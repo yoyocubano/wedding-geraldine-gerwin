@@ -292,6 +292,13 @@
     }
 
     /* Accordion styles */
+    .accordion-item {
+      transition: all 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
+    }
+    .accordion-item.active {
+      border-color: rgba(197, 160, 89, 0.65);
+      box-shadow: 0 4px 16px -2px rgba(140, 103, 38, 0.12);
+    }
     .accordion-content {
       max-height: 0;
       overflow: hidden;
@@ -302,6 +309,7 @@
     }
     .accordion-item.active .accordion-icon {
       transform: rotate(180deg);
+      color: #8C6726;
     }
 
     #scratchCanvas {
@@ -574,54 +582,73 @@
           <span>✈️</span>
           <span data-i18n="faq.badge">Guía del Invitado</span>
         </div>
-        <h2 class="font-serif text-xl text-espresso mb-2" data-i18n="faq.title">Preguntas Frecuentes</h2>
+        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-3" data-i18n="faq.title">Preguntas Frecuentes</h2>
 
-        <div class="space-y-1.5 text-left" id="accordionContainer">
+        <!-- Contenedor con espacio generoso y estilizado para cada tarjeta -->
+        <div class="space-y-2.5 text-left" id="accordionContainer">
           
-          <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span>🏨 <span data-i18n="faq.q1">¿Dónde me hospedo? Hoteles & Airbnb</span></span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <!-- FAQ 1: Alojamiento -->
+          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
+            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🏨</span>
+                <span data-i18n="faq.q1">¿Dónde me hospedo? Hoteles & Airbnb</span>
+              </span>
+              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="accordion-content px-3 bg-champagne-50/60 border-t border-champagne-500/20 text-[11px] text-champagne-900 py-2 leading-relaxed" data-i18n="faq.a1">
-              Bloque de habitaciones reservado en el hotel de la fiesta (código disponible este viernes tras la firma). Opciones Airbnb a 10-15 minutos.
+            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a1">
+              <div class="py-2.5">Bloque de habitaciones reservado en el hotel de la fiesta (código disponible este viernes tras la firma). Opciones Airbnb a 10-15 minutos.</div>
             </div>
           </div>
 
-          <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span>🚆 <span data-i18n="faq.q2">¿Cómo llego desde el aeropuerto?</span></span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <!-- FAQ 2: Aeropuerto & Trenes -->
+          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
+            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🚆</span>
+                <span data-i18n="faq.q2">¿Cómo llego desde el aeropuerto?</span>
+              </span>
+              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="accordion-content px-3 bg-champagne-50/60 border-t border-champagne-500/20 text-[11px] text-champagne-900 py-2 leading-relaxed" data-i18n="faq.a2">
-              Vuela a Schiphol (AMS). Trenes NS directos cada 15 min. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.
+            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a2">
+              <div class="py-2.5">Vuela a Schiphol (AMS). Trenes NS directos cada 15 min. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.</div>
             </div>
           </div>
 
-          <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span>👗 <span data-i18n="faq.q3">Código de Vestimenta (Dress Code)</span></span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <!-- FAQ 3: Dress Code -->
+          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
+            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">👗</span>
+                <span data-i18n="faq.q3">Código de Vestimenta (Dress Code)</span>
+              </span>
+              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="accordion-content px-3 bg-champagne-50/60 border-t border-champagne-500/20 text-[11px] text-champagne-900 py-2 leading-relaxed">
-              <span data-i18n="faq.a3">Gala & Black Tie Optional. Hombres traje formal/esmoquin, mujeres vestido largo.</span>
-              <div class="flex items-center gap-1 mt-1">
-                <span class="text-[9px] uppercase font-sans font-bold text-champagne-800">Tonos:</span>
-                <span class="w-3 h-3 rounded-full bg-[#FAF5EB] border border-champagne-500"></span>
-                <span class="w-3 h-3 rounded-full bg-[#DFBE7D]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#8C6726]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#2A1B0E]"></span>
+            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed">
+              <div class="py-2.5">
+                <span data-i18n="faq.a3">Gala & Black Tie Optional. Hombres traje formal/esmoquin, mujeres vestido largo.</span>
+                <div class="flex items-center gap-1.5 mt-2">
+                  <span class="text-[9px] uppercase font-sans font-bold text-champagne-800">Tonos:</span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EB] border border-champagne-500 shadow-xs" title="Champagne"></span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#DFBE7D] shadow-xs" title="Gold"></span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#8C6726] shadow-xs" title="Bronze"></span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#2A1B0E] shadow-xs" title="Black Tie"></span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span>👶 <span data-i18n="faq.q4">Niños y Acompañantes</span></span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <!-- FAQ 4: Niños y Acompañantes -->
+          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
+            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">👶</span>
+                <span data-i18n="faq.q4">Niños y Acompañantes</span>
+              </span>
+              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="accordion-content px-3 bg-champagne-50/60 border-t border-champagne-500/20 text-[11px] text-champagne-900 py-2 leading-relaxed" data-i18n="faq.a4">
-              Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo.
+            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a4">
+              <div class="py-2.5">Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo.</div>
             </div>
           </div>
 
