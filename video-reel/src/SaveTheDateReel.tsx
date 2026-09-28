@@ -227,7 +227,7 @@ const Scene1WaxSeal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }>
                 textShadow: '0 2px 4px rgba(0,0,0,0.7)',
               }}
             >
-              G&G
+              Y&G
             </span>
             <span
               style={{
@@ -268,7 +268,7 @@ const Scene1WaxSeal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }>
           margin: 0,
         }}
       >
-        Geraldine
+        Yeraldin
         <span
           style={{
             display: 'block',
@@ -407,7 +407,7 @@ const Scene2PhotoReveal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl
               color: '#FFF',
             }}
           >
-            <p style={{ fontFamily: FONT_SERIF, fontSize: 36, margin: 0 }}>Geraldine & Gerwin</p>
+            <p style={{ fontFamily: FONT_SERIF, fontSize: 36, margin: 0 }}>Yeraldin & Gerwin</p>
             <p style={{ fontFamily: FONT_SANS, fontSize: 16, letterSpacing: 4, color: '#FFE8A3', marginTop: 4 }}>
               {lang === 'nl' ? 'NEDERLAND • 2027' : 'PAÍSES BAJOS • 2027'}
             </p>
@@ -829,7 +829,7 @@ const Scene5RSVPClose: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' 
           }}
         >
           <span style={{ fontFamily: FONT_EDITORIAL, fontSize: 54, fontWeight: 700, color: '#FFF8DB' }}>
-            G&G
+            Y&G
           </span>
         </div>
 
