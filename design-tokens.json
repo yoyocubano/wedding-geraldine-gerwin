@@ -1,0 +1,188 @@
+{
+  "system": {
+    "name": "The Digital Yes x Haute Atelier Wedding Design System",
+    "version": "2.0.0",
+    "targetPlatform": "Web / Mobile Web / Progressive Web App",
+    "inspirationSources": [
+      {
+        "name": "The Digital Yes (Scratch & Interactive Wedding Suite)",
+        "source": "https://www.thedigitalyes.com / scratch.thedigitalyes.com",
+        "keyFeatures": [
+          "Interactive Touch Scratch-to-Reveal Card (HTML5 Canvas with destination-out blending)",
+          "Wax Seal Envelope Unsealing Animation with 3D Perspective Rotation",
+          "Glassmorphic Trilingual Switcher (ES / EN / NL)",
+          "Floating Antique Gold Frosted Countdown Cards",
+          "Direct Google & Apple Calendar One-Tap ICS Sync",
+          "Interactive Guest Travel Concierge & Accordion FAQ"
+        ]
+      },
+      {
+        "name": "Canva Haute Champagne Gold Wedding Stationery",
+        "source": "https://rsvp-wedding-invitation.my.canva.site/champagne-gold-wedding/invitation",
+        "keyFeatures": [
+          "Archival Cotton Paper Texture (600gsm unbleached warm ivory)",
+          "Double-recessed gold foil hairline borders with corner flourishes (✦)",
+          "Editorial Serif Typography in Deep Bronze Espresso (#2A1B0E, #58351C)",
+          "Interlocking Calligraphic Monogram Crest (G & G)"
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "brand": {
+        "champagneGold": "#C5A059",
+        "classicGold": "#D4AF37",
+        "paleGoldLeaf": "#E6C875",
+        "antiqueGold": "#B38F3F",
+        "bronzeShimmer": "#8C6726",
+        "waxSealDeep": "#99732B"
+      },
+      "surfaces": {
+        "canvasBase": "#FAF5EB",
+        "cottonPaper": "#FDFBF7",
+        "parchmentCream": "#FAF6EE",
+        "warmSand": "#EFE9DC",
+        "cardInset": "#F4EFE6",
+        "glassFrosted": "rgba(253, 251, 247, 0.88)",
+        "glassDark": "rgba(42, 27, 14, 0.75)"
+      },
+      "typography": {
+        "inkEspresso": "#2A1B0E",
+        "inkBronze": "#58351C",
+        "inkMutedUmber": "#4A3525",
+        "inkCaption": "#7A5E44",
+        "inkFoil": "#D4AF37",
+        "inkLight": "#FDFBF7"
+      },
+      "accents": {
+        "successEmerald": "#10B981",
+        "whatsappGreen": "#25D366",
+        "alertRose": "#E11D48"
+      },
+      "gradients": {
+        "goldFoil": "linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #F7E7A9 50%, #C5A059 70%, #8C6726 100%)",
+        "waxSeal": "radial-gradient(circle at 35% 35%, #F5DE98 0%, #C5A059 40%, #99732B 75%, #6A4B13 100%)",
+        "paperDeckle": "linear-gradient(to bottom, #FAF5EB 0%, #FDFBF7 50%, #F5EFE3 100%)",
+        "scratchCoating": "linear-gradient(135deg, #D4AF37 0%, #F7E7A9 25%, #C5A059 50%, #E6C875 75%, #AA7C11 100%)",
+        "sparkleFlash": "radial-gradient(circle, rgba(255, 235, 170, 0.95) 0%, rgba(212, 175, 55, 0.5) 40%, transparent 80%)"
+      }
+    },
+    "typography": {
+      "families": {
+        "primaryDisplay": "'Playfair Display', Georgia, serif",
+        "secondaryEditorial": "'Cormorant Garamond', 'EB Garamond', serif",
+        "bodyText": "'EB Garamond', Georgia, serif",
+        "uiSans": "'Outfit', -apple-system, BlinkMacSystemFont, sans-serif",
+        "signatureCalligraphy": "'Alex Brush', cursive"
+      },
+      "scales": {
+        "displayHero": {
+          "fontSize": "3.5rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.02em",
+          "fontWeight": "400"
+        },
+        "displayHeroMobile": {
+          "fontSize": "2.5rem",
+          "lineHeight": "1.15",
+          "letterSpacing": "-0.01em",
+          "fontWeight": "400"
+        },
+        "sectionTitle": {
+          "fontSize": "1.875rem",
+          "lineHeight": "1.25",
+          "letterSpacing": "-0.01em",
+          "fontWeight": "400"
+        },
+        "cardHeading": {
+          "fontSize": "1.375rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0em",
+          "fontWeight": "500"
+        },
+        "body": {
+          "fontSize": "1.0625rem",
+          "lineHeight": "1.65",
+          "letterSpacing": "0.01em",
+          "fontWeight": "400"
+        },
+        "uiBadge": {
+          "fontSize": "0.6875rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.22em",
+          "textTransform": "uppercase",
+          "fontWeight": "600"
+        },
+        "uiButton": {
+          "fontSize": "0.75rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.18em",
+          "textTransform": "uppercase",
+          "fontWeight": "600"
+        }
+      }
+    },
+    "borders": {
+      "radii": {
+        "none": "0px",
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "2xl": "24px",
+        "pill": "9999px"
+      },
+      "widths": {
+        "hairline": "0.5px",
+        "thin": "1px",
+        "medium": "1.5px",
+        "thick": "2px"
+      },
+      "gildedBorder": {
+        "outer": "1px solid rgba(197, 160, 89, 0.45)",
+        "innerRecessed": "1px solid rgba(197, 160, 89, 0.25)",
+        "insetOffset": "6px"
+      }
+    },
+    "shadows": {
+      "luxuryAmbient": "0 20px 45px -10px rgba(88, 53, 28, 0.12), 0 0 0 1px rgba(197, 160, 89, 0.25)",
+      "waxSeal3D": "0 10px 25px rgba(42, 27, 14, 0.35), inset 0 2px 4px rgba(255, 235, 170, 0.6), inset 0 -3px 6px rgba(140, 103, 38, 0.6)",
+      "glassFloating": "0 8px 32px 0 rgba(88, 53, 28, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.7)",
+      "scratchCardFrame": "0 16px 36px -8px rgba(42, 27, 14, 0.2), inset 0 0 0 1px rgba(212, 175, 55, 0.5)",
+      "sparkleGlow": "0 0 40px 10px rgba(212, 175, 55, 0.7)"
+    },
+    "animations": {
+      "envelopeUnseal": {
+        "duration": "1200ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "transformOrigin": "top center",
+        "rotateX": "180deg"
+      },
+      "scratchCard": {
+        "revealThreshold": 0.45,
+        "brushRadius": 28,
+        "sparkleParticleCount": 65,
+        "flashDurationMs": 850
+      },
+      "countdownFlip": {
+        "transition": "all 0.3s ease-out"
+      },
+      "accordionExpand": {
+        "duration": "500ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "layout": {
+      "maxWidth": {
+        "mobile": "440px",
+        "tablet": "768px",
+        "desktop": "1040px"
+      },
+      "padding": {
+        "mobile": "1.25rem",
+        "desktop": "2.5rem"
+      }
+    }
+  }
+}

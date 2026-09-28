@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Geraldine & Gerwin — Save The Date & Boda Real 2027</title>
+  
+  <!-- SEO & Social OpenGraph -->
+  <meta name="description" content="Invitación de Boda y Save the Date exclusivo de Geraldine & Gerwin. 21 de Abril & 1 de Mayo 2027, Países Bajos." />
+  <meta property="og:title" content="Geraldine & Gerwin — Save The Date 2027" />
+  <meta property="og:description" content="Rasca para descubrir nuestra foto y celebrar nuestro amor en los Países Bajos." />
+  <meta property="og:image" content="assets/geraldine_gerwin_portrait.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Google Editorial Serif, Calligraphy & Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            champagne: {
+              50: '#FDFBF7',
+              100: '#FAF5EB',
+              200: '#F3E8D2',
+              300: '#DFBE7D',
+              400: '#D4AF37',
+              500: '#C5A059',
+              600: '#A98338',
+              700: '#8C6726',
+              800: '#58351C',
+              900: '#2A1B0E',
+            },
+            parchment: '#FAF6EE',
+            sand: '#EFE9DC',
+            espresso: '#241711',
+            goldfoil: '#D4AF37',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            script: ['"Alex Brush"', 'cursive'],
+            body: ['"EB Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif'],
+          },
+          boxShadow: {
+            'luxury': '0 20px 45px -10px rgba(88, 53, 28, 0.12), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'seal': '0 10px 25px rgba(42, 27, 14, 0.35), inset 0 2px 4px rgba(255, 235, 170, 0.6), inset 0 -3px 6px rgba(140, 103, 38, 0.6)',
+            'glass': '0 8px 32px 0 rgba(88, 53, 28, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.7)',
+            'scratch': '0 25px 50px -12px rgba(42, 27, 14, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.4)',
+            'destello': '0 0 60px 20px rgba(212, 175, 55, 0.8), 0 0 100px 40px rgba(255, 235, 170, 0.6)',
+          },
+          animation: {
+            'pulse-subtle': 'pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+            'sparkle': 'sparkle 1.5s ease-out forwards',
+          },
+          keyframes: {
+            pulseSubtle: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.03)', opacity: '0.92' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+            sparkle: {
+              '0%': { opacity: '0', transform: 'scale(0.5) rotate(0deg)' },
+              '50%': { opacity: '1', transform: 'scale(1.2) rotate(180deg)' },
+              '100%': { opacity: '0', transform: 'scale(1.5) rotate(360deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF5EB;
+      color: #2A1B0E;
+      font-family: 'EB Garamond', serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      touch-action: pan-y;
+    }
+
+    .paper-texture {
+      background-color: #FDFBF7;
+      background-image: radial-gradient(#d4af37 0.45px, transparent 0.45px), radial-gradient(#d4af37 0.45px, #FDFBF7 0.45px);
+      background-size: 18px 18px;
+      background-position: 0 0, 9px 9px;
+    }
+
+    .gilded-border {
+      position: relative;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+    }
+    .gilded-border::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(197, 160, 89, 0.25);
+      pointer-events: none;
+    }
+
+    /* 3D Envelope Animation */
+    .perspective-1000 {
+      perspective: 1200px;
+    }
+    .envelope-flap {
+      transform-origin: top center;
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .envelope-opened .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 10;
+    }
+    .invitation-card {
+      transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    }
+    .envelope-opened .invitation-card {
+      transform: translateY(-80px) scale(1.02);
+      z-index: 30;
+    }
+
+    /* Metallic Gold Foil Text */
+    .text-gold-metallic {
+      background: linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #F7E7A9 50%, #C5A059 70%, #8C6726 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Accordion */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+    }
+    .accordion-item.active .accordion-content {
+      max-height: 800px;
+      transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Scratch Canvas Touch Protection */
+    #scratchCanvas {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Flash Destello Animation */
+    @keyframes destelloFlash {
+      0% { opacity: 0; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(1.4); }
+    }
+    .animate-destello {
+      animation: destelloFlash 1.2s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="selection:bg-champagne-300 selection:text-espresso relative">
+
+  <!-- ==================== TOP FLOATING LUXURY NAVBAR ==================== -->
+  <nav class="fixed top-3 inset-x-3 z-50 max-w-4xl mx-auto">
+    <div class="backdrop-blur-md bg-white/85 border border-champagne-500/30 rounded-full px-4 py-2.5 shadow-glass flex items-center justify-between transition-all duration-300">
+      
+      <!-- Monogram & Couple Name -->
+      <a href="#hero" class="flex items-center gap-2 group cursor-pointer">
+        <div class="w-8 h-8 rounded-full border border-champagne-500/50 flex items-center justify-center bg-champagne-100/80 shadow-sm group-hover:scale-105 transition-transform">
+          <span class="font-cormorant font-bold text-xs text-champagne-800 tracking-tighter">G&G</span>
+        </div>
+        <span class="font-serif text-sm tracking-wider text-espresso font-medium hidden sm:inline">Geraldine & Gerwin</span>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-xs uppercase tracking-widest font-sans text-champagne-800/80 font-medium">
+        <a href="#fechas" class="hover:text-champagne-600 transition-colors" data-i18n="nav.dates">Fechas</a>
+        <a href="#scratch-section" class="hover:text-champagne-600 transition-colors text-gold-metallic font-semibold" data-i18n="nav.scratch">✦ Rasca & Revela</a>
+        <a href="#lugares" class="hover:text-champagne-600 transition-colors" data-i18n="nav.venues">Lugares</a>
+        <a href="#guia-viaje" class="hover:text-champagne-600 transition-colors" data-i18n="nav.travel">Guía & FAQ</a>
+        <a href="#rsvp" class="hover:text-champagne-600 transition-colors font-semibold text-champagne-700" data-i18n="nav.rsvp">RSVP</a>
+      </div>
+
+      <!-- Controls: Trilingual Switcher (ES | EN | NL) & Audio -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-sans font-medium">
+          <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white shadow-xs font-semibold">ES</button>
+          <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
+          <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+        </div>
+
+        <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200/40 transition-colors cursor-pointer" title="Música ambiental">
+          <svg id="soundIconOn" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          <svg id="soundIconOff" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO: INTERACTIVE ENVELOPE (THE DIGITAL YES CLONE) ==================== -->
+  <header id="hero" class="min-h-screen pt-24 pb-16 px-4 flex flex-col items-center justify-center relative overflow-hidden bg-radial from-champagne-100 via-parchment to-sand">
+    
+    <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-champagne-300/15 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-champagne-400/15 blur-3xl pointer-events-none"></div>
+
+    <div class="w-full max-w-md perspective-1000 my-4" id="envelopeWrapper">
+      <div id="envelopeCard" class="relative transition-all duration-700">
+        
+        <!-- Flap Top (3D fold) -->
+        <div class="envelope-flap relative w-full h-32 bg-gradient-to-b from-[#f3ebd9] to-[#faf5eb] rounded-t-2xl border-t border-x border-champagne-500/40 shadow-md flex items-center justify-center z-20">
+          <div class="w-full border-b border-champagne-500/20 absolute bottom-0"></div>
+          
+          <!-- Wax Seal Stamp Button (Click to Open) -->
+          <div class="absolute -bottom-8 flex flex-col items-center cursor-pointer group" onclick="openEnvelope()">
+            <div class="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#dfbe7d] via-[#c5a059] to-[#8c6726] p-1 shadow-seal flex items-center justify-center group-hover:scale-105 active:scale-95 transition-transform duration-300">
+              <div class="w-full h-full rounded-full border-2 border-champagne-200/60 flex flex-col items-center justify-center bg-gradient-to-tr from-[#99732b] to-[#c5a059] relative overflow-hidden">
+                <span class="font-cormorant font-bold text-2xl text-champagne-100 tracking-tighter drop-shadow-sm select-none">G&G</span>
+                <span class="text-[8px] uppercase tracking-widest text-champagne-200/90 font-sans -mt-1 font-semibold">2027</span>
+              </div>
+              <div class="absolute inset-0 rounded-full border border-champagne-400/40 animate-ping opacity-25 pointer-events-none"></div>
+            </div>
+
+            <!-- Tap Indicator Badge -->
+            <div id="tapBadge" class="mt-11 px-3 py-1 bg-espresso/90 text-champagne-200 rounded-full text-[10px] tracking-widest uppercase font-sans border border-champagne-500/40 shadow-sm animate-bounce flex items-center gap-1">
+              <span>✦</span>
+              <span data-i18n="hero.tap_open">Toca para abrir invitación</span>
+              <span>✦</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Invitation Card Itself -->
+        <div class="invitation-card relative paper-texture gilded-border rounded-b-2xl shadow-luxury pt-14 pb-10 px-6 sm:px-8 text-center bg-[#FDFBF7] z-10">
+          
+          <div class="flex items-center justify-center gap-3 mb-3 text-champagne-600/70">
+            <span class="text-xs">✦</span>
+            <div class="h-px w-16 bg-gradient-to-r from-transparent via-champagne-500 to-transparent"></div>
+            <span class="text-xs">✦</span>
+          </div>
+
+          <p class="text-xs sm:text-sm font-sans uppercase tracking-[0.25em] text-champagne-800/80 mb-2 font-medium" data-i18n="hero.save_the_date">
+            Save The Date & Invitación
+          </p>
+
+          <p class="font-body italic text-base sm:text-lg text-champagne-700 mb-4" data-i18n="hero.together">
+            Junto a nuestras familias, tenemos el honor de invitarte a celebrar
+          </p>
+
+          <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-espresso tracking-tight leading-tight my-2">
+            Geraldine
+            <span class="block font-script text-4xl sm:text-5xl text-gold-metallic my-1 font-normal">&</span>
+            Gerwin
+          </h1>
+
+          <div class="my-4 flex items-center justify-center gap-2">
+            <div class="w-12 h-px bg-champagne-500/40"></div>
+            <div class="w-2 h-2 rotate-45 border border-champagne-500 bg-champagne-200"></div>
+            <div class="w-12 h-px bg-champagne-500/40"></div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 my-5 p-3 rounded-xl bg-champagne-100/70 border border-champagne-500/30 text-center">
+            <div class="border-r border-champagne-500/20 pr-2">
+              <span class="block text-[10px] uppercase tracking-widest text-champagne-800 font-sans font-semibold" data-i18n="hero.civil_badge">Boda Civil</span>
+              <span class="font-serif text-base sm:text-lg font-semibold text-espresso">21 Abril 2027</span>
+            </div>
+            <div class="pl-2">
+              <span class="block text-[10px] uppercase tracking-widest text-champagne-800 font-sans font-semibold" data-i18n="hero.party_badge">Gran Celebración</span>
+              <span class="font-serif text-base sm:text-lg font-semibold text-espresso">01 Mayo 2027</span>
+            </div>
+          </div>
+
+          <p class="text-xs uppercase tracking-widest font-sans text-champagne-800 flex items-center justify-center gap-1 font-medium mb-6">
+            <svg class="w-3.5 h-3.5 text-champagne-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <span data-i18n="hero.location">Países Bajos (Holanda)</span>
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-2.5 justify-center">
+            <a href="#scratch-section" class="px-5 py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans tracking-widest uppercase font-semibold hover:bg-champagne-800 hover:shadow-lg transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <span data-i18n="hero.discover">✦ Rascar & Descubrir</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <a href="#rsvp" class="px-5 py-2.5 bg-champagne-200/60 text-champagne-900 border border-champagne-500/50 rounded-full text-xs font-sans tracking-widest uppercase font-semibold hover:bg-champagne-300 transition-all flex items-center justify-center cursor-pointer" data-i18n="hero.rsvp_btn">
+              Confirmar Asistencia
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Hint -->
+    <a href="#scratch-section" class="mt-8 text-champagne-700/80 flex flex-col items-center gap-1 group transition-all">
+      <span class="text-[10px] uppercase tracking-widest font-sans font-medium" data-i18n="hero.scroll">Desliza para ver más</span>
+      <svg class="w-4 h-4 animate-bounce text-champagne-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </a>
+  </header>
+
+  <!-- ==================== COUNTDOWN & CALENDAR ==================== -->
+  <section id="countdown" class="py-14 px-4 bg-white/70 border-y border-champagne-500/20 relative">
+    <div class="max-w-3xl mx-auto text-center">
+      
+      <p class="font-sans text-xs uppercase tracking-[0.2em] text-champagne-800 mb-2 font-medium" data-i18n="countdown.subtitle">
+        Contando los segundos para nuestro gran día
+      </p>
+      <h2 class="font-serif text-2xl sm:text-3xl text-espresso mb-8" data-i18n="countdown.title">
+        La Cuenta Regresiva • 01 Mayo 2027
+      </h2>
+
+      <!-- The 4 Frosted Glass Countdown Boxes -->
+      <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto mb-8">
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-xl p-3 sm:p-4 shadow-sm">
+          <span id="days" class="block font-serif text-2xl sm:text-4xl font-semibold text-espresso">--</span>
+          <span class="text-[10px] sm:text-xs font-sans uppercase tracking-wider text-champagne-700 font-medium" data-i18n="countdown.days">Días</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-xl p-3 sm:p-4 shadow-sm">
+          <span id="hours" class="block font-serif text-2xl sm:text-4xl font-semibold text-espresso">--</span>
+          <span class="text-[10px] sm:text-xs font-sans uppercase tracking-wider text-champagne-700 font-medium" data-i18n="countdown.hours">Horas</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-xl p-3 sm:p-4 shadow-sm">
+          <span id="mins" class="block font-serif text-2xl sm:text-4xl font-semibold text-espresso">--</span>
+          <span class="text-[10px] sm:text-xs font-sans uppercase tracking-wider text-champagne-700 font-medium" data-i18n="countdown.mins">Minutos</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-xl p-3 sm:p-4 shadow-sm">
+          <span id="secs" class="block font-serif text-2xl sm:text-4xl font-semibold text-espresso text-gold-metallic">--</span>
+          <span class="text-[10px] sm:text-xs font-sans uppercase tracking-wider text-champagne-700 font-medium" data-i18n="countdown.secs">Segundos</span>
+        </div>
+      </div>
+
+      <!-- Add to Calendar Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a id="btnGoogleCalendar" target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Geraldine+%26+Gerwin&dates=20270501T143000Z/20270502T020000Z&details=Celebraci%C3%B3n+de+Boda+de+Geraldine+%26+Gerwin+en+Pa%C3%ADses+Bajos.&location=Pa%C3%ADses+Bajos" class="px-4 py-2.5 rounded-full bg-white border border-champagne-500/50 shadow-sm text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-all flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 text-champagne-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+          <span data-i18n="calendar.google">Añadir a Google Calendar</span>
+        </a>
+
+        <button onclick="downloadICS()" class="px-4 py-2.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500/60 shadow-sm text-xs font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-all flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 text-champagne-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span data-i18n="calendar.apple">Apple / Outlook (.ics)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THE SCRATCH-TO-REVEAL PHOTO CARD (THE DIGITAL YES VIRAL FEATURE) ==================== -->
+  <section id="scratch-section" class="py-16 px-4 max-w-4xl mx-auto relative">
+    
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-champagne-200/60 border border-champagne-500/40 text-[10px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-2">
+        <span>✨</span>
+        <span data-i18n="scratch.badge">Experiencia Interactiva Touch</span>
+      </div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-espresso" data-i18n="scratch.title">
+        Rasca para Revelar Nuestro Amor
+      </h2>
+      <p class="font-body text-base text-champagne-800/90 mt-2 max-w-md mx-auto" data-i18n="scratch.subtitle">
+        Desliza tu dedo o cursor sobre la capa dorada para descubrir la foto oficial de Geraldine & Gerwin.
+      </p>
+      <div class="w-12 h-px bg-champagne-500/50 mx-auto mt-3"></div>
+    </div>
+
+    <!-- Scratch Card Container (Centered Luxury Portrait Aspect Ratio) -->
+    <div class="relative max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-scratch border-2 border-champagne-500/60 bg-espresso select-none" id="scratchCardContainer">
+      
+      <!-- Base Layer: Geraldine's Real Profile Photo with Luxury Treatment -->
+      <div class="relative w-full aspect-[4/5] overflow-hidden flex items-center justify-center bg-espresso" id="photoRevealWrapper">
+        <!-- Blurred Background Ambient Glow -->
+        <img src="assets/geraldine_profile.jpg" alt="Ambient" class="absolute inset-0 w-full h-full object-cover filter blur-lg scale-110 opacity-50" />
+        
+        <!-- Centerpiece Portrait Photo -->
+        <img id="couplePhoto" src="assets/geraldine_profile.jpg" alt="Geraldine & Gerwin" class="relative z-10 w-full h-full object-cover select-none pointer-events-none transition-transform duration-700 hover:scale-105" />
+        
+        <!-- Elegant bottom caption inside photo -->
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 text-white text-center pointer-events-none z-20">
+          <p class="font-serif text-xl sm:text-2xl tracking-wide drop-shadow-md">Geraldine & Gerwin</p>
+          <p class="font-sans text-[11px] uppercase tracking-widest text-champagne-200 font-semibold mt-0.5">01 Mayo 2027 • Países Bajos</p>
+        </div>
+      </div>
+
+      <!-- Scratch Overlay Canvas -->
+      <canvas id="scratchCanvas" class="absolute inset-0 w-full h-full cursor-crosshair z-20 transition-opacity duration-700"></canvas>
+
+      <!-- Sparkle Burst Overlay (Triggered upon 50% scratch) -->
+      <div id="destelloOverlay" class="absolute inset-0 pointer-events-none z-30 hidden flex items-center justify-center">
+        <div class="w-full h-full bg-radial from-amber-200/90 via-champagne-400/40 to-transparent animate-destello"></div>
+      </div>
+
+      <!-- Confetti / Particle Canvas -->
+      <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-40"></canvas>
+
+    </div>
+
+    <!-- Scratched Percentage Progress Indicator -->
+    <div class="max-w-xs sm:max-w-sm mx-auto mt-4 text-center">
+      <div class="flex items-center justify-between text-xs font-sans text-champagne-800 font-medium mb-1">
+        <span data-i18n="scratch.progress">Revelado:</span>
+        <span id="scratchPercentText" class="font-semibold text-champagne-900">0%</span>
+      </div>
+      <div class="w-full h-1.5 bg-champagne-200 rounded-full overflow-hidden">
+        <div id="scratchProgressBar" class="h-full bg-gradient-to-r from-champagne-500 to-amber-500 transition-all duration-300 w-0"></div>
+      </div>
+    </div>
+
+    <!-- Revealed Notification Callout (Reveals upon completed scratch) -->
+    <div id="revealedConfirmationCallout" class="max-w-sm mx-auto mt-6 p-4 rounded-xl paper-texture gilded-border shadow-luxury text-center hidden transform transition-all duration-500 scale-95 opacity-0">
+      <div class="w-10 h-10 mx-auto rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center text-lg mb-2 shadow-sm animate-pulse">
+        💍
+      </div>
+      <h3 class="font-serif text-lg text-espresso font-semibold" data-i18n="scratch.revealed_title">
+        ¡Destello de Amor! Foto y Fecha Reveladas
+      </h3>
+      <p class="font-body text-sm text-champagne-900 mt-1 mb-3" data-i18n="scratch.revealed_msg">
+        ¡Tu presencia es el mayor regalo para nosotros! Por favor confirma si nos acompañas en este gran día.
+      </p>
+      <a href="#rsvp" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md transition-all cursor-pointer">
+        <span data-i18n="scratch.confirm_btn">✦ Confirmar Mi Presencia ✦</span>
+        <svg class="w-3.5 h-3.5 text-champagne-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ==================== THE TWO EVENTS (CIVIL & PARTY) ==================== -->
+  <section id="fechas" class="py-16 px-4 bg-champagne-100/60 border-t border-champagne-500/20">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-12">
+        <p class="font-sans text-xs uppercase tracking-[0.2em] text-champagne-800 mb-2 font-medium" data-i18n="events.subtitle">
+          Dos Momentos Inolvidables
+        </p>
+        <h2 class="font-serif text-2xl sm:text-3xl text-espresso" data-i18n="events.title">
+          Programa & Ubicaciones
+        </h2>
+        <div class="w-12 h-px bg-champagne-500/50 mx-auto mt-3"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- EVENT 1: BODA CIVIL -->
+        <div class="paper-texture gilded-border rounded-xl p-6 sm:p-8 bg-white shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-champagne-200/70 border border-champagne-500/30 text-[11px] font-sans font-semibold uppercase tracking-wider text-champagne-900" data-i18n="event1.tag">
+                Ceremonia Civil
+              </span>
+              <span class="text-champagne-600 font-cormorant italic text-sm">Parte I</span>
+            </div>
+
+            <h3 class="font-serif text-xl sm:text-2xl text-espresso mb-2" data-i18n="event1.title">
+              Enlace Civil & Firma
+            </h3>
+            
+            <div class="space-y-2.5 my-4 text-sm font-body text-champagne-900">
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <strong data-i18n="event1.date">Miércoles, 21 de Abril de 2027</strong>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span data-i18n="event1.time">Hora: 14:00 hrs (Recepción íntima)</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>
+                  <strong data-i18n="event1.place_name">[Ayuntamiento / Stadhuis Histórico]</strong><br />
+                  <span class="text-xs text-champagne-700" data-i18n="event1.place_desc">Países Bajos (Ubicación exacta disponible este viernes)</span>
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-champagne-500/20 mt-4">
+            <button onclick="copyAddress('Países Bajos - Ayuntamiento')" class="w-full py-2 bg-champagne-100 hover:bg-champagne-200 border border-champagne-500/30 rounded-lg text-xs font-sans uppercase tracking-wider text-champagne-900 transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span data-i18n="event1.copy">Copiar Dirección</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- EVENT 2: LA GRAN FIESTA DE BODA -->
+        <div class="paper-texture gilded-border rounded-xl p-6 sm:p-8 bg-white shadow-sm flex flex-col justify-between border-champagne-500/80 ring-1 ring-champagne-500/20">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-champagne-800 text-champagne-100 text-[11px] font-sans font-semibold uppercase tracking-wider shadow-xs" data-i18n="event2.tag">
+                Gran Celebración
+              </span>
+              <span class="text-champagne-600 font-cormorant italic text-sm">Parte II</span>
+            </div>
+
+            <h3 class="font-serif text-xl sm:text-2xl text-espresso mb-2" data-i18n="event2.title">
+              Banquete & Fiesta de Gala
+            </h3>
+            
+            <div class="space-y-2.5 my-4 text-sm font-body text-champagne-900">
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <strong data-i18n="event2.date">Sábado, 01 de Mayo de 2027</strong>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span data-i18n="event2.time">Hora: 16:30 hrs — Hasta el amanecer</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-champagne-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>
+                  <strong data-i18n="event2.place_name">[Kasteel & Hotel Venue Holandés]</strong><br />
+                  <span class="text-xs text-champagne-700" data-i18n="event2.place_desc">Países Bajos (Firma final de contrato este viernes)</span>
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-champagne-500/20 mt-4 flex gap-2">
+            <a href="https://maps.google.com/?q=Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 bg-espresso text-champagne-100 hover:bg-champagne-800 rounded-lg text-xs font-sans uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-champagne-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              <span data-i18n="event2.map">Abrir en Maps</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GUEST TRAVEL GUIDE & FAQ ACCORDION ==================== -->
+  <section id="guia-viaje" class="py-16 px-4 max-w-3xl mx-auto">
+    
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-champagne-200/50 border border-champagne-500/30 text-[10px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-2">
+        <span>✈️</span>
+        <span data-i18n="faq.badge">Guía Oficial para Invitados</span>
+      </div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-espresso" data-i18n="faq.title">
+        Preguntas Frecuentes & Consejos de Viaje
+      </h2>
+      <p class="font-body text-base text-champagne-800/90 mt-2 max-w-xl mx-auto" data-i18n="faq.subtitle">
+        Hemos preparado todas las respuestas para que tu viaje a los Países Bajos sea fluido, cómodo y sin complicaciones.
+      </p>
+    </div>
+
+    <div class="space-y-3.5" id="accordionContainer">
+      
+      <!-- FAQ 1: ALOJAMIENTO -->
+      <div class="accordion-item paper-texture border border-champagne-500/30 rounded-xl overflow-hidden shadow-xs transition-all bg-white">
+        <button onclick="toggleAccordion(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-champagne-50 transition-colors cursor-pointer">
+          <span class="font-serif text-base sm:text-lg text-espresso flex items-center gap-2 font-medium">
+            <span class="text-champagne-600">🏨</span>
+            <span data-i18n="faq.q1">¿Dónde me hospedo? ¿Hoteles recomendados y Airbnb?</span>
+          </span>
+          <svg class="accordion-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content border-t border-champagne-500/20 px-5 bg-champagne-50/50">
+          <div class="py-4 text-sm text-champagne-900 space-y-2 leading-relaxed" data-i18n="faq.a1">
+            <p><strong>Hotel Principal de la Celebración:</strong> Hemos reservado un bloque de habitaciones con tarifa especial para invitados en el hotel de la fiesta. Facilitaremos el código promocional tan pronto firmemos la confirmación este viernes.</p>
+            <p><strong>Alternativas cercanas:</strong> Hay excelentes hoteles boutique y opciones de Airbnb a menos de 10-15 minutos en coche/taxi. Recomendamos reservar con anticipación debido a la temporada de tulipanes en primavera.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2: TRANSPORTE -->
+      <div class="accordion-item paper-texture border border-champagne-500/30 rounded-xl overflow-hidden shadow-xs transition-all bg-white">
+        <button onclick="toggleAccordion(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-champagne-50 transition-colors cursor-pointer">
+          <span class="font-serif text-base sm:text-lg text-espresso flex items-center gap-2 font-medium">
+            <span class="text-champagne-600">🚆</span>
+            <span data-i18n="faq.q2">¿Cómo llego desde el aeropuerto? ¿Qué tren o autobús tomo?</span>
+          </span>
+          <svg class="accordion-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content border-t border-champagne-500/20 px-5 bg-champagne-50/50">
+          <div class="py-4 text-sm text-champagne-900 space-y-2 leading-relaxed" data-i18n="faq.a2">
+            <p><strong>Aeropuerto Amsterdam Schiphol (AMS):</strong> Es la mejor opción para volar. Directamente debajo de la terminal salen los trenes de la compañía nacional <em>NS</em> cada 10-15 minutos.</p>
+            <p><strong>Cómo pagar el transporte público:</strong> Ya no necesitas comprar tickets de papel. Puedes pagar directamente tocando tu tarjeta bancaria (Contactless / Apple Pay) al entrar y salir de cada estación (sistema <em>OV-Pay</em>).</p>
+            <p><strong>Aeropuerto de Eindhoven (EIN):</strong> Si vuelas con aerolíneas low-cost, puedes tomar el autobús express hasta la estación de tren de Eindhoven y conectar directo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3: DRESS CODE -->
+      <div class="accordion-item paper-texture border border-champagne-500/30 rounded-xl overflow-hidden shadow-xs transition-all bg-white">
+        <button onclick="toggleAccordion(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-champagne-50 transition-colors cursor-pointer">
+          <span class="font-serif text-base sm:text-lg text-espresso flex items-center gap-2 font-medium">
+            <span class="text-champagne-600">👗</span>
+            <span data-i18n="faq.q3">¿Cuál es el Código de Vestimenta (Dress Code)?</span>
+          </span>
+          <svg class="accordion-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content border-t border-champagne-500/20 px-5 bg-champagne-50/50">
+          <div class="py-4 text-sm text-champagne-900 space-y-3 leading-relaxed">
+            <p data-i18n="faq.a3"><strong>Gala & Black Tie Optional:</strong> Queremos que todos luzcan deslumbrantes. Hombres: traje formal o esmoquin. Mujeres: vestido largo o de cóctel elegante.</p>
+            <div class="flex items-center gap-2 pt-1">
+              <span class="text-xs uppercase font-sans tracking-wider text-champagne-800 font-semibold" data-i18n="faq.palette">Paleta sugerida:</span>
+              <div class="flex gap-1.5">
+                <span class="w-5 h-5 rounded-full bg-[#FAF5EB] border border-champagne-500 shadow-xs" title="Champagne"></span>
+                <span class="w-5 h-5 rounded-full bg-[#DFBE7D] shadow-xs" title="Gold"></span>
+                <span class="w-5 h-5 rounded-full bg-[#8C6726] shadow-xs" title="Bronze"></span>
+                <span class="w-5 h-5 rounded-full bg-[#2A1B0E] shadow-xs" title="Espresso"></span>
+                <span class="w-5 h-5 rounded-full bg-[#354333] shadow-xs" title="Forest Green"></span>
+              </div>
+            </div>
+            <p class="text-xs italic text-champagne-700" data-i18n="faq.a3_note">* Recordatorio cariñoso: Por favor reservar los tonos blancos o marfil exclusivamente para la novia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4: NIÑOS -->
+      <div class="accordion-item paper-texture border border-champagne-500/30 rounded-xl overflow-hidden shadow-xs transition-all bg-white">
+        <button onclick="toggleAccordion(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-champagne-50 transition-colors cursor-pointer">
+          <span class="font-serif text-base sm:text-lg text-espresso flex items-center gap-2 font-medium">
+            <span class="text-champagne-600">👶</span>
+            <span data-i18n="faq.q4">¿Puedo asistir con acompañante o niños?</span>
+          </span>
+          <svg class="accordion-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content border-t border-champagne-500/20 px-5 bg-champagne-50/50">
+          <div class="py-4 text-sm text-champagne-900 space-y-2 leading-relaxed" data-i18n="faq.a4">
+            <p>Amamos a los pequeños de la familia, pero la fiesta del 1 de Mayo ha sido pensada como una celebración para adultos, para que todos puedan bailar y disfrutar al máximo.</p>
+            <p>Los pases asignados están indicados individualmente en tu mensaje de invitación personalizado.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5: REGALOS -->
+      <div class="accordion-item paper-texture border border-champagne-500/30 rounded-xl overflow-hidden shadow-xs transition-all bg-white">
+        <button onclick="toggleAccordion(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-champagne-50 transition-colors cursor-pointer">
+          <span class="font-serif text-base sm:text-lg text-espresso flex items-center gap-2 font-medium">
+            <span class="text-champagne-600">🎁</span>
+            <span data-i18n="faq.q5">Mesa de Regalos & Luna de Miel</span>
+          </span>
+          <svg class="accordion-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content border-t border-champagne-500/20 px-5 bg-champagne-50/50">
+          <div class="py-4 text-sm text-champagne-900 space-y-2 leading-relaxed" data-i18n="faq.a5">
+            <p>El mayor regalo es tenerte con nosotros cruzando fronteras para celebrar este día. Si deseas tener un detalle con nosotros, dispondremos de un cofre de deseos (Wishing Well) en la recepción o puedes consultarnos nuestros datos bancarios para nuestro fondo de luna de miel.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ==================== RSVP FORM ==================== -->
+  <section id="rsvp" class="py-16 px-4 bg-radial from-champagne-100 via-parchment to-sand border-t border-champagne-500/20">
+    <div class="max-w-xl mx-auto paper-texture gilded-border rounded-2xl p-6 sm:p-10 shadow-luxury bg-[#FDFBF7]">
+      
+      <div class="text-center mb-8">
+        <div class="w-12 h-12 mx-auto rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center mb-3">
+          <span class="font-cormorant font-bold text-lg text-champagne-800">G&G</span>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl text-espresso mb-1" data-i18n="rsvp.title">
+          Confirmación de Asistencia
+        </h2>
+        <p class="font-sans text-xs uppercase tracking-widest text-champagne-700 font-semibold" data-i18n="rsvp.deadline">
+          ✦ Por favor confirma antes del 01 de Febrero 2027 ✦
+        </p>
+      </div>
+
+      <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)" class="space-y-5 text-sm">
+        
+        <div>
+          <label class="block font-sans text-xs uppercase tracking-wider font-semibold text-champagne-800 mb-2" data-i18n="rsvp.attending_label">
+            ¿Nos acompañarás en nuestro gran día?
+          </label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="relative flex items-center justify-center p-3 rounded-xl border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs">
+              <input type="radio" name="attendance" value="si" checked class="sr-only" />
+              <span class="font-sans text-xs font-semibold uppercase tracking-wider text-center" data-i18n="rsvp.yes">¡Sí, allí estaré! 🎉</span>
+            </label>
+            <label class="relative flex items-center justify-center p-3 rounded-xl border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs">
+              <input type="radio" name="attendance" value="no" class="sr-only" />
+              <span class="font-sans text-xs font-semibold uppercase tracking-wider text-center" data-i18n="rsvp.no">Lo celebraré de lejos ❤️</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="guestName" class="block font-sans text-xs uppercase tracking-wider font-semibold text-champagne-800 mb-1" data-i18n="rsvp.name_label">
+            Nombre y Apellidos
+          </label>
+          <input type="text" id="guestName" required placeholder="Ej: María Rodríguez" class="w-full px-4 py-2.5 rounded-xl border border-champagne-500/40 bg-white/90 text-espresso placeholder-champagne-700/40 focus:outline-hidden focus:border-champagne-600 focus:ring-1 focus:ring-champagne-500" />
+        </div>
+
+        <div>
+          <label class="block font-sans text-xs uppercase tracking-wider font-semibold text-champagne-800 mb-1" data-i18n="rsvp.events_label">
+            ¿A qué eventos asistirás?
+          </label>
+          <div class="space-y-2 pt-1">
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="checkCivil" checked class="w-4 h-4 rounded border-champagne-500 text-champagne-700 focus:ring-champagne-500" />
+              <span class="text-sm text-espresso" data-i18n="rsvp.event_civil">Boda Civil (21 Abril 2027)</span>
+            </label>
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="checkParty" checked class="w-4 h-4 rounded border-champagne-500 text-champagne-700 focus:ring-champagne-500" />
+              <span class="text-sm text-espresso" data-i18n="rsvp.event_party">Gran Celebración & Fiesta (01 Mayo 2027)</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="dietary" class="block font-sans text-xs uppercase tracking-wider font-semibold text-champagne-800 mb-1" data-i18n="rsvp.dietary_label">
+            Restricciones o Alergias Alimentarias (Opcional)
+          </label>
+          <input type="text" id="dietary" placeholder="Vegetariano, celíaco, mariscos, etc." class="w-full px-4 py-2.5 rounded-xl border border-champagne-500/40 bg-white/90 text-espresso placeholder-champagne-700/40 focus:outline-hidden focus:border-champagne-600 focus:ring-1 focus:ring-champagne-500" />
+        </div>
+
+        <div>
+          <label for="songRequest" class="block font-sans text-xs uppercase tracking-wider font-semibold text-champagne-800 mb-1" data-i18n="rsvp.song_label">
+            Canción que no puede faltar en la fiesta (DJ)
+          </label>
+          <input type="text" id="songRequest" placeholder="Artista - Canción" class="w-full px-4 py-2.5 rounded-xl border border-champagne-500/40 bg-white/90 text-espresso placeholder-champagne-700/40 focus:outline-hidden focus:border-champagne-600 focus:ring-1 focus:ring-champagne-500" />
+        </div>
+
+        <div class="pt-2 space-y-2">
+          <button type="submit" class="w-full py-3.5 px-6 rounded-full bg-espresso text-champagne-100 border border-champagne-500 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-champagne-800 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+            <span data-i18n="rsvp.submit_btn">Confirmar vía WhatsApp a Geraldine</span>
+          </button>
+          <p class="text-[11px] text-center text-champagne-700 italic" data-i18n="rsvp.note">
+            * Se abrirá WhatsApp con los datos listos para enviar en un solo toque.
+          </p>
+        </div>
+
+      </form>
+
+      <div id="rsvpSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-center text-xs font-sans">
+        ¡Gracias! Redirigiendo a WhatsApp para enviar tu confirmación...
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 px-4 text-center border-t border-champagne-500/20 bg-champagne-50">
+    <div class="w-10 h-10 mx-auto rounded-full border border-champagne-500/40 bg-champagne-200/50 flex items-center justify-center mb-4">
+      <span class="font-cormorant font-bold text-sm text-champagne-800">G&G</span>
+    </div>
+    <h3 class="font-serif text-lg text-espresso mb-1">Geraldine & Gerwin</h3>
+    <p class="font-sans text-xs uppercase tracking-widest text-champagne-700 font-medium">Países Bajos • 2027</p>
+    <p class="font-cormorant italic text-sm text-champagne-600 mt-3">"Esperamos con enorme ilusión celebrar juntos este nuevo capítulo"</p>
+  </footer>
+
+  <!-- ==================== SCRIPT ==================== -->
+  <script>
+    // ==================== TRILINGUAL DICTIONARY (ES / EN / NL) ====================
+    const i18n = {
+      es: {
+        "nav.dates": "Fechas",
+        "nav.scratch": "✦ Rasca & Revela",
+        "nav.venues": "Lugares",
+        "nav.travel": "Guía & FAQ",
+        "nav.rsvp": "RSVP",
+        "hero.tap_open": "Toca para abrir invitación",
+        "hero.save_the_date": "Save The Date & Invitación",
+        "hero.together": "Junto a nuestras familias, tenemos el honor de invitarte a celebrar",
+        "hero.civil_badge": "Boda Civil",
+        "hero.party_badge": "Gran Celebración",
+        "hero.location": "Países Bajos (Holanda)",
+        "hero.discover": "✦ Rascar & Descubrir",
+        "hero.rsvp_btn": "Confirmar Asistencia",
+        "hero.scroll": "Desliza para ver más",
+        "countdown.subtitle": "Contando los segundos para nuestro gran día",
+        "countdown.title": "La Cuenta Regresiva • 01 Mayo 2027",
+        "countdown.days": "Días",
+        "countdown.hours": "Horas",
+        "countdown.mins": "Minutos",
+        "countdown.secs": "Segundos",
+        "calendar.google": "Añadir a Google Calendar",
+        "calendar.apple": "Apple / Outlook (.ics)",
+        "scratch.badge": "Experiencia Interactiva Touch",
+        "scratch.title": "Rasca para Revelar Nuestro Amor",
+        "scratch.subtitle": "Desliza tu dedo o cursor sobre la capa dorada para descubrir la foto oficial de Geraldine & Gerwin.",
+        "scratch.progress": "Revelado:",
+        "scratch.revealed_title": "¡Destello de Amor! Foto y Fecha Reveladas",
+        "scratch.revealed_msg": "¡Tu presencia es el mayor regalo para nosotros! Por favor confirma si nos acompañas en este gran día.",
+        "scratch.confirm_btn": "✦ Confirmar Mi Presencia ✦",
+        "events.subtitle": "Dos Momentos Inolvidables",
+        "events.title": "Programa & Ubicaciones",
+        "event1.tag": "Ceremonia Civil",
+        "event1.title": "Enlace Civil & Firma",
+        "event1.date": "Miércoles, 21 de Abril de 2027",
+        "event1.time": "Hora: 14:00 hrs (Recepción íntima)",
+        "event1.place_name": "[Ayuntamiento / Stadhuis Histórico]",
+        "event1.place_desc": "Países Bajos (Ubicación exacta disponible este viernes)",
+        "event1.copy": "Copiar Dirección",
+        "event2.tag": "Gran Celebración",
+        "event2.title": "Banquete & Fiesta de Gala",
+        "event2.date": "Sábado, 01 de Mayo de 2027",
+        "event2.time": "Hora: 16:30 hrs — Hasta el amanecer",
+        "event2.place_name": "[Kasteel & Hotel Venue Holandés]",
+        "event2.place_desc": "Países Bajos (Firma final de contrato este viernes)",
+        "event2.map": "Abrir en Maps",
+        "faq.badge": "Guía Oficial para Invitados",
+        "faq.title": "Preguntas Frecuentes & Consejos de Viaje",
+        "faq.subtitle": "Hemos preparado todas las respuestas para que tu viaje a los Países Bajos sea fluido, cómodo y sin complicaciones.",
+        "faq.q1": "¿Dónde me hospedo? ¿Hoteles recomendados y Airbnb?",
+        "faq.a1": "<p><strong>Hotel Principal de la Celebración:</strong> Hemos reservado un bloque de habitaciones con tarifa especial para invitados en el hotel de la fiesta. Facilitaremos el código promocional tan pronto firmemos la confirmación este viernes.</p><p><strong>Alternativas cercanas:</strong> Hay excelentes hoteles boutique y opciones de Airbnb a menos de 10-15 minutos en coche/taxi. Recomendamos reservar con anticipación debido a la temporada de tulipanes en primavera.</p>",
+        "faq.q2": "¿Cómo llego desde el aeropuerto? ¿Qué tren o autobús tomo?",
+        "faq.a2": "<p><strong>Aeropuerto Amsterdam Schiphol (AMS):</strong> Es la mejor opción para volar. Directamente debajo de la terminal salen los trenes de la compañía nacional <em>NS</em> cada 10-15 minutos.</p><p><strong>Cómo pagar el transporte público:</strong> Ya no necesitas comprar tickets de papel. Puedes pagar directamente tocando tu tarjeta bancaria (Contactless / Apple Pay) al entrar y salir de cada estación (sistema <em>OV-Pay</em>).</p><p><strong>Aeropuerto de Eindhoven (EIN):</strong> Si vuelas con aerolíneas low-cost, puedes tomar el autobús express hasta la estación de tren de Eindhoven y conectar directo.</p>",
+        "faq.q3": "¿Cuál es el Código de Vestimenta (Dress Code)?",
+        "faq.a3": "<strong>Gala & Black Tie Optional:</strong> Queremos que todos luzcan deslumbrantes. Hombres: traje formal o esmoquin. Mujeres: vestido largo o de cóctel elegante.",
+        "faq.palette": "Paleta sugerida:",
+        "faq.a3_note": "* Recordatorio cariñoso: Por favor reservar los tonos blancos o marfil exclusivamente para la novia.",
+        "faq.q4": "¿Puedo asistir con acompañante o niños?",
+        "faq.a4": "<p>Amamos a los pequeños de la familia, pero la fiesta del 1 de Mayo ha sido pensada como una celebración para adultos, para que todos puedan bailar y disfrutar al máximo.</p><p>Los pases asignados están indicados individualmente en tu mensaje de invitación personalizado.</p>",
+        "faq.q5": "Mesa de Regalos & Luna de Miel",
+        "faq.a5": "<p>El mayor regalo es tenerte con nosotros cruzando fronteras para celebrar este día. Si deseas tener un detalle con nosotros, dispondremos de un cofre de deseos (Wishing Well) en la recepción o puedes consultarnos nuestros datos bancarios para nuestro fondo de luna de miel.</p>",
+        "rsvp.title": "Confirmación de Asistencia",
+        "rsvp.deadline": "✦ Por favor confirma antes del 01 de Febrero 2027 ✦",
+        "rsvp.attending_label": "¿Nos acompañarás en nuestro gran día?",
+        "rsvp.yes": "¡Sí, allí estaré! 🎉",
+        "rsvp.no": "Lo celebraré de lejos ❤️",
+        "rsvp.name_label": "Nombre y Apellidos",
+        "rsvp.events_label": "¿A qué eventos asistirás?",
+        "rsvp.event_civil": "Boda Civil (21 Abril 2027)",
+        "rsvp.event_party": "Gran Celebración & Fiesta (01 Mayo 2027)",
+        "rsvp.dietary_label": "Restricciones o Alergias Alimentarias (Opcional)",
+        "rsvp.song_label": "Canción que no puede faltar en la fiesta (DJ)",
+        "rsvp.submit_btn": "Confirmar vía WhatsApp a Geraldine",
+        "rsvp.note": "* Se abrirá WhatsApp con los datos listos para enviar en un solo toque."
+      },
+      en: {
+        "nav.dates": "Dates",
+        "nav.scratch": "✦ Scratch & Reveal",
+        "nav.venues": "Venues",
+        "nav.travel": "Guide & FAQ",
+        "nav.rsvp": "RSVP",
+        "hero.tap_open": "Tap to open invitation",
+        "hero.save_the_date": "Save The Date & Invitation",
+        "hero.together": "Together with our families, we request the pleasure of your company",
+        "hero.civil_badge": "Civil Ceremony",
+        "hero.party_badge": "Grand Celebration",
+        "hero.location": "The Netherlands (Holland)",
+        "hero.discover": "✦ Scratch & Reveal",
+        "hero.rsvp_btn": "Confirm Attendance",
+        "hero.scroll": "Scroll to discover more",
+        "countdown.subtitle": "Counting down the seconds to our big day",
+        "countdown.title": "The Countdown • 01 May 2027",
+        "countdown.days": "Days",
+        "countdown.hours": "Hours",
+        "countdown.mins": "Minutes",
+        "countdown.secs": "Seconds",
+        "calendar.google": "Add to Google Calendar",
+        "calendar.apple": "Apple / Outlook (.ics)",
+        "scratch.badge": "Interactive Touch Experience",
+        "scratch.title": "Scratch to Reveal Our Love Story",
+        "scratch.subtitle": "Rub your finger or cursor over the gold foil to uncover the official portrait of Geraldine & Gerwin.",
+        "scratch.progress": "Revealed:",
+        "scratch.revealed_title": "Love Sparkle! Photo & Date Unveiled",
+        "scratch.revealed_msg": "Your presence is our greatest gift! Kindly confirm if you will join us on our celebration.",
+        "scratch.confirm_btn": "✦ Confirm My Attendance ✦",
+        "events.subtitle": "Two Unforgettable Moments",
+        "events.title": "Schedule & Locations",
+        "event1.tag": "Civil Ceremony",
+        "event1.title": "Civil Union & Official Signing",
+        "event1.date": "Wednesday, April 21, 2027",
+        "event1.time": "Time: 2:00 PM (Intimate reception)",
+        "event1.place_name": "[Historical City Hall / Stadhuis]",
+        "event1.place_desc": "Netherlands (Exact venue announced this Friday)",
+        "event1.copy": "Copy Address",
+        "event2.tag": "Grand Celebration",
+        "event2.title": "Banquet & Gala Celebration",
+        "event2.date": "Saturday, May 01, 2027",
+        "event2.time": "Time: 4:30 PM — Until dawn",
+        "event2.place_name": "[Dutch Kasteel & Hotel Estate]",
+        "event2.place_desc": "Netherlands (Final contract signing this Friday)",
+        "event2.map": "Open in Maps",
+        "faq.badge": "Official Guest Travel Guide",
+        "faq.title": "Frequently Asked Questions & Travel Tips",
+        "faq.subtitle": "We've compiled all key information to make your journey to the Netherlands seamless and memorable.",
+        "faq.q1": "Where should I stay? Recommended Hotels & Airbnb?",
+        "faq.a1": "<p><strong>Official Hotel Venue:</strong> We have secured a block of rooms at a special rate for our guests at the celebration hotel. We will share the promotional booking code right after finalizing our reservation this Friday.</p><p><strong>Nearby Alternatives:</strong> Charming boutique hotels and Airbnb apartments are available within 10-15 minutes by taxi. Spring is peak tulip season, so we strongly advise early booking.</p>",
+        "faq.q2": "How do I get there from the airport? Which train or bus?",
+        "faq.a2": "<p><strong>Amsterdam Airport Schiphol (AMS):</strong> The recommended airport. Direct <em>NS</em> national trains depart directly beneath the main terminal every 10-15 minutes.</p><p><strong>Public Transport Payments:</strong> Paper tickets are no longer required. You can simply tap your contactless bank card or Apple/Google Pay (via <em>OV-Pay</em>) at the turnstiles when boarding and exiting.</p><p><strong>Eindhoven Airport (EIN):</strong> For low-cost flight arrivals, an express bus takes you to Eindhoven Centraal station for direct rail connection.</p>",
+        "faq.q3": "What is the Dress Code?",
+        "faq.a3": "<strong>Black Tie Optional / Formal Gala:</strong> We encourage glamorous evening wear. Gentlemen: Tuxedo or dark formal suit. Ladies: Floor-length gowns or elegant cocktail dresses.",
+        "faq.palette": "Suggested Palette:",
+        "faq.a3_note": "* Gentle reminder: Kindly reserve all shades of white and ivory solely for the bride.",
+        "faq.q4": "Are plus-ones and children invited?",
+        "faq.a4": "<p>While we adore children, our May 1st celebration is designed as an adults-only evening so that everyone can unwind and celebrate fully.</p><p>Assigned seats and plus-ones are specified on your individual invitation message.</p>",
+        "faq.q5": "Gift Registry & Wishing Well",
+        "faq.a5": "<p>Your presence traveling from afar to share this day is the greatest gift. Should you wish to honor us with a gift, a Wishing Well will be available at the reception, or you may contribute to our honeymoon adventure fund.</p>",
+        "rsvp.title": "RSVP Confirmation",
+        "rsvp.deadline": "✦ Kindly confirm before February 01, 2027 ✦",
+        "rsvp.attending_label": "Will you be joining us on our special day?",
+        "rsvp.yes": "Yes, with pleasure! 🎉",
+        "rsvp.no": "Celebrating from afar ❤️",
+        "rsvp.name_label": "Full Name",
+        "rsvp.events_label": "Which events will you attend?",
+        "rsvp.event_civil": "Civil Ceremony (21 April 2027)",
+        "rsvp.event_party": "Grand Gala Celebration (01 May 2027)",
+        "rsvp.dietary_label": "Dietary Restrictions / Allergies (Optional)",
+        "rsvp.song_label": "Song recommendation for the DJ dancefloor",
+        "rsvp.submit_btn": "Confirm via WhatsApp to Geraldine",
+        "rsvp.note": "* WhatsApp will open with your pre-filled response ready to send in one tap."
+      },
+      nl: {
+        "nav.dates": "Data",
+        "nav.scratch": "✦ Kras & Onthul",
+        "nav.venues": "Locaties",
+        "nav.travel": "Gids & FAQ",
+        "nav.rsvp": "RSVP",
+        "hero.tap_open": "Tik om uitnodiging te openen",
+        "hero.save_the_date": "Save The Date & Uitnodiging",
+        "hero.together": "Samen met onze families hebben wij de eer u uit te nodigen om te vieren",
+        "hero.civil_badge": "Burgerlijk Huwelijk",
+        "hero.party_badge": "Huwelijksfeest",
+        "hero.location": "Nederland",
+        "hero.discover": "✦ Kras & Onthul",
+        "hero.rsvp_btn": "Aanwezigheid Bevestigen",
+        "hero.scroll": "Scroll naar beneden voor meer",
+        "countdown.subtitle": "Wij tellen de seconden af tot onze grote dag",
+        "countdown.title": "Aftellen • 01 Mei 2027",
+        "countdown.days": "Dagen",
+        "countdown.hours": "Uur",
+        "countdown.mins": "Minuten",
+        "countdown.secs": "Seconden",
+        "calendar.google": "Toevoegen aan Google Agenda",
+        "calendar.apple": "Apple / Outlook (.ics)",
+        "scratch.badge": "Interactieve Touch Ervaring",
+        "scratch.title": "Kras om Ons Verhaal te Onthullen",
+        "scratch.subtitle": "Veeg met je vinger of muis over de goudlaag om de officiële foto van Geraldine & Gerwin te ontdekken.",
+        "scratch.progress": "Onthuld:",
+        "scratch.revealed_title": "Fonkeling van Liefde! Foto & Datum Onthuld",
+        "scratch.revealed_msg": "Uw aanwezigheid is ons allermooiste geschenk! Laat ons alstublieft weten of u aanwezig zult zijn.",
+        "scratch.confirm_btn": "✦ Mijn Aanwezigheid Bevestigen ✦",
+        "events.subtitle": "Twee Onvergetelijke Momenten",
+        "events.title": "Programma & Locaties",
+        "event1.tag": "Burgerlijke Ceremonie",
+        "event1.title": "Burgerlijk Huwelijk & Ondertekening",
+        "event1.date": "Woensdag 21 April 2027",
+        "event1.time": "Tijd: 14:00 uur (Intieme receptie)",
+        "event1.place_name": "[Historisch Stadhuis]",
+        "event1.place_desc": "Nederland (Exacte locatie bekend na vrijdag)",
+        "event1.copy": "Adres Kopiëren",
+        "event2.tag": "Groot Huwelijksfeest",
+        "event2.title": "Banket & Feestelijke Gala",
+        "event2.date": "Zaterdag 01 Mei 2027",
+        "event2.time": "Tijd: 16:30 uur — Tot in de late uurtjes",
+        "event2.place_name": "[Nederlands Kasteel & Hotel Landgoed]",
+        "event2.place_desc": "Nederland (Definitieve ondertekening deze vrijdag)",
+        "event2.map": "Open in Kaarten",
+        "faq.badge": "Officiële Gasteninformatie",
+        "faq.title": "Veelgestelde Vragen & Reistips",
+        "faq.subtitle": "Alle essentiële informatie voor een zorgeloze en onvergetelijke reis naar Nederland.",
+        "faq.q1": "Waar kan ik verblijven? Aanbevolen hotels & Airbnb?",
+        "faq.a1": "<p><strong>Feestlocatie Hotel:</strong> We hebben een aantal kamers gereserveerd met speciaal tarief voor gasten. De actiecode ontvangt u zodra de overeenkomst vrijdag is afgerond.</p><p><strong>Alternatieven in de buurt:</strong> Er zijn prachtige boetiekhotels en Airbnb-accommodaties op 10-15 minuten afstand. Vanwege het tulpenseizoen adviseren wij tijdig te boeken.</p>",
+        "faq.q2": "Hoe kom ik er vanaf het vliegveld? Welke trein of bus?",
+        "faq.a2": "<p><strong>Luchthaven Amsterdam Schiphol (AMS):</strong> De beste keuze. Direct onder de centrale hal vertrekken <em>NS</em>-treinen elke 10-15 minuten.</p><p><strong>Reizen met het openbaar vervoer:</strong> U hoeft geen losse kaartjes te kopen; u kunt direct in- en uitchecken met uw contactloze bankpas of smartphone (via <em>OV-Pay</em>).</p><p><strong>Eindhoven Airport (EIN):</strong> Vliegt u low-cost, neem dan de snelbus naar Eindhoven Centraal station voor directe aansluiting.</p>",
+        "faq.q3": "Wat is het kledingvoorschrift (Dress Code)?",
+        "faq.a3": "<strong>Black Tie Optional / Feestelijk Gala:</strong> Heren: smoking of donker pak. Dames: lange avondjurk of elegante cocktailjurk.",
+        "faq.palette": "Voorgesteld kleurenpalet:",
+        "faq.a3_note": "* Vriendelijk verzoek: Gelieve witte en ivoortinten exclusief voor de bruid te bewaren.",
+        "faq.q4": "Mag ik een introducee of kinderen meenemen?",
+        "faq.a4": "<p>Wij houden van kinderen, maar ons feest op 1 mei is bedoeld als een avond voor volwassenen zodat iedereen volop kan genieten en dansen.</p><p>Uitnodigingen en introducés zijn vermeld in uw persoonlijke uitnodigingsbericht.</p>",
+        "faq.q5": "Cadeautips & Huwelijksreis",
+        "faq.a5": "<p>Uw aanwezigheid is voor ons het allermooiste geschenk. Mocht u ons willen verrassen met een attentie, dan is er een 'wishing well' envelopbox aanwezig op de feestlocatie of kunt u bijdragen aan onze huwelijksreis.</p>",
+        "rsvp.title": "Aanwezigheid Bevestigen",
+        "rsvp.deadline": "✦ Gelieve te bevestigen vóór 01 Februari 2027 ✦",
+        "rsvp.attending_label": "Bent u aanwezig op onze bijzondere dag?",
+        "rsvp.yes": "Ja, ik kom graag! 🎉",
+        "rsvp.no": "Helaas verhinderd ❤️",
+        "rsvp.name_label": "Voor- en Achternaam",
+        "rsvp.events_label": "Bij welke onderdelen bent u aanwezig?",
+        "rsvp.event_civil": "Burgerlijk Huwelijk (21 April 2027)",
+        "rsvp.event_party": "Groot Huwelijksfeest (01 Mei 2027)",
+        "rsvp.dietary_label": "Dieetwensen of Allergieën (Optioneel)",
+        "rsvp.song_label": "Muziekverzoek voor de DJ op de dansvloer",
+        "rsvp.submit_btn": "Bevestigen via WhatsApp naar Geraldine",
+        "rsvp.note": "* WhatsApp opent direct met uw ingevulde gegevens, klaar om te verzenden."
+      }
+    };
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      if (!i18n[lang]) return;
+      currentLang = lang;
+
+      ['es', 'en', 'nl'].forEach(l => {
+        const btn = document.getElementById(`btn-lang-${l}`);
+        if (btn) {
+          if (l === lang) {
+            btn.className = "px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white shadow-xs font-semibold";
+          } else {
+            btn.className = "px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso";
+          }
+        }
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+
+      // Redraw canvas text if not already scratched
+      if (!isScratchedComplete) {
+        initScratchCanvas();
+      }
+    }
+
+    // ==================== ENVELOPE INTERACTIVE UNSEALING ====================
+    let isEnvelopeOpen = false;
+    function openEnvelope() {
+      if (isEnvelopeOpen) return;
+      isEnvelopeOpen = true;
+
+      const card = document.getElementById('envelopeCard');
+      const tapBadge = document.getElementById('tapBadge');
+
+      if (card) {
+        card.classList.add('envelope-opened');
+      }
+      if (tapBadge) {
+        tapBadge.style.opacity = '0';
+        tapBadge.style.pointerEvents = 'none';
+      }
+
+      playEnvelopeChime();
+
+      setTimeout(() => {
+        document.getElementById('scratch-section').scrollIntoView({ behavior: 'smooth' });
+      }, 1500);
+    }
+
+    function playEnvelopeChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const now = ctx.currentTime;
+        const freqs = [523.25, 659.25, 783.99, 1046.50];
+        freqs.forEach((f, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, now + idx * 0.1);
+          gain.gain.setValueAtTime(0.08, now + idx * 0.1);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.1 + 1.2);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + idx * 0.1);
+          osc.stop(now + idx * 0.1 + 1.3);
+        });
+      } catch (e) {}
+    }
+
+    // ==================== REAL-TIME COUNTDOWN TO MAY 1, 2027 ====================
+    const weddingDate = new Date('2027-05-01T16:30:00+02:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.getElementById('days').innerText = "0";
+        document.getElementById('hours').innerText = "0";
+        document.getElementById('mins').innerText = "0";
+        document.getElementById('secs').innerText = "0";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = days;
+      document.getElementById('hours').innerText = hours;
+      document.getElementById('mins').innerText = mins;
+      document.getElementById('secs').innerText = secs;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function downloadICS() {
+      const icsData = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Geraldine and Gerwin//Wedding Invitation//ES",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "BEGIN:VEVENT",
+        "UID:wedding-geraldine-gerwin-20270501@wedding",
+        "DTSTAMP:20260928T220000Z",
+        "DTSTART:20270501T143000Z",
+        "DTEND:20270502T020000Z",
+        "SUMMARY:Boda Geraldine & Gerwin (Fiesta de Gala)",
+        "DESCRIPTION:Gran Celebración de Boda de Geraldine & Gerwin en Países Bajos.\\nVestimenta: Black Tie / Gala.\\n¡Esperamos verte allí!",
+        "LOCATION:Países Bajos (Holanda)",
+        "STATUS:CONFIRMED",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute("download", "Boda_Geraldine_y_Gerwin_2027.ics");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ==================== INTERACTIVE SCRATCH CARD (TOUCH & MOUSE) ====================
+    const scratchCanvas = document.getElementById('scratchCanvas');
+    const scratchCtx = scratchCanvas ? scratchCanvas.getContext('2d', { willReadFrequently: true }) : null;
+    let isDrawing = false;
+    let isScratchedComplete = false;
+    let lastPoint = null;
+
+    function initScratchCanvas() {
+      if (!scratchCanvas || isScratchedComplete) return;
+
+      const rect = scratchCanvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      scratchCanvas.width = rect.width * dpr;
+      scratchCanvas.height = rect.height * dpr;
+
+      scratchCtx.scale(dpr, dpr);
+      const w = rect.width;
+      const h = rect.height;
+
+      // Base metallic gold foil gradient
+      const grad = scratchCtx.createLinearGradient(0, 0, w, h);
+      grad.addColorStop(0, '#A98338');
+      grad.addColorStop(0.25, '#D4AF37');
+      grad.addColorStop(0.5, '#F7E7A9');
+      grad.addColorStop(0.75, '#C5A059');
+      grad.addColorStop(1, '#8C6726');
+
+      scratchCtx.fillStyle = grad;
+      scratchCtx.fillRect(0, 0, w, h);
+
+      // Gold glitter speckles pattern
+      scratchCtx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      for (let i = 0; i < 140; i++) {
+        const x = Math.random() * w;
+        const y = Math.random() * h;
+        const r = Math.random() * 1.5;
+        scratchCtx.beginPath();
+        scratchCtx.arc(x, y, r, 0, Math.PI * 2);
+        scratchCtx.fill();
+      }
+
+      // Elegant inner hairline border
+      scratchCtx.strokeStyle = 'rgba(255, 235, 170, 0.5)';
+      scratchCtx.lineWidth = 1;
+      scratchCtx.strokeRect(12, 12, w - 24, h - 24);
+
+      // Monogram Crest on the Foil
+      scratchCtx.save();
+      scratchCtx.beginPath();
+      scratchCtx.arc(w / 2, h / 2 - 35, 42, 0, Math.PI * 2);
+      scratchCtx.fillStyle = 'rgba(88, 53, 28, 0.12)';
+      scratchCtx.fill();
+      scratchCtx.strokeStyle = '#2A1B0E';
+      scratchCtx.lineWidth = 1.5;
+      scratchCtx.stroke();
+      scratchCtx.restore();
+
+      // Text: Monogram
+      scratchCtx.font = 'bold 30px "Cormorant Garamond", Georgia, serif';
+      scratchCtx.fillStyle = '#2A1B0E';
+      scratchCtx.textAlign = 'center';
+      scratchCtx.textBaseline = 'middle';
+      scratchCtx.fillText('G & G', w / 2, h / 2 - 35);
+
+      // Instruction Text
+      const instructions = {
+        es: "✦ RASCA CON EL DEDO O CURSOR ✦",
+        en: "✦ SCRATCH WITH FINGER OR CURSOR ✦",
+        nl: "✦ KRAS MET VINGER OF MUIS ✦"
+      };
+      scratchCtx.font = '600 12px "Outfit", sans-serif';
+      scratchCtx.fillStyle = '#2A1B0E';
+      scratchCtx.letterSpacing = '2px';
+      scratchCtx.fillText(instructions[currentLang] || instructions.es, w / 2, h / 2 + 35);
+
+      const subtitle = {
+        es: "Para revelar nuestro secreto",
+        en: "To reveal our secret photo",
+        nl: "Om onze foto te onthullen"
+      };
+      scratchCtx.font = 'italic 15px "EB Garamond", serif';
+      scratchCtx.fillStyle = '#4A3525';
+      scratchCtx.fillText(subtitle[currentLang] || subtitle.es, w / 2, h / 2 + 58);
+    }
+
+    function getCanvasCoordinates(e) {
+      const rect = scratchCanvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function scratch(point) {
+      if (!scratchCtx || isScratchedComplete) return;
+
+      scratchCtx.save();
+      scratchCtx.globalCompositeOperation = 'destination-out';
+      scratchCtx.beginPath();
+
+      const brushRadius = 30;
+
+      if (lastPoint) {
+        scratchCtx.lineWidth = brushRadius * 2;
+        scratchCtx.lineCap = 'round';
+        scratchCtx.lineJoin = 'round';
+        scratchCtx.moveTo(lastPoint.x, lastPoint.y);
+        scratchCtx.lineTo(point.x, point.y);
+        scratchCtx.stroke();
+      } else {
+        scratchCtx.arc(point.x, point.y, brushRadius, 0, Math.PI * 2);
+        scratchCtx.fill();
+      }
+      scratchCtx.restore();
+
+      lastPoint = point;
+    }
+
+    // Check transparency ratio
+    let throttleCheck = null;
+    function checkScratchProgress() {
+      if (isScratchedComplete || !scratchCtx) return;
+
+      if (throttleCheck) return;
+      throttleCheck = setTimeout(() => {
+        throttleCheck = null;
+        const w = scratchCanvas.width;
+        const h = scratchCanvas.height;
+        if (w === 0 || h === 0) return;
+
+        // Sample downscaled grid of 2500 pixels for fast 60fps performance
+        const imgData = scratchCtx.getImageData(0, 0, w, h);
+        const data = imgData.data;
+        let transparentPixels = 0;
+        const step = 4 * 16; // sample every 16th pixel
+        const totalSampled = data.length / step;
+
+        for (let i = 3; i < data.length; i += step) {
+          if (data[i] === 0) {
+            transparentPixels++;
+          }
+        }
+
+        const percent = Math.min(100, Math.round((transparentPixels / totalSampled) * 100));
+        
+        const percentText = document.getElementById('scratchPercentText');
+        const progressBar = document.getElementById('scratchProgressBar');
+        if (percentText) percentText.innerText = `${percent}%`;
+        if (progressBar) progressBar.style.width = `${percent}%`;
+
+        // If >= 42% scratched, trigger the DESTELLO / SPARKLE CELEBRATION!
+        if (percent >= 42 && !isScratchedComplete) {
+          triggerDestelloCelebration();
+        }
+      }, 80);
+    }
+
+    // ==================== DESTELLO / SPARKLE CELEBRATION ====================
+    function triggerDestelloCelebration() {
+      isScratchedComplete = true;
+
+      const percentText = document.getElementById('scratchPercentText');
+      const progressBar = document.getElementById('scratchProgressBar');
+      if (percentText) percentText.innerText = "100%";
+      if (progressBar) progressBar.style.width = "100%";
+
+      // 1. Soft fade out remaining canvas
+      scratchCanvas.style.opacity = '0';
+      setTimeout(() => {
+        scratchCanvas.style.display = 'none';
+      }, 700);
+
+      // 2. Destello Flash Effect
+      const destelloOverlay = document.getElementById('destelloOverlay');
+      if (destelloOverlay) {
+        destelloOverlay.classList.remove('hidden');
+        destelloOverlay.classList.add('animate-destello');
+      }
+
+      // 3. Play golden celebration chime
+      playCelebrationHarp();
+
+      // 4. Confetti / Star Sparkles explosion
+      startGoldenConfetti();
+
+      // 5. Reveal attendance confirmation banner with smooth fade-in
+      const callout = document.getElementById('revealedConfirmationCallout');
+      if (callout) {
+        callout.classList.remove('hidden');
+        setTimeout(() => {
+          callout.classList.remove('scale-95', 'opacity-0');
+          callout.classList.add('scale-100', 'opacity-100');
+        }, 100);
+      }
+    }
+
+    // Web Audio Celebration Sound
+    function playCelebrationHarp() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const now = ctx.currentTime;
+        const notes = [440, 554.37, 659.25, 880, 1108.73, 1318.51]; // A4, C#5, E5, A5, C#6, E6
+        notes.forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + i * 0.08);
+          gain.gain.setValueAtTime(0.12, now + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.08 + 1.5);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.08);
+          osc.stop(now + i * 0.08 + 1.6);
+        });
+      } catch (e) {}
+    }
+
+    // Particle Sparkle System
+    function startGoldenConfetti() {
+      const pCanvas = document.getElementById('particleCanvas');
+      if (!pCanvas) return;
+      const ctx = pCanvas.getContext('2d');
+      const rect = pCanvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      pCanvas.width = rect.width * dpr;
+      pCanvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+
+      const particles = [];
+      const colors = ['#D4AF37', '#FFF3C4', '#C5A059', '#FFFFFF', '#FAF5EB'];
+
+      for (let i = 0; i < 75; i++) {
+        particles.push({
+          x: rect.width / 2,
+          y: rect.height / 2,
+          vx: (Math.random() - 0.5) * 10,
+          vy: (Math.random() - 0.5) * 10 - 2,
+          size: Math.random() * 5 + 2,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          alpha: 1,
+          decay: Math.random() * 0.015 + 0.01,
+          shape: Math.random() > 0.4 ? 'circle' : 'star'
+        });
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, rect.width, rect.height);
+        let active = false;
+
+        particles.forEach(p => {
+          if (p.alpha > 0) {
+            active = true;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.15; // gravity
+            p.alpha -= p.decay;
+
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, p.alpha);
+            ctx.fillStyle = p.color;
+
+            if (p.shape === 'star') {
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+              ctx.fill();
+            } else {
+              ctx.fillRect(p.x, p.y, p.size, p.size);
+            }
+            ctx.restore();
+          }
+        });
+
+        if (active) {
+          requestAnimationFrame(render);
+        } else {
+          ctx.clearRect(0, 0, rect.width, rect.height);
+        }
+      }
+      render();
+    }
+
+    // Event Listeners for Unified Touch/Pointer Scratching
+    if (scratchCanvas) {
+      const startDraw = (e) => {
+        isDrawing = true;
+        lastPoint = getCanvasCoordinates(e);
+        scratch(lastPoint);
+      };
+
+      const moveDraw = (e) => {
+        if (!isDrawing) return;
+        const point = getCanvasCoordinates(e);
+        scratch(point);
+        checkScratchProgress();
+      };
+
+      const endDraw = () => {
+        isDrawing = false;
+        lastPoint = null;
+      };
+
+      scratchCanvas.addEventListener('pointerdown', startDraw);
+      window.addEventListener('pointermove', moveDraw);
+      window.addEventListener('pointerup', endDraw);
+      window.addEventListener('pointercancel', endDraw);
+
+      // Touch fallbacks
+      scratchCanvas.addEventListener('touchstart', (e) => { e.preventDefault(); startDraw(e); }, { passive: false });
+      window.addEventListener('touchmove', (e) => { if (isDrawing) { e.preventDefault(); moveDraw(e); } }, { passive: false });
+      window.addEventListener('touchend', endDraw);
+    }
+
+    // Init canvas on window load & resize
+    window.addEventListener('load', () => {
+      initScratchCanvas();
+    });
+    window.addEventListener('resize', () => {
+      if (!isScratchedComplete) initScratchCanvas();
+    });
+
+    // ==================== ACCORDION CONTROLLER ====================
+    function toggleAccordion(button) {
+      const item = button.closest('.accordion-item');
+      const container = document.getElementById('accordionContainer');
+      const allItems = container.querySelectorAll('.accordion-item');
+
+      allItems.forEach(i => {
+        if (i !== item) i.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstItem = document.querySelector('.accordion-item');
+      if (firstItem) firstItem.classList.add('active');
+    });
+
+    // ==================== AMBIENT AUDIO (REAL WEDDING MUSIC EXTRACTED) ====================
+    let isAmbientPlaying = false;
+    const bgAudio = new Audio('assets/wedding_music.mp3');
+    bgAudio.loop = true;
+
+    function toggleAudio() {
+      isAmbientPlaying = !isAmbientPlaying;
+      const on = document.getElementById('soundIconOn');
+      const off = document.getElementById('soundIconOff');
+      if (isAmbientPlaying) {
+        on.classList.remove('hidden');
+        off.classList.add('hidden');
+        bgAudio.play().catch(() => {});
+      } else {
+        on.classList.add('hidden');
+        off.classList.remove('hidden');
+        bgAudio.pause();
+      }
+    }
+
+    // ==================== COPY ADDRESS HELPER ====================
+    function copyAddress(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Dirección copiada: " + text);
+      }).catch(() => {
+        alert("Dirección: " + text);
+      });
+    }
+
+    // ==================== RSVP TO WHATSAPP DISPATCH ====================
+    function handleRSVPSubmit(e) {
+      e.preventDefault();
+      
+      const attendance = document.querySelector('input[name="attendance"]:checked').value;
+      const name = document.getElementById('guestName').value.trim();
+      const civil = document.getElementById('checkCivil').checked ? "Sí" : "No";
+      const party = document.getElementById('checkParty').checked ? "Sí" : "No";
+      const dietary = document.getElementById('dietary').value.trim() || "Ninguna";
+      const song = document.getElementById('songRequest').value.trim() || "A elección del DJ";
+
+      const attendsText = (attendance === "si") ? "¡SÍ, ASISTIRÉ! 🎉" : "Lamentablemente no podré asistir ❤️";
+
+      let message = `💍 *CONFIRMACIÓN DE ASISTENCIA — BODA GERALDINE & GERWIN*\n\n`;
+      message += `👤 *Invitado:* ${name}\n`;
+      message += `✨ *Respuesta:* ${attendsText}\n`;
+      if (attendance === "si") {
+        message += `🏛️ *Boda Civil (21 Abr):* ${civil}\n`;
+        message += `🏰 *Gran Celebración (01 May):* ${party}\n`;
+        message += `🥗 *Dieta/Alergias:* ${dietary}\n`;
+        message += `🎵 *Canción sugerida:* ${song}\n`;
+      }
+      message += `\n_Enviado desde la invitación interactiva oficial._`;
+
+      const toast = document.getElementById('rsvpSuccess');
+      toast.classList.remove('hidden');
+
+      const encodedMsg = encodeURIComponent(message);
+      const waUrl = `https://api.whatsapp.com/send?text=${encodedMsg}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 800);
+    }
+  </script>
+</body>
+</html>
