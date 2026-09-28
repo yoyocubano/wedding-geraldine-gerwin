@@ -82,22 +82,34 @@
       touch-action: pan-y pinch-zoom;
     }
 
+    /* ==================== TACTILE COTTON PAPER TEXTURE ("TÓCAME") ==================== */
     .paper-texture {
-      background-color: #FDFBF7;
-      background-image: radial-gradient(#d4af37 0.4px, transparent 0.4px), radial-gradient(#d4af37 0.4px, #FDFBF7 0.4px);
-      background-size: 18px 18px;
-      background-position: 0 0, 9px 9px;
+      background-color: #FAF7F0;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.9) 0%, transparent 75%),
+        radial-gradient(ellipse at 50% 100%, rgba(223, 190, 125, 0.14) 0%, transparent 60%),
+        radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.055) 1px, transparent 0),
+        radial-gradient(circle at 7px 7px, rgba(140, 103, 38, 0.04) 1px, transparent 0);
+      background-size: 100% 100%, 100% 100%, 14px 14px, 28px 28px;
+      box-shadow: 
+        0 30px 60px -12px rgba(42, 27, 14, 0.28),
+        0 14px 28px -6px rgba(140, 103, 38, 0.2),
+        0 0 0 1px rgba(212, 175, 55, 0.45),
+        inset 0 0 45px rgba(223, 190, 125, 0.1),
+        inset 0 1.5px 2.5px rgba(255, 255, 255, 0.95);
     }
 
+    /* Gilded double hairline border with corner flourishes */
     .gilded-border {
       position: relative;
-      border: 1px solid rgba(197, 160, 89, 0.45);
+      border: 1px solid rgba(197, 160, 89, 0.6);
     }
     .gilded-border::before {
       content: '';
       position: absolute;
-      inset: 6px;
-      border: 1px solid rgba(197, 160, 89, 0.25);
+      inset: 8px;
+      border: 1px solid rgba(197, 160, 89, 0.32);
+      border-radius: calc(1.5rem - 8px);
       pointer-events: none;
     }
 
@@ -107,16 +119,144 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* 3D Carousel & Card Stack Physics */
+    /* ==================== 3D WAX SEAL (ORO PRECIOSO & SOMBRA PROFUNDA) ==================== */
+    .wax-seal-wrapper {
+      position: relative;
+      width: 116px;
+      height: 116px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Sello sellado: Aura pulsante que invita a romper el sello */
+    @keyframes sealBreathingPulse {
+      0%, 100% {
+        transform: scale(0.98);
+        opacity: 0.6;
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6), 0 0 20px 2px rgba(212, 175, 55, 0.2);
+      }
+      50% {
+        transform: scale(1.08);
+        opacity: 1;
+        box-shadow: 0 0 0 12px rgba(212, 175, 55, 0), 0 0 35px 8px rgba(212, 175, 55, 0.45);
+      }
+    }
+    .seal-aura {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+      animation: sealBreathingPulse 2.6s infinite ease-in-out;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* 3D Wax Seal Body */
+    .wax-seal-3d {
+      position: relative;
+      z-index: 2;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 28%, #FFFBE6 0%, #F8DA89 22%, #D4AF37 45%, #9E7422 75%, #593A0B 100%);
+      /* Sombra proyectada por abajo hiperrealista */
+      box-shadow: 
+        0 22px 34px -4px rgba(60, 36, 10, 0.65),
+        0 9px 18px -2px rgba(0, 0, 0, 0.3),
+        inset 0 2.5px 5px rgba(255, 255, 255, 0.85),
+        inset 0 -4px 8px rgba(45, 25, 5, 0.75);
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wax-seal-3d:hover {
+      transform: scale(1.06) translateY(-2px);
+      box-shadow: 
+        0 28px 42px -4px rgba(60, 36, 10, 0.72),
+        0 12px 22px -2px rgba(0, 0, 0, 0.35),
+        inset 0 2.5px 6px rgba(255, 255, 255, 0.9),
+        inset 0 -4px 8px rgba(45, 25, 5, 0.75);
+    }
+    .wax-seal-3d:active {
+      transform: scale(0.94) translateY(3px);
+      box-shadow: 
+        0 10px 16px -2px rgba(60, 36, 10, 0.5),
+        inset 0 1px 3px rgba(255, 255, 255, 0.6),
+        inset 0 -2px 5px rgba(45, 25, 5, 0.85);
+    }
+
+    /* Melted organic wax rim with dripping lips */
+    .wax-rim {
+      position: absolute;
+      inset: -5px;
+      border-radius: 47% 53% 51% 49% / 49% 51% 49% 51%;
+      background: radial-gradient(circle at 35% 28%, #FFEAB0 0%, #D4AF37 38%, #8C6726 82%, #4A2E07 100%);
+      box-shadow: 
+        0 14px 22px -4px rgba(65, 38, 10, 0.55),
+        inset 0 2px 3px rgba(255, 255, 255, 0.65),
+        inset 0 -3px 6px rgba(40, 22, 5, 0.7);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Stamped Inner Bevel & Monogram */
+    .seal-inner-stamp {
+      position: relative;
+      z-index: 3;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      border: 2px dashed rgba(255, 245, 200, 0.55);
+      box-shadow: 
+        inset 0 3px 6px rgba(45, 25, 5, 0.65),
+        inset 0 -1.5px 3px rgba(255, 255, 255, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 40% 35%, #CFA551 0%, #A3792A 60%, #785315 100%);
+    }
+
+    /* Animación de apertura / rotura del sello */
+    @keyframes sealCrackAnim {
+      0% { transform: scale(1); filter: brightness(1); }
+      30% { transform: scale(0.92); filter: brightness(1.3); }
+      60% { transform: scale(1.18); filter: brightness(1.6); opacity: 0.9; }
+      100% { transform: scale(1.35); opacity: 0; }
+    }
+    .seal-cracking {
+      animation: sealCrackAnim 0.45s ease-out forwards;
+      pointer-events: none;
+    }
+
+    /* ==================== 3D CAROUSEL & 9:16 PHYSICAL DECK RATIO ==================== */
     .deck-container {
       perspective: 1200px;
       transform-style: preserve-3d;
     }
 
     .invitation-card {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
       transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.5s ease;
       will-change: transform, opacity;
       backface-visibility: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(197, 160, 89, 0.3) transparent;
+      touch-action: pan-y;
+    }
+    .invitation-card::-webkit-scrollbar {
+      width: 4px;
+    }
+    .invitation-card::-webkit-scrollbar-thumb {
+      background: rgba(197, 160, 89, 0.35);
+      border-radius: 4px;
     }
 
     /* Card Positions */
@@ -213,100 +353,108 @@
     </div>
   </header>
 
-  <!-- ==================== 3D CARD STACK CAROUSEL VIEWPORT ==================== -->
-  <main class="flex-1 flex items-center justify-center px-4 py-2 relative overflow-hidden deck-container w-full max-w-md mx-auto" id="cardStackDeck">
+  <!-- ==================== 3D CARD STACK CAROUSEL VIEWPORT (9:16 RATIO) ==================== -->
+  <main class="flex-1 flex items-center justify-center p-2 sm:p-3 relative overflow-hidden w-full max-w-lg mx-auto">
+    <div class="deck-container relative w-full max-w-[390px] h-[calc(100vh-84px)] max-h-[720px] aspect-[9/16] mx-auto select-none" id="cardStackDeck">
 
-    <!-- ========== CARD 1: EL SOBRE REAL & SELLO DE CERA ========== -->
-    <article id="card-0" class="invitation-card card-active absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-6 sm:p-8 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <div class="flex items-center justify-center gap-2 mb-2 text-champagne-600/70">
-          <span class="text-xs">✦</span>
-          <div class="h-px w-12 bg-champagne-500/40"></div>
-          <span class="text-xs">✦</span>
-        </div>
-        <p class="text-xs font-sans uppercase tracking-[0.25em] text-champagne-800 font-semibold" data-i18n="hero.save_the_date">Save The Date & Invitación</p>
-        <p class="font-cormorant italic text-base text-champagne-700 mt-1 mb-4" data-i18n="hero.together">Junto a nuestras familias, los invitamos a celebrar</p>
+      <!-- ========== CARD 1: EL SOBRE REAL & SELLO DE CERA ========== -->
+      <article id="card-0" class="invitation-card card-active paper-texture gilded-border p-5 sm:p-6 flex flex-col justify-between text-center overflow-y-auto">
+        <div>
+          <div class="flex items-center justify-center gap-2 mb-1.5 text-champagne-600/70">
+            <span class="text-xs">✦</span>
+            <div class="h-px w-12 bg-champagne-500/40"></div>
+            <span class="text-xs">✦</span>
+          </div>
+          <p class="text-[11px] font-sans uppercase tracking-[0.25em] text-champagne-800 font-semibold" data-i18n="hero.save_the_date">Save The Date & Invitación</p>
+          <p class="font-cormorant italic text-sm text-champagne-700 mt-0.5 mb-3" data-i18n="hero.together">Junto a nuestras familias, los invitamos a celebrar</p>
 
-        <!-- Monogram Seal Centerpiece -->
-        <div class="my-6 flex flex-col items-center cursor-pointer group" onclick="nextCard()">
-          <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-[#dfbe7d] via-[#c5a059] to-[#8c6726] p-1 shadow-seal flex items-center justify-center group-hover:scale-105 active:scale-95 transition-transform duration-300">
-            <div class="w-full h-full rounded-full border-2 border-champagne-200/60 flex flex-col items-center justify-center bg-gradient-to-tr from-[#99732b] to-[#c5a059]">
-              <span class="font-cormorant font-bold text-3xl text-champagne-100 tracking-tighter drop-shadow-sm select-none">G&G</span>
-              <span class="text-[9px] uppercase tracking-widest text-champagne-200 font-sans font-semibold -mt-1">2027</span>
+          <!-- Monogram Seal Centerpiece (3D Oro Precioso & Sombra Profunda) -->
+          <div class="my-4 flex flex-col items-center cursor-pointer group" onclick="openEnvelope(event)">
+            <div class="wax-seal-wrapper">
+              <!-- Aura luminosa que invita a interactuar ("está sellado, pero hace falta abrirlo") -->
+              <div class="seal-aura"></div>
+
+              <!-- Sello de cera 3D con relieve, sombra y brillo especular -->
+              <div class="wax-seal-3d" id="waxSealElem">
+                <div class="wax-rim"></div>
+                <div class="seal-inner-stamp">
+                  <span class="font-cormorant font-bold text-3xl text-[#FFF8DB] tracking-tight drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.65)] select-none">G&G</span>
+                  <span class="text-[9px] uppercase tracking-[0.25em] text-[#FFE8A3] font-sans font-bold drop-shadow-sm -mt-0.5">2027</span>
+                </div>
+              </div>
             </div>
-            <div class="absolute inset-0 rounded-full border border-champagne-400/40 animate-ping opacity-30 pointer-events-none"></div>
+            
+            <!-- Badge táctil interactivo -->
+            <div class="mt-4 px-3.5 py-1 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso text-champagne-200 text-[10px] tracking-[0.2em] uppercase font-sans font-semibold border border-champagne-400/60 shadow-lg flex items-center gap-1.5 group-hover:scale-105 active:scale-95 transition-transform">
+              <span class="text-gold-metallic">✦</span>
+              <span data-i18n="hero.tap_open">Toca el sello para abrir</span>
+              <span class="text-gold-metallic">✦</span>
+            </div>
           </div>
-          
-          <div class="mt-4 px-3 py-1 bg-espresso text-champagne-200 rounded-full text-[10px] tracking-widest uppercase font-sans border border-champagne-500/40 shadow-xs flex items-center gap-1.5 animate-bounce">
-            <span>✦</span>
-            <span data-i18n="hero.tap_open">Toca el sello para abrir</span>
-            <span>✦</span>
-          </div>
+
+          <h1 class="font-serif text-3xl text-espresso tracking-tight my-1">
+            Geraldine
+            <span class="block font-script text-3xl text-gold-metallic my-0.5">&</span>
+            Gerwin
+          </h1>
         </div>
 
-        <h1 class="font-serif text-3xl sm:text-4xl text-espresso tracking-tight my-1">
-          Geraldine
-          <span class="block font-script text-4xl text-gold-metallic my-0.5">&</span>
-          Gerwin
-        </h1>
-      </div>
-
-      <div class="pt-4 border-t border-champagne-500/20">
-        <p class="text-xs uppercase tracking-widest font-sans text-champagne-800 font-semibold mb-3 flex items-center justify-center gap-1">
-          <svg class="w-3.5 h-3.5 text-champagne-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-          <span data-i18n="hero.location">Países Bajos (Holanda)</span>
-        </p>
-        <button onclick="nextCard()" class="tap-press w-full py-3 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans tracking-widest uppercase font-semibold hover:bg-champagne-800 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
-          <span data-i18n="deck.open">Abrir Invitación</span>
-          <span>→</span>
-        </button>
-      </div>
-    </article>
+        <div class="pt-3 border-t border-champagne-500/20">
+          <p class="text-[11px] uppercase tracking-widest font-sans text-champagne-800 font-semibold mb-2.5 flex items-center justify-center gap-1">
+            <svg class="w-3.5 h-3.5 text-champagne-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <span data-i18n="hero.location">Países Bajos (Holanda)</span>
+          </p>
+          <button onclick="openEnvelope(event)" class="tap-press w-full py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans tracking-widest uppercase font-semibold hover:bg-champagne-800 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
+            <span data-i18n="deck.open">Abrir Invitación</span>
+            <span>→</span>
+          </button>
+        </div>
+      </article>
 
     <!-- ========== CARD 2: CUENTA REGRESIVA & CALENDARIO ========== -->
-    <article id="card-1" class="invitation-card card-next absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-6 sm:p-8 flex flex-col justify-between text-center overflow-y-auto">
+    <article id="card-1" class="invitation-card card-next paper-texture gilded-border p-5 sm:p-6 flex flex-col justify-between text-center overflow-y-auto">
       <div>
         <p class="text-[10px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="countdown.subtitle">Contando los segundos para nuestro gran día</p>
-        <h2 class="font-serif text-2xl text-espresso mt-1 mb-6" data-i18n="countdown.title">La Cuenta Regresiva • 01 Mayo 2027</h2>
+        <h2 class="font-serif text-xl sm:text-2xl text-espresso mt-1 mb-4" data-i18n="countdown.title">La Cuenta Regresiva • 01 Mayo 2027</h2>
 
         <!-- Frosted Glass Countdown Boxes -->
-        <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto my-4">
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2.5 shadow-xs">
-            <span id="days" class="block font-serif text-2xl sm:text-3xl font-semibold text-espresso">--</span>
+        <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto my-3">
+          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
+            <span id="days" class="block font-serif text-2xl font-semibold text-espresso">--</span>
             <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.days">Días</span>
           </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2.5 shadow-xs">
-            <span id="hours" class="block font-serif text-2xl sm:text-3xl font-semibold text-espresso">--</span>
+          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
+            <span id="hours" class="block font-serif text-2xl font-semibold text-espresso">--</span>
             <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.hours">Horas</span>
           </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2.5 shadow-xs">
-            <span id="mins" class="block font-serif text-2xl sm:text-3xl font-semibold text-espresso">--</span>
+          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
+            <span id="mins" class="block font-serif text-2xl font-semibold text-espresso">--</span>
             <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.mins">Minutos</span>
           </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2.5 shadow-xs">
-            <span id="secs" class="block font-serif text-2xl sm:text-3xl font-semibold text-gold-metallic">--</span>
+          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
+            <span id="secs" class="block font-serif text-2xl font-semibold text-gold-metallic">--</span>
             <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.secs">Segundos</span>
           </div>
         </div>
 
-        <p class="font-cormorant italic text-sm text-champagne-700 my-4">"Cada momento nos acerca más a nuestro nuevo comienzo"</p>
+        <p class="font-cormorant italic text-sm text-champagne-700 my-3">"Cada momento nos acerca más a nuestro nuevo comienzo"</p>
 
         <!-- Calendar Buttons -->
         <div class="flex flex-col gap-2 max-w-xs mx-auto my-2">
-          <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Geraldine+%26+Gerwin&dates=20270501T143000Z/20270502T020000Z&details=Gran+Celebraci%C3%B3n+de+Boda+de+Geraldine+%26+Gerwin+en+Pa%C3%ADses+Bajos.&location=Pa%C3%ADses+Bajos" class="py-2.5 px-4 rounded-full bg-white border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso shadow-xs hover:bg-champagne-100 flex items-center justify-center gap-2 cursor-pointer">
-            <svg class="w-4 h-4 text-champagne-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+          <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Geraldine+%26+Gerwin&dates=20270501T143000Z/20270502T020000Z&details=Gran+Celebraci%C3%B3n+de+Boda+de+Geraldine+%26+Gerwin+en+Pa%C3%ADses+Bajos.&location=Pa%C3%ADses+Bajos" class="py-2 px-3.5 rounded-full bg-white border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-espresso shadow-xs hover:bg-champagne-100 flex items-center justify-center gap-2 cursor-pointer">
+            <svg class="w-3.5 h-3.5 text-champagne-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
             <span data-i18n="calendar.google">Añadir a Google Calendar</span>
           </a>
-          <button onclick="downloadICS()" class="py-2.5 px-4 rounded-full bg-champagne-200/70 border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-champagne-900 shadow-xs hover:bg-champagne-300 flex items-center justify-center gap-2 cursor-pointer">
-            <svg class="w-4 h-4 text-champagne-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <button onclick="downloadICS()" class="py-2 px-3.5 rounded-full bg-champagne-200/70 border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-champagne-900 shadow-xs hover:bg-champagne-300 flex items-center justify-center gap-2 cursor-pointer">
+            <svg class="w-3.5 h-3.5 text-champagne-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             <span data-i18n="calendar.apple">Apple / Outlook (.ics)</span>
           </button>
         </div>
       </div>
 
-      <div class="pt-4 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2.5 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
+      <div class="pt-3 border-t border-champagne-500/20 flex gap-2">
+        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
+        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
           <span data-i18n="deck.scratch_next">Descubrir Foto (Rasca)</span>
           <span>→</span>
         </button>
@@ -314,23 +462,23 @@
     </article>
 
     <!-- ========== CARD 3: RASCA & REVELA (SCRATCH CARD TÁCTIL) ========== -->
-    <article id="card-2" class="invitation-card card-hidden absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-5 sm:p-7 flex flex-col justify-between text-center overflow-y-auto">
+    <article id="card-2" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
       <div>
         <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-champagne-200/70 border border-champagne-500/30 text-[9px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-1">
           <span>✨</span>
           <span data-i18n="scratch.badge">Experiencia Touch</span>
         </div>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-1" data-i18n="scratch.title">Rasca para Revelar</h2>
-        <p class="font-body text-xs text-champagne-800/90 mb-3" data-i18n="scratch.subtitle">Desliza tu dedo o cursor sobre la capa dorada.</p>
+        <h2 class="font-serif text-xl text-espresso mb-0.5" data-i18n="scratch.title">Rasca para Revelar</h2>
+        <p class="font-body text-xs text-champagne-800/90 mb-2" data-i18n="scratch.subtitle">Desliza tu dedo o cursor sobre la capa dorada.</p>
 
         <!-- Scratch Frame -->
-        <div class="relative w-48 sm:w-56 aspect-[4/5] mx-auto rounded-xl overflow-hidden shadow-md border-2 border-champagne-500/60 bg-espresso select-none" id="scratchCardContainer">
+        <div class="relative w-44 sm:w-48 aspect-[4/5] mx-auto rounded-xl overflow-hidden shadow-md border-2 border-champagne-500/60 bg-espresso select-none" id="scratchCardContainer">
           
           <!-- Photo Behind Layer -->
           <div class="relative w-full h-full flex items-center justify-center bg-espresso" id="photoRevealWrapper">
             <img src="assets/geraldine_profile.jpg" alt="Ambient" class="absolute inset-0 w-full h-full object-cover filter blur-md scale-110 opacity-60" />
             <img id="couplePhoto" src="assets/geraldine_profile.jpg" alt="Geraldine & Gerwin" class="relative z-10 w-full h-full object-cover select-none pointer-events-none" />
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-2.5 text-white text-center pointer-events-none z-20">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-2 text-white text-center pointer-events-none z-20">
               <p class="font-serif text-sm tracking-wide font-medium">Geraldine & Gerwin</p>
               <p class="font-sans text-[9px] uppercase tracking-widest text-champagne-200 font-semibold">01 Mayo 2027</p>
             </div>
@@ -348,7 +496,7 @@
         </div>
 
         <!-- Progress bar & Notification -->
-        <div class="w-48 sm:w-56 mx-auto mt-2.5">
+        <div class="w-44 sm:w-48 mx-auto mt-2">
           <div class="flex items-center justify-between text-[10px] font-sans text-champagne-800 font-semibold mb-0.5">
             <span data-i18n="scratch.progress">Revelado:</span>
             <span id="scratchPercentText">0%</span>
@@ -358,14 +506,14 @@
           </div>
         </div>
 
-        <div id="revealedConfirmationCallout" class="mt-2 text-xs font-serif text-espresso hidden">
-          <p class="text-gold-metallic font-semibold text-sm">✦ ¡Foto Revelada con Éxito! ✦</p>
+        <div id="revealedConfirmationCallout" class="mt-1 text-xs font-serif text-espresso hidden">
+          <p class="text-gold-metallic font-semibold text-xs">✦ ¡Foto Revelada con Éxito! ✦</p>
         </div>
       </div>
 
-      <div class="pt-3 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2.5 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
+      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
+        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
+        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
           <span data-i18n="deck.itinerary_next">Ver Itinerario</span>
           <span>→</span>
         </button>
@@ -373,36 +521,36 @@
     </article>
 
     <!-- ========== CARD 4: PROGRAMA & UBICACIONES (DOS EVENTOS) ========== -->
-    <article id="card-3" class="invitation-card card-hidden absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-5 sm:p-7 flex flex-col justify-between text-center overflow-y-auto">
+    <article id="card-3" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
       <div>
         <p class="text-[10px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="events.subtitle">Dos Momentos Inolvidables</p>
-        <h2 class="font-serif text-2xl text-espresso mb-4" data-i18n="events.title">Programa & Fechas</h2>
+        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-3" data-i18n="events.title">Programa & Fechas</h2>
 
-        <div class="space-y-3 text-left">
+        <div class="space-y-2.5 text-left">
           <!-- Event 1: Civil -->
-          <div class="p-3.5 rounded-xl bg-champagne-100/70 border border-champagne-500/30">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-[10px] font-sans font-semibold uppercase tracking-wider text-champagne-900 bg-champagne-200/80 px-2 py-0.5 rounded-full" data-i18n="event1.tag">Ceremonia Civil</span>
+          <div class="p-3 rounded-xl bg-champagne-100/70 border border-champagne-500/30">
+            <div class="flex items-center justify-between mb-0.5">
+              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-900 bg-champagne-200/80 px-2 py-0.5 rounded-full" data-i18n="event1.tag">Ceremonia Civil</span>
               <span class="font-serif text-xs text-champagne-700 italic">21 Abril 2027</span>
             </div>
-            <h3 class="font-serif text-base text-espresso font-semibold" data-i18n="event1.title">Enlace Civil & Firma</h3>
-            <p class="text-xs text-champagne-900 mt-0.5" data-i18n="event1.place_desc">Países Bajos • 14:00 hrs</p>
+            <h3 class="font-serif text-sm text-espresso font-semibold" data-i18n="event1.title">Enlace Civil & Firma</h3>
+            <p class="text-[11px] text-champagne-900 mt-0.5" data-i18n="event1.place_desc">Países Bajos • 14:00 hrs</p>
           </div>
 
           <!-- Event 2: Gala Celebration -->
-          <div class="p-3.5 rounded-xl bg-champagne-800 text-champagne-100 border border-champagne-500/60 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-[10px] font-sans font-semibold uppercase tracking-wider text-champagne-200 bg-white/15 px-2 py-0.5 rounded-full" data-i18n="event2.tag">Gran Celebración</span>
+          <div class="p-3 rounded-xl bg-champagne-800 text-champagne-100 border border-champagne-500/60 shadow-sm">
+            <div class="flex items-center justify-between mb-0.5">
+              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-200 bg-white/15 px-2 py-0.5 rounded-full" data-i18n="event2.tag">Gran Celebración</span>
               <span class="font-serif text-xs text-champagne-200 italic">01 Mayo 2027</span>
             </div>
-            <h3 class="font-serif text-base text-white font-semibold" data-i18n="event2.title">Banquete & Fiesta de Gala</h3>
-            <p class="text-xs text-champagne-200 mt-0.5" data-i18n="event2.place_desc">Kasteel & Hotel Venue Holandés • 16:30 hrs</p>
-            <div class="mt-2.5 pt-2 border-t border-champagne-500/30 flex gap-2">
-              <a href="https://maps.google.com/?q=Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 bg-champagne-500/90 text-espresso rounded-lg text-[10px] font-sans uppercase tracking-wider font-semibold text-center flex items-center justify-center gap-1 hover:bg-champagne-400">
+            <h3 class="font-serif text-sm text-white font-semibold" data-i18n="event2.title">Banquete & Fiesta de Gala</h3>
+            <p class="text-[11px] text-champagne-200 mt-0.5" data-i18n="event2.place_desc">Kasteel & Hotel Venue Holandés • 16:30 hrs</p>
+            <div class="mt-2 pt-1.5 border-t border-champagne-500/30 flex gap-2">
+              <a href="https://maps.google.com/?q=Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-1 bg-champagne-500/90 text-espresso rounded-lg text-[9px] font-sans uppercase tracking-wider font-semibold text-center flex items-center justify-center gap-1 hover:bg-champagne-400">
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
                 <span data-i18n="event2.map">Abrir en Maps</span>
               </a>
-              <button onclick="copyAddress('Países Bajos - Kasteel Venue')" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-[10px] font-sans uppercase tracking-wider text-champagne-100 flex items-center justify-center gap-1">
+              <button onclick="copyAddress('Países Bajos - Kasteel Venue')" class="px-2.5 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-[9px] font-sans uppercase tracking-wider text-champagne-100 flex items-center justify-center gap-1">
                 <span data-i18n="event1.copy">Copiar</span>
               </button>
             </div>
@@ -410,9 +558,9 @@
         </div>
       </div>
 
-      <div class="pt-3 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2.5 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
+      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
+        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
+        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
           <span data-i18n="deck.faq_next">Guía & FAQ de Viaje</span>
           <span>→</span>
         </button>
@@ -420,18 +568,18 @@
     </article>
 
     <!-- ========== CARD 5: GUÍA & FAQ DE VIAJE (HOLANDA) ========== -->
-    <article id="card-4" class="invitation-card card-hidden absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-5 sm:p-7 flex flex-col justify-between text-center overflow-y-auto">
+    <article id="card-4" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
       <div>
         <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-champagne-200/70 border border-champagne-500/30 text-[9px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-1">
           <span>✈️</span>
           <span data-i18n="faq.badge">Guía del Invitado</span>
         </div>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-3" data-i18n="faq.title">Preguntas Frecuentes</h2>
+        <h2 class="font-serif text-xl text-espresso mb-2" data-i18n="faq.title">Preguntas Frecuentes</h2>
 
-        <div class="space-y-2 text-left" id="accordionContainer">
+        <div class="space-y-1.5 text-left" id="accordionContainer">
           
           <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2.5 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
+            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
               <span>🏨 <span data-i18n="faq.q1">¿Dónde me hospedo? Hoteles & Airbnb</span></span>
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
@@ -441,7 +589,7 @@
           </div>
 
           <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2.5 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
+            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
               <span>🚆 <span data-i18n="faq.q2">¿Cómo llego desde el aeropuerto?</span></span>
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
@@ -451,24 +599,24 @@
           </div>
 
           <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2.5 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
+            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
               <span>👗 <span data-i18n="faq.q3">Código de Vestimenta (Dress Code)</span></span>
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="accordion-content px-3 bg-champagne-50/60 border-t border-champagne-500/20 text-[11px] text-champagne-900 py-2 leading-relaxed">
               <span data-i18n="faq.a3">Gala & Black Tie Optional. Hombres traje formal/esmoquin, mujeres vestido largo.</span>
-              <div class="flex items-center gap-1 mt-1.5">
+              <div class="flex items-center gap-1 mt-1">
                 <span class="text-[9px] uppercase font-sans font-bold text-champagne-800">Tonos:</span>
-                <span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EB] border border-champagne-500"></span>
-                <span class="w-3.5 h-3.5 rounded-full bg-[#DFBE7D]"></span>
-                <span class="w-3.5 h-3.5 rounded-full bg-[#8C6726]"></span>
-                <span class="w-3.5 h-3.5 rounded-full bg-[#2A1B0E]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#FAF5EB] border border-champagne-500"></span>
+                <span class="w-3 h-3 rounded-full bg-[#DFBE7D]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#8C6726]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#2A1B0E]"></span>
               </div>
             </div>
           </div>
 
           <div class="accordion-item border border-champagne-500/30 rounded-lg overflow-hidden bg-white shadow-xs">
-            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2.5 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
+            <button onclick="toggleAccordion(this)" class="w-full px-3 py-2 text-left flex items-center justify-between gap-2 hover:bg-champagne-50 text-xs font-serif text-espresso font-semibold cursor-pointer">
               <span>👶 <span data-i18n="faq.q4">Niños y Acompañantes</span></span>
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
@@ -480,9 +628,9 @@
         </div>
       </div>
 
-      <div class="pt-3 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2.5 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
+      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
+        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
+        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
           <span data-i18n="deck.rsvp_next">Confirmar Asistencia</span>
           <span>→</span>
         </button>
@@ -490,22 +638,22 @@
     </article>
 
     <!-- ========== CARD 6: CONFIRMACIÓN DE ASISTENCIA (RSVP) ========== -->
-    <article id="card-5" class="invitation-card card-hidden absolute inset-x-4 top-2 bottom-4 paper-texture gilded-border rounded-2xl shadow-card-active p-5 sm:p-7 flex flex-col justify-between text-center overflow-y-auto">
+    <article id="card-5" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
       <div>
-        <div class="w-10 h-10 mx-auto rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center mb-1">
-          <span class="font-cormorant font-bold text-base text-champagne-800">G&G</span>
+        <div class="w-9 h-9 mx-auto rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center mb-1">
+          <span class="font-cormorant font-bold text-sm text-champagne-800">G&G</span>
         </div>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-0.5" data-i18n="rsvp.title">Confirmación de Asistencia</h2>
-        <p class="font-sans text-[10px] uppercase tracking-wider text-champagne-700 font-bold mb-3" data-i18n="rsvp.deadline">✦ Antes del 01 de Febrero 2027 ✦</p>
+        <h2 class="font-serif text-lg sm:text-xl text-espresso mb-0.5" data-i18n="rsvp.title">Confirmación de Asistencia</h2>
+        <p class="font-sans text-[10px] uppercase tracking-wider text-champagne-700 font-bold mb-2.5" data-i18n="rsvp.deadline">✦ Antes del 01 de Febrero 2027 ✦</p>
 
-        <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)" class="space-y-3 text-left text-xs">
+        <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)" class="space-y-2 text-left text-xs">
           <div>
             <div class="grid grid-cols-2 gap-2">
-              <label class="relative flex items-center justify-center p-2 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
+              <label class="relative flex items-center justify-center p-1.5 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
                 <input type="radio" name="attendance" value="si" checked class="sr-only" />
                 <span class="font-sans text-[11px] font-semibold" data-i18n="rsvp.yes">¡Sí, allí estaré! 🎉</span>
               </label>
-              <label class="relative flex items-center justify-center p-2 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
+              <label class="relative flex items-center justify-center p-1.5 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
                 <input type="radio" name="attendance" value="no" class="sr-only" />
                 <span class="font-sans text-[11px] font-semibold" data-i18n="rsvp.no">Lo celebraré de lejos ❤️</span>
               </label>
@@ -514,7 +662,7 @@
 
           <div>
             <label for="guestName" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.name_label">Nombre y Apellidos</label>
-            <input type="text" id="guestName" required placeholder="Ej: María Rodríguez" class="w-full px-3 py-1.5 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
+            <input type="text" id="guestName" required placeholder="Ej: María Rodríguez" class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
           </div>
 
           <div>
@@ -533,23 +681,23 @@
 
           <div>
             <label for="dietary" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.dietary_label">Dieta / Alergias (Opcional)</label>
-            <input type="text" id="dietary" placeholder="Vegetariano, celíaco, etc." class="w-full px-3 py-1.5 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
+            <input type="text" id="dietary" placeholder="Vegetariano, celíaco, etc." class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
           </div>
 
           <div>
             <label for="songRequest" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.song_label">Canción para el DJ</label>
-            <input type="text" id="songRequest" placeholder="Artista - Canción" class="w-full px-3 py-1.5 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
+            <input type="text" id="songRequest" placeholder="Artista - Canción" class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
           </div>
 
           <div class="pt-1">
-            <button type="submit" class="tap-press w-full py-3 rounded-full bg-espresso text-champagne-100 border border-champagne-500 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
+            <button type="submit" class="tap-press w-full py-2.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
               <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
               <span data-i18n="rsvp.submit_btn">Confirmar vía WhatsApp</span>
             </button>
           </div>
         </form>
 
-        <div id="rsvpSuccess" class="hidden mt-2 p-2 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 text-[11px] text-center font-sans">
+        <div id="rsvpSuccess" class="hidden mt-2 p-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 text-[10px] text-center font-sans">
           ¡Abriendo WhatsApp para enviar confirmación!
         </div>
       </div>
@@ -562,6 +710,7 @@
       </div>
     </article>
 
+    </div><!-- End of #cardStackDeck 9:16 container -->
   </main>
 
   <!-- ==================== BOTTOM DECK DOTS NAVIGATOR ==================== -->
@@ -824,6 +973,55 @@
       if (currentCardIndex === 2 && !isScratchedComplete) {
         setTimeout(initScratchCanvas, 150);
       }
+    }
+
+    function openEnvelope(e) {
+      if (e) e.stopPropagation();
+      const seal = document.getElementById('waxSealElem');
+      if (seal) {
+        seal.classList.add('seal-cracking');
+        playSealBreakChime();
+      }
+      setTimeout(() => {
+        nextCard();
+        setTimeout(() => {
+          if (seal) seal.classList.remove('seal-cracking');
+        }, 600);
+      }, 350);
+    }
+
+    function playSealBreakChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const now = ctx.currentTime;
+
+        // Warm fundamental golden chime (D5 to A5)
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(587.33, now);
+        osc1.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+        gain1.gain.setValueAtTime(0.35, now);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
+        osc1.connect(gain1);
+        gain1.connect(ctx.destination);
+        osc1.start(now);
+        osc1.stop(now + 0.85);
+
+        // Crystal overtone (D6 bell harmonic)
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(1174.66, now + 0.03);
+        gain2.gain.setValueAtTime(0.2, now + 0.03);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 1.1);
+        osc2.connect(gain2);
+        gain2.connect(ctx.destination);
+        osc2.start(now + 0.03);
+        osc2.stop(now + 1.1);
+      } catch (err) {}
     }
 
     function nextCard() {
