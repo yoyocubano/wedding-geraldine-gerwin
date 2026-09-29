@@ -144,10 +144,11 @@
       <!-- Quick Nav Links -->
       <div class="hidden lg:flex items-center gap-6 text-[11px] uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-semibold">
         <a href="#bienvenida" class="hover:text-champagne-600 transition-colors" data-i18n="nav.welcome">Bienvenidos</a>
-        <a href="#tu-viaje" class="hover:text-champagne-600 transition-colors text-gold-metallic" data-i18n="nav.travel">Tu Viaje</a>
+        <a href="#checklist" class="hover:text-champagne-600 transition-colors text-gold-metallic font-bold" data-i18n="nav.checklist">Checklist</a>
+        <a href="#tu-viaje" class="hover:text-champagne-600 transition-colors" data-i18n="nav.travel">Tu Viaje</a>
         <a href="#lugar" class="hover:text-champagne-600 transition-colors" data-i18n="nav.venue">El Lugar</a>
         <a href="#itinerario" class="hover:text-champagne-600 transition-colors" data-i18n="nav.timeline">Agenda</a>
-        <a href="#detalles" class="hover:text-champagne-600 transition-colors" data-i18n="nav.details">Detalles</a>
+        <a href="#detalles" class="hover:text-champagne-600 transition-colors" data-i18n="nav.details">Detalles & FAQ</a>
         <a href="#rsvp" class="hover:text-champagne-600 transition-colors font-bold text-champagne-700" data-i18n="nav.rsvp">RSVP</a>
       </div>
 
@@ -355,6 +356,175 @@
           <span>🍎</span>
           <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
         </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SPECIAL GERALDINE SECTION: CHECKLIST DEL INVITADO ==================== -->
+  <section id="checklist" class="py-20 px-4 sm:px-6 bg-champagne-50/70 relative border-b border-champagne-500/20">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="checklist.subtitle">
+          ✦ Sección Especial de los Novios ✦
+        </span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="checklist.title">
+          ¿Vienes a nuestra boda desde Madrid / España?
+        </h2>
+        <p class="font-serif italic text-base text-champagne-800 mt-2 max-w-xl mx-auto" data-i18n="checklist.intro">
+          Para que no tengas que leer toda la web, aquí tienes tu checklist paso a paso para organizar tu viaje sin estrés.
+        </p>
+      </div>
+
+      <!-- Checklist Container -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury">
+        
+        <!-- Progress Bar Header -->
+        <div class="mb-8 pb-6 border-b border-champagne-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-sans uppercase font-bold tracking-wider text-champagne-700">Tu Progreso de Viaje</span>
+            <div class="flex items-center gap-2 mt-1">
+              <span id="checklistScore" class="font-serif text-2xl font-bold text-espresso">0 de 9</span>
+              <span class="text-xs font-sans text-champagne-800">pasos completados</span>
+            </div>
+          </div>
+          <div class="w-full sm:w-48 bg-champagne-100 rounded-full h-3 overflow-hidden border border-champagne-500/30">
+            <div id="checklistProgressBar" class="bg-gradient-to-r from-champagne-500 via-champagne-400 to-espresso h-full w-0 transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- The 9 Interactive Checklist Items -->
+        <div class="space-y-3.5" id="guestChecklistItems">
+          
+          <!-- 1. Vuelo -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 1)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">1. Reservar vuelo a Ámsterdam Schiphol (AMS)</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Vuelos</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                Vuelos directos desde Madrid con Iberia, Air Europa o KLM. Con 3-6 meses de antelación consigues el mejor precio.
+              </p>
+            </div>
+          </label>
+
+          <!-- 2. Alojamiento -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 2)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">2. Reservar habitación en Hotel ReeHorst</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Hotel</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                ¡El banquete y la fiesta son en el mismo hotel! Podrás disfrutar de las 4h de barra libre y subir directo a tu cama sin taxis ni conducir.
+              </p>
+            </div>
+          </label>
+
+          <!-- 3. Confirmar Asistencia -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 3)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">3. Confirmar asistencia en el RSVP</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">RSVP</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                Rellena el formulario antes del <strong>01 de Marzo de 2027</strong> para confirmar tu plaza nominal y la de tu acompañante.
+              </p>
+            </div>
+          </label>
+
+          <!-- 4. Alergias e Intolerancias -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 4)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">4. Indicar alergias e intolerancias</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Chef</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                Vital para el chef: especifica en el RSVP si no puedes comer pescado/mariscos, si eres celíaco (sin gluten), vegetariano o kosher.
+              </p>
+            </div>
+          </label>
+
+          <!-- 5. Preparar el Look -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 5)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">5. Preparar el Look (Dress Code)</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Estilo</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                Casual Chic / Gala Chic. Toques en <strong>Blanco & Dorado</strong> para día/fotos y <strong>Negro & Dorado</strong> en el salón de fiesta. ¡Calzado cómodo para bailar!
+              </p>
+            </div>
+          </label>
+
+          <!-- 6. Guardar la Dirección del Hotel -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 6)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">6. Guardar la dirección del Hotel</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Ubicación</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                <strong>Hotel & Congrescentrum ReeHorst</strong>, Bennekomseweg 24, 6717 LM Ede, Países Bajos.
+              </p>
+            </div>
+          </label>
+
+          <!-- 7. Organizar el Transporte -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 7)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">7. Organizar el transporte (Tren directo NS)</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Tren</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                ¡No alquiles coche! Tren directo de NS cada 15 min desde la terminal de Schiphol hasta la estación de Ede-Wageningen (~50 min, ~18.80€). Cruzas la calle y estás en el hotel.
+              </p>
+            </div>
+          </label>
+
+          <!-- 8. Hacer la Maleta -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/50 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 8)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">8. Hacer la maleta</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-champagne-200/80 text-champagne-800 font-sans font-bold">Equipaje</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/80 mt-1 leading-relaxed">
+                Ropa de gala, calzado de fiesta y una chaqueta/abrigo para los traslados (primavera en Países Bajos: 14°C a 18°C durante el día, refresca de noche).
+              </p>
+            </div>
+          </label>
+
+          <!-- 9. ¡Venir a celebrar! -->
+          <label class="checklist-row flex items-start gap-4 p-4 rounded-2xl border-2 border-champagne-500/60 bg-gradient-to-r from-champagne-100/80 to-white hover:bg-champagne-100 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 9)" class="checklist-check mt-1 w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <div class="flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <span class="font-serif text-base sm:text-lg font-bold text-espresso">9. ¡Venir a celebrar con nosotros! 🎉</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-espresso text-champagne-100 font-sans font-bold">¡Fiesta!</span>
+              </div>
+              <p class="text-xs font-sans text-champagne-900/90 mt-1 leading-relaxed">
+                ¡Cena buffet gourmet, arepas artesanales venezolanas, 4 horas de barra libre, mesas con dulces y tablas de quesos, y bailar hasta las 02:30!
+              </p>
+            </div>
+          </label>
+
+        </div>
+
       </div>
 
     </div>
@@ -922,6 +1092,107 @@
               <p data-i18n="faq.a11">
                 El regalo más grande para nosotros es que crucéis fronteras y compartáis este día a nuestro lado. Si deseáis hacernos un presente para ayudarnos a construir nuestro hogar y luna de miel, ponemos a vuestra disposición nuestra cuenta bancaria en Países Bajos (ABN AMRO):<br/><br/>
                 <span class="font-mono font-bold text-espresso select-all bg-white px-2.5 py-1 rounded-md border border-champagne-500/30">NL91 ABNA 0417 1643 00</span> (Yeraldin & Gerwin).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 12: Check-in y Consigna de Equipaje -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q12">¿A qué hora es el check-in en Hotel ReeHorst? ¿Y si llegamos antes?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a12">
+                El <strong>check-in oficial de habitaciones es a las 15:00 hrs (3:00 PM)</strong>.<br/><br/>
+                Si tu vuelo o tren llega más temprano por la mañana, <strong>el Hotel ReeHorst dispone de una consigna de equipaje vigilada y completamente gratuita</strong> en recepción. Puedes dejar tus maletas con total seguridad, dar un paseo, almorzar o descansar en las salas comunes hasta la entrega de llave.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 13: Parking para 700 plazas -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q13">¿Hay suficiente aparcamiento si algún invitado va en coche?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a13">
+                ¡Más que de sobra! El Hotel & Congrescentrum ReeHorst cuenta con un <strong>parking privado inmenso con capacidad para más de 700 vehículos</strong>, 100% gratuito para todos nuestros invitados durante el evento.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 14: Comida durante la fiesta (quesos, dulces y tarta) -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="comida">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q14">¿Qué habrá de picar o comer durante la fiesta nocturna (tras el buffet)?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a14">
+                Tras la cena buffet libre (20:00 a 22:00), la energía sigue viva: a las 22:00 hrs en el salón de fiesta tendremos <strong>la tarta nupcial y una elegante mesa con variedad de dulces</strong>, y en las mesas colocaremos <strong>tablas de quesos típicos holandeses</strong> para que podáis picar en cualquier momento entre baile y copa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 15: Clima y temperatura en Mayo -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q15">¿Qué tiempo hace en Países Bajos en mayo y qué ropa llevar?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a15">
+                En mayo estamos en plena primavera holandesa. Las temperaturas diurnas suelen rondar entre <strong>14°C y 18°C</strong>, y refresca hacia los 8°C - 10°C por la noche. Os recomendamos traer una chaqueta o abrigo elegante para los trayectos exteriores.<br/><br/>
+                ¡No os preocupéis por el frío o la lluvia! <strong>Toda la boda se celebra en el interior del salón climatizado</strong> de Hotel ReeHorst con temperatura ideal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 16: Autobús privado / Transfer -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q16">¿Habrá autobús o transfer privado organizado desde el aeropuerto?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a16">
+                No dispondremos de autobús privado, ya que los invitados voláis en diferentes aerolíneas, horas e incluso días previos. <strong>El tren directo de NS es infinitamente superior y cómodo</strong>: sale cada 15 minutos desde los andenes subterráneos de la misma terminal de Schiphol y os deja exactamente frente al hotel en Ede-Wageningen por solo ~€18.80.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 17: Explicación transparente de Adults Only -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q17">¿Cuál es el motivo de que la fiesta sea exclusivamente Adults Only?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a17">
+                Queremos explicároslo con total honestidad y cariño:<br/><br/>
+                1. <strong>Capacidad y cubiertos cerrados:</strong> El hotel tarifica cada comensal (pax) íntegramente. Hemos tenido que limitar la lista para no dejar fuera a grandes amigos y familiares adultos queridos.<br/>
+                2. <strong>Bienestar infantil y horario nocturno:</strong> La cena comienza a las 20:00 y la fiesta arranca a las 22:00 con música a buen volumen y 4 horas de barra libre hasta las 02:30. A esas horas los peques ya duermen y no es un entorno pensado para ellos, ni resulta seguro dejarlos solos en las habitaciones del hotel.<br/><br/>
+                Queremos que los padres podáis bailar, brindar y disfrutar sin preocupaciones por una noche entera.
               </p>
             </div>
           </div>
@@ -1592,10 +1863,50 @@ END:VCALENDAR`;
       }
     }
 
-    // Auto-open first FAQ item on load
+    // ==================== CHECKLIST LOGIC & PERSISTENCE ====================
+    function updateChecklist(checkbox, index) {
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      const state = [];
+      allChecks.forEach((c) => {
+        if (c.checked) checkedCount++;
+        state.push(c.checked);
+      });
+
+      localStorage.setItem('yg_wedding_checklist_state', JSON.stringify(state));
+
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} de ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    function loadChecklist() {
+      const saved = localStorage.getItem('yg_wedding_checklist_state');
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      if (saved && allChecks.length) {
+        try {
+          const state = JSON.parse(saved);
+          allChecks.forEach((c, i) => {
+            if (state[i]) {
+              c.checked = true;
+              checkedCount++;
+            }
+          });
+        } catch(e) {}
+      }
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} de ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    // Auto-open first FAQ item & load checklist on load
     window.addEventListener('DOMContentLoaded', () => {
       const firstFaq = document.querySelector('.faq-item');
       if (firstFaq) firstFaq.classList.add('active');
+      loadChecklist();
     });
   </script>
 </body>
