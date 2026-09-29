@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Yeraldin & Gerwin — Save The Date & Boda Real 2027</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yeraldin & Gerwin — Nuestra Boda 2027</title>
   
-  <meta name="description" content="Invitación de Boda interactiva de Yeraldin & Gerwin. 21 de Abril & 1 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
+  <meta name="description" content="Invitación de Boda oficial de Yeraldin & Gerwin. 21 de Abril & 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
   <meta property="og:title" content="Yeraldin & Gerwin — Boda 2027" />
-  <meta property="og:description" content="Abre tu invitación de boda interactiva para Yeraldin & Gerwin en Países Bajos." />
-  <meta property="og:image" content="assets/envelope_yg_hero.jpg" />
+  <meta property="og:description" content="Celebra nuestro amor en Países Bajos. Guía para invitados, horarios, mapa y confirmación RSVP." />
+  <meta property="og:image" content="assets/geraldine_gerwin_portrait.jpg" />
 
-  <!-- Fonts: Luxury Editorial Serif, Calligraphy & Clean Sans -->
+  <!-- Google Fonts: Luxury Editorial Serif, Romantic Calligraphy & Modern Clean Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,48 +34,44 @@
               800: '#58351C',
               900: '#2A1B0E',
             },
-            parchment: '#FAF6EE',
-            sand: '#EFE9DC',
-            espresso: '#241711',
-            burgundy: '#5B1E28',
+            parchment: '#FBF9F4',
+            warmwhite: '#FAF7F2',
+            espresso: '#1A120B',
+            darknoir: '#0F0B08',
             goldfoil: '#D4AF37',
           },
           fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
             cormorant: ['"Cormorant Garamond"', 'serif'],
             script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
             alex: ['"Alex Brush"', 'cursive'],
             body: ['"EB Garamond"', 'serif'],
-            sans: ['"Outfit"', 'sans-serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
           },
           boxShadow: {
-            'phone-titanium': '0 40px 90px -20px rgba(38, 24, 12, 0.45), 0 20px 40px -15px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.35), inset 0 -2px 4px rgba(0, 0, 0, 0.6)',
-            'seal': '0 12px 30px rgba(42, 27, 14, 0.4), inset 0 2px 4px rgba(255, 235, 170, 0.7), inset 0 -3px 6px rgba(140, 103, 38, 0.7)',
-            'card-luxury': '0 20px 50px -15px rgba(42, 27, 14, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.35)',
+            'luxury': '0 25px 60px -15px rgba(26, 18, 11, 0.12), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'luxury-dark': '0 30px 70px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(212, 175, 55, 0.35)',
+            'glow-gold': '0 0 35px 5px rgba(212, 175, 55, 0.45)',
           },
           animation: {
-            'shimmer': 'shimmer 2.5s infinite linear',
-            'float': 'float 5s ease-in-out infinite',
-            'pulse-subtle': 'pulseSubtle 2.5s infinite ease-in-out',
-            'scroll-hint': 'scrollHint 2s infinite ease-in-out',
+            'pulse-slow': 'pulseSlow 3s infinite ease-in-out',
+            'float': 'float 6s ease-in-out infinite',
+            'neon-glow': 'neonGlow 2.5s infinite alternate ease-in-out',
           },
           keyframes: {
-            shimmer: {
-              '0%': { backgroundPosition: '-200% 0' },
-              '100%': { backgroundPosition: '200% 0' },
+            pulseSlow: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.03)', opacity: '0.9' },
             },
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-5px)' },
+              '50%': { transform: 'translateY(-6px)' },
             },
-            pulseSubtle: {
-              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-              '50%': { transform: 'scale(1.04)', opacity: '0.9' },
-            },
-            scrollHint: {
-              '0%, 100%': { transform: 'translateY(0)', opacity: '0.9' },
-              '50%': { transform: 'translateY(6px)', opacity: '0.4' },
-            },
+            neonGlow: {
+              '0%': { filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.8)) drop-shadow(0 0 16px rgba(212,175,55,0.6))' },
+              '100%': { filter: 'drop-shadow(0 0 14px rgba(255,255,255,1)) drop-shadow(0 0 28px rgba(212,175,55,0.85))' },
+            }
           }
         }
       }
@@ -83,1340 +79,1348 @@
   </script>
 
   <style>
-    html, body {
-      height: 100%;
-      background-color: #ECE5D8;
-      color: #2A1B0E;
+    body {
+      background-color: #FAF7F2;
+      color: #1A120B;
       font-family: 'EB Garamond', serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Ambient studio backdrop with organic linen & marble grain */
-    .studio-backdrop {
-      background-color: #EFE9DC;
-      background-image: 
-        radial-gradient(circle at 50% 10%, #FFFDF7 0%, rgba(239, 233, 220, 0.95) 50%, #DFD5C2 100%),
-        radial-gradient(#C5A059 0.4px, transparent 0.4px);
-      background-size: 100% 100%, 20px 20px;
-    }
-
-    /* Tactile Paper Texture */
-    .paper-texture {
-      background-color: #FAF7F0;
-      background-image: 
-        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.9) 0%, transparent 75%),
-        radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.05) 1px, transparent 0);
-      background-size: 100% 100%, 16px 16px;
-    }
-
-    /* Realistic iPhone 16 Pro Frame */
-    .iphone-device {
-      position: relative;
-      width: 100%;
-      max-width: 412px;
-      height: 874px;
-      max-height: 94vh;
-      border-radius: 54px;
-      padding: 11px;
-      background: linear-gradient(145deg, #4A4036 0%, #2A241D 40%, #5C5044 70%, #1E1914 100%);
-      box-shadow: 
-        0 40px 90px -20px rgba(35, 20, 10, 0.5),
-        0 20px 45px -10px rgba(0, 0, 0, 0.35),
-        0 0 0 1px rgba(255, 255, 255, 0.22),
-        inset 0 0 2px 1.5px rgba(255, 255, 255, 0.35),
-        inset 0 0 0 2px #1A1612;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* iPhone Frame Colors */
-    .theme-desert .iphone-device {
-      background: linear-gradient(145deg, #5A4A3A 0%, #34281E 40%, #766350 70%, #221A12 100%);
-    }
-    .theme-natural .iphone-device {
-      background: linear-gradient(145deg, #4E4E4C 0%, #282827 40%, #6E6D6B 70%, #1A1A19 100%);
-    }
-    .theme-black .iphone-device {
-      background: linear-gradient(145deg, #2E2E30 0%, #131314 40%, #3E3E42 70%, #0A0A0B 100%);
-    }
-
-    /* Hardware Buttons */
-    .iphone-button-action {
-      position: absolute;
-      left: -3px;
-      top: 115px;
-      width: 4px;
-      height: 28px;
-      background: #3A3229;
-      border-radius: 3px 0 0 3px;
-      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
-    }
-    .iphone-button-vol-up {
-      position: absolute;
-      left: -3px;
-      top: 160px;
-      width: 4px;
-      height: 52px;
-      background: #3A3229;
-      border-radius: 3px 0 0 3px;
-      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
-    }
-    .iphone-button-vol-down {
-      position: absolute;
-      left: -3px;
-      top: 224px;
-      width: 4px;
-      height: 52px;
-      background: #3A3229;
-      border-radius: 3px 0 0 3px;
-      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
-    }
-    .iphone-button-power {
-      position: absolute;
-      right: -3px;
-      top: 175px;
-      width: 4px;
-      height: 74px;
-      background: #3A3229;
-      border-radius: 0 3px 3px 0;
-      box-shadow: 1px 0 2px rgba(0,0,0,0.5);
-    }
-
-    /* Inner Screen Viewport */
-    .iphone-screen {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border-radius: 44px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      background-color: #FAF5EB;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* Fullscreen mode (strips phone bezel for mobile native) */
-    .fullscreen-mode .iphone-device {
-      max-width: 100% !important;
-      height: 100% !important;
-      max-height: 100vh !important;
-      border-radius: 0 !important;
-      padding: 0 !important;
-      background: transparent !important;
-      box-shadow: none !important;
-    }
-    .fullscreen-mode .iphone-screen {
-      border-radius: 0 !important;
-    }
-    .fullscreen-mode .iphone-button-action,
-    .fullscreen-mode .iphone-button-vol-up,
-    .fullscreen-mode .iphone-button-vol-down,
-    .fullscreen-mode .iphone-button-power {
-      display: none !important;
-    }
-
-    /* Dynamic Island */
-    .dynamic-island {
-      position: sticky;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 118px;
-      height: 32px;
-      background-color: #000;
-      border-radius: 20px;
-      z-index: 60;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      transition: width 0.3s ease;
-    }
-    .dynamic-island-lens {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #1F2840 0%, #060910 80%);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .dynamic-island-sensor {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #0d0d0f;
-    }
-
-    /* Glass Reflection on Screen */
-    .screen-glare {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 70%;
-      height: 40%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 60%, transparent 100%);
-      pointer-events: none;
-      z-index: 45;
-      border-top-right-radius: 44px;
-    }
-
-    /* Mobile Safari Toolbar (as seen in Wooow Invites) */
-    .safari-toolbar {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(250, 245, 235, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(197, 160, 89, 0.3);
-      z-index: 50;
-      padding: 8px 14px 10px 14px;
-    }
-
-    /* 3D Envelope Opening */
-    .perspective-envelope {
-      perspective: 1000px;
-    }
-    .envelope-flap-top {
-      transform-origin: top center;
-      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .envelope-opened .envelope-flap-top {
-      transform: rotateX(180deg);
-      z-index: 5;
-    }
-    .envelope-card-slide {
-      transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
-    }
-    .envelope-opened .envelope-card-slide {
-      transform: translateY(-90px) scale(1.02);
-      z-index: 25;
-    }
-
-    /* Metallic Gold Text */
+    /* Metallic Gold Gradient Text */
     .text-gold-metallic {
-      background: linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #FFF2B2 50%, #C5A059 70%, #8C6726 100%);
+      background: linear-gradient(135deg, #B8903B 0%, #E6C86E 35%, #FFF6D1 50%, #C5A059 70%, #99732B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Accordion */
+    /* Glowing Neon Script (Elena & Daniel Canva Signature) */
+    .neon-script-glow {
+      text-shadow: 
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 15px rgba(255, 240, 180, 0.7),
+        0 0 25px rgba(212, 175, 55, 0.6),
+        0 0 45px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Subtle Paper Texture */
+    .paper-texture {
+      background-color: #FAF7F2;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 75%),
+        radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.04) 1px, transparent 0);
+      background-size: 100% 100%, 18px 18px;
+    }
+
+    /* Luxury Accordion */
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+      transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
     }
     .faq-item.active .faq-answer {
-      max-height: 500px;
-      transition: max-height 0.5s ease-in-out;
+      max-height: 600px;
+      transition: max-height 0.55s ease-in-out;
     }
-    .faq-item.active .faq-chevron {
+    .faq-item.active .faq-icon {
       transform: rotate(180deg);
-    }
-
-    /* Hide scrollbar for clean UI */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
     }
   </style>
 </head>
-<body class="h-full flex flex-col items-center justify-center studio-backdrop selection:bg-champagne-300 selection:text-espresso relative p-0 sm:p-4">
+<body class="selection:bg-champagne-300 selection:text-espresso relative">
 
-  <!-- ==================== TOP DESKTOP STUDIO CONTROLLER ==================== -->
-  <header class="w-full max-w-4xl mx-auto px-4 py-2 hidden sm:flex items-center justify-between text-xs font-sans text-champagne-900 z-50">
-    <!-- Brand / Title -->
-    <div class="flex items-center gap-2 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-champagne-500/30 shadow-xs">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-      <span class="font-semibold tracking-wider uppercase text-[10px] text-champagne-800">Wooow Mockup Experience</span>
-      <span class="text-champagne-400">|</span>
-      <span class="font-serif italic text-espresso">Yeraldin & Gerwin 2027</span>
-    </div>
-
-    <!-- Center/Right Controls: Device Mockup Switcher, iPhone Finishes & Language -->
-    <div class="flex items-center gap-2">
-      <!-- Device Finish Selector -->
-      <div class="flex items-center gap-1 bg-white/80 backdrop-blur-md px-2 py-1 rounded-full border border-champagne-500/30 shadow-xs text-[11px]">
-        <span class="text-[10px] text-champagne-700 uppercase font-semibold pl-1">Chasis:</span>
-        <button onclick="setTheme('theme-desert')" class="w-5 h-5 rounded-full bg-[#766350] border border-white shadow-xs hover:scale-110 transition-transform" title="Desert Titanium"></button>
-        <button onclick="setTheme('theme-natural')" class="w-5 h-5 rounded-full bg-[#6E6D6B] border border-white shadow-xs hover:scale-110 transition-transform" title="Natural Titanium"></button>
-        <button onclick="setTheme('theme-black')" class="w-5 h-5 rounded-full bg-[#202022] border border-white shadow-xs hover:scale-110 transition-transform" title="Space Black"></button>
-      </div>
-
-      <!-- View Mode Toggle (Mockup vs Fullscreen) -->
-      <button onclick="toggleMockupView()" id="btnMockupToggle" class="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-champagne-500/30 text-[11px] font-semibold text-champagne-800 hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
-        <span id="mockupIcon">📱</span>
-        <span id="mockupText">Ver Pantalla Completa</span>
-      </button>
-
-      <!-- Language Selector (ES / NL / EN) -->
-      <div class="flex items-center bg-white/80 backdrop-blur-md border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-medium shadow-xs">
-        <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
-        <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
-        <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
-      </div>
-
-      <!-- Quick Link to Editorial Mode -->
-      <a href="editorial.html" class="px-2.5 py-1 rounded-full bg-champagne-800 text-champagne-100 text-[11px] font-medium hover:bg-champagne-900 transition-colors shadow-xs flex items-center gap-1" title="Ver formato pergamino continuo">
-        <span>📜</span>
-        <span>Editorial</span>
+  <!-- ==================== FLOATING LUXURY NAVBAR ==================== -->
+  <nav class="fixed top-4 inset-x-3 z-50 max-w-5xl mx-auto">
+    <div class="backdrop-blur-md bg-white/85 border border-champagne-500/30 rounded-full px-4 sm:px-6 py-2.5 shadow-luxury flex items-center justify-between transition-all duration-300">
+      
+      <!-- Monogram & Couple Name -->
+      <a href="#hero" class="flex items-center gap-2.5 group cursor-pointer">
+        <div class="w-8 h-8 rounded-full border border-champagne-500/60 flex items-center justify-center bg-champagne-100/80 shadow-xs group-hover:scale-105 transition-transform">
+          <span class="font-cormorant font-bold text-xs text-champagne-800 tracking-tighter">Y&G</span>
+        </div>
+        <span class="font-cinzel text-xs tracking-widest text-espresso font-semibold hidden sm:inline">YERALDIN & GERWIN</span>
       </a>
+
+      <!-- Quick Nav Links -->
+      <div class="hidden lg:flex items-center gap-6 text-[11px] uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-semibold">
+        <a href="#bienvenida" class="hover:text-champagne-600 transition-colors" data-i18n="nav.welcome">Bienvenidos</a>
+        <a href="#tu-viaje" class="hover:text-champagne-600 transition-colors text-gold-metallic" data-i18n="nav.travel">Tu Viaje</a>
+        <a href="#lugar" class="hover:text-champagne-600 transition-colors" data-i18n="nav.venue">El Lugar</a>
+        <a href="#itinerario" class="hover:text-champagne-600 transition-colors" data-i18n="nav.timeline">Agenda</a>
+        <a href="#detalles" class="hover:text-champagne-600 transition-colors" data-i18n="nav.details">Detalles</a>
+        <a href="#rsvp" class="hover:text-champagne-600 transition-colors font-bold text-champagne-700" data-i18n="nav.rsvp">RSVP</a>
+      </div>
+
+      <!-- Right Controls: Audio & Language Switcher -->
+      <div class="flex items-center gap-2">
+        <!-- Audio Player Toggle -->
+        <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-100/90 border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200 transition-colors shadow-xs cursor-pointer" title="Música romántica de boda">
+          <svg id="soundIconOn" class="w-4 h-4 text-champagne-700" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-500" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+
+        <!-- Trilingual Switcher (ES | NL | EN) -->
+        <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-sans font-medium">
+          <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
+          <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+          <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
+        </div>
+      </div>
     </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION: CANVA-INSPIRED EDITORIAL ROMANCE ==================== -->
+  <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    
+    <!-- Background Image with Soft Light & Vignette Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="assets/geraldine_gerwin_portrait.jpg" 
+        alt="Yeraldin y Gerwin Boda Real" 
+        class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05]"
+      />
+      <!-- Soft ambient gradient overlays -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75"></div>
+      <div class="absolute inset-0 bg-radial from-transparent via-black/20 to-black/60"></div>
+    </div>
+
+    <!-- Central Floating Hero Content -->
+    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 py-28 text-center text-white flex flex-col items-center justify-center">
+      
+      <!-- Top Monogram Badge -->
+      <div class="w-14 h-14 rounded-full border border-champagne-400/60 bg-black/40 backdrop-blur-md flex items-center justify-center mb-6 shadow-glow-gold">
+        <span class="font-cormorant font-bold text-xl text-champagne-200 tracking-tight">Y&G</span>
+      </div>
+
+      <!-- Glowing Neon Script (Signature from Canva reference) -->
+      <div class="my-2 flex flex-col items-center">
+        <h2 class="font-script text-6xl sm:text-7xl lg:text-8xl text-white neon-script-glow leading-none transform -rotate-2 select-none">
+          We Say Yes
+        </h2>
+        <div class="w-10 h-10 -mt-2 text-champagne-300 animate-pulse">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+      </div>
+
+      <!-- Together With Their Families -->
+      <p class="font-sans text-xs sm:text-sm uppercase tracking-[0.35em] text-champagne-200/90 font-medium mt-4 mb-2" data-i18n="hero.together">
+        TOGETHER WITH THEIR FAMILIES
+      </p>
+
+      <!-- Couple Names in Editorial Serif -->
+      <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl tracking-[0.18em] text-white font-bold my-2 drop-shadow-md">
+        YERALDIN <span class="font-script text-4xl sm:text-5xl text-gold-metallic font-normal block sm:inline">&</span> GERWIN
+      </h1>
+
+      <p class="font-cormorant italic text-lg sm:text-xl text-champagne-100 max-w-lg mx-auto my-3" data-i18n="hero.invite_sub">
+        Tenemos el honor de invitarte a celebrar nuestra boda
+      </p>
+
+      <!-- Date Banner (Elena & Daniel Style) -->
+      <div class="my-6 py-3 px-8 rounded-full bg-black/40 backdrop-blur-md border border-champagne-400/40 inline-flex items-center gap-4 text-center">
+        <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold" data-i18n="hero.month">MAYO</span>
+        <span class="w-px h-6 bg-champagne-400/50"></span>
+        <span class="font-cinzel text-3xl sm:text-4xl font-bold text-white tracking-widest">01</span>
+        <span class="w-px h-6 bg-champagne-400/50"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
+      </div>
+
+      <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold">
+        Hotel ReeHorst • Ede, Países Bajos
+      </p>
+
+      <!-- Civil Wedding Date Subtitle -->
+      <p class="text-[11px] font-sans text-champagne-300/80 tracking-wider mt-1">
+        <span data-i18n="hero.civil_note">Boda Civil:</span> <strong>21 Abril 2027 • 10:00h</strong>
+      </p>
+
+      <!-- Comenzar Button (As instructed by Geraldine: Simple and elegant) -->
+      <div class="mt-10">
+        <a 
+          href="#bienvenida" 
+          class="px-8 py-3.5 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 cursor-pointer"
+        >
+          <span data-i18n="hero.btn_start">Comenzar</span>
+          <span>↓</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Soft Scroll Down Arrow -->
+    <a href="#bienvenida" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </a>
   </header>
 
-  <!-- ==================== THE IPHONE 16 PRO DEVICE MOCKUP CONTAINER ==================== -->
-  <div id="deviceContainer" class="theme-desert w-full h-full sm:h-auto flex items-center justify-center relative">
-    
-    <!-- iPhone Chassis Shell -->
-    <div class="iphone-device relative">
-      <!-- Hardware Exterior Buttons -->
-      <div class="iphone-button-action"></div>
-      <div class="iphone-button-vol-up"></div>
-      <div class="iphone-button-vol-down"></div>
-      <div class="iphone-button-power"></div>
+  <!-- ==================== AUDIO SECTION: "OUR WEDDING SONG" ==================== -->
+  <section class="py-10 px-4 bg-white/90 border-b border-champagne-500/20 relative">
+    <div class="max-w-md mx-auto p-4 rounded-2xl bg-champagne-50/80 border border-champagne-500/30 shadow-xs flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-espresso text-champagne-200 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md cursor-pointer">
+          <svg id="songPlayIcon" class="w-5 h-5 ml-0.5 text-champagne-300" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="text-left">
+          <span class="block text-[10px] uppercase font-sans tracking-widest text-champagne-700 font-bold" data-i18n="audio.label">Música de la Boda</span>
+          <span class="font-serif text-sm font-bold text-espresso block" data-i18n="audio.title">Suite Romántica Nupcial</span>
+          <span class="text-[11px] font-sans text-champagne-800">Piano & Cuerdas</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 h-5 pr-2" id="musicBars">
+        <span class="w-1 h-3 bg-champagne-600 rounded-full animate-pulse"></span>
+        <span class="w-1 h-5 bg-champagne-400 rounded-full animate-pulse" style="animation-delay: 0.15s"></span>
+        <span class="w-1 h-2 bg-champagne-600 rounded-full animate-pulse" style="animation-delay: 0.3s"></span>
+        <span class="w-1 h-4 bg-champagne-500 rounded-full animate-pulse" style="animation-delay: 0.45s"></span>
+      </div>
+    </div>
+  </section>
 
-      <!-- Screen Viewport -->
-      <div class="iphone-screen no-scrollbar relative flex flex-col" id="scrollContainer">
+  <!-- ==================== SECTION: PERSONAL LOVE LETTER / BIENVENIDA ==================== -->
+  <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-parchment paper-texture relative">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="welcome.subtitle">
+        ✦ Carta a Nuestros Invitados ✦
+      </span>
+
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold mb-6 tracking-wide" data-i18n="welcome.title">
+        ¡Nos Casamos!
+      </h2>
+
+      <!-- Exact Heartfelt Text as Requested by Geraldine in Audio -->
+      <div class="bg-white/95 border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury text-left relative">
+        <!-- Delicate gold quotation mark -->
+        <span class="font-serif text-6xl text-champagne-400/40 absolute top-4 left-6 select-none">“</span>
         
-        <!-- Screen Gloss Glare Highlight -->
-        <div class="screen-glare"></div>
+        <p class="font-cormorant text-xl sm:text-2xl text-espresso/90 leading-relaxed italic mb-4 pt-2 relative z-10" data-i18n="welcome.text_p1">
+          El 21 de abril de 2027 nos daremos el «Sí, quiero», y queremos celebrarlo con vosotros el 1 de mayo de 2027 en Ede, Países Bajos.
+        </p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed mb-6 relative z-10" data-i18n="welcome.text_p2">
+          Sabemos que para muchos de vosotros esto significa hacer las maletas, coger un avión y venir hasta aquí. Por eso hemos preparado esta pequeña guía con todo lo que necesitáis saber para disfrutar del viaje y, sobre todo, de la celebración.
+        </p>
 
-        <!-- ==================== DYNAMIC ISLAND & STATUS BAR ==================== -->
-        <div class="sticky top-0 z-50 pt-2 px-6 pb-1 bg-gradient-to-b from-[#FAF5EB] via-[#FAF5EB]/95 to-transparent pointer-events-none">
-          <div class="flex items-center justify-between text-[11px] font-semibold font-sans text-espresso/80 px-2 select-none">
-            <span id="iosClock">9:41</span>
-            
-            <!-- Dynamic Island Capsule -->
-            <div class="dynamic-island pointer-events-auto cursor-pointer" onclick="toggleAudio()" title="Control de audio de boda">
-              <div class="dynamic-island-sensor"></div>
-              <!-- Equalizer Waveform indicator -->
-              <div class="flex items-center gap-0.5 h-3" id="islandWaveform">
-                <span class="w-0.5 h-2 bg-champagne-400 rounded-full animate-pulse"></span>
-                <span class="w-0.5 h-3 bg-champagne-300 rounded-full animate-pulse" style="animation-delay: 0.15s"></span>
-                <span class="w-0.5 h-1.5 bg-champagne-400 rounded-full animate-pulse" style="animation-delay: 0.3s"></span>
-              </div>
-              <div class="dynamic-island-lens"></div>
-            </div>
+        <div class="border-t border-champagne-500/20 pt-4 flex items-center justify-between">
+          <div>
+            <span class="font-script text-3xl text-gold-metallic block">Yeraldin & Gerwin</span>
+            <span class="text-[10px] uppercase font-sans tracking-widest text-champagne-700 font-semibold">Ede, Países Bajos • 2027</span>
+          </div>
+          <div class="w-10 h-10 rounded-full border border-champagne-400/40 flex items-center justify-center bg-champagne-50">
+            <span class="font-cormorant font-bold text-sm text-champagne-800">Y&G</span>
+          </div>
+        </div>
+      </div>
 
-            <!-- Signal & Battery -->
-            <div class="flex items-center gap-1.5">
-              <!-- 5G -->
-              <span class="text-[9px] font-bold text-espresso/70">5G</span>
-              <!-- Wifi Icon -->
-              <svg class="w-3 h-3 text-espresso/70" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 2.22c3.84 0 7.33 1.48 9.97 3.93L12 18.17 2.03 10.15C4.67 7.7 8.16 6.22 12 6.22z"/></svg>
-              <!-- Battery Icon -->
-              <div class="w-5 h-2.5 border border-espresso/70 rounded-xs p-0.5 flex items-center">
-                <div class="w-full h-full bg-espresso/70 rounded-2xs"></div>
-              </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: COUNTDOWN ("UNTIL WE SAY I DO") ==================== -->
+  <section class="py-16 px-4 bg-white/70 border-y border-champagne-500/20 text-center relative">
+    <div class="max-w-2xl mx-auto">
+      
+      <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Until</p>
+      <h3 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-widest mb-2" data-i18n="countdown.we_say_ido">
+        WE SAY I DO
+      </h3>
+      <p class="font-cormorant italic text-lg text-champagne-800 mb-8" data-i18n="countdown.cant_imagine">
+        No podemos imaginar este día sin vosotros
+      </p>
+
+      <!-- 4 Countdown Cards -->
+      <div class="grid grid-cols-4 gap-3 max-w-md mx-auto my-6">
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-days" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">213</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.days">DÍAS</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-hours" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">22</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.hours">HORAS</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-mins" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">30</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.mins">MINUTOS</span>
+        </div>
+        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-secs" class="block font-serif text-3xl sm:text-4xl font-bold text-gold-metallic">00</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.secs">SEGUNDOS</span>
+        </div>
+      </div>
+
+      <!-- Add to Calendar Buttons -->
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-white border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+          <span>📅</span>
+          <span data-i18n="countdown.google_cal">Google Calendar</span>
+        </button>
+        <button onclick="downloadICS()" class="px-5 py-2 rounded-full bg-espresso text-champagne-100 border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+          <span>🍎</span>
+          <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SPECIAL SECTION: TU VIAJE A PAÍSES BAJOS (NETHERLANDS) ==================== -->
+  <section id="tu-viaje" class="py-20 px-4 sm:px-6 bg-[#FAF5EB] relative">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="travel.subtitle">
+          ✦ Especial Invitados desde Madrid / España ✦
+        </span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="travel.title">
+          Tu Viaje a Países Bajos
+        </h2>
+        <p class="font-body text-base sm:text-lg text-champagne-800 max-w-xl mx-auto mt-2" data-i18n="travel.intro">
+          Todo lo que necesitas para llegar fácil, cómodo y económico hasta Hotel ReeHorst en Ede.
+        </p>
+      </div>
+
+      <!-- Route Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        
+        <!-- Step 1: Vuelo -->
+        <div class="bg-white/95 rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
+              ✈️
             </div>
+            <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-700" data-i18n="travel.step1_tag">Paso 1: Vuelo</span>
+            <h3 class="font-serif text-xl font-bold text-espresso my-1" data-i18n="travel.step1_title">Aeropuerto Schiphol (AMS)</h3>
+            <p class="text-xs font-sans text-champagne-900/80 leading-relaxed mt-2" data-i18n="travel.step1_desc">
+              Recomendamos volar directamente de Madrid a <strong>Ámsterdam Schiphol (AMS)</strong>. Hay vuelos diarios con Iberia, Air Europa y KLM.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-champagne-500/20 text-[11px] font-sans text-champagne-700 font-semibold">
+            Alternativa: Eindhoven (EIN)
           </div>
         </div>
 
-        <!-- ==================== MAIN INVITATION CONTENT FLOW ==================== -->
-        <div class="flex-1 flex flex-col">
-
-          <!-- ========== HERO 1: THE WOOW INVITES EMBROIDERED ENVELOPE (INTERACTIVE REVEAL) ========== -->
-          <section id="section-envelope" class="min-h-[82vh] flex flex-col items-center justify-between p-4 sm:p-5 text-center relative select-none">
-            
-            <!-- Viral Hook Caption (exact text from video) -->
-            <div class="pt-2">
-              <p class="font-sans font-bold text-xs sm:text-sm text-espresso/90 tracking-wide max-w-[280px] mx-auto leading-snug" data-i18n="hero.viral_hook">
-                You have never seen a wedding Invitation like this 😍💍🥹
-              </p>
-            </div>
-
-            <!-- The Realistic 3D Embroidered Linen Envelope Container -->
-            <div class="w-full max-w-[340px] my-auto relative cursor-pointer group" onclick="openEnvelope(event)">
-              
-              <!-- Ambient Warm Glow behind the envelope -->
-              <div class="absolute inset-0 bg-champagne-300/25 blur-2xl rounded-3xl pointer-events-none transform scale-95 group-hover:scale-105 transition-transform duration-500"></div>
-
-              <!-- Closed Envelope with Linen Texture & Deckled Edge -->
-              <div id="envelopeGraphic" class="relative rounded-2xl overflow-hidden shadow-2xl border border-champagne-500/40 bg-[#FAF7F0] transition-all duration-700">
-                <img 
-                  src="assets/envelope_yg_hero.jpg" 
-                  alt="Sobre de Boda Bordado Yeraldin y Gerwin" 
-                  class="w-full h-auto object-cover block rounded-2xl transform group-hover:scale-102 transition-transform duration-500" 
-                />
-
-                <!-- Interactive Wax Seal Touchpoint Overlay -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center pt-24 sm:pt-28">
-                  <!-- Pulsing Ripple Aura -->
-                  <div class="relative flex items-center justify-center">
-                    <div class="w-24 h-24 rounded-full border-2 border-champagne-400/60 animate-ping opacity-35 pointer-events-none absolute"></div>
-                    
-                    <!-- Touch Action Button -->
-                    <button class="px-4 py-1.5 rounded-full bg-espresso/90 text-champagne-100 text-[10px] font-sans font-bold tracking-[0.2em] uppercase border border-champagne-400/80 shadow-lg flex items-center gap-1.5 group-hover:scale-105 active:scale-95 transition-transform">
-                      <span class="text-gold-metallic">✦</span>
-                      <span data-i18n="hero.tap_seal">Toca el sello para abrir</span>
-                      <span class="text-gold-metallic">✦</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Unfolded Golden Light Burst Indicator (shows when opened) -->
-              <div id="openLightBloom" class="absolute inset-0 bg-radial from-amber-200/60 via-amber-300/20 to-transparent rounded-full opacity-0 pointer-events-none transition-opacity duration-700"></div>
-            </div>
-
-            <!-- Couple Names & Location Teaser -->
-            <div class="pb-2">
-              <p class="font-cormorant italic text-sm text-champagne-800" data-i18n="hero.together">Junto a nuestras familias</p>
-              <h1 class="font-serif text-2xl text-espresso font-semibold tracking-tight">
-                Yeraldin <span class="font-script text-2xl text-gold-metallic">&</span> Gerwin
-              </h1>
-              <p class="text-[10px] font-sans uppercase tracking-[0.25em] text-champagne-700 font-semibold mt-0.5">
-                21 Abril & 01 Mayo 2027 • Países Bajos
-              </p>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 2: THE ROYAL BAROQUE FLORAL ARCH FRAME (AS SEEN IN FRAME 7-10) ========== -->
-          <section id="section-main-card" class="min-h-[86vh] flex flex-col items-center justify-center relative p-3 sm:p-4 my-2">
-            
-            <!-- Ornate Baroque Frame Graphic with Blank Central Arch -->
-            <div class="relative w-full max-w-[350px] aspect-[720/1200] rounded-2xl overflow-hidden shadow-2xl border border-champagne-500/30">
-              <img 
-                src="assets/wooow_floral_frame_clean.jpg" 
-                alt="Marco Floral Barroco Real" 
-                class="w-full h-full object-cover block" 
-              />
-
-              <!-- Overlay Content precisely positioned within the central arch -->
-              <div class="absolute inset-x-10 top-20 bottom-24 flex flex-col items-center justify-center text-center px-2">
-                
-                <!-- Top Monogram -->
-                <div class="w-10 h-10 rounded-full border border-champagne-600/40 bg-[#FFFDF7]/85 backdrop-blur-xs flex items-center justify-center mb-1 shadow-xs">
-                  <span class="font-cormorant font-bold text-sm text-champagne-800 tracking-tighter">Y&G</span>
-                </div>
-
-                <p class="text-[8.5px] font-sans uppercase tracking-[0.25em] text-burgundy/80 font-bold mb-0.5" data-i18n="card.invitation">
-                  Save The Date & Invitación
-                </p>
-
-                <!-- Couple Names in Burgundy Editorial Calligraphy -->
-                <h2 class="font-script text-3xl sm:text-4xl text-burgundy tracking-wide leading-none my-0.5">
-                  Yeraldin
-                </h2>
-                <div class="flex items-center justify-center gap-2 my-0">
-                  <div class="w-5 h-px bg-champagne-600/50"></div>
-                  <span class="font-script text-xl text-gold-metallic">&</span>
-                  <div class="w-5 h-px bg-champagne-600/50"></div>
-                </div>
-                <h2 class="font-script text-3xl sm:text-4xl text-burgundy tracking-wide leading-none mb-1">
-                  Gerwin
-                </h2>
-
-                <!-- Diamond Divider -->
-                <div class="flex items-center gap-1.5 my-1 text-champagne-600">
-                  <span class="text-[10px]">✦</span>
-                  <div class="w-6 h-px bg-champagne-600/40"></div>
-                  <span class="text-[9px]">❖</span>
-                  <div class="w-6 h-px bg-champagne-600/40"></div>
-                  <span class="text-[10px]">✦</span>
-                </div>
-
-                <!-- Gala Date -->
-                <p class="font-serif text-base sm:text-lg font-bold text-espresso tracking-widest my-0.5">
-                  2027-05-01
-                </p>
-                <p class="text-[9.5px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="card.gala_subtitle">
-                  Gran Gala & Banquete Nupcial
-                </p>
-
-                <!-- Civil Date Mention -->
-                <div class="mt-1.5 pt-1.5 border-t border-champagne-500/30 w-full max-w-[180px]">
-                  <p class="text-[8.5px] font-sans uppercase tracking-wider text-espresso/80 font-medium">
-                    <span data-i18n="card.civil_note">Boda Civil:</span> <strong>21 Abril 2027 • 10:00h</strong>
-                  </p>
-                  <p class="text-[8.5px] font-sans text-champagne-700 italic mt-0.5">
-                    Hotel ReeHorst • Ede, Países Bajos
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Scroll For More Details Indicator (exact match from video) -->
-            <div class="mt-4 flex flex-col items-center gap-1 text-champagne-800">
-              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
-              <!-- Animated Mouse Wheel Pill Icon -->
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 3: COUNTDOWN (CUENTA REGRESIVA) ========== -->
-          <section id="section-countdown" class="min-h-[75vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
-            
-            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1" data-i18n="countdown.title">
-              Countdown
-            </h3>
-            
-            <p class="text-[10px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy/80 mb-1" data-i18n="common.scroll_more">
-              SCROLL FOR MORE DETAILS
-            </p>
-            
-            <p class="font-script text-2xl text-champagne-800 italic my-2" data-i18n="countdown.cant_wait">
-              We can't wait for this moment!
-            </p>
-
-            <!-- 4 Frosted Countdown Boxes (Exact Style from Wooow Invites) -->
-            <div class="grid grid-cols-4 gap-2 w-full max-w-[320px] mx-auto my-5">
-              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
-                <span id="cd-days" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">214</span>
-                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.days">DAYS</span>
-              </div>
-              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
-                <span id="cd-hours" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">08</span>
-                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.hours">HOURS</span>
-              </div>
-              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
-                <span id="cd-mins" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">42</span>
-                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.mins">MINUTES</span>
-              </div>
-              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
-                <span id="cd-secs" class="block font-script text-3xl sm:text-4xl font-bold text-gold-metallic">19</span>
-                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.secs">SECONDS</span>
-              </div>
-            </div>
-
-            <!-- Calendar Integration Buttons -->
-            <div class="flex items-center gap-2 mt-2">
-              <button onclick="addToGoogleCalendar()" class="px-3.5 py-1.5 rounded-full bg-white/80 border border-champagne-500/40 text-[10px] font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
-                <span>📅</span>
-                <span data-i18n="countdown.google_cal">Google Calendar</span>
-              </button>
-              <button onclick="downloadICS()" class="px-3.5 py-1.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500/50 text-[10px] font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
-                <span>🍎</span>
-                <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
-              </button>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-8 flex flex-col items-center gap-1">
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 4: THE VENUE (EL LUGAR - HOTEL REEHORST) ========== -->
-          <section id="section-venue" class="min-h-[88vh] flex flex-col items-center justify-between p-4 text-center relative border-t border-champagne-500/20">
-            
-            <div>
-              <h3 class="font-script text-4xl sm:text-5xl text-burgundy mt-2" data-i18n="venue.title">
-                The Venue
-              </h3>
-              <p class="font-cormorant italic text-sm text-champagne-800">
-                Hotel & Congrescentrum ReeHorst
-              </p>
-            </div>
-
-            <!-- Watercolor Castle / Venue Artwork -->
-            <div class="relative w-full max-w-[320px] rounded-2xl overflow-hidden shadow-xl border border-champagne-500/40 my-3">
-              <img 
-                src="assets/venue_hotel_reehorst_luxury.jpg" 
-                alt="Hotel ReeHorst Ede Wedding Estate" 
-                class="w-full h-auto object-cover block" 
-              />
-              
-              <!-- Floating Pulsing GPS Location Button (exact match from frame 12) -->
-              <div class="absolute bottom-4 left-1/2 -translate-x-1/2">
-                <a 
-                  href="https://maps.google.com/?q=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Netherlands" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="w-12 h-12 rounded-full bg-white/95 border-2 border-emerald-600 shadow-xl flex items-center justify-center text-emerald-700 hover:scale-110 active:scale-95 transition-transform cursor-pointer"
-                  title="Abrir ubicación en Google Maps"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Venue Details & Transport Note -->
-            <div class="w-full max-w-[320px] text-center">
-              <p class="font-serif text-sm font-bold text-espresso">
-                Bennekomseweg 24, 6717 LM Ede
-              </p>
-              <p class="text-[11px] font-sans text-champagne-700 mb-2">
-                Gelderland • Países Bajos (Holanda)
-              </p>
-
-              <!-- Travel Highlights -->
-              <div class="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-champagne-500/30 text-left text-[11px] space-y-1.5 shadow-xs">
-                <div class="flex items-start gap-2">
-                  <span class="text-sm">🚆</span>
-                  <p class="text-espresso/90">
-                    <strong data-i18n="venue.train_title">Tren directo:</strong> <span data-i18n="venue.train_desc">Desde Schiphol AMS cada 15 min directo a estación Ede-Wageningen (a 3 min a pie del hotel).</span>
-                  </p>
-                </div>
-                <div class="flex items-start gap-2">
-                  <span class="text-sm">✈️</span>
-                  <p class="text-espresso/90">
-                    <strong data-i18n="venue.flight_title">Vuelos desde España:</strong> <span data-i18n="venue.flight_desc">Llegada a Ámsterdam Schiphol o Eindhoven.</span>
-                  </p>
-                </div>
-                <div class="flex items-start gap-2">
-                  <span class="text-sm">🏨</span>
-                  <p class="text-espresso/90">
-                    <strong data-i18n="venue.stay_title">Alojamiento:</strong> <span data-i18n="venue.stay_desc">Tarifa especial reservando con código "Boda Yeraldin & Gerwin".</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-4 flex flex-col items-center gap-1">
-              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 5: ITINERARY / TIMELINE (PROGRAMA) ========== -->
-          <section id="section-timeline" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
-            
-            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1" data-i18n="timeline.title">
-              Itinerary
-            </h3>
-            <p class="text-[10px] font-sans uppercase tracking-[0.2em] font-bold text-champagne-800 mb-6" data-i18n="timeline.subtitle">
-              Los Momentos Inolvidables
-            </p>
-
-            <!-- Vertical Hanging Timeline (exact match from frame 15) -->
-            <div class="relative w-full max-w-[310px] pl-6 text-left space-y-7 my-2">
-              <!-- Central Line -->
-              <div class="absolute left-9 top-3 bottom-3 w-px bg-champagne-500/40"></div>
-
-              <!-- Node 1: Boda Civil -->
-              <div class="relative flex items-start gap-4">
-                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
-                  💍
-                </div>
-                <div>
-                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">10:00</span>
-                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.civil_title">Boda Civil • 21 Abril</span>
-                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.civil_desc">Ceremonia oficial y firma solemne.</p>
-                </div>
-              </div>
-
-              <!-- Node 2: Banquete de Gala -->
-              <div class="relative flex items-start gap-4">
-                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
-                  🥂
-                </div>
-                <div>
-                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">20:00 - 22:00</span>
-                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.banquet_title">Banquete & Gran Cena • 01 Mayo</span>
-                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.banquet_desc">Brindis de bienvenida y cena gourmet en Salón de Gala ReeHorst.</p>
-                </div>
-              </div>
-
-              <!-- Node 3: Gran Fiesta & Barra Libre -->
-              <div class="relative flex items-start gap-4">
-                <div class="w-7 h-7 rounded-full bg-burgundy text-white flex items-center justify-center text-xs font-bold z-10 shadow-sm shrink-0">
-                  🎉
-                </div>
-                <div>
-                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">22:00 - 02:00</span>
-                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.party_title">Gran Fiesta & Baile</span>
-                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.party_desc">¡Let yourself go! Baile y barra libre durante 4 horas.</p>
-                </div>
-              </div>
-
-              <!-- Node 4: Fin de Fiesta -->
-              <div class="relative flex items-start gap-4">
-                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
-                  🚗
-                </div>
-                <div>
-                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">02:00</span>
-                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.end_title">Fin de Fiesta</span>
-                  <p class="text-[11px] font-sans text-champagne-800 italic leading-snug" data-i18n="timeline.end_desc">All good things come to an end!</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Open Bar Highlight Card -->
-            <div class="w-full max-w-[310px] mt-6 p-3 rounded-2xl bg-gradient-to-r from-champagne-100 via-white to-champagne-100 border border-champagne-500/40 text-center shadow-xs">
-              <span class="text-xs uppercase tracking-widest font-sans font-bold text-burgundy block mb-1">
-                🍸 Barra Libre & Bebidas
-              </span>
-              <p class="text-[11px] font-sans text-espresso leading-snug" data-i18n="timeline.open_bar_note">
-                <strong>4 Horas de Barra Libre Incluidas:</strong> selección de cervezas, vinos y refrescos para todos los invitados. Barra cash bar disponible para cócteles y licores premium.
-              </p>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-6 flex flex-col items-center gap-1">
-              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 6: DRESS CODE & GIFTS ========== -->
-          <section id="section-gifts" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20">
-            
-            <!-- Dress Code Preview -->
-            <div class="mb-6 w-full max-w-[310px]">
-              <div class="w-14 h-14 mx-auto mb-2 flex items-center justify-center">
-                <img src="assets/dress_code_attire.png" alt="Dress code novios" class="w-full h-full object-contain" />
-              </div>
-              <h4 class="font-script text-3xl text-burgundy" data-i18n="dress.title">Dress Code</h4>
-              <p class="text-[11px] font-sans uppercase tracking-widest text-espresso font-bold mt-0.5" data-i18n="dress.type">
-                Gala • Black Tie & White/Gold
-              </p>
-              <p class="text-[11px] font-sans text-champagne-800 mt-1" data-i18n="dress.palette">
-                Paleta sugerida: Blanco, Dorado, Champagne, Negro.
-              </p>
-            </div>
-
-            <!-- Divider -->
-            <div class="w-32 h-px bg-champagne-500/30 my-2"></div>
-
-            <!-- Gifts Card (exact match from frame 18) -->
-            <div class="w-full max-w-[310px] mt-2">
-              <div class="w-12 h-12 mx-auto mb-1 flex items-center justify-center">
-                <img src="assets/gift_icon_watercolor.png" alt="Regalos de boda" class="w-full h-full object-contain" />
-              </div>
-              <h4 class="font-script text-4xl text-burgundy" data-i18n="gifts.title">Gifts</h4>
-              <p class="font-script text-xl text-espresso italic mt-1 leading-snug max-w-[270px] mx-auto" data-i18n="gifts.presence">
-                "Your presence is your gift, but all contributions can go to the bank details below. Thank you!"
-              </p>
-
-              <!-- Bank Details Accordion -->
-              <div class="mt-4 bg-white/80 backdrop-blur-md rounded-2xl border border-champagne-500/30 p-3 shadow-xs">
-                <p class="text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-2" data-i18n="gifts.bank_label">
-                  Prefer to contribute directly?
-                </p>
-                <div class="bg-champagne-100/70 p-2.5 rounded-xl border border-champagne-500/30 flex items-center justify-between">
-                  <div class="text-left">
-                    <span class="block text-[9px] uppercase font-sans text-champagne-700 font-semibold">IBAN / Cuenta</span>
-                    <span class="font-mono text-xs font-bold text-espresso select-all">NL91 ABNA 0417 1643 00</span>
-                    <span class="block text-[9px] text-champagne-800">Beneficiarios: Yeraldin & Gerwin</span>
-                  </div>
-                  <button onclick="copyToClipboard('NL91 ABNA 0417 1643 00')" class="px-2.5 py-1 bg-espresso text-champagne-100 rounded-lg text-[10px] font-sans font-semibold hover:bg-champagne-800 active:scale-95 transition-all">
-                    Copiar
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-8 flex flex-col items-center gap-1">
-              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 7: FAQ (PREGUNTAS FRECUENTES) ========== -->
-          <section id="section-faq" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
-            
-            <!-- Scroll Icon Header (exact match from frame 21) -->
-            <div class="w-12 h-12 mx-auto mb-1 flex items-center justify-center">
-              <img src="assets/faq_scroll_icon.png" alt="FAQ Pergamino" class="w-full h-full object-contain" />
-            </div>
-
-            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1">
-              FAQ
-            </h3>
-            <p class="text-[10px] font-sans uppercase tracking-[0.2em] font-bold text-champagne-800 mb-5" data-i18n="faq.subtitle">
-              Preguntas Frecuentes
-            </p>
-
-            <!-- FAQ Accordion List -->
-            <div class="w-full max-w-[320px] space-y-2.5 text-left">
-              
-              <!-- FAQ 1 -->
-              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
-                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
-                  <span data-i18n="faq.q1">¿Puedo llevar un acompañante (+1)?</span>
-                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
-                  <span data-i18n="faq.a1">Las invitaciones son personalizadas. Por favor indícanos el nombre de tu acompañante en el formulario de confirmación RSVP para organizar el salón y la cena.</span>
-                </div>
-              </div>
-
-              <!-- FAQ 2 -->
-              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
-                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
-                  <span data-i18n="faq.q2">¿Cómo viajo desde España u otros países?</span>
-                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
-                  <span data-i18n="faq.a2">Te recomendamos volar al aeropuerto de Ámsterdam Schiphol (AMS). Justo debajo del aeropuerto tomas el tren directo de la red NS cada 15 min hasta la estación Ede-Wageningen, que queda a solo 3 minutos a pie del Hotel ReeHorst.</span>
-                </div>
-              </div>
-
-              <!-- FAQ 3 -->
-              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
-                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
-                  <span data-i18n="faq.q3">¿Cómo funciona la barra libre de bebidas?</span>
-                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
-                  <span data-i18n="faq.a3">Contamos con 4 horas completas de barra libre con cerveza holandesa, vinos seleccionados y refrescos incluidos. Además, el hotel dispondrá de barra cash bar para quienes deseen cócteles o licores destilados.</span>
-                </div>
-              </div>
-
-              <!-- FAQ 4 -->
-              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
-                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
-                  <span data-i18n="faq.q4">¿Dónde puedo hospedarme en Ede?</span>
-                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
-                  <span data-i18n="faq.a4">El mismo Hotel ReeHorst dispone de amplias habitaciones con descuento especial de boda. Menciona "Boda Yeraldin & Gerwin" al reservar directamente con recepción.</span>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="mt-8 flex flex-col items-center gap-1">
-              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
-              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
-                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- ========== SECTION 8: RSVP FORM (CONFIRMACIÓN DE ASISTENCIA) ========== -->
-          <section id="section-rsvp" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20">
-            
-            <h3 class="font-script text-5xl text-burgundy mb-1">
-              RSVP
-            </h3>
-            <p class="font-script text-2xl text-champagne-800 italic" data-i18n="rsvp.cant_wait">
-              We can't wait!
-            </p>
-            <p class="font-script text-xl text-burgundy italic mb-4" data-i18n="rsvp.deadline">
-              Please reply by March 1st, 2027
-            </p>
-
-            <!-- RSVP Form Container -->
-            <form onsubmit="handleRSVPSubmit(event)" class="w-full max-w-[320px] bg-white/90 backdrop-blur-md rounded-2xl border border-champagne-500/30 p-4 shadow-md text-left space-y-3">
-              
-              <div>
-                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
-                  Nombre Completo *
-                </label>
-                <input 
-                  type="text" 
-                  id="rsvpName" 
-                  required 
-                  placeholder="Tu nombre y apellido" 
-                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600"
-                />
-              </div>
-
-              <!-- Attendance Choice -->
-              <div>
-                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
-                  ¿Asistirás a la celebración? *
-                </label>
-                <div class="grid grid-cols-2 gap-2 text-xs">
-                  <label class="flex items-center gap-1.5 p-2 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
-                    <input type="radio" name="rsvpAttend" value="si" checked class="text-burgundy focus:ring-burgundy" />
-                    <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.yes">¡Sí, asistiré! 🎉</span>
-                  </label>
-                  <label class="flex items-center gap-1.5 p-2 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
-                    <input type="radio" name="rsvpAttend" value="no" class="text-burgundy focus:ring-burgundy" />
-                    <span class="font-sans font-medium text-espresso" data-i18n="rsvp.no">No podré ❤️</span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Events Attendance Checklist -->
-              <div class="p-2.5 rounded-xl bg-champagne-100/50 border border-champagne-500/30 space-y-1.5">
-                <span class="block text-[9px] uppercase font-sans font-bold text-champagne-800" data-i18n="rsvp.events_title">Eventos que asistirás:</span>
-                <label class="flex items-center gap-2 text-xs text-espresso font-sans">
-                  <input type="checkbox" id="rsvpCheckGala" checked class="rounded-xs text-burgundy" />
-                  <span data-i18n="rsvp.event_gala">Gran Gala & Banquete (01 Mayo)</span>
-                </label>
-                <label class="flex items-center gap-2 text-xs text-espresso font-sans">
-                  <input type="checkbox" id="rsvpCheckCivil" class="rounded-xs text-burgundy" />
-                  <span data-i18n="rsvp.event_civil">Boda Civil (21 Abril)</span>
-                </label>
-              </div>
-
-              <!-- Dietary Needs -->
-              <div>
-                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.diet_label">
-                  Alergias o Restricciones Alimentarias
-                </label>
-                <input 
-                  type="text" 
-                  id="rsvpDiet" 
-                  placeholder="Ej: Vegetariano, sin gluten, mariscos..." 
-                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600"
-                />
-              </div>
-
-              <!-- Message -->
-              <div>
-                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.msg_label">
-                  Mensaje para los novios
-                </label>
-                <textarea 
-                  id="rsvpMessage" 
-                  rows="2" 
-                  placeholder="¡Felicidades por su gran día!" 
-                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600 resize-none"
-                ></textarea>
-              </div>
-
-              <!-- Submit Button with WhatsApp Routing -->
-              <button 
-                type="submit" 
-                class="w-full py-2.5 rounded-full bg-burgundy hover:bg-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-widest shadow-md transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span data-i18n="rsvp.submit_btn">Enviar Confirmación</span>
-                <span>💌</span>
-              </button>
-            </form>
-
-            <div id="rsvpSuccess" class="hidden mt-3 p-3 bg-emerald-100/90 border border-emerald-500 text-emerald-900 rounded-xl text-xs font-sans font-medium w-full max-w-[320px]">
-              ¡Muchas gracias! Tu confirmación ha sido enviada con éxito.
-            </div>
-
-            <!-- Bottom Monogram Seal Footer -->
-            <div class="mt-8 mb-4 text-center">
-              <span class="font-cormorant font-bold text-2xl text-champagne-700 tracking-tighter">Y&G</span>
-              <p class="text-[9px] uppercase tracking-[0.25em] text-champagne-600 font-sans mt-0.5">
-                Hotel ReeHorst • Ede, Países Bajos • 2027
-              </p>
-            </div>
-          </section>
-
-        </div>
-
-        <!-- ==================== MOBILE SAFARI BOTTOM BAR (EXACT MOCKUP CLONE) ==================== -->
-        <div class="safari-toolbar flex items-center justify-between text-espresso/80 select-none">
-          <!-- Back / Forward -->
-          <div class="flex items-center gap-3">
-            <button onclick="scrollToTop()" class="hover:text-espresso transition-colors text-sm" title="Inicio">‹</button>
-            <button onclick="scrollToNextSection()" class="hover:text-espresso transition-colors text-sm" title="Siguiente">›</button>
+        <!-- Step 2: Tren Directo NS -->
+        <div class="bg-gradient-to-b from-white to-champagne-50 rounded-3xl p-6 border-2 border-champagne-500/50 shadow-luxury flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-3 right-3 bg-champagne-600 text-white text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
+            Recomendado
           </div>
-
-          <!-- Audio Equalizer Speaker (Frame 3/7/10 match) -->
-          <button onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center text-espresso hover:bg-champagne-300 transition-colors shadow-xs cursor-pointer" title="Activar/Silenciar Música">
-            <svg id="safariSoundIcon" class="w-4 h-4 text-burgundy" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-          </button>
-
-          <!-- URL Pill -->
-          <div class="flex items-center gap-1.5 bg-white/90 border border-champagne-500/40 rounded-full px-3 py-1 shadow-xs text-[10px] font-sans font-medium text-espresso/80">
-            <span class="text-[9px]">🔒</span>
-            <span>yeraldin-gerwin.wedding</span>
-            <button onclick="window.location.reload()" class="hover:text-espresso text-[9px]">⟳</button>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-200 flex items-center justify-center text-2xl mb-4 border border-champagne-500/40">
+              🚆
+            </div>
+            <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-800" data-i18n="travel.step2_tag">Paso 2: Tren Directo</span>
+            <h3 class="font-serif text-xl font-bold text-espresso my-1" data-i18n="travel.step2_title">Schiphol a Ede-Wageningen</h3>
+            <p class="text-xs font-sans text-champagne-900/80 leading-relaxed mt-2" data-i18n="travel.step2_desc">
+              Debajo de la terminal tomas el tren <strong>NS Intercity directo cada 15 min</strong> hasta la estación <strong>Ede-Wageningen</strong> (unos 50 min de trayecto).
+            </p>
           </div>
-
-          <!-- Share & Tabs -->
-          <div class="flex items-center gap-3 text-xs">
-            <button onclick="shareInvitation()" class="hover:text-espresso transition-colors" title="Compartir">⎙</button>
-            <button onclick="toggleMockupView()" class="hover:text-espresso transition-colors font-bold" title="Cambiar Vista">⧉</button>
+          <div class="mt-4 pt-3 border-t border-champagne-500/30 text-xs font-sans text-espresso">
+            <strong class="text-champagne-700">Precio billete NS:</strong> ~€18.80 por trayecto (ida/vuelta ~€37.60). <em>¡Mucho más barato y sin estrés que alquilar coche!</em>
           </div>
         </div>
 
-        <!-- iOS Home Indicator -->
-        <div class="py-1 bg-transparent">
-          <div class="w-32 h-1 bg-black/60 rounded-full mx-auto"></div>
+        <!-- Step 3: Llegada a Hotel ReeHorst -->
+        <div class="bg-white/95 rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
+              🚶
+            </div>
+            <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-700" data-i18n="travel.step3_tag">Paso 3: Llegada</span>
+            <h3 class="font-serif text-xl font-bold text-espresso my-1" data-i18n="travel.step3_title">3 min a pie al Hotel</h3>
+            <p class="text-xs font-sans text-champagne-900/80 leading-relaxed mt-2" data-i18n="travel.step3_desc">
+              La estación de tren Ede-Wageningen está <strong>justo enfrente del Hotel ReeHorst</strong>. Solo cruzas la calle y ya estás en el hotel.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-champagne-500/20 text-[11px] font-sans text-champagne-700 font-semibold">
+            Taxis / Uber / Bolt disponibles
+          </div>
         </div>
 
       </div>
-    </div>
-  </div>
 
-  <!-- Background Wedding Music Element -->
+      <!-- Recommendation Card: Hotel ReeHorst Stay -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left flex flex-col sm:flex-row items-center gap-6">
+        <div class="w-20 h-20 rounded-2xl bg-champagne-100 border border-champagne-500/30 flex items-center justify-center text-3xl shrink-0">
+          🏨
+        </div>
+        <div class="flex-1">
+          <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-700 block mb-1">
+            Alojamiento Recomendado por los Novios
+          </span>
+          <h4 class="font-serif text-xl sm:text-2xl font-bold text-espresso mb-1">
+            Hospédate en Hotel ReeHorst
+          </h4>
+          <p class="text-xs sm:text-sm font-sans text-champagne-900/80 leading-relaxed">
+            Para que podáis disfrutar de la fiesta y de las <strong>4 horas de barra libre</strong> sin preocuparos de conducir de madrugada, os recomendamos alojaros en el mismo hotel. Mencionad «Boda Yeraldin & Gerwin» al reservar.
+          </p>
+        </div>
+        <a 
+          href="https://www.reehorst.nl/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="px-6 py-3 rounded-full bg-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-wider hover:bg-champagne-800 transition-colors shadow-md shrink-0"
+        >
+          Ver Hotel ReeHorst →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THE VENUE SECTION: HOTEL REEHORST ==================== -->
+  <section id="lugar" class="py-20 px-4 sm:px-6 bg-white relative">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="venue.subtitle">
+        ✦ El Escenario de Nuestro Sueño ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="venue.title">
+        Hotel & Congrescentrum ReeHorst
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-1 mb-8">
+        Bennekomseweg 24, 6717 LM Ede, Países Bajos (Gelderland)
+      </p>
+
+      <!-- Venue Artwork & Highlights -->
+      <div class="relative w-full max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-champagne-500/30 my-6">
+        <img 
+          src="assets/venue_hotel_reehorst_luxury.jpg" 
+          alt="Hotel ReeHorst Ede Países Bajos" 
+          class="w-full h-auto object-cover block" 
+        />
+        
+        <!-- Floating Google Maps Action Button -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+          <a 
+            href="https://maps.google.com/?q=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Netherlands" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="px-6 py-3 rounded-full bg-white/95 text-emerald-800 border-2 border-emerald-600 font-sans font-bold text-xs uppercase tracking-wider shadow-2xl hover:scale-105 active:scale-95 transition-transform flex items-center gap-2"
+          >
+            <span>📍</span>
+            <span data-i18n="venue.btn_maps">Abrir en Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Highlights Pills -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mt-8 text-left text-xs font-sans">
+        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+          <span class="text-2xl">❄️/♨️</span>
+          <div>
+            <strong class="block text-espresso">Salón Climatizado</strong>
+            <span class="text-champagne-700">Calefacción y A/C. ¡El clima exterior no importa!</span>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+          <span class="text-2xl">🚗</span>
+          <div>
+            <strong class="block text-espresso">Parking Gratuito</strong>
+            <span class="text-champagne-700">Aparcamiento en el propio hotel para invitados.</span>
+          </div>
+        </div>
+        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+          <span class="text-2xl">✨</span>
+          <div>
+            <strong class="block text-espresso">Decoración de Gala</strong>
+            <span class="text-champagne-700">Elegancia en Blanco & Dorado / Negro & Dorado.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== WEDDING TIMELINE: LA AGENDA DEL DÍA ==================== -->
+  <section id="itinerario" class="py-20 px-4 sm:px-6 bg-parchment paper-texture relative">
+    <div class="max-w-3xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="timeline.subtitle">
+        ✦ La Agenda de la Boda ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide mb-12" data-i18n="timeline.title">
+        Horarios & Momentos Especiales
+      </h2>
+
+      <!-- Timeline Cards -->
+      <div class="relative pl-6 sm:pl-10 text-left space-y-10 my-8">
+        <!-- Central Line -->
+        <div class="absolute left-9 sm:left-13 top-4 bottom-4 w-px bg-champagne-500/40"></div>
+
+        <!-- 1. Boda Civil (21 Abril) -->
+        <div class="relative flex items-start gap-4 sm:gap-6">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-lg z-10 shadow-md shrink-0">
+            💍
+          </div>
+          <div class="bg-white/95 rounded-2xl p-5 sm:p-6 border border-champagne-500/30 shadow-luxury flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-cinzel text-lg sm:text-xl font-bold text-champagne-800">10:00 AM</span>
+              <span class="text-[10px] uppercase font-sans font-bold px-2.5 py-0.5 rounded-full bg-champagne-100 text-champagne-800">
+                Miércoles 21 Abril 2027
+              </span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-espresso my-1" data-i18n="timeline.civil_title">
+              Boda Civil Oficial («Sí, quiero»)
+            </h3>
+            <p class="text-xs sm:text-sm font-sans text-champagne-900/80 leading-relaxed mt-2" data-i18n="timeline.civil_desc">
+              Ceremonia oficial y firma solemne en el ayuntamiento con la familia más íntima (20 personas).
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Banquete de Gala Buffet Libre (01 Mayo) -->
+        <div class="relative flex items-start gap-4 sm:gap-6">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-champagne-200 border-2 border-champagne-600 flex items-center justify-center text-lg z-10 shadow-md shrink-0">
+            🍽️
+          </div>
+          <div class="bg-white/95 rounded-2xl p-5 sm:p-6 border border-champagne-500/30 shadow-luxury flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-cinzel text-lg sm:text-xl font-bold text-champagne-800">20:00 - 22:00</span>
+              <span class="text-[10px] uppercase font-sans font-bold px-2.5 py-0.5 rounded-full bg-champagne-800 text-white">
+                Sábado 01 Mayo 2027
+              </span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-espresso my-1" data-i18n="timeline.dinner_title">
+              Banquete & Gran Cena Buffet Libre Gourmet
+            </h3>
+            <p class="text-xs sm:text-sm font-sans text-champagne-900/80 leading-relaxed mt-2" data-i18n="timeline.dinner_desc">
+              Brindis de honor y cena buffet libre en Salón de Gala ReeHorst con carnes a la brasa, opciones para celíacos, vegetarianos, kosher, sin mariscos ¡y arepas especiales para celebrar nuestras raíces!
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Gran Fiesta & Baile con 4h Barra Libre -->
+        <div class="relative flex items-start gap-4 sm:gap-6">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-espresso text-champagne-200 border-2 border-champagne-400 flex items-center justify-center text-lg z-10 shadow-md shrink-0">
+            🎉
+          </div>
+          <div class="bg-gradient-to-r from-darknoir via-espresso to-darknoir text-white rounded-2xl p-5 sm:p-6 border-2 border-champagne-400 shadow-luxury-dark flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-cinzel text-lg sm:text-xl font-bold text-champagne-300">22:00 - 02:00 / 02:30</span>
+              <span class="text-[10px] uppercase font-sans font-bold px-2.5 py-0.5 rounded-full bg-champagne-400/30 text-champagne-200 border border-champagne-400/50">
+                Salón Negro & Dorado
+              </span>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white my-1" data-i18n="timeline.party_title">
+              Gran Fiesta, Baile & Barra Libre
+            </h3>
+            <p class="text-xs sm:text-sm font-sans text-champagne-100/90 leading-relaxed mt-2" data-i18n="timeline.party_desc">
+              ¡A bailar y celebrar! Baile nupcial y 4 horas completas de barra libre.
+            </p>
+            
+            <div class="mt-4 pt-3 border-t border-champagne-400/30 bg-black/30 p-3 rounded-xl">
+              <p class="text-xs font-sans text-champagne-200">
+                <strong class="text-gold-metallic">🍸 Barra Libre Incluida:</strong> Cervezas holandesas, vinos seleccionados y refrescos incluidos para todos los invitados. Barra cash bar disponible para cócteles y licores premium.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== DETAILS & PROTOCOL (LO QUE NECESITAS SABER) ==================== -->
+  <section id="detalles" class="py-20 px-4 sm:px-6 bg-white relative">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="details.subtitle">
+          ✦ Información Importante ✦
+        </span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="details.title">
+          Protocolo & Preguntas Frecuentes
+        </h2>
+        <p class="font-serif italic text-sm text-champagne-800 mt-2 max-w-xl mx-auto" data-i18n="details.intro">
+          Hemos recopilado todas las dudas frecuentes sobre el viaje, transporte, menú, alergias y la celebración para que disfrutes sin preocupaciones.
+        </p>
+      </div>
+
+      <!-- Quick Highlights Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+        
+        <!-- Dress Code -->
+        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+          <div class="text-2xl mb-2">👗👔</div>
+          <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.dress_title">Dress Code</h3>
+          <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Casual Chic / Gala</p>
+          <p class="text-[11px] font-sans text-champagne-900/80 leading-relaxed" data-i18n="details.dress_desc">
+            Día/Recuerdos: Blanco & Dorado.<br/>Salón Gala: Negro & Dorado.
+          </p>
+        </div>
+
+        <!-- Niños / Adults Only -->
+        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+          <div class="text-2xl mb-2">👶✨</div>
+          <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.kids_title">Adults Only</h3>
+          <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Fiesta sin ataduras</p>
+          <p class="text-[11px] font-sans text-champagne-900/80 leading-relaxed" data-i18n="details.kids_desc">
+            Exclusivo mayores de edad para bailar y disfrutar (salvo sobrinos directos).
+          </p>
+        </div>
+
+        <!-- Alojamiento -->
+        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+          <div class="text-2xl mb-2">🏨🥂</div>
+          <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.hotel_title">Hotel ReeHorst</h3>
+          <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Todo en un solo lugar</p>
+          <p class="text-[11px] font-sans text-champagne-900/80 leading-relaxed" data-i18n="details.hotel_desc">
+            Banquete y fiesta en el mismo hotel. ¡Sube directo a tu habitación sin taxis!
+          </p>
+        </div>
+
+        <!-- Regalos / Transferencia -->
+        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+          <div class="text-2xl mb-2">🎁💌</div>
+          <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.gifts_title">Mesa de Regalos</h3>
+          <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Para nuestra nueva vida</p>
+          <p class="text-[11px] font-sans text-champagne-900/80 leading-relaxed" data-i18n="details.gifts_desc">
+            Lluvia de sobres virtual por transferencia bancaria directa (IBAN).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bank Transfer Box -->
+      <div class="bg-champagne-100/70 border border-champagne-500/40 rounded-2xl p-5 mb-14 max-w-xl mx-auto shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-center sm:text-left">
+          <span class="block text-[10px] uppercase font-sans text-champagne-800 font-bold tracking-wider">Número de Cuenta Oficial (ABN AMRO)</span>
+          <span class="font-mono text-sm sm:text-base font-bold text-espresso select-all tracking-wider">NL91 ABNA 0417 1643 00</span>
+          <span class="block text-xs text-champagne-800 font-serif">Titulares: Yeraldin & Gerwin</span>
+        </div>
+        <button onclick="copyToClipboard('NL91 ABNA 0417 1643 00')" class="px-5 py-2.5 bg-espresso text-champagne-100 rounded-full text-xs font-sans font-bold uppercase hover:bg-champagne-800 active:scale-95 transition-all shadow-md flex items-center gap-2 cursor-pointer shrink-0">
+          <span>Copiar IBAN</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+        </button>
+      </div>
+
+      <!-- FAQ Section Container -->
+      <div class="bg-champagne-50/60 rounded-3xl p-6 sm:p-10 border border-champagne-500/30 shadow-luxury">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-champagne-500/20">
+          <div>
+            <h3 class="font-serif text-2xl font-bold text-espresso" data-i18n="faq.title">
+              Preguntas Frecuentes Detalladas
+            </h3>
+            <p class="text-xs font-sans text-champagne-800 mt-1" data-i18n="faq.hint">
+              Haz clic en cualquier pregunta para ver todos los detalles.
+            </p>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="flex flex-wrap gap-1.5" id="faqFilters">
+            <button onclick="filterFAQ('all', this)" class="faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-espresso text-champagne-100 shadow-xs cursor-pointer transition-all">
+              Todas
+            </button>
+            <button onclick="filterFAQ('viaje', this)" class="faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-white text-champagne-800 border border-champagne-500/30 hover:bg-champagne-100 cursor-pointer transition-all">
+              ✈️ Viaje & Hotel
+            </button>
+            <button onclick="filterFAQ('comida', this)" class="faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-white text-champagne-800 border border-champagne-500/30 hover:bg-champagne-100 cursor-pointer transition-all">
+              🍽️ Menú & Bebidas
+            </button>
+            <button onclick="filterFAQ('fiesta', this)" class="faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-white text-champagne-800 border border-champagne-500/30 hover:bg-champagne-100 cursor-pointer transition-all">
+              🎉 Fiesta & Protocolo
+            </button>
+          </div>
+        </div>
+
+        <!-- FAQ Search Input -->
+        <div class="relative mb-6">
+          <input 
+            type="text" 
+            id="faqSearch" 
+            oninput="searchFAQ()" 
+            placeholder="Buscar duda (ej: tren, arepas, mariscos, hotel, barra libre...)" 
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-champagne-500/40 text-xs sm:text-sm text-espresso placeholder-champagne-700/60 focus:outline-none focus:ring-2 focus:ring-champagne-600 shadow-xs"
+          />
+          <svg class="w-4 h-4 text-champagne-600 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+
+        <!-- FAQ Accordion List -->
+        <div class="space-y-3.5" id="faqAccordionList">
+          
+          <!-- Item 1: Fechas -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q1">¿Por qué hay dos fechas distintas: 21 de Abril y 01 de Mayo?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a1">
+                El <strong>miércoles 21 de abril de 2027 a las 10:00 AM</strong> realizamos la firma civil en el Ayuntamiento de Ede en una ceremonia íntima de aforo limitado (máximo 20 personas, exclusiva para padres y testigos).<br/><br/>
+                El <strong>sábado 01 de mayo de 2027</strong> es la <strong>Gran Boda y Celebración Oficial</strong> con todos los invitados en el Hotel ReeHorst: Gran Gala, Cena Buffet Libre Gourmet (20:00 a 22:00) y Fiesta con Barra Libre (22:00 a 02:00 / 02:30).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Tren vs Coche -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q2">¿Cómo llego desde España / Madrid? ¿Es necesario alquilar coche?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a2">
+                <strong>¡No recomendamos alquilar coche!</strong> Es mucho más rápido, cómodo y económico viajar en tren.<br/><br/>
+                1. Tomas tu vuelo a <strong>Ámsterdam Schiphol (AMS)</strong>.<br/>
+                2. En la misma estación subterránea del aeropuerto, tomas el tren <strong>NS Intercity directo hacia Ede-Wageningen</strong> (sale cada 15 minutos, trayecto de 50-55 minutos, y cuesta aprox. 18,80 € el billete sencillo).<br/>
+                3. Al bajarte en la estación de Ede-Wageningen, <strong>cruzas la calle y estás en la puerta del Hotel ReeHorst</strong> (3 minutos a pie).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Alojamiento en ReeHorst -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q3">¿Dónde me hospedo? ¿Por qué se recomienda quedarse en Hotel ReeHorst?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a3">
+                Recomendamos fervientemente reservar vuestra habitación en el <strong>Hotel ReeHorst</strong>. Como el banquete y la fiesta se celebran allí mismo, podréis disfrutar plenamente de las <strong>4 horas de barra libre</strong> sin preocuparos por conducir de noche, pedir taxis o lidiar con el frío holandés. Al terminar la fiesta a las 02:30, ¡simplemente subís en ascensor a vuestra cama!
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Parking y Clima -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="viaje">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q4">¿Hay aparcamiento si voy en coche? ¿Qué pasa si llueve?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a4">
+                El Hotel ReeHorst cuenta con un <strong>amplio parking privado gratuito</strong> para los asistentes. Además, <strong>toda la boda es 100% en salón interior cerrado y climatizado</strong>; la lluvia, el viento o el frío de Países Bajos no afectarán en lo absoluto la celebración.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: Buffet Libre, Arepas y Menú Holandés -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="comida">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q5">¿Cómo es la comida? ¿Es cena servida en mesa o buffet? ¿Habrá arepas?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a5">
+                ¡Es un <strong>Buffet Libre Gourmet</strong> donde comes todo lo que quieras y repites a tu gusto!<br/><br/>
+                • <strong>Carnes & Platos Fuertes:</strong> Carnes a la plancha, brasa y guisadas con arroces, pastas y ensaladas frescas.<br/>
+                • <strong>Fritanga Típica Holandesa:</strong> Bitterballen, croquetas neerlandesas, frikandel y queso frito crujiente.<br/>
+                • <strong>¡TOQUE DE HONOR VENEZOLANO!:</strong> Por petición personal e innegociable de Geraldine con el chef, ¡tendremos <strong>arepas venezolanas artesanales</strong> para que la familia y amigos latinos coman como en casa!<br/>
+                • El menú final pasará por sesión de degustación con el chef para garantizar máxima excelencia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6: Alergias, Mariscos, Celíacos y Kosher -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="comida">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q6">Tengo alergias alimentarias o intolerancia al pescado/marisco, ¿qué hago?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a6">
+                El hotel diferencia con rigor los platos especiales. <strong>No habrá pescado ni productos marinos perjudiciales</strong> para evitar alergias alimentarias. Además, se dispondrá de alternativas para <strong>celíacos (sin gluten)</strong>, <strong>vegetarianos</strong> y <strong>kosher</strong>.<br/><br/>
+                Es indispensable que nos indiques tus alergias o intolerancias en el campo de observaciones del <strong>formulario RSVP</strong> para que el chef las prepare de forma personalizada.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 7: Barra Libre -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="comida">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q7">¿Qué incluye la Barra Libre y qué horario tiene?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a7">
+                Tendremos <strong>4 horas completas de barra libre abierta (de 22:00 a 02:00 hrs)</strong> que incluye: cerveza holandesa de grifo, vinos (tinto, blanco y rosado), refrescos, agua con y sin gas, café e infusiones.<br/><br/>
+                Para quienes deseen copas, combinados con licores de alta graduación o cócteles especiales, habrá servicio de barra de pago disponible en el mismo salón (cash / tarjeta).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 8: Dress Code -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q8">¿Cuál es el Código de Vestimenta (Dress Code)?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a8">
+                El dress code es <strong>Casual Chic / Gala Chic</strong>.<br/>
+                • Para las fotos, recuerdos e invitaciones: toques elegantes en <strong>Blanco & Dorado</strong>.<br/>
+                • Para la noche de fiesta en el salón: toques en <strong>Negro & Dorado</strong> (traje formal o semigala con calzado cómodo para bailar durante horas).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 9: Niños -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q9">¿Pueden asistir niños a la celebración?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a9">
+                Aunque amamos a los más pequeños, la celebración del 1 de mayo ha sido concebida como un evento <strong>Adults Only</strong> para que todos los padres e invitados puedan desconectar, relajarse y disfrutar la noche festiva y la barra libre. La única excepción contemplada son los sobrinitos directos de la familia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 10: Acompañantes -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q10">¿Puedo llevar un acompañante (+1)?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a10">
+                Por motivos de capacidad máxima de salón y confirmación de menú con el hotel, las plazas son <strong>estrictamente nominales</strong>. Si tu invitación contempla un acompañante (+1), indícanos su nombre completo en el formulario RSVP antes del 01 de Marzo de 2027.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 11: Regalos / Mesa de bodas -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all" data-category="fiesta">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q11">¿Tienen lista de bodas o preferencia para los regalos?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a11">
+                El regalo más grande para nosotros es que crucéis fronteras y compartáis este día a nuestro lado. Si deseáis hacernos un presente para ayudarnos a construir nuestro hogar y luna de miel, ponemos a vuestra disposición nuestra cuenta bancaria en Países Bajos (ABN AMRO):<br/><br/>
+                <span class="font-mono font-bold text-espresso select-all bg-white px-2.5 py-1 rounded-md border border-champagne-500/30">NL91 ABNA 0417 1643 00</span> (Yeraldin & Gerwin).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- No results alert for search -->
+        <div id="faqNoResults" class="hidden text-center py-8 text-xs font-sans text-champagne-800">
+          No encontramos ninguna pregunta con ese término. ¡Contáctanos directamente y te responderemos al instante!
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== RSVP FORM: CONFIRMACIÓN DE ASISTENCIA ==================== -->
+  <section id="rsvp" class="py-20 px-4 sm:px-6 bg-[#FAF5EB] relative">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2">
+        ✦ Confirmación ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide">
+        R. S. V. P.
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-1 mb-8" data-i18n="rsvp.deadline">
+        Por favor confirma tu asistencia antes del 01 de Marzo de 2027
+      </p>
+
+      <!-- Form Container -->
+      <form onsubmit="handleRSVPSubmit(event)" class="bg-white rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
+        
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
+            Nombre Completo *
+          </label>
+          <input 
+            type="text" 
+            id="rsvpName" 
+            required 
+            placeholder="Tu nombre y apellido" 
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Attendance Choice -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
+            ¿Asistirás a la celebración? *
+          </label>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="si" checked class="text-champagne-800 focus:ring-champagne-700" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.yes">¡Sí, asistiré! 🎉</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="no" class="text-champagne-800 focus:ring-champagne-700" />
+              <span class="font-sans font-medium text-espresso" data-i18n="rsvp.no">No podré asistir ❤️</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Event Checklist -->
+        <div class="p-3.5 rounded-xl bg-champagne-100/60 border border-champagne-500/30 space-y-2">
+          <span class="block text-[11px] uppercase font-sans font-bold text-champagne-800" data-i18n="rsvp.events_title">Eventos que asistirás:</span>
+          <label class="flex items-center gap-2 text-xs sm:text-sm text-espresso font-sans">
+            <input type="checkbox" id="rsvpCheckGala" checked class="rounded-xs text-champagne-800" />
+            <span data-i18n="rsvp.event_gala">Gran Gala & Banquete en Hotel ReeHorst (01 Mayo)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs sm:text-sm text-espresso font-sans">
+            <input type="checkbox" id="rsvpCheckCivil" class="rounded-xs text-champagne-800" />
+            <span data-i18n="rsvp.event_civil">Boda Civil en Ayuntamiento (21 Abril - Íntimo)</span>
+          </label>
+        </div>
+
+        <!-- Dietary Requirements / Allergies (Requested by Geraldine) -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.diet_label">
+            Alergias o Restricciones Alimentarias (Muy importante para el chef)
+          </label>
+          <input 
+            type="text" 
+            id="rsvpDiet" 
+            placeholder="Ej: Sin pescado/mariscos, celíaco, vegetariano, kosher..." 
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.msg_label">
+            Mensaje para los novios
+          </label>
+          <textarea 
+            id="rsvpMessage" 
+            rows="3" 
+            placeholder="¡Deseamos celebrar con vosotros este momento inolvidable!" 
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600 resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full py-4 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso hover:from-champagne-900 hover:to-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
+          <span>💌</span>
+        </button>
+      </form>
+
+      <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold">
+        ¡Muchas gracias! Tu confirmación ha sido preparada y enviada con éxito.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 px-4 bg-darknoir text-center text-champagne-200/80 border-t border-champagne-500/30">
+    <div class="max-w-md mx-auto">
+      <div class="w-12 h-12 rounded-full border border-champagne-400/50 flex items-center justify-center mx-auto mb-3 bg-black/40">
+        <span class="font-cormorant font-bold text-base text-champagne-200">Y&G</span>
+      </div>
+      <p class="font-cinzel text-base tracking-widest text-white font-bold">
+        YERALDIN & GERWIN
+      </p>
+      <p class="text-xs font-sans text-champagne-400 tracking-wider mt-1">
+        21 Abril & 01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
+      </p>
+      <p class="font-script text-2xl text-champagne-300 mt-4">
+        ¡Os esperamos con todo nuestro cariño!
+      </p>
+    </div>
+  </footer>
+
+  <!-- Audio Element -->
   <audio id="weddingMusic" loop preload="auto">
     <source src="assets/wedding_music.mp3" type="audio/mp3" />
   </audio>
 
-  <!-- ==================== LOGIC & SCRIPTS ==================== -->
+  <!-- ==================== JAVASCRIPT LOGIC & TRILINGUAL DICTIONARY ==================== -->
   <script>
-    // ==================== TRILINGUAL TRANSLATIONS DICTIONARY ====================
-    const i18nData = {
+    const i18n = {
       es: {
-        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
-        "hero.tap_seal": "Toca el sello para abrir",
-        "hero.together": "Junto a nuestras familias",
-        "card.invitation": "Save The Date & Invitación",
-        "card.gala_subtitle": "Gran Gala & Banquete Nupcial",
-        "card.civil_note": "Boda Civil:",
-        "common.scroll_more": "SCROLL FOR MORE DETAILS",
-        "countdown.title": "Countdown",
-        "countdown.cant_wait": "¡No podemos esperar a este momento!",
+        "nav.welcome": "Bienvenidos",
+        "nav.travel": "Tu Viaje",
+        "nav.venue": "El Lugar",
+        "nav.timeline": "Agenda",
+        "nav.details": "Detalles",
+        "nav.rsvp": "RSVP",
+        "hero.together": "TOGETHER WITH OUR FAMILIES",
+        "hero.invite_sub": "Tenemos el honor de invitarte a celebrar nuestra boda",
+        "hero.month": "MAYO",
+        "hero.civil_note": "Boda Civil:",
+        "hero.btn_start": "Comenzar",
+        "audio.label": "Música de la Boda",
+        "audio.title": "Suite Romántica Nupcial",
+        "welcome.subtitle": "✦ Carta a Nuestros Invitados ✦",
+        "welcome.title": "¡Nos Casamos!",
+        "welcome.text_p1": "El 21 de abril de 2027 nos daremos el «Sí, quiero», y queremos celebrarlo con vosotros el 1 de mayo de 2027 en Ede, Países Bajos.",
+        "welcome.text_p2": "Sabemos que para muchos de vosotros esto significa hacer las maletas, coger un avión y venir hasta aquí. Por eso hemos preparado esta pequeña guía con todo lo que necesitáis saber para disfrutar del viaje y, sobre todo, de la celebración.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "No podemos imaginar este día sin vosotros",
         "countdown.days": "DÍAS",
         "countdown.hours": "HORAS",
         "countdown.mins": "MINUTOS",
         "countdown.secs": "SEGUNDOS",
         "countdown.google_cal": "Google Calendar",
         "countdown.apple_cal": "Apple iCal (.ics)",
-        "venue.title": "The Venue",
-        "venue.train_title": "Tren directo:",
-        "venue.train_desc": "Desde Schiphol AMS cada 15 min directo a estación Ede-Wageningen (a 3 min a pie del hotel).",
-        "venue.flight_title": "Vuelos desde España:",
-        "venue.flight_desc": "Llegada recomendada a Ámsterdam Schiphol o Eindhoven.",
-        "venue.stay_title": "Alojamiento:",
-        "venue.stay_desc": "Tarifa especial reservando con código \"Boda Yeraldin & Gerwin\".",
-        "timeline.title": "Itinerary",
-        "timeline.subtitle": "Los Momentos Inolvidables",
-        "timeline.civil_title": "Boda Civil • 21 Abril",
-        "timeline.civil_desc": "Ceremonia oficial y firma solemne.",
-        "timeline.banquet_title": "Banquete & Gran Cena • 01 Mayo",
-        "timeline.banquet_desc": "Brindis de bienvenida y cena gourmet en Salón de Gala ReeHorst.",
-        "timeline.party_title": "Gran Fiesta & Baile",
-        "timeline.party_desc": "¡Let yourself go! Baile y barra libre durante 4 horas.",
-        "timeline.end_title": "Fin de Fiesta",
-        "timeline.end_desc": "¡Todo lo bueno tiene un final inolvidable!",
-        "timeline.open_bar_note": "4 Horas de Barra Libre Incluidas: selección de cervezas, vinos y refrescos para todos los invitados. Barra cash bar disponible para cócteles y licores premium.",
-        "dress.title": "Dress Code",
-        "dress.type": "Gala • Black Tie & White/Gold",
-        "dress.palette": "Paleta sugerida: Blanco, Dorado, Champagne, Negro.",
-        "gifts.title": "Gifts",
-        "gifts.presence": "\"Tu presencia es nuestro mayor regalo, pero si deseas hacernos un detalle para nuestra nueva etapa juntos, agradecemos tu cariño.\"",
-        "gifts.bank_label": "¿Prefieres contribuir directamente?",
-        "faq.subtitle": "Preguntas Frecuentes",
-        "faq.q1": "¿Puedo llevar un acompañante (+1)?",
-        "faq.a1": "Las invitaciones son personalizadas. Por favor indícanos el nombre de tu acompañante en el formulario de confirmación RSVP para organizar el salón y la cena.",
-        "faq.q2": "¿Cómo viajo desde España u otros países?",
-        "faq.a2": "Te recomendamos volar al aeropuerto de Ámsterdam Schiphol (AMS). Justo debajo del aeropuerto tomas el tren directo de la red NS cada 15 min hasta la estación Ede-Wageningen, que queda a solo 3 minutos a pie del Hotel ReeHorst.",
-        "faq.q3": "¿Cómo funciona la barra libre de bebidas?",
-        "faq.a3": "Contamos con 4 horas completas de barra libre con cerveza holandesa, vinos seleccionados y refrescos incluidos. Además, el hotel dispondrá de barra cash bar para quienes deseen cócteles o licores destilados.",
-        "faq.q4": "¿Dónde puedo hospedarme en Ede?",
-        "faq.a4": "El mismo Hotel ReeHorst dispone de amplias habitaciones con descuento especial de boda. Menciona \"Boda Yeraldin & Gerwin\" al reservar directamente con recepción.",
-        "rsvp.cant_wait": "¡No podemos esperar!",
-        "rsvp.deadline": "Por favor confirma antes del 01 de Marzo de 2027",
+        "travel.subtitle": "✦ Especial Invitados desde Madrid / España ✦",
+        "travel.title": "Tu Viaje a Países Bajos",
+        "travel.intro": "Todo lo que necesitas para llegar fácil, cómodo y económico hasta Hotel ReeHorst en Ede.",
+        "travel.step1_tag": "Paso 1: Vuelo",
+        "travel.step1_title": "Aeropuerto Schiphol (AMS)",
+        "travel.step1_desc": "Recomendamos volar directamente de Madrid a Ámsterdam Schiphol (AMS). Hay vuelos diarios con Iberia, Air Europa y KLM.",
+        "travel.step2_tag": "Paso 2: Tren Directo",
+        "travel.step2_title": "Schiphol a Ede-Wageningen",
+        "travel.step2_desc": "Debajo de la terminal tomas el tren NS Intercity directo cada 15 min hasta la estación Ede-Wageningen (unos 50 min de trayecto).",
+        "travel.step3_tag": "Paso 3: Llegada",
+        "travel.step3_title": "3 min a pie al Hotel",
+        "travel.step3_desc": "La estación de tren Ede-Wageningen está justo enfrente del Hotel ReeHorst. Solo cruzas la calle y ya estás en el hotel.",
+        "venue.subtitle": "✦ El Escenario de Nuestro Sueño ✦",
+        "venue.title": "Hotel & Congrescentrum ReeHorst",
+        "venue.btn_maps": "Abrir en Google Maps",
+        "timeline.subtitle": "✦ La Agenda de la Boda ✦",
+        "timeline.title": "Horarios & Momentos Especiales",
+        "timeline.civil_title": "Boda Civil Oficial («Sí, quiero»)",
+        "timeline.civil_desc": "Ceremonia oficial y firma solemne en el ayuntamiento con la familia más íntima (20 personas).",
+        "timeline.dinner_title": "Banquete & Gran Cena Buffet Libre Gourmet",
+        "timeline.dinner_desc": "Brindis de honor y cena buffet libre en Salón de Gala ReeHorst con carnes a la brasa, opciones para celíacos, vegetarianos, kosher, sin mariscos ¡y arepas especiales para celebrar nuestras raíces!",
+        "timeline.party_title": "Gran Fiesta, Baile & Barra Libre",
+        "timeline.party_desc": "¡A bailar y celebrar! Baile nupcial y 4 horas completas de barra libre.",
+        "details.subtitle": "✦ Información Importante ✦",
+        "details.title": "Protocolo & Preguntas Frecuentes",
+        "details.intro": "Hemos recopilado todas las dudas frecuentes sobre el viaje, transporte, menú, alergias y la celebración para que disfrutes sin preocupaciones.",
+        "details.dress_title": "Dress Code",
+        "details.dress_desc": "Día/Recuerdos: Blanco & Dorado. Salón Gala: Negro & Dorado.",
+        "details.kids_title": "Adults Only",
+        "details.kids_desc": "Exclusivo mayores de edad para bailar y disfrutar (salvo sobrinos directos).",
+        "details.hotel_title": "Hotel ReeHorst",
+        "details.hotel_desc": "Banquete y fiesta en el mismo hotel. ¡Sube directo a tu habitación sin taxis!",
+        "details.gifts_title": "Mesa de Regalos",
+        "details.gifts_desc": "Lluvia de sobres virtual por transferencia bancaria directa (IBAN).",
+        "faq.title": "Preguntas Frecuentes Detalladas",
+        "faq.hint": "Haz clic en cualquier pregunta para ver todos los detalles.",
+        "faq.q1": "¿Por qué hay dos fechas distintas: 21 de Abril y 01 de Mayo?",
+        "faq.a1": "El <strong>miércoles 21 de abril de 2027 a las 10:00 AM</strong> realizamos la firma civil en el Ayuntamiento de Ede en una ceremonia íntima de aforo limitado (máximo 20 personas, exclusiva para padres y testigos).<br/><br/>El <strong>sábado 01 de mayo de 2027</strong> es la <strong>Gran Boda y Celebración Oficial</strong> con todos los invitados en el Hotel ReeHorst: Gran Gala, Cena Buffet Libre Gourmet (20:00 a 22:00) y Fiesta con Barra Libre (22:00 a 02:00 / 02:30).",
+        "faq.q2": "¿Cómo llego desde España / Madrid? ¿Es necesario alquilar coche?",
+        "faq.a2": "<strong>¡No recomendamos alquilar coche!</strong> Es mucho más rápido, cómodo y económico viajar en tren.<br/><br/>1. Tomas tu vuelo a <strong>Ámsterdam Schiphol (AMS)</strong>.<br/>2. En la misma estación subterránea del aeropuerto, tomas el tren <strong>NS Intercity directo hacia Ede-Wageningen</strong> (sale cada 15 minutos, trayecto de 50-55 minutos, y cuesta aprox. 18,80 € el billete sencillo).<br/>3. Al bajarte en la estación de Ede-Wageningen, <strong>cruzas la calle y estás en la puerta del Hotel ReeHorst</strong> (3 minutos a pie).",
+        "faq.q3": "¿Dónde me hospedo? ¿Por qué se recomienda quedarse en Hotel ReeHorst?",
+        "faq.a3": "Recomendamos fervientemente reservar vuestra habitación en el <strong>Hotel ReeHorst</strong>. Como el banquete y la fiesta se celebran allí mismo, podréis disfrutar plenamente de las <strong>4 horas de barra libre</strong> sin preocuparos por conducir de noche, pedir taxis o lidiar con el frío holandés. Al terminar la fiesta a las 02:30, ¡simplemente subís en ascensor a vuestra cama!",
+        "faq.q4": "¿Hay aparcamiento si voy en coche? ¿Qué pasa si llueve?",
+        "faq.a4": "El Hotel ReeHorst cuenta con un <strong>amplio parking privado gratuito</strong> para los asistentes. Además, <strong>toda la boda es 100% en salón interior cerrado y climatizado</strong>; la lluvia, el viento o el frío de Países Bajos no afectarán en lo absoluto la celebración.",
+        "faq.q5": "¿Cómo es la comida? ¿Es cena servida en mesa o buffet? ¿Habrá arepas?",
+        "faq.a5": "¡Es un <strong>Buffet Libre Gourmet</strong> donde comes todo lo que quieras y repites a tu gusto!<br/><br/>• <strong>Carnes & Platos Fuertes:</strong> Carnes a la plancha, brasa y guisadas con arroces, pastas y ensaladas frescas.<br/>• <strong>Fritanga Típica Holandesa:</strong> Bitterballen, croquetas neerlandesas, frikandel y queso frito crujiente.<br/>• <strong>¡TOQUE DE HONOR VENEZOLANO!:</strong> Por petición personal e innegociable de Geraldine con el chef, ¡tendremos <strong>arepas venezolanas artesanales</strong> para que la familia y amigos latinos coman como en casa!<br/>• El menú final pasará por sesión de degustación con el chef para garantizar máxima excelencia.",
+        "faq.q6": "Tengo alergias alimentarias o intolerancia al pescado/marisco, ¿qué hago?",
+        "faq.a6": "El hotel diferencia con rigor los platos especiales. <strong>No habrá pescado ni productos marinos perjudiciales</strong> para evitar alergias alimentarias. Además, se dispondrá de alternativas para <strong>celíacos (sin gluten)</strong>, <strong>vegetarianos</strong> y <strong>kosher</strong>.<br/><br/>Es indispensable que nos indiques tus alergias o intolerancias en el campo de observaciones del <strong>formulario RSVP</strong> para que el chef las prepare de forma personalizada.",
+        "faq.q7": "¿Qué incluye la Barra Libre y qué horario tiene?",
+        "faq.a7": "Tendremos <strong>4 horas completas de barra libre abierta (de 22:00 a 02:00 hrs)</strong> que incluye: cerveza holandesa de grifo, vinos (tinto, blanco y rosado), refrescos, agua con y sin gas, café e infusiones.<br/><br/>Para quienes deseen copas, combinados con licores de alta graduación o cócteles especiales, habrá servicio de barra de pago disponible en el mismo salón (cash / tarjeta).",
+        "faq.q8": "¿Cuál es el Código de Vestimenta (Dress Code)?",
+        "faq.a8": "El dress code es <strong>Casual Chic / Gala Chic</strong>.<br/>• Para las fotos, recuerdos e invitaciones: toques elegantes en <strong>Blanco & Dorado</strong>.<br/>• Para la noche de fiesta en el salón: toques en <strong>Negro & Dorado</strong> (traje formal o semigala con calzado cómodo para bailar durante horas).",
+        "faq.q9": "¿Pueden asistir niños a la celebración?",
+        "faq.a9": "Aunque amamos a los más pequeños, la celebración del 1 de mayo ha sido concebida como un evento <strong>Adults Only</strong> para que todos los padres e invitados puedan desconectar, relajarse y disfrutar la noche festiva y la barra libre. La única excepción contemplada son los sobrinitos directos de la familia.",
+        "faq.q10": "¿Puedo llevar un acompañante (+1)?",
+        "faq.a10": "Por motivos de capacidad máxima de salón y confirmación de menú con el hotel, las plazas son <strong>estrictamente nominales</strong>. Si tu invitación contempla un acompañante (+1), indícanos su nombre completo en el formulario RSVP antes del 01 de Marzo de 2027.",
+        "faq.q11": "¿Tienen lista de bodas o preferencia para los regalos?",
+        "faq.a11": "El regalo más grande para nosotros es que crucéis fronteras y compartáis este día a nuestro lado. Si deseáis hacernos un presente para ayudarnos a construir nuestro hogar y luna de miel, ponemos a vuestra disposición nuestra cuenta bancaria en Países Bajos (ABN AMRO):<br/><br/><span class=\"font-mono font-bold text-espresso select-all bg-white px-2.5 py-1 rounded-md border border-champagne-500/30\">NL91 ABNA 0417 1643 00</span> (Yeraldin & Gerwin).",
+        "rsvp.deadline": "Por favor confirma tu asistencia antes del 01 de Marzo de 2027",
         "rsvp.name_label": "Nombre Completo *",
         "rsvp.attendance_label": "¿Asistirás a la celebración? *",
         "rsvp.yes": "¡Sí, asistiré! 🎉",
-        "rsvp.no": "No podré ❤️",
+        "rsvp.no": "No podré asistir ❤️",
         "rsvp.events_title": "Eventos que asistirás:",
-        "rsvp.event_gala": "Gran Gala & Banquete (01 Mayo)",
-        "rsvp.event_civil": "Boda Civil (21 Abril)",
-        "rsvp.diet_label": "Alergias o Restricciones Alimentarias",
+        "rsvp.event_gala": "Gran Gala & Banquete en Hotel ReeHorst (01 Mayo)",
+        "rsvp.event_civil": "Boda Civil en Ayuntamiento (21 Abril - Íntimo)",
+        "rsvp.diet_label": "Alergias o Restricciones Alimentarias (Muy importante para el chef)",
         "rsvp.msg_label": "Mensaje para los novios",
-        "rsvp.submit_btn": "Enviar Confirmación",
+        "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
       },
       nl: {
-        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
-        "hero.tap_seal": "Tik op het zegel om te openen",
-        "hero.together": "Samen met onze families nodigen wij u uit",
-        "card.invitation": "Save The Date & Huwelijksuitnodiging",
-        "card.gala_subtitle": "Groot Gala & Huwelijksbanket",
-        "card.civil_note": "Burgerlijk Huwelijk:",
-        "common.scroll_more": "SCROLL VOOR MEER DETAILS",
-        "countdown.title": "Countdown",
-        "countdown.cant_wait": "We kunnen niet wachten op dit moment!",
+        "nav.welcome": "Welkom",
+        "nav.travel": "Uw Reis",
+        "nav.venue": "De Locatie",
+        "nav.timeline": "Programma",
+        "nav.details": "Details",
+        "nav.rsvp": "RSVP",
+        "hero.together": "SAMEN MET ONZE FAMILIES",
+        "hero.invite_sub": "Wij nodigen u van harte uit voor onze bruiloft",
+        "hero.month": "MEI",
+        "hero.civil_note": "Burgerlijk Huwelijk:",
+        "hero.btn_start": "Beginnen",
+        "audio.label": "Bruiloft Muziek",
+        "audio.title": "Romantische Suite",
+        "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
+        "welcome.title": "Wij Gaan Trouwen!",
+        "welcome.text_p1": "Op 21 april 2027 geven wij elkaar het ja-woord en wij willen dit graag vieren met jullie op 1 mei 2027 in Ede, Nederland.",
+        "welcome.text_p2": "We weten dat dit voor velen van jullie betekent: koffers pakken, het vliegtuig instappen en hierheen reizen. Daarom hebben we deze gids gemaakt met alles wat u moet weten om van de reis en het feest te genieten.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie",
         "countdown.days": "DAGEN",
         "countdown.hours": "UREN",
         "countdown.mins": "MINUTEN",
         "countdown.secs": "SECONDEN",
         "countdown.google_cal": "Google Agenda",
         "countdown.apple_cal": "Apple iCal (.ics)",
-        "venue.title": "De Locatie",
-        "venue.train_title": "Rechtstreekse trein:",
-        "venue.train_desc": "Vanaf Schiphol AMS elke 15 min rechtstreeks naar station Ede-Wageningen (3 min lopen naar Hotel ReeHorst).",
-        "venue.flight_title": "Vluchten vanuit Spanje:",
-        "venue.flight_desc": "Aanbevolen luchthavens: Amsterdam Schiphol of Eindhoven.",
-        "venue.stay_title": "Accommodatie:",
-        "venue.stay_desc": "Speciaal tarief bij boeking met code \"Bruiloft Yeraldin & Gerwin\".",
-        "timeline.title": "Programma",
-        "timeline.subtitle": "De Onvergetelijke Momenten",
-        "timeline.civil_title": "Burgerlijk Huwelijk • 21 April",
-        "timeline.civil_desc": "Officiële ceremonie en handtekening.",
-        "timeline.banquet_title": "Banket & Feestdiner • 01 Mei",
-        "timeline.banquet_desc": "Welkomsttoast en gastronomisch 3-gangendiner in Galazaal ReeHorst.",
-        "timeline.party_title": "Groot Feest & Dans",
-        "timeline.party_desc": "Laat je gaan! Open bar en dansen gedurende 4 uur.",
-        "timeline.end_title": "Einde van het Feest",
-        "timeline.end_desc": "Aan al het goede komt een onvergetelijk einde!",
-        "timeline.open_bar_note": "4 Uur Open Bar Inbegrepen: bier, geselecteerde wijnen en frisdrank voor alle gasten. Cash bar beschikbaar voor cocktails en premium sterke dranken.",
-        "dress.title": "Kledingvoorschrift",
-        "dress.type": "Gala • Black Tie & White/Gold",
-        "dress.palette": "Kleurenpalet: Wit, Goud, Champagne, Zwart.",
-        "gifts.title": "Cadeautip",
-        "gifts.presence": "\"Uw aanwezigheid is ons grootste geschenk, maar wie ons wil verrassen voor onze toekomst samen, kan onderstaande gegevens gebruiken.\"",
-        "gifts.bank_label": "Wilt u direct bijdragen?",
-        "faq.subtitle": "Veelgestelde Vragen",
-        "faq.q1": "Mag ik een introducee (+1) meenemen?",
-        "faq.a1": "Uitnodigingen zijn op naam. Vul alstublieft de naam van uw gast in bij het RSVP-formulier voor de tafelindeling.",
-        "faq.q2": "Hoe reis ik vanuit Spanje of het buitenland?",
-        "faq.a2": "Vlieg naar Amsterdam Schiphol (AMS). Neem direct onder de terminal de NS-intercitytrein naar station Ede-Wageningen. Vandaar is het slechts 3 minuten wandelen naar Hotel ReeHorst.",
-        "faq.q3": "Hoe zit het met de open bar en drankjes?",
-        "faq.a3": "Er is 4 uur lang een open bar met bier, wijn en frisdrank inbegrepen. Voor wie speciale cocktails of sterke drank wil, is er een cash bar aanwezig.",
-        "faq.q4": "Waar kan ik overnachten in Ede?",
-        "faq.a4": "In Hotel ReeHorst zelf zijn kamers beschikbaar tegen een gereduceerd huwelijkstarief. Vermeld \"Bruiloft Yeraldin & Gerwin\".",
-        "rsvp.cant_wait": "We kunnen niet wachten!",
+        "travel.subtitle": "✦ Speciaal voor Gasten die Reizen ✦",
+        "travel.title": "Uw Reis naar Nederland",
+        "travel.intro": "Alles wat u nodig heeft om gemakkelijk, comfortabel en voordelig bij Hotel ReeHorst in Ede te komen.",
+        "travel.step1_tag": "Stap 1: Vlucht",
+        "travel.step1_title": "Luchthaven Schiphol (AMS)",
+        "travel.step1_desc": "Vlieg rechtstreeks naar Amsterdam Schiphol (AMS). Er zijn dagelijks vluchten vanuit Madrid en Europa.",
+        "travel.step2_tag": "Stap 2: Directe Trein",
+        "travel.step2_title": "Schiphol naar Ede-Wageningen",
+        "travel.step2_desc": "Onder de terminal neemt u elke 15 min de rechtstreekse NS Intercity naar station Ede-Wageningen (ca. 50 min).",
+        "travel.step3_tag": "Stap 3: Aankomst",
+        "travel.step3_title": "3 min lopen naar Hotel",
+        "travel.step3_desc": "Station Ede-Wageningen ligt recht tegenover Hotel ReeHorst. Slechts de straat oversteken.",
+        "venue.subtitle": "✦ Het Decor van Onze Droom ✦",
+        "venue.title": "Hotel & Congrescentrum ReeHorst",
+        "venue.btn_maps": "Openen in Google Maps",
+        "timeline.subtitle": "✦ Het Bruiloftsprogramma ✦",
+        "timeline.title": "Tijden & Bijzondere Momenten",
+        "timeline.civil_title": "Burgerlijk Huwelijk (Ja-woord)",
+        "timeline.civil_desc": "Officiële ceremonie en handtekening op het gemeentehuis met directe familie (20 personen).",
+        "timeline.dinner_title": "Huwelijksbanket & Feestdiner Buffet",
+        "timeline.dinner_desc": "Welkomsttoast en gastronomisch buffetdiner in Galazaal ReeHorst met gegrild vlees, opties voor coeliakie, vegetariërs en speciale gerechten!",
+        "timeline.party_title": "Groot Feest & 4 Uur Open Bar",
+        "timeline.party_desc": "Dansen en vieren! Bruiloftsdans en 4 uur lang open bar inbegrepen.",
+        "details.subtitle": "✦ Belangrijke Informatie ✦",
+        "details.title": "Protocol & Veelgestelde Vragen",
+        "details.intro": "We hebben alle veelgestelde vragen over reis, vervoer, menu, allergieën en het feest verzameld.",
+        "details.dress_title": "Kledingvoorschrift",
+        "details.dress_desc": "Overdag: Wit & Goud. Feestzaal: Zwart & Goud. Kom elegant gekleed!",
+        "details.kids_title": "Adults Only",
+        "details.kids_desc": "Het feest is uitsluitend voor volwassenen (m.u.v. directe neefjes/nichtjes), zodat iedereen onbezorgd kan feesten.",
+        "details.hotel_title": "Hotel ReeHorst",
+        "details.hotel_desc": "Banket en feest in hetzelfde hotel. Ga direct met de lift naar uw kamer!",
+        "details.gifts_title": "Cadeautip",
+        "details.gifts_desc": "Wie ons wil verrassen voor onze nieuwe toekomst samen, kan onderstaande bankrekening gebruiken:",
+        "faq.title": "Gedetailleerde Veelgestelde Vragen",
+        "faq.hint": "Klik op een vraag om alle details te zien.",
+        "faq.q1": "Waarom zijn er twee data: 21 april en 1 mei?",
+        "faq.a1": "Op <strong>woensdag 21 april 2027 om 10:00 uur</strong> vindt het burgerlijk huwelijk plaats op het gemeentehuis van Ede in intieme kring (max. 20 personen, ouders en getuigen).<br/><br/>Op <strong>zaterdag 1 mei 2027</strong> is de <strong>Grote Bruiloft en Officiële Viering</strong> met alle gasten in Hotel ReeHorst: Galadiner met buffet (20:00 - 22:00) en Feest met 4 uur open bar (22:00 - 02:30).",
+        "faq.q2": "Hoe reis ik vanaf Schiphol? Moet ik een auto huren?",
+        "faq.a2": "<strong>Wij raden af om een auto te huren!</strong> De trein is sneller, ontspannen en goedkoop.<br/><br/>Vanaf Schiphol Airport neemt u direct de <strong>NS Intercity naar Ede-Wageningen</strong> (elke 15 min, ca. 50 min reistijd, €18,80). Station Ede-Wageningen ligt recht tegenover Hotel ReeHorst (3 min lopen).",
+        "faq.q3": "Waar kan ik overnachten? Waarom Hotel ReeHorst?",
+        "faq.a3": "We raden aan om direct bij <strong>Hotel ReeHorst</strong> te boeken. Omdat het feest daar plaatsvindt, kunt u optimaal genieten van de 4 uur open bar zonder u zorgen te maken over rijden of taxi's.",
+        "faq.q4": "Is er parkeergelegenheid? Wat als het regent?",
+        "faq.a4": "Hotel ReeHorst biedt <strong>ruime gratis privéparkeergelegenheid</strong>. Bovendien is de hele bruiloft in een <strong>klimaatgeregelde binnenzaal</strong>; het Nederlandse weer heeft geen invloed.",
+        "faq.q5": "Hoe ziet het diner eruit? Is er een buffet en zijn er arepa's?",
+        "faq.a5": "Het is een <strong>Gourmet Buffet</strong> waar u onbeperkt van kunt genieten: gegrild vlees, traditionele Nederlandse snacks (bitterballen, kroketten, frikandellen) én als speciaal eerbetoon: <strong>artisanale Venezolaanse arepa's</strong>!",
+        "faq.q6": "Ik heb allergieën of eet geen vis/zeevruchten, wat kan ik doen?",
+        "faq.a6": "Er worden strikt aparte gerechten voorzien. <strong>Er wordt geen vis/zeevruchten geserveerd</strong> om allergische reacties te voorkomen. Er zijn ook glutenvrije, vegetarische en koosjere opties. Geef dit s.v.p. door via de RSVP.",
+        "faq.q7": "Wat is inbegrepen bij de 4 uur Open Bar?",
+        "faq.a7": "Inbegrepen van 22:00 tot 02:00: bier van het vat, wijnen, frisdranken, koffie en thee. Sterke dranken en cocktails zijn verkrijgbaar tegen betaling aan de bar.",
+        "faq.q8": "Wat is het kledingvoorschrift (Dress Code)?",
+        "faq.a8": "Casual Chic / Gala Chic. Voor de uitnodiging en foto's: Wit & Goud. Voor het avondfeest in de zaal: Zwart & Goud.",
+        "faq.q9": "Zijn kinderen welkom op het feest?",
+        "faq.a9": "Het avondfeest is Adults Only zodat ouders zorgeloos kunnen genieten (uitzondering: directe neefjes en nichtjes).",
+        "faq.q10": "Mag ik een introducé meenemen (+1)?",
+        "faq.a10": "Uitnodigingen zijn strikt op naam i.v.m. zaalcapaciteit. Vermeld uw gast s.v.p. tijdig via de RSVP.",
+        "faq.q11": "Wat is de cadeautip?",
+        "faq.a11": "Uw aanwezigheid is ons mooiste geschenk. Voor wie wil bijdragen aan onze toekomst: NL91 ABNA 0417 1643 00 (Yeraldin & Gerwin).",
         "rsvp.deadline": "Gelieve te reageren vóór 01 Maart 2027",
         "rsvp.name_label": "Volledige Naam *",
         "rsvp.attendance_label": "Bent u aanwezig? *",
         "rsvp.yes": "Ja, ik kom vieren! 🎉",
         "rsvp.no": "Helaas kan ik niet ❤️",
-        "rsvp.events_title": "Onderdelen aanwezig:",
-        "rsvp.event_gala": "Groot Gala & Banket (01 Mei)",
-        "rsvp.event_civil": "Burgerlijk Huwelijk (21 April)",
-        "rsvp.diet_label": "Dieetwensen of allergieën",
+        "rsvp.events_title": "Aanwezig bij:",
+        "rsvp.event_gala": "Groot Gala & Banket in Hotel ReeHorst (01 Mei)",
+        "rsvp.event_civil": "Burgerlijk Huwelijk (21 April - Intiem)",
+        "rsvp.diet_label": "Dieetwensen of allergieën (zeer belangrijk voor de chef)",
         "rsvp.msg_label": "Wens voor het bruidspaar",
-        "rsvp.submit_btn": "Bevestiging Verzenden",
+        "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
       },
       en: {
-        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
-        "hero.tap_seal": "Tap the seal to open",
-        "hero.together": "Together with our families",
-        "card.invitation": "Save The Date & Wedding Invitation",
-        "card.gala_subtitle": "Grand Gala & Wedding Banquet",
-        "card.civil_note": "Civil Ceremony:",
-        "common.scroll_more": "SCROLL FOR MORE DETAILS",
-        "countdown.title": "Countdown",
-        "countdown.cant_wait": "We can't wait for this moment!",
+        "nav.welcome": "Welcome",
+        "nav.travel": "Your Trip",
+        "nav.venue": "The Venue",
+        "nav.timeline": "Timeline",
+        "nav.details": "Details",
+        "nav.rsvp": "RSVP",
+        "hero.together": "TOGETHER WITH OUR FAMILIES",
+        "hero.invite_sub": "We have the honor to invite you to celebrate our wedding",
+        "hero.month": "MAY",
+        "hero.civil_note": "Civil Ceremony:",
+        "hero.btn_start": "Begin",
+        "audio.label": "Wedding Music",
+        "audio.title": "Romantic Suite",
+        "welcome.subtitle": "✦ A Letter to Our Guests ✦",
+        "welcome.title": "We Are Getting Married!",
+        "welcome.text_p1": "On April 21, 2027 we will say 'I Do', and we want to celebrate with you on May 1, 2027 in Ede, Netherlands.",
+        "welcome.text_p2": "We know that for many of you this means packing suitcases, catching a plane, and traveling here. That is why we prepared this guide with everything you need to enjoy the journey and the celebration.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "We can't imagine this day without you",
         "countdown.days": "DAYS",
         "countdown.hours": "HOURS",
         "countdown.mins": "MINUTES",
         "countdown.secs": "SECONDS",
         "countdown.google_cal": "Google Calendar",
         "countdown.apple_cal": "Apple iCal (.ics)",
-        "venue.title": "The Venue",
-        "venue.train_title": "Direct Train:",
-        "venue.train_desc": "From Schiphol AMS every 15 min directly to Ede-Wageningen station (3 min walk to Hotel ReeHorst).",
-        "venue.flight_title": "Flights from Spain & Worldwide:",
-        "venue.flight_desc": "Recommended arrival: Amsterdam Schiphol or Eindhoven.",
-        "venue.stay_title": "Accommodation:",
-        "venue.stay_desc": "Special discount rate booking with code \"Wedding Yeraldin & Gerwin\".",
-        "timeline.title": "Itinerary",
-        "timeline.subtitle": "Unforgettable Moments",
-        "timeline.civil_title": "Civil Wedding • April 21",
-        "timeline.civil_desc": "Official ceremony and signing.",
-        "timeline.banquet_title": "Gala Banquet & Dinner • May 01",
-        "timeline.banquet_desc": "Welcome toast and gourmet 3-course dinner in ReeHorst Gala Ballroom.",
-        "timeline.party_title": "Grand Party & Dance",
-        "timeline.party_desc": "Let yourself go! Dance and open bar for 4 hours.",
-        "timeline.end_title": "End of Night",
-        "timeline.end_desc": "All good things come to an unforgettable end!",
-        "timeline.open_bar_note": "4 Hours Open Bar Included: selection of beers, fine wines, and soft drinks. Cash bar available for cocktails and premium spirits.",
-        "dress.title": "Dress Code",
-        "dress.type": "Gala • Black Tie & White/Gold",
-        "dress.palette": "Suggested Palette: White, Gold, Champagne, Black.",
-        "gifts.title": "Gifts",
-        "gifts.presence": "\"Your presence is your gift, but all contributions can go to the bank details below. Thank you!\"",
-        "gifts.bank_label": "Prefer to contribute directly?",
-        "faq.subtitle": "Frequently Asked Questions",
-        "faq.q1": "Can I bring a plus one?",
-        "faq.a1": "Invitations are personalized. Please let us know the name of your companion in the RSVP form for seating and catering arrangements.",
-        "faq.q2": "How do I travel from Spain or abroad?",
-        "faq.a2": "We recommend flying to Amsterdam Schiphol (AMS). Directly under the terminal, take the NS direct intercity train to Ede-Wageningen station, just 3 minutes walk from Hotel ReeHorst.",
-        "faq.q3": "How does the open bar work?",
-        "faq.a3": "There is a 4-hour open bar with beer, wine, and soft drinks included. The venue will also offer a cash bar for cocktails and premium spirits.",
-        "faq.q4": "Where can I stay in Ede?",
-        "faq.a4": "Hotel ReeHorst itself offers rooms with a special wedding discount. Mention \"Wedding Yeraldin & Gerwin\" when booking.",
-        "rsvp.cant_wait": "We can't wait!",
+        "travel.subtitle": "✦ Special Guide for Guests Traveling ✦",
+        "travel.title": "Your Trip to The Netherlands",
+        "travel.intro": "Everything you need to arrive easily, comfortably, and affordably at Hotel ReeHorst in Ede.",
+        "travel.step1_tag": "Step 1: Flight",
+        "travel.step1_title": "Amsterdam Schiphol (AMS)",
+        "travel.step1_desc": "We recommend flying directly to Amsterdam Schiphol (AMS). Daily direct flights available across Europe.",
+        "travel.step2_tag": "Step 2: Direct Train",
+        "travel.step2_title": "Schiphol to Ede-Wageningen",
+        "travel.step2_desc": "Directly under the terminal, take the NS Intercity train every 15 min straight to Ede-Wageningen station (~50 min).",
+        "travel.step3_tag": "Step 3: Arrival",
+        "travel.step3_title": "3 min walk to Hotel",
+        "travel.step3_desc": "Ede-Wageningen station is located right across from Hotel ReeHorst. Just walk across the street.",
+        "venue.subtitle": "✦ The Setting of Our Dream ✦",
+        "venue.title": "Hotel & Congrescentrum ReeHorst",
+        "venue.btn_maps": "Open in Google Maps",
+        "timeline.subtitle": "✦ Wedding Itinerary ✦",
+        "timeline.title": "Schedule & Special Moments",
+        "timeline.civil_title": "Civil Ceremony (Official Vows)",
+        "timeline.civil_desc": "Official vows and signing ceremony at the town hall with intimate family (20 guests).",
+        "timeline.dinner_title": "Gala Banquet & Gourmet Buffet Dinner",
+        "timeline.dinner_desc": "Welcome toast and gourmet buffet in ReeHorst Gala Ballroom with grilled meats, dietary options, and authentic Venezuelan arepas!",
+        "timeline.party_title": "Grand Party, Dance & Open Bar",
+        "timeline.party_desc": "Let's dance and celebrate! First dance and 4 full hours of open bar included.",
+        "details.subtitle": "✦ Important Information ✦",
+        "details.title": "Protocol & FAQ",
+        "details.intro": "We have gathered all answers about travel, transportation, menu, allergies, and the party.",
+        "details.dress_title": "Dress Code",
+        "details.dress_desc": "Daytime: White & Gold. Evening Gala Ballroom: Black & Gold. Come dressed elegantly to dance all night!",
+        "details.kids_title": "Adults Only",
+        "details.kids_desc": "To allow parents to celebrate freely, the evening gala will be Adults Only (except direct nieces/nephews).",
+        "details.hotel_title": "Hotel ReeHorst",
+        "details.hotel_desc": "Banquet and party at the same venue. Take the elevator straight to your room!",
+        "details.gifts_title": "Wedding Registry",
+        "details.gifts_desc": "For those wishing to celebrate with a gift towards our new home and future together, direct bank details are provided below:",
+        "faq.title": "Detailed Frequently Asked Questions",
+        "faq.hint": "Click on any question to view all details.",
+        "faq.q1": "Why are there two different dates: April 21 and May 01?",
+        "faq.a1": "On <strong>Wednesday, April 21, 2027 at 10:00 AM</strong>, we celebrate our intimate civil marriage ceremony at Ede Town Hall (limited to 20 guests: parents and witnesses).<br/><br/>On <strong>Saturday, May 01, 2027</strong> is the <strong>Grand Wedding & Official Celebration</strong> for all guests at Hotel ReeHorst: Gala Buffet Dinner (20:00 to 22:00) and Party with 4 hours of Open Bar (22:00 to 02:30).",
+        "faq.q2": "How do I get here from abroad? Should I rent a car?",
+        "faq.a2": "<strong>We strongly advise against renting a car!</strong> Traveling by train is faster, cheaper, and hassle-free.<br/><br/>Fly to <strong>Amsterdam Schiphol (AMS)</strong>. From inside the airport terminal, board the <strong>direct NS Intercity train to Ede-Wageningen</strong> (runs every 15 min, takes ~50 min, ~€18.80). Cross the street at Ede-Wageningen and you are right at Hotel ReeHorst (3 min walk).",
+        "faq.q3": "Where should I stay? Why do you recommend Hotel ReeHorst?",
+        "faq.a3": "We strongly recommend staying directly at <strong>Hotel ReeHorst</strong>. Since both the dinner and the party take place in the ballroom, you can freely enjoy the 4 hours of open bar and simply take the elevator to your room at 02:30 without needing taxis or driving.",
+        "faq.q4": "Is there parking available? What if it rains?",
+        "faq.a4": "Hotel ReeHorst provides <strong>ample free private parking</strong> for guests. Furthermore, the entire wedding is held in a <strong>fully climate-controlled indoor ballroom</strong>; Dutch weather will not affect the celebration at all.",
+        "faq.q5": "What will the food be like? Is there a buffet and arepas?",
+        "faq.a5": "It is a <strong>Gourmet Buffet</strong> where you can enjoy as much as you like: grilled meats, savory stews, classic Dutch bites (bitterballen, croquettes, frikandel), and as an exclusive Venezuelan tribute requested by Geraldine: <strong>fresh homemade Venezuelan arepas</strong>!",
+        "faq.q6": "I have food allergies or seafood intolerance, what should I do?",
+        "faq.a6": "The hotel rigorously separates special dietary meals. <strong>No seafood or problematic fish will be served</strong> to ensure safety. Gluten-free (celiac), vegetarian, and kosher options are available. Please specify your requirements in the RSVP form.",
+        "faq.q7": "What does the 4-Hour Open Bar include?",
+        "faq.a7": "Unlimited Dutch draft beer, quality red, white, and rosé wines, soft drinks, sparkling water, coffee, and tea from 22:00 to 02:00. Cocktails and spirits are available for purchase at the ballroom bar.",
+        "faq.q8": "What is the Dress Code?",
+        "faq.a8": "Casual Chic / Gala Chic. White & Gold accents for daytime photos and invites. Black & Gold for the evening gala ballroom.",
+        "faq.q9": "Are children allowed at the celebration?",
+        "faq.a9": "The celebration is Adults Only to allow parents to unwind and enjoy the evening and open bar (with the only exception of direct nieces/nephews).",
+        "faq.q10": "Can I bring a Plus One (+1)?",
+        "faq.a10": "Invitations are strictly personalized due to venue capacity. Please confirm your guest's full name in the RSVP form before March 1, 2027.",
+        "faq.q11": "What is your wedding registry preference?",
+        "faq.a11": "Having you celebrate with us is our greatest joy. For those wishing to contribute to our future home and honeymoon: ABN AMRO NL91 ABNA 0417 1643 00 (Yeraldin & Gerwin).",
+        "details.plus_title": "Plus Ones (+1)",
+        "details.plus_desc": "Invitations are personalized due to ballroom capacity. Please state your companion's name in the RSVP form.",
         "rsvp.deadline": "Please reply by March 1st, 2027",
         "rsvp.name_label": "Full Name *",
         "rsvp.attendance_label": "Will you attend? *",
         "rsvp.yes": "Yes, I will attend! 🎉",
         "rsvp.no": "Regretfully decline ❤️",
         "rsvp.events_title": "Events you will attend:",
-        "rsvp.event_gala": "Grand Gala & Banquet (May 01)",
-        "rsvp.event_civil": "Civil Ceremony (April 21)",
-        "rsvp.diet_label": "Dietary requirements or allergies",
+        "rsvp.event_gala": "Grand Gala & Banquet at Hotel ReeHorst (May 01)",
+        "rsvp.event_civil": "Civil Ceremony (April 21 - Intimate)",
+        "rsvp.diet_label": "Dietary requirements or allergies (very important for the chef)",
         "rsvp.msg_label": "Message for the couple",
-        "rsvp.submit_btn": "Send Confirmation",
+        "rsvp.submit_btn": "Send Confirmation via WhatsApp",
       }
     };
 
     let currentLang = 'es';
 
     function setLanguage(lang) {
-      if (!i18nData[lang]) return;
+      if (!i18n[lang]) return;
       currentLang = lang;
 
-      // Update button active states
       ['es', 'nl', 'en'].forEach(l => {
         const btn = document.getElementById(`btn-lang-${l}`);
         if (btn) {
           if (l === lang) {
-            btn.className = "px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold";
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold";
           } else {
-            btn.className = "px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso";
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso";
           }
         }
       });
 
-      // Update texts
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (i18nData[lang][key]) {
-          el.innerHTML = i18nData[lang][key];
+        if (i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
         }
       });
     }
 
-    // ==================== PHONE MOCKUP VIEW CONTROLS ====================
-    let isMockupView = true;
-
-    function toggleMockupView() {
-      const container = document.getElementById('deviceContainer');
-      const btnText = document.getElementById('mockupText');
-      const btnIcon = document.getElementById('mockupIcon');
-      
-      isMockupView = !isMockupView;
-      if (isMockupView) {
-        container.classList.remove('fullscreen-mode');
-        if (btnText) btnText.textContent = "Ver Pantalla Completa";
-        if (btnIcon) btnIcon.textContent = "📱";
-      } else {
-        container.classList.add('fullscreen-mode');
-        if (btnText) btnText.textContent = "Ver Modo Celular";
-        if (btnIcon) btnIcon.textContent = "🖥️";
-      }
-    }
-
-    function setTheme(themeName) {
-      const container = document.getElementById('deviceContainer');
-      container.className = `${themeName} w-full h-full sm:h-auto flex items-center justify-center relative ${!isMockupView ? 'fullscreen-mode' : ''}`;
-    }
-
-    // ==================== ENVELOPE OPENING AUDIO & ANIMATION ====================
-    let isOpened = false;
-
-    function playWaxSealBreakSound() {
-      try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        
-        // 1. Crisp wax snap / crack
-        const snapOsc = ctx.createOscillator();
-        const snapGain = ctx.createGain();
-        snapOsc.type = 'triangle';
-        snapOsc.frequency.setValueAtTime(140, ctx.currentTime);
-        snapOsc.frequency.exponentialRampToValueAtTime(45, ctx.currentTime + 0.12);
-        snapGain.gain.setValueAtTime(0.7, ctx.currentTime);
-        snapGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
-        snapOsc.connect(snapGain);
-        snapGain.connect(ctx.destination);
-        snapOsc.start();
-        snapOsc.stop(ctx.currentTime + 0.15);
-
-        // 2. Ethereal golden chime chord
-        [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
-          const chimeOsc = ctx.createOscillator();
-          const chimeGain = ctx.createGain();
-          chimeOsc.type = 'sine';
-          chimeOsc.frequency.value = freq;
-          chimeGain.gain.setValueAtTime(0.18, ctx.currentTime + 0.08 + i * 0.04);
-          chimeGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2 + i * 0.08);
-          chimeOsc.connect(chimeGain);
-          chimeGain.connect(ctx.destination);
-          chimeOsc.start(ctx.currentTime + 0.08 + i * 0.04);
-          chimeOsc.stop(ctx.currentTime + 1.4);
-        });
-      } catch (e) {
-        console.warn("AudioContext error", e);
-      }
-    }
-
-    function openEnvelope(e) {
-      if (e) e.stopPropagation();
-      playWaxSealBreakSound();
-
-      const bloom = document.getElementById('openLightBloom');
-      if (bloom) {
-        bloom.style.opacity = '1';
-        setTimeout(() => { bloom.style.opacity = '0'; }, 1000);
-      }
-
-      // Auto play wedding music on first interaction
-      playAudio();
-
-      // Smooth scroll directly to the baroque floral card
-      setTimeout(() => {
-        const target = document.getElementById('section-main-card');
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 550);
-    }
-
-    function scrollToNextSection() {
-      const sections = ['section-envelope', 'section-main-card', 'section-countdown', 'section-venue', 'section-timeline', 'section-gifts', 'section-faq', 'section-rsvp'];
-      const scrollEl = document.getElementById('scrollContainer');
-      const currentScroll = scrollEl.scrollTop;
-
-      for (let id of sections) {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop > currentScroll + 40) {
-          el.scrollIntoView({ behavior: 'smooth' });
-          return;
-        }
-      }
-    }
-
-    function scrollToTop() {
-      const scrollEl = document.getElementById('scrollContainer');
-      scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // ==================== WEDDING AUDIO CONTROLLER ====================
+    // ==================== AUDIO CONTROLLER ====================
     let isPlaying = false;
     const audio = document.getElementById('weddingMusic');
-    const safariSoundIcon = document.getElementById('safariSoundIcon');
-    const islandWaveform = document.getElementById('islandWaveform');
-
-    function playAudio() {
-      if (!audio) return;
-      audio.play().then(() => {
-        isPlaying = true;
-        updateAudioIcons();
-      }).catch(err => {
-        console.log("Autoplay waiting for direct tap", err);
-      });
-    }
+    const soundIconOn = document.getElementById('soundIconOn');
+    const soundIconOff = document.getElementById('soundIconOff');
+    const songPlayIcon = document.getElementById('songPlayIcon');
+    const musicBars = document.getElementById('musicBars');
 
     function toggleAudio() {
       if (!audio) return;
       if (isPlaying) {
         audio.pause();
         isPlaying = false;
+        soundIconOn.classList.add('hidden');
+        soundIconOff.classList.remove('hidden');
+        songPlayIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        if (musicBars) musicBars.classList.add('opacity-30');
       } else {
         audio.play().then(() => {
           isPlaying = true;
-        });
-      }
-      updateAudioIcons();
-    }
-
-    function updateAudioIcons() {
-      if (isPlaying) {
-        safariSoundIcon.innerHTML = '<path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>';
-        safariSoundIcon.classList.add('text-burgundy');
-        if (islandWaveform) islandWaveform.classList.remove('opacity-40');
-      } else {
-        safariSoundIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
-        safariSoundIcon.classList.remove('text-burgundy');
-        if (islandWaveform) islandWaveform.classList.add('opacity-40');
+          soundIconOn.classList.remove('hidden');
+          soundIconOff.classList.add('hidden');
+          songPlayIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+          if (musicBars) musicBars.classList.remove('opacity-30');
+        }).catch(e => console.log("Audio waiting for user gesture", e));
       }
     }
 
     // ==================== LIVE COUNTDOWN TIMER ====================
-    const WEDDING_TARGET = new Date('2027-05-01T20:00:00+02:00').getTime();
+    const TARGET_DATE = new Date('2027-05-01T20:00:00+02:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
-      const diff = WEDDING_TARGET - now;
+      const diff = TARGET_DATE - now;
 
       if (diff <= 0) {
         document.getElementById('cd-days').textContent = '00';
@@ -1436,27 +1440,15 @@
       document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
       document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
     }
-
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // ==================== IOS CLOCK ====================
-    function updateClock() {
-      const now = new Date();
-      let h = now.getHours();
-      let m = String(now.getMinutes()).padStart(2, '0');
-      const el = document.getElementById('iosClock');
-      if (el) el.textContent = `${h}:${m}`;
-    }
-    setInterval(updateClock, 30000);
-    updateClock();
-
     // ==================== CALENDAR INTEGRATION ====================
     function addToGoogleCalendar() {
-      const title = encodeURIComponent("Boda Yeraldin & Gerwin — Gran Gala");
-      const details = encodeURIComponent("Celebración del matrimonio de Yeraldin & Gerwin en Hotel ReeHorst, Ede, Países Bajos. Banquete de gala y fiesta con barra libre.");
+      const title = encodeURIComponent("Boda Yeraldin & Gerwin — Gran Celebración");
+      const details = encodeURIComponent("Banquete y fiesta de boda de Yeraldin & Gerwin en Hotel ReeHorst, Ede, Países Bajos.");
       const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
-      const dates = "20270501T180000Z/20270502T000000Z";
+      const dates = "20270501T180000Z/20270502T010000Z";
       window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
     }
 
@@ -1470,9 +1462,9 @@ BEGIN:VEVENT
 UID:wedding-yeraldin-gerwin-2027@reehorst
 DTSTAMP:20270501T180000Z
 DTSTART:20270501T180000Z
-DTEND:20270502T000000Z
-SUMMARY:Boda Real Yeraldin & Gerwin — Gran Gala
-DESCRIPTION:Banquete de gala y gran celebración de boda de Yeraldin & Gerwin. Hotel ReeHorst, Ede, Países Bajos.
+DTEND:20270502T010000Z
+SUMMARY:Boda Real Yeraldin & Gerwin
+DESCRIPTION:Gran celebración de boda de Yeraldin & Gerwin. Hotel ReeHorst, Ede, Países Bajos.
 LOCATION:Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos
 STATUS:CONFIRMED
 END:VEVENT
@@ -1487,37 +1479,16 @@ END:VCALENDAR`;
       document.body.removeChild(link);
     }
 
-    // ==================== FAQ ACCORDION ====================
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const all = document.querySelectorAll('.faq-item');
-      all.forEach(i => {
-        if (i !== item) i.classList.remove('active');
-      });
-      item.classList.toggle('active');
-    }
-
+    // ==================== UTILS ====================
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
-        alert("Copiado al portapapeles: " + text);
+        alert("Número de cuenta copiado: " + text);
       }).catch(() => {
-        alert("Número: " + text);
+        alert("Cuenta: " + text);
       });
     }
 
-    function shareInvitation() {
-      if (navigator.share) {
-        navigator.share({
-          title: "Boda Yeraldin & Gerwin 2027",
-          text: "¡Estás invitado a la boda de Yeraldin & Gerwin en Países Bajos!",
-          url: window.location.href,
-        }).catch(() => {});
-      } else {
-        copyToClipboard(window.location.href);
-      }
-    }
-
-    // ==================== RSVP FORM SUBMISSION ====================
+    // ==================== RSVP FORM HANDLER ====================
     function handleRSVPSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('rsvpName').value.trim();
@@ -1533,10 +1504,10 @@ END:VCALENDAR`;
       if (attend === 'si') {
         text += `🏰 *Gran Gala & Banquete (01 Mayo):* ${checkGala}\n`;
         text += `🏛️ *Boda Civil (21 Abril):* ${checkCivil}\n`;
-        text += `🥗 *Dieta / Alergias:* ${diet}\n`;
+        text += `🥗 *Dieta / Alergias para el Chef:* ${diet}\n`;
         text += `💌 *Mensaje:* ${msg}\n`;
       }
-      text += `\n_Enviado desde el Mockup Interactivo de Boda._`;
+      text += `\n_Enviado desde la web oficial de boda._`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
@@ -1546,6 +1517,86 @@ END:VCALENDAR`;
         window.open(waUrl, '_blank');
       }, 700);
     }
+
+    // ==================== FAQ ACCORDION & SEARCH LOGIC ====================
+    function toggleFAQ(button) {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const wasActive = item.classList.contains('active');
+      
+      // Close other items
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+      });
+      
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+
+    function filterFAQ(category, btn) {
+      document.querySelectorAll('.faq-filter-btn').forEach(b => {
+        b.className = "faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-white text-champagne-800 border border-champagne-500/30 hover:bg-champagne-100 cursor-pointer transition-all";
+      });
+      btn.className = "faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-espresso text-champagne-100 shadow-xs cursor-pointer transition-all";
+
+      const searchInput = document.getElementById('faqSearch');
+      if (searchInput) searchInput.value = '';
+
+      let visibleCount = 0;
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+          item.classList.remove('active');
+        }
+      });
+
+      const noResults = document.getElementById('faqNoResults');
+      if (noResults) {
+        if (visibleCount === 0) noResults.classList.remove('hidden');
+        else noResults.classList.add('hidden');
+      }
+    }
+
+    function searchFAQ() {
+      const query = document.getElementById('faqSearch').value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      document.querySelectorAll('.faq-filter-btn').forEach((b, idx) => {
+        if (idx === 0) {
+          b.className = "faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-espresso text-champagne-100 shadow-xs cursor-pointer transition-all";
+        } else {
+          b.className = "faq-filter-btn px-3 py-1.5 rounded-full text-[11px] font-sans font-semibold bg-white text-champagne-800 border border-champagne-500/30 hover:bg-champagne-100 cursor-pointer transition-all";
+        }
+      });
+
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (!query || text.includes(query)) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+          item.classList.remove('active');
+        }
+      });
+
+      const noResults = document.getElementById('faqNoResults');
+      if (noResults) {
+        if (visibleCount === 0) noResults.classList.remove('hidden');
+        else noResults.classList.add('hidden');
+      }
+    }
+
+    // Auto-open first FAQ item on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const firstFaq = document.querySelector('.faq-item');
+      if (firstFaq) firstFaq.classList.add('active');
+    });
   </script>
 </body>
 </html>
