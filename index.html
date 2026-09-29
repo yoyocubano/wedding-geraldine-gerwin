@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Yeraldin & Gerwin — Save The Date & Boda Real 2027</title>
   
-  <meta name="description" content="Invitación de Boda interactiva en tarjetas de Yeraldin & Gerwin. 21 de Abril & 1 de Mayo 2027, Países Bajos." />
+  <meta name="description" content="Invitación de Boda interactiva de Yeraldin & Gerwin. 21 de Abril & 1 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
   <meta property="og:title" content="Yeraldin & Gerwin — Boda 2027" />
-  <meta property="og:description" content="Abre tu tarjeta de boda interactiva para Yeraldin & Gerwin en Países Bajos." />
-  <meta property="og:image" content="assets/geraldine_profile.jpg" />
+  <meta property="og:description" content="Abre tu invitación de boda interactiva para Yeraldin & Gerwin en Países Bajos." />
+  <meta property="og:image" content="assets/envelope_yg_hero.jpg" />
 
   <!-- Fonts: Luxury Editorial Serif, Calligraphy & Clean Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,24 +37,27 @@
             parchment: '#FAF6EE',
             sand: '#EFE9DC',
             espresso: '#241711',
+            burgundy: '#5B1E28',
             goldfoil: '#D4AF37',
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
             cormorant: ['"Cormorant Garamond"', 'serif'],
-            script: ['"Alex Brush"', 'cursive'],
+            script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+            alex: ['"Alex Brush"', 'cursive'],
             body: ['"EB Garamond"', 'serif'],
             sans: ['"Outfit"', 'sans-serif'],
           },
           boxShadow: {
-            'card-active': '0 25px 60px -15px rgba(42, 27, 14, 0.28), 0 0 0 1px rgba(197, 160, 89, 0.35)',
-            'card-stacked': '0 12px 30px -8px rgba(42, 27, 14, 0.15), 0 0 0 1px rgba(197, 160, 89, 0.2)',
-            'seal': '0 10px 25px rgba(42, 27, 14, 0.35), inset 0 2px 4px rgba(255, 235, 170, 0.6), inset 0 -3px 6px rgba(140, 103, 38, 0.6)',
-            'glass': '0 8px 32px 0 rgba(88, 53, 28, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.7)',
+            'phone-titanium': '0 40px 90px -20px rgba(38, 24, 12, 0.45), 0 20px 40px -15px rgba(0, 0, 0, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.35), inset 0 -2px 4px rgba(0, 0, 0, 0.6)',
+            'seal': '0 12px 30px rgba(42, 27, 14, 0.4), inset 0 2px 4px rgba(255, 235, 170, 0.7), inset 0 -3px 6px rgba(140, 103, 38, 0.7)',
+            'card-luxury': '0 20px 50px -15px rgba(42, 27, 14, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.35)',
           },
           animation: {
             'shimmer': 'shimmer 2.5s infinite linear',
             'float': 'float 5s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s infinite ease-in-out',
+            'scroll-hint': 'scrollHint 2s infinite ease-in-out',
           },
           keyframes: {
             shimmer: {
@@ -63,8 +66,16 @@
             },
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-4px)' },
-            }
+              '50%': { transform: 'translateY(-5px)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.04)', opacity: '0.9' },
+            },
+            scrollHint: {
+              '0%, 100%': { transform: 'translateY(0)', opacity: '0.9' },
+              '50%': { transform: 'translateY(6px)', opacity: '0.4' },
+            },
           }
         }
       }
@@ -74,890 +85,1166 @@
   <style>
     html, body {
       height: 100%;
-      background-color: #FAF5EB;
+      background-color: #ECE5D8;
       color: #2A1B0E;
       font-family: 'EB Garamond', serif;
       -webkit-font-smoothing: antialiased;
-      overflow: hidden;
-      touch-action: pan-y pinch-zoom;
+      overflow-x: hidden;
     }
 
-    /* ==================== TACTILE COTTON PAPER TEXTURE ("TÓCAME") ==================== */
+    /* Ambient studio backdrop with organic linen & marble grain */
+    .studio-backdrop {
+      background-color: #EFE9DC;
+      background-image: 
+        radial-gradient(circle at 50% 10%, #FFFDF7 0%, rgba(239, 233, 220, 0.95) 50%, #DFD5C2 100%),
+        radial-gradient(#C5A059 0.4px, transparent 0.4px);
+      background-size: 100% 100%, 20px 20px;
+    }
+
+    /* Tactile Paper Texture */
     .paper-texture {
       background-color: #FAF7F0;
       background-image: 
         radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.9) 0%, transparent 75%),
-        radial-gradient(ellipse at 50% 100%, rgba(223, 190, 125, 0.14) 0%, transparent 60%),
-        radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.055) 1px, transparent 0),
-        radial-gradient(circle at 7px 7px, rgba(140, 103, 38, 0.04) 1px, transparent 0);
-      background-size: 100% 100%, 100% 100%, 14px 14px, 28px 28px;
-      box-shadow: 
-        0 30px 60px -12px rgba(42, 27, 14, 0.28),
-        0 14px 28px -6px rgba(140, 103, 38, 0.2),
-        0 0 0 1px rgba(212, 175, 55, 0.45),
-        inset 0 0 45px rgba(223, 190, 125, 0.1),
-        inset 0 1.5px 2.5px rgba(255, 255, 255, 0.95);
+        radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.05) 1px, transparent 0);
+      background-size: 100% 100%, 16px 16px;
     }
 
-    /* Gilded double hairline border with handcrafted embroidery stitching effect */
-    .gilded-border {
+    /* Realistic iPhone 16 Pro Frame */
+    .iphone-device {
       position: relative;
-      border: 1.5px solid rgba(197, 160, 89, 0.65);
-    }
-    .gilded-border::before {
-      content: '';
-      position: absolute;
-      inset: 7px;
-      border: 1px dashed rgba(212, 175, 55, 0.55);
-      border-radius: calc(1.5rem - 7px);
-      box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.12), 0 0 2px rgba(255, 255, 255, 0.7);
-      pointer-events: none;
+      width: 100%;
+      max-width: 412px;
+      height: 874px;
+      max-height: 94vh;
+      border-radius: 54px;
+      padding: 11px;
+      background: linear-gradient(145deg, #4A4036 0%, #2A241D 40%, #5C5044 70%, #1E1914 100%);
+      box-shadow: 
+        0 40px 90px -20px rgba(35, 20, 10, 0.5),
+        0 20px 45px -10px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.22),
+        inset 0 0 2px 1.5px rgba(255, 255, 255, 0.35),
+        inset 0 0 0 2px #1A1612;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    /* iPhone Frame Colors */
+    .theme-desert .iphone-device {
+      background: linear-gradient(145deg, #5A4A3A 0%, #34281E 40%, #766350 70%, #221A12 100%);
+    }
+    .theme-natural .iphone-device {
+      background: linear-gradient(145deg, #4E4E4C 0%, #282827 40%, #6E6D6B 70%, #1A1A19 100%);
+    }
+    .theme-black .iphone-device {
+      background: linear-gradient(145deg, #2E2E30 0%, #131314 40%, #3E3E42 70%, #0A0A0B 100%);
+    }
+
+    /* Hardware Buttons */
+    .iphone-button-action {
+      position: absolute;
+      left: -3px;
+      top: 115px;
+      width: 4px;
+      height: 28px;
+      background: #3A3229;
+      border-radius: 3px 0 0 3px;
+      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
+    }
+    .iphone-button-vol-up {
+      position: absolute;
+      left: -3px;
+      top: 160px;
+      width: 4px;
+      height: 52px;
+      background: #3A3229;
+      border-radius: 3px 0 0 3px;
+      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
+    }
+    .iphone-button-vol-down {
+      position: absolute;
+      left: -3px;
+      top: 224px;
+      width: 4px;
+      height: 52px;
+      background: #3A3229;
+      border-radius: 3px 0 0 3px;
+      box-shadow: -1px 0 2px rgba(0,0,0,0.5);
+    }
+    .iphone-button-power {
+      position: absolute;
+      right: -3px;
+      top: 175px;
+      width: 4px;
+      height: 74px;
+      background: #3A3229;
+      border-radius: 0 3px 3px 0;
+      box-shadow: 1px 0 2px rgba(0,0,0,0.5);
+    }
+
+    /* Inner Screen Viewport */
+    .iphone-screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 44px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #FAF5EB;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Fullscreen mode (strips phone bezel for mobile native) */
+    .fullscreen-mode .iphone-device {
+      max-width: 100% !important;
+      height: 100% !important;
+      max-height: 100vh !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .fullscreen-mode .iphone-screen {
+      border-radius: 0 !important;
+    }
+    .fullscreen-mode .iphone-button-action,
+    .fullscreen-mode .iphone-button-vol-up,
+    .fullscreen-mode .iphone-button-vol-down,
+    .fullscreen-mode .iphone-button-power {
+      display: none !important;
+    }
+
+    /* Dynamic Island */
+    .dynamic-island {
+      position: sticky;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 118px;
+      height: 32px;
+      background-color: #000;
+      border-radius: 20px;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: width 0.3s ease;
+    }
+    .dynamic-island-lens {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #1F2840 0%, #060910 80%);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .dynamic-island-sensor {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0d0d0f;
+    }
+
+    /* Glass Reflection on Screen */
+    .screen-glare {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 40%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 45;
+      border-top-right-radius: 44px;
+    }
+
+    /* Mobile Safari Toolbar (as seen in Wooow Invites) */
+    .safari-toolbar {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(250, 245, 235, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(197, 160, 89, 0.3);
+      z-index: 50;
+      padding: 8px 14px 10px 14px;
+    }
+
+    /* 3D Envelope Opening */
+    .perspective-envelope {
+      perspective: 1000px;
+    }
+    .envelope-flap-top {
+      transform-origin: top center;
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .envelope-opened .envelope-flap-top {
+      transform: rotateX(180deg);
+      z-index: 5;
+    }
+    .envelope-card-slide {
+      transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    }
+    .envelope-opened .envelope-card-slide {
+      transform: translateY(-90px) scale(1.02);
+      z-index: 25;
+    }
+
+    /* Metallic Gold Text */
     .text-gold-metallic {
-      background: linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #F7E7A9 50%, #C5A059 70%, #8C6726 100%);
+      background: linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #FFF2B2 50%, #C5A059 70%, #8C6726 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* ==================== 3D WAX SEAL (ORO PRECIOSO & SOMBRA PROFUNDA) ==================== */
-    .wax-seal-wrapper {
-      position: relative;
-      width: 116px;
-      height: 116px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Sello sellado: Aura pulsante que invita a romper el sello */
-    @keyframes sealBreathingPulse {
-      0%, 100% {
-        transform: scale(0.98);
-        opacity: 0.6;
-        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6), 0 0 20px 2px rgba(212, 175, 55, 0.2);
-      }
-      50% {
-        transform: scale(1.08);
-        opacity: 1;
-        box-shadow: 0 0 0 12px rgba(212, 175, 55, 0), 0 0 35px 8px rgba(212, 175, 55, 0.45);
-      }
-    }
-    .seal-aura {
-      position: absolute;
-      inset: -12px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(212, 175, 55, 0.55);
-      animation: sealBreathingPulse 2.6s infinite ease-in-out;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* 3D Wax Seal Body */
-    .wax-seal-3d {
-      position: relative;
-      z-index: 2;
-      width: 104px;
-      height: 104px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 28%, #FFFBE6 0%, #F8DA89 22%, #D4AF37 45%, #9E7422 75%, #593A0B 100%);
-      /* Sombra proyectada por abajo hiperrealista */
-      box-shadow: 
-        0 22px 34px -4px rgba(60, 36, 10, 0.65),
-        0 9px 18px -2px rgba(0, 0, 0, 0.3),
-        inset 0 2.5px 5px rgba(255, 255, 255, 0.85),
-        inset 0 -4px 8px rgba(45, 25, 5, 0.75);
-      cursor: pointer;
-      transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.25s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .wax-seal-3d:hover {
-      transform: scale(1.06) translateY(-2px);
-      box-shadow: 
-        0 28px 42px -4px rgba(60, 36, 10, 0.72),
-        0 12px 22px -2px rgba(0, 0, 0, 0.35),
-        inset 0 2.5px 6px rgba(255, 255, 255, 0.9),
-        inset 0 -4px 8px rgba(45, 25, 5, 0.75);
-    }
-    .wax-seal-3d:active {
-      transform: scale(0.94) translateY(3px);
-      box-shadow: 
-        0 10px 16px -2px rgba(60, 36, 10, 0.5),
-        inset 0 1px 3px rgba(255, 255, 255, 0.6),
-        inset 0 -2px 5px rgba(45, 25, 5, 0.85);
-    }
-
-    /* Melted organic wax rim with dripping lips */
-    .wax-rim {
-      position: absolute;
-      inset: -5px;
-      border-radius: 47% 53% 51% 49% / 49% 51% 49% 51%;
-      background: radial-gradient(circle at 35% 28%, #FFEAB0 0%, #D4AF37 38%, #8C6726 82%, #4A2E07 100%);
-      box-shadow: 
-        0 14px 22px -4px rgba(65, 38, 10, 0.55),
-        inset 0 2px 3px rgba(255, 255, 255, 0.65),
-        inset 0 -3px 6px rgba(40, 22, 5, 0.7);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* Stamped Inner Bevel & Monogram */
-    .seal-inner-stamp {
-      position: relative;
-      z-index: 3;
-      width: 78px;
-      height: 78px;
-      border-radius: 50%;
-      border: 2px dashed rgba(255, 245, 200, 0.55);
-      box-shadow: 
-        inset 0 3px 6px rgba(45, 25, 5, 0.65),
-        inset 0 -1.5px 3px rgba(255, 255, 255, 0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at 40% 35%, #CFA551 0%, #A3792A 60%, #785315 100%);
-    }
-
-    /* Animación de apertura / rotura del sello */
-    @keyframes sealCrackAnim {
-      0% { transform: scale(1); filter: brightness(1); }
-      30% { transform: scale(0.92); filter: brightness(1.3); }
-      60% { transform: scale(1.18); filter: brightness(1.6); opacity: 0.9; }
-      100% { transform: scale(1.35); opacity: 0; }
-    }
-    .seal-cracking {
-      animation: sealCrackAnim 0.45s ease-out forwards;
-      pointer-events: none;
-    }
-
-    /* ==================== 3D CAROUSEL & 9:16 PHYSICAL DECK RATIO ==================== */
-    .deck-container {
-      perspective: 1200px;
-      transform-style: preserve-3d;
-    }
-
-    .invitation-card {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 1.5rem;
-      transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.5s ease;
-      will-change: transform, opacity;
-      backface-visibility: hidden;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(197, 160, 89, 0.3) transparent;
-      touch-action: pan-y;
-    }
-    .invitation-card::-webkit-scrollbar {
-      width: 4px;
-    }
-    .invitation-card::-webkit-scrollbar-thumb {
-      background: rgba(197, 160, 89, 0.35);
-      border-radius: 4px;
-    }
-
-    /* Card Positions */
-    .card-active {
-      transform: translate3d(0, 0, 0) scale(1);
-      opacity: 1;
-      pointer-events: auto;
-      z-index: 30;
-    }
-    .card-next {
-      transform: translate3d(0, 24px, -50px) scale(0.94);
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 20;
-    }
-    .card-prev {
-      transform: translate3d(-110%, 0, 0) rotate(-6deg);
-      opacity: 0;
-      pointer-events: none;
-      z-index: 10;
-    }
-    .card-hidden {
-      transform: translate3d(0, 48px, -100px) scale(0.88);
-      opacity: 0;
-      pointer-events: none;
-      z-index: 5;
-    }
-
-    /* Tactile Press Feedback */
-    .tap-press:active {
-      transform: scale(0.975);
-      transition: transform 120ms ease-out;
-    }
-
-    /* Accordion styles */
-    .accordion-item {
-      transition: all 0.28s cubic-bezier(0.2, 0.9, 0.3, 1);
-    }
-    .accordion-item.active {
-      border-color: rgba(197, 160, 89, 0.65);
-      box-shadow: 0 4px 16px -2px rgba(140, 103, 38, 0.12);
-    }
-    .accordion-content {
+    /* Accordion */
+    .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
     }
-    .accordion-item.active .accordion-content {
+    .faq-item.active .faq-answer {
       max-height: 500px;
+      transition: max-height 0.5s ease-in-out;
     }
-    .accordion-item.active .accordion-icon {
+    .faq-item.active .faq-chevron {
       transform: rotate(180deg);
-      color: #8C6726;
     }
 
-    #scratchCanvas {
-      touch-action: none;
+    /* Hide scrollbar for clean UI */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
     }
-
-    @keyframes destelloFlash {
-      0% { opacity: 0; transform: scale(0.85); }
-      40% { opacity: 1; transform: scale(1.1); }
-      100% { opacity: 0; transform: scale(1.4); }
-    }
-    .animate-destello {
-      animation: destelloFlash 1.2s ease-out forwards;
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   </style>
 </head>
-<body class="flex flex-col h-full bg-radial from-champagne-100 via-parchment to-sand relative select-none">
+<body class="h-full flex flex-col items-center justify-center studio-backdrop selection:bg-champagne-300 selection:text-espresso relative p-0 sm:p-4">
 
-  <!-- Subtle ambient background gradients -->
-  <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-champagne-300/15 blur-3xl pointer-events-none"></div>
-  <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-champagne-400/15 blur-3xl pointer-events-none"></div>
-
-  <!-- ==================== DISCREET TOP CONTROLS (NO CLUTTERED NAVBAR) ==================== -->
-  <header class="w-full max-w-lg mx-auto px-4 pt-4 pb-2 flex items-center justify-between z-40 shrink-0">
-    <!-- Left: Card Progress Indicator -->
-    <div class="flex items-center gap-1.5 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full border border-champagne-500/30 text-[10px] font-sans font-semibold uppercase tracking-wider text-champagne-800 shadow-xs">
-      <span class="text-champagne-600">✦</span>
-      <span id="stepCounterText">Tarjeta 1 / 6</span>
+  <!-- ==================== TOP DESKTOP STUDIO CONTROLLER ==================== -->
+  <header class="w-full max-w-4xl mx-auto px-4 py-2 hidden sm:flex items-center justify-between text-xs font-sans text-champagne-900 z-50">
+    <!-- Brand / Title -->
+    <div class="flex items-center gap-2 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-champagne-500/30 shadow-xs">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+      <span class="font-semibold tracking-wider uppercase text-[10px] text-champagne-800">Wooow Mockup Experience</span>
+      <span class="text-champagne-400">|</span>
+      <span class="font-serif italic text-espresso">Yeraldin & Gerwin 2027</span>
     </div>
 
-    <!-- Right: Language Pill (ES | EN | NL) & Audio -->
+    <!-- Center/Right Controls: Device Mockup Switcher, iPhone Finishes & Language -->
     <div class="flex items-center gap-2">
-      <div class="flex items-center bg-white/80 backdrop-blur-md border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-sans font-medium shadow-xs">
-        <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
-        <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
-        <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+      <!-- Device Finish Selector -->
+      <div class="flex items-center gap-1 bg-white/80 backdrop-blur-md px-2 py-1 rounded-full border border-champagne-500/30 shadow-xs text-[11px]">
+        <span class="text-[10px] text-champagne-700 uppercase font-semibold pl-1">Chasis:</span>
+        <button onclick="setTheme('theme-desert')" class="w-5 h-5 rounded-full bg-[#766350] border border-white shadow-xs hover:scale-110 transition-transform" title="Desert Titanium"></button>
+        <button onclick="setTheme('theme-natural')" class="w-5 h-5 rounded-full bg-[#6E6D6B] border border-white shadow-xs hover:scale-110 transition-transform" title="Natural Titanium"></button>
+        <button onclick="setTheme('theme-black')" class="w-5 h-5 rounded-full bg-[#202022] border border-white shadow-xs hover:scale-110 transition-transform" title="Space Black"></button>
       </div>
 
-      <!-- Quick Switcher to Editorial Scroll Version -->
-      <a href="editorial.html" class="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md border border-champagne-500/30 text-[10px] font-sans font-semibold uppercase tracking-wider text-champagne-800 hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-1" title="Ver modo Editorial Pergamino">
-        <span>📜</span>
-        <span class="hidden sm:inline">Editorial</span>
-      </a>
-
-      <button id="soundToggle" onclick="toggleAudio()" class="w-7 h-7 rounded-full bg-white/80 backdrop-blur-md border border-champagne-500/30 flex items-center justify-center text-champagne-800 hover:bg-champagne-100 transition-colors shadow-xs cursor-pointer" title="Música de boda">
-        <svg id="soundIconOn" class="w-3.5 h-3.5 hidden text-champagne-600" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-        <svg id="soundIconOff" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+      <!-- View Mode Toggle (Mockup vs Fullscreen) -->
+      <button onclick="toggleMockupView()" id="btnMockupToggle" class="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-champagne-500/30 text-[11px] font-semibold text-champagne-800 hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
+        <span id="mockupIcon">📱</span>
+        <span id="mockupText">Ver Pantalla Completa</span>
       </button>
+
+      <!-- Language Selector (ES / NL / EN) -->
+      <div class="flex items-center bg-white/80 backdrop-blur-md border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-medium shadow-xs">
+        <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
+        <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+        <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
+      </div>
+
+      <!-- Quick Link to Editorial Mode -->
+      <a href="editorial.html" class="px-2.5 py-1 rounded-full bg-champagne-800 text-champagne-100 text-[11px] font-medium hover:bg-champagne-900 transition-colors shadow-xs flex items-center gap-1" title="Ver formato pergamino continuo">
+        <span>📜</span>
+        <span>Editorial</span>
+      </a>
     </div>
   </header>
 
-  <!-- ==================== 3D CARD STACK CAROUSEL VIEWPORT (9:16 RATIO) ==================== -->
-  <main class="flex-1 flex items-center justify-center p-2 sm:p-3 relative overflow-hidden w-full max-w-lg mx-auto">
-    <div class="deck-container relative w-full max-w-[390px] h-[calc(100vh-84px)] max-h-[720px] aspect-[9/16] mx-auto select-none" id="cardStackDeck">
+  <!-- ==================== THE IPHONE 16 PRO DEVICE MOCKUP CONTAINER ==================== -->
+  <div id="deviceContainer" class="theme-desert w-full h-full sm:h-auto flex items-center justify-center relative">
+    
+    <!-- iPhone Chassis Shell -->
+    <div class="iphone-device relative">
+      <!-- Hardware Exterior Buttons -->
+      <div class="iphone-button-action"></div>
+      <div class="iphone-button-vol-up"></div>
+      <div class="iphone-button-vol-down"></div>
+      <div class="iphone-button-power"></div>
 
-      <!-- ========== CARD 1: EL SOBRE REAL & SELLO DE CERA ========== -->
-      <article id="card-0" class="invitation-card card-active paper-texture gilded-border p-5 sm:p-6 flex flex-col justify-between text-center overflow-y-auto">
-        <div>
-          <div class="flex items-center justify-center gap-2 mb-1.5 text-champagne-600/70">
-            <span class="text-xs">✦</span>
-            <div class="h-px w-12 bg-champagne-500/40"></div>
-            <span class="text-xs">✦</span>
-          </div>
-          <p class="text-[11px] font-sans uppercase tracking-[0.25em] text-champagne-800 font-semibold" data-i18n="hero.save_the_date">Save The Date & Invitación</p>
-          <p class="font-cormorant italic text-sm text-champagne-700 mt-0.5 mb-3" data-i18n="hero.together">Junto a nuestras familias, los invitamos a celebrar</p>
+      <!-- Screen Viewport -->
+      <div class="iphone-screen no-scrollbar relative flex flex-col" id="scrollContainer">
+        
+        <!-- Screen Gloss Glare Highlight -->
+        <div class="screen-glare"></div>
 
-          <!-- Monogram Seal Centerpiece (3D Oro Precioso & Sombra Profunda) -->
-          <div class="my-4 flex flex-col items-center cursor-pointer group" onclick="openEnvelope(event)">
-            <div class="wax-seal-wrapper">
-              <!-- Aura luminosa que invita a interactuar ("está sellado, pero hace falta abrirlo") -->
-              <div class="seal-aura"></div>
+        <!-- ==================== DYNAMIC ISLAND & STATUS BAR ==================== -->
+        <div class="sticky top-0 z-50 pt-2 px-6 pb-1 bg-gradient-to-b from-[#FAF5EB] via-[#FAF5EB]/95 to-transparent pointer-events-none">
+          <div class="flex items-center justify-between text-[11px] font-semibold font-sans text-espresso/80 px-2 select-none">
+            <span id="iosClock">9:41</span>
+            
+            <!-- Dynamic Island Capsule -->
+            <div class="dynamic-island pointer-events-auto cursor-pointer" onclick="toggleAudio()" title="Control de audio de boda">
+              <div class="dynamic-island-sensor"></div>
+              <!-- Equalizer Waveform indicator -->
+              <div class="flex items-center gap-0.5 h-3" id="islandWaveform">
+                <span class="w-0.5 h-2 bg-champagne-400 rounded-full animate-pulse"></span>
+                <span class="w-0.5 h-3 bg-champagne-300 rounded-full animate-pulse" style="animation-delay: 0.15s"></span>
+                <span class="w-0.5 h-1.5 bg-champagne-400 rounded-full animate-pulse" style="animation-delay: 0.3s"></span>
+              </div>
+              <div class="dynamic-island-lens"></div>
+            </div>
 
-              <!-- Sello de cera 3D con relieve, sombra y brillo especular -->
-              <div class="wax-seal-3d" id="waxSealElem">
-                <div class="wax-rim"></div>
-                <div class="seal-inner-stamp">
-                  <span class="font-cormorant font-bold text-3xl text-[#FFF8DB] tracking-tight drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.65)] select-none">Y&G</span>
-                  <span class="text-[9px] uppercase tracking-[0.25em] text-[#FFE8A3] font-sans font-bold drop-shadow-sm -mt-0.5">2027</span>
-                </div>
+            <!-- Signal & Battery -->
+            <div class="flex items-center gap-1.5">
+              <!-- 5G -->
+              <span class="text-[9px] font-bold text-espresso/70">5G</span>
+              <!-- Wifi Icon -->
+              <svg class="w-3 h-3 text-espresso/70" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 2.22c3.84 0 7.33 1.48 9.97 3.93L12 18.17 2.03 10.15C4.67 7.7 8.16 6.22 12 6.22z"/></svg>
+              <!-- Battery Icon -->
+              <div class="w-5 h-2.5 border border-espresso/70 rounded-xs p-0.5 flex items-center">
+                <div class="w-full h-full bg-espresso/70 rounded-2xs"></div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- ==================== MAIN INVITATION CONTENT FLOW ==================== -->
+        <div class="flex-1 flex flex-col">
+
+          <!-- ========== HERO 1: THE WOOW INVITES EMBROIDERED ENVELOPE (INTERACTIVE REVEAL) ========== -->
+          <section id="section-envelope" class="min-h-[82vh] flex flex-col items-center justify-between p-4 sm:p-5 text-center relative select-none">
             
-            <!-- Badge táctil interactivo -->
-            <div class="mt-4 px-3.5 py-1 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso text-champagne-200 text-[10px] tracking-[0.2em] uppercase font-sans font-semibold border border-champagne-400/60 shadow-lg flex items-center gap-1.5 group-hover:scale-105 active:scale-95 transition-transform">
-              <span class="text-gold-metallic">✦</span>
-              <span data-i18n="hero.tap_open">Toca el sello para abrir</span>
-              <span class="text-gold-metallic">✦</span>
+            <!-- Viral Hook Caption (exact text from video) -->
+            <div class="pt-2">
+              <p class="font-sans font-bold text-xs sm:text-sm text-espresso/90 tracking-wide max-w-[280px] mx-auto leading-snug" data-i18n="hero.viral_hook">
+                You have never seen a wedding Invitation like this 😍💍🥹
+              </p>
             </div>
-          </div>
 
-          <h1 class="font-serif text-3xl text-espresso tracking-tight my-1">
-            Yeraldin
-            <span class="block font-script text-3xl text-gold-metallic my-0.5">&</span>
-            Gerwin
-          </h1>
-        </div>
+            <!-- The Realistic 3D Embroidered Linen Envelope Container -->
+            <div class="w-full max-w-[340px] my-auto relative cursor-pointer group" onclick="openEnvelope(event)">
+              
+              <!-- Ambient Warm Glow behind the envelope -->
+              <div class="absolute inset-0 bg-champagne-300/25 blur-2xl rounded-3xl pointer-events-none transform scale-95 group-hover:scale-105 transition-transform duration-500"></div>
 
-        <div class="pt-3 border-t border-champagne-500/20">
-          <p class="text-[11px] uppercase tracking-widest font-sans text-champagne-800 font-semibold mb-2.5 flex items-center justify-center gap-1">
-            <svg class="w-3.5 h-3.5 text-champagne-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-            <span data-i18n="hero.location">Países Bajos (Holanda)</span>
-          </p>
-          <button onclick="openEnvelope(event)" class="tap-press w-full py-2.5 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans tracking-widest uppercase font-semibold hover:bg-champagne-800 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
-            <span data-i18n="deck.open">Abrir Invitación</span>
-            <span>→</span>
-          </button>
-        </div>
-      </article>
+              <!-- Closed Envelope with Linen Texture & Deckled Edge -->
+              <div id="envelopeGraphic" class="relative rounded-2xl overflow-hidden shadow-2xl border border-champagne-500/40 bg-[#FAF7F0] transition-all duration-700">
+                <img 
+                  src="assets/envelope_yg_hero.jpg" 
+                  alt="Sobre de Boda Bordado Yeraldin y Gerwin" 
+                  class="w-full h-auto object-cover block rounded-2xl transform group-hover:scale-102 transition-transform duration-500" 
+                />
 
-    <!-- ========== CARD 2: CUENTA REGRESIVA & CALENDARIO ========== -->
-    <article id="card-1" class="invitation-card card-next paper-texture gilded-border p-5 sm:p-6 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <p class="text-[10px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="countdown.subtitle">Contando los segundos para nuestro gran día</p>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mt-1 mb-4" data-i18n="countdown.title">La Cuenta Regresiva • 01 Mayo 2027</h2>
+                <!-- Interactive Wax Seal Touchpoint Overlay -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center pt-24 sm:pt-28">
+                  <!-- Pulsing Ripple Aura -->
+                  <div class="relative flex items-center justify-center">
+                    <div class="w-24 h-24 rounded-full border-2 border-champagne-400/60 animate-ping opacity-35 pointer-events-none absolute"></div>
+                    
+                    <!-- Touch Action Button -->
+                    <button class="px-4 py-1.5 rounded-full bg-espresso/90 text-champagne-100 text-[10px] font-sans font-bold tracking-[0.2em] uppercase border border-champagne-400/80 shadow-lg flex items-center gap-1.5 group-hover:scale-105 active:scale-95 transition-transform">
+                      <span class="text-gold-metallic">✦</span>
+                      <span data-i18n="hero.tap_seal">Toca el sello para abrir</span>
+                      <span class="text-gold-metallic">✦</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Frosted Glass Countdown Boxes -->
-        <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto my-3">
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
-            <span id="days" class="block font-serif text-2xl font-semibold text-espresso">--</span>
-            <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.days">Días</span>
-          </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
-            <span id="hours" class="block font-serif text-2xl font-semibold text-espresso">--</span>
-            <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.hours">Horas</span>
-          </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
-            <span id="mins" class="block font-serif text-2xl font-semibold text-espresso">--</span>
-            <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.mins">Minutos</span>
-          </div>
-          <div class="bg-champagne-100/80 border border-champagne-500/30 rounded-xl p-2 shadow-xs">
-            <span id="secs" class="block font-serif text-2xl font-semibold text-gold-metallic">--</span>
-            <span class="text-[9px] font-sans uppercase tracking-wider text-champagne-700 font-semibold" data-i18n="countdown.secs">Segundos</span>
-          </div>
-        </div>
-
-        <p class="font-cormorant italic text-sm text-champagne-700 my-3">"Cada momento nos acerca más a nuestro nuevo comienzo"</p>
-
-        <!-- Calendar Buttons -->
-        <div class="flex flex-col gap-2 max-w-xs mx-auto my-2">
-          <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Yeraldin+%26+Gerwin+(ReeHorst,+Ede)&dates=20270501T180000Z/20270502T000000Z&details=Gran+Celebraci%C3%B3n+de+Boda+de+Yeraldin+%26+Gerwin+en+Hotel+ReeHorst+(Ede,+Pa%C3%ADses+Bajos).%0A%E2%80%A2+Cena:+20:00+a+22:00+hrs%0A%E2%80%A2+Fiesta:+22:00+a+02:00+hrs%0A%E2%80%A2+Vestimenta:+Gala+/+Black+Tie+Optional.&location=Hotel+ReeHorst,+Bennekomseweg+24,+6717+LM+Ede,+Netherlands" class="py-2 px-3.5 rounded-full bg-white border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-espresso shadow-xs hover:bg-champagne-100 flex items-center justify-center gap-2 cursor-pointer">
-            <svg class="w-3.5 h-3.5 text-champagne-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-            <span data-i18n="calendar.google">Añadir a Google Calendar</span>
-          </a>
-          <button onclick="downloadICS()" class="py-2 px-3.5 rounded-full bg-champagne-200/70 border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-champagne-900 shadow-xs hover:bg-champagne-300 flex items-center justify-center gap-2 cursor-pointer">
-            <svg class="w-3.5 h-3.5 text-champagne-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            <span data-i18n="calendar.apple">Apple / Outlook (.ics)</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="pt-3 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-          <span data-i18n="deck.scratch_next">Descubrir Foto (Rasca)</span>
-          <span>→</span>
-        </button>
-      </div>
-    </article>
-
-    <!-- ========== CARD 3: RASCA & REVELA (SCRATCH CARD TÁCTIL) ========== -->
-    <article id="card-2" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-champagne-200/70 border border-champagne-500/30 text-[9px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-1">
-          <span>✨</span>
-          <span data-i18n="scratch.badge">Experiencia Touch</span>
-        </div>
-        <h2 class="font-serif text-xl text-espresso mb-0.5" data-i18n="scratch.title">Rasca para Revelar</h2>
-        <p class="font-body text-xs text-champagne-800/90 mb-2" data-i18n="scratch.subtitle">Desliza tu dedo o cursor sobre la capa dorada.</p>
-
-        <!-- Scratch Frame -->
-        <div class="relative w-44 sm:w-48 aspect-[4/5] mx-auto rounded-xl overflow-hidden shadow-md border-2 border-champagne-500/60 bg-espresso select-none" id="scratchCardContainer">
-          
-          <!-- Photo Behind Layer -->
-          <div class="relative w-full h-full flex items-center justify-center bg-espresso" id="photoRevealWrapper">
-            <img src="assets/geraldine_profile.jpg" alt="Ambient" class="absolute inset-0 w-full h-full object-cover filter blur-md scale-110 opacity-60" />
-            <img id="couplePhoto" src="assets/geraldine_profile.jpg" alt="Yeraldin & Gerwin" class="relative z-10 w-full h-full object-cover select-none pointer-events-none" />
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-2 text-white text-center pointer-events-none z-20">
-              <p class="font-serif text-sm tracking-wide font-medium">Yeraldin & Gerwin</p>
-              <p class="font-sans text-[9px] uppercase tracking-widest text-champagne-200 font-semibold">01 Mayo 2027</p>
+              <!-- Unfolded Golden Light Burst Indicator (shows when opened) -->
+              <div id="openLightBloom" class="absolute inset-0 bg-radial from-amber-200/60 via-amber-300/20 to-transparent rounded-full opacity-0 pointer-events-none transition-opacity duration-700"></div>
             </div>
-          </div>
 
-          <!-- Gold Foil Canvas Layer -->
-          <canvas id="scratchCanvas" class="absolute inset-0 w-full h-full cursor-crosshair z-20 transition-opacity duration-700"></canvas>
-
-          <!-- Destello Radial Overlay -->
-          <div id="destelloOverlay" class="absolute inset-0 pointer-events-none z-30 hidden flex items-center justify-center">
-            <div class="w-full h-full bg-radial from-amber-200/95 via-champagne-400/40 to-transparent animate-destello"></div>
-          </div>
-
-          <canvas id="particleCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-40"></canvas>
-        </div>
-
-        <!-- Progress bar & Notification -->
-        <div class="w-44 sm:w-48 mx-auto mt-2">
-          <div class="flex items-center justify-between text-[10px] font-sans text-champagne-800 font-semibold mb-0.5">
-            <span data-i18n="scratch.progress">Revelado:</span>
-            <span id="scratchPercentText">0%</span>
-          </div>
-          <div class="w-full h-1 bg-champagne-200 rounded-full overflow-hidden">
-            <div id="scratchProgressBar" class="h-full bg-gradient-to-r from-champagne-500 to-amber-500 w-0 transition-all duration-300"></div>
-          </div>
-        </div>
-
-        <div id="revealedConfirmationCallout" class="mt-1 text-xs font-serif text-espresso hidden">
-          <p class="text-gold-metallic font-semibold text-xs">✦ ¡Foto Revelada con Éxito! ✦</p>
-        </div>
-      </div>
-
-      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-          <span data-i18n="deck.itinerary_next">Ver Itinerario</span>
-          <span>→</span>
-        </button>
-      </div>
-    </article>
-
-    <!-- ========== CARD 4: PROGRAMA & UBICACIONES (DOS EVENTOS) ========== -->
-    <article id="card-3" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <p class="text-[10px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="events.subtitle">Dos Momentos Inolvidables</p>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-3" data-i18n="events.title">Programa & Fechas</h2>
-
-        <div class="space-y-2.5 text-left">
-          <!-- Event 1: Civil -->
-          <div class="p-3 rounded-xl bg-champagne-100/70 border border-champagne-500/30">
-            <div class="flex items-center justify-between mb-0.5">
-              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-900 bg-champagne-200/80 px-2 py-0.5 rounded-full" data-i18n="event1.tag">Ceremonia Civil</span>
-              <span class="font-serif text-xs text-champagne-700 italic">21 Abril 2027</span>
+            <!-- Couple Names & Location Teaser -->
+            <div class="pb-2">
+              <p class="font-cormorant italic text-sm text-champagne-800" data-i18n="hero.together">Junto a nuestras familias</p>
+              <h1 class="font-serif text-2xl text-espresso font-semibold tracking-tight">
+                Yeraldin <span class="font-script text-2xl text-gold-metallic">&</span> Gerwin
+              </h1>
+              <p class="text-[10px] font-sans uppercase tracking-[0.25em] text-champagne-700 font-semibold mt-0.5">
+                21 Abril & 01 Mayo 2027 • Países Bajos
+              </p>
             </div>
-            <h3 class="font-serif text-sm text-espresso font-semibold" data-i18n="event1.title">Enlace Civil & Firma Oficial</h3>
-            <p class="text-[11px] text-champagne-900 mt-0.5" data-i18n="event1.place_desc">Países Bajos • 10:00 hrs</p>
-          </div>
+          </section>
 
-          <!-- Event 2: Gala Celebration en Hotel ReeHorst, Ede -->
-          <div class="p-3.5 rounded-xl bg-[#1A120B] text-champagne-100 border border-champagne-500/70 shadow-md">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-200 bg-champagne-500/20 px-2 py-0.5 rounded-full border border-champagne-500/40" data-i18n="event2.tag">Gran Celebración</span>
-              <span class="font-serif text-xs text-champagne-200 italic">01 Mayo 2027</span>
+          <!-- ========== SECTION 2: THE ROYAL BAROQUE FLORAL ARCH FRAME (AS SEEN IN FRAME 7-10) ========== -->
+          <section id="section-main-card" class="min-h-[86vh] flex flex-col items-center justify-center relative p-3 sm:p-4 my-2">
+            
+            <!-- Ornate Baroque Frame Graphic with Blank Central Arch -->
+            <div class="relative w-full max-w-[350px] aspect-[720/1200] rounded-2xl overflow-hidden shadow-2xl border border-champagne-500/30">
+              <img 
+                src="assets/wooow_floral_frame_clean.jpg" 
+                alt="Marco Floral Barroco Real" 
+                class="w-full h-full object-cover block" 
+              />
+
+              <!-- Overlay Content precisely positioned within the central arch -->
+              <div class="absolute inset-x-10 top-20 bottom-24 flex flex-col items-center justify-center text-center px-2">
+                
+                <!-- Top Monogram -->
+                <div class="w-10 h-10 rounded-full border border-champagne-600/40 bg-[#FFFDF7]/85 backdrop-blur-xs flex items-center justify-center mb-1 shadow-xs">
+                  <span class="font-cormorant font-bold text-sm text-champagne-800 tracking-tighter">Y&G</span>
+                </div>
+
+                <p class="text-[8.5px] font-sans uppercase tracking-[0.25em] text-burgundy/80 font-bold mb-0.5" data-i18n="card.invitation">
+                  Save The Date & Invitación
+                </p>
+
+                <!-- Couple Names in Burgundy Editorial Calligraphy -->
+                <h2 class="font-script text-3xl sm:text-4xl text-burgundy tracking-wide leading-none my-0.5">
+                  Yeraldin
+                </h2>
+                <div class="flex items-center justify-center gap-2 my-0">
+                  <div class="w-5 h-px bg-champagne-600/50"></div>
+                  <span class="font-script text-xl text-gold-metallic">&</span>
+                  <div class="w-5 h-px bg-champagne-600/50"></div>
+                </div>
+                <h2 class="font-script text-3xl sm:text-4xl text-burgundy tracking-wide leading-none mb-1">
+                  Gerwin
+                </h2>
+
+                <!-- Diamond Divider -->
+                <div class="flex items-center gap-1.5 my-1 text-champagne-600">
+                  <span class="text-[10px]">✦</span>
+                  <div class="w-6 h-px bg-champagne-600/40"></div>
+                  <span class="text-[9px]">❖</span>
+                  <div class="w-6 h-px bg-champagne-600/40"></div>
+                  <span class="text-[10px]">✦</span>
+                </div>
+
+                <!-- Gala Date -->
+                <p class="font-serif text-base sm:text-lg font-bold text-espresso tracking-widest my-0.5">
+                  2027-05-01
+                </p>
+                <p class="text-[9.5px] font-sans uppercase tracking-[0.2em] text-champagne-800 font-semibold" data-i18n="card.gala_subtitle">
+                  Gran Gala & Banquete Nupcial
+                </p>
+
+                <!-- Civil Date Mention -->
+                <div class="mt-1.5 pt-1.5 border-t border-champagne-500/30 w-full max-w-[180px]">
+                  <p class="text-[8.5px] font-sans uppercase tracking-wider text-espresso/80 font-medium">
+                    <span data-i18n="card.civil_note">Boda Civil:</span> <strong>21 Abril 2027 • 10:00h</strong>
+                  </p>
+                  <p class="text-[8.5px] font-sans text-champagne-700 italic mt-0.5">
+                    Hotel ReeHorst • Ede, Países Bajos
+                  </p>
+                </div>
+
+              </div>
             </div>
-            <h3 class="font-serif text-base text-white font-semibold flex items-center gap-1.5" data-i18n="event2.title">
-              <span>Hotel ReeHorst</span>
-              <span class="text-xs text-gold-metallic">✦ Ede</span>
+
+            <!-- Scroll For More Details Indicator (exact match from video) -->
+            <div class="mt-4 flex flex-col items-center gap-1 text-champagne-800">
+              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
+              <!-- Animated Mouse Wheel Pill Icon -->
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 3: COUNTDOWN (CUENTA REGRESIVA) ========== -->
+          <section id="section-countdown" class="min-h-[75vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
+            
+            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1" data-i18n="countdown.title">
+              Countdown
             </h3>
-            <p class="text-[11px] text-champagne-200 mt-1 leading-snug" data-i18n="event2.place_desc">
-              🍽️ <strong>Cena:</strong> 20:00 – 22:00 hrs &nbsp;|&nbsp; 🥂 <strong>Fiesta:</strong> 22:00 – 02:00 hrs<br>
-              <span class="text-champagne-300/80 text-[10px]">Bennekomseweg 24, 6717 LM Ede (a 3 min de estación Ede-Wageningen)</span>
+            
+            <p class="text-[10px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy/80 mb-1" data-i18n="common.scroll_more">
+              SCROLL FOR MORE DETAILS
             </p>
-            <div class="mt-2.5 pt-2 border-t border-champagne-500/30 flex gap-2">
-              <a href="https://maps.google.com/?q=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 bg-gradient-to-r from-champagne-500 to-champagne-400 text-espresso rounded-lg text-[9px] font-sans uppercase tracking-wider font-bold text-center flex items-center justify-center gap-1.5 hover:opacity-95 transition-opacity">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-                <span data-i18n="event2.map">Abrir en Maps</span>
-              </a>
-              <button onclick="copyAddress('Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos')" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-[9px] font-sans uppercase tracking-wider text-champagne-100 flex items-center justify-center gap-1">
-                <span data-i18n="event1.copy">Copiar</span>
+            
+            <p class="font-script text-2xl text-champagne-800 italic my-2" data-i18n="countdown.cant_wait">
+              We can't wait for this moment!
+            </p>
+
+            <!-- 4 Frosted Countdown Boxes (Exact Style from Wooow Invites) -->
+            <div class="grid grid-cols-4 gap-2 w-full max-w-[320px] mx-auto my-5">
+              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
+                <span id="cd-days" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">214</span>
+                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.days">DAYS</span>
+              </div>
+              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
+                <span id="cd-hours" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">08</span>
+                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.hours">HOURS</span>
+              </div>
+              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
+                <span id="cd-mins" class="block font-script text-3xl sm:text-4xl font-bold text-burgundy">42</span>
+                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.mins">MINUTES</span>
+              </div>
+              <div class="bg-white/70 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-2.5 shadow-sm text-center">
+                <span id="cd-secs" class="block font-script text-3xl sm:text-4xl font-bold text-gold-metallic">19</span>
+                <span class="text-[9px] font-sans uppercase tracking-widest text-champagne-800 font-bold" data-i18n="countdown.secs">SECONDS</span>
+              </div>
+            </div>
+
+            <!-- Calendar Integration Buttons -->
+            <div class="flex items-center gap-2 mt-2">
+              <button onclick="addToGoogleCalendar()" class="px-3.5 py-1.5 rounded-full bg-white/80 border border-champagne-500/40 text-[10px] font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
+                <span>📅</span>
+                <span data-i18n="countdown.google_cal">Google Calendar</span>
+              </button>
+              <button onclick="downloadICS()" class="px-3.5 py-1.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500/50 text-[10px] font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-colors shadow-xs flex items-center gap-1.5 cursor-pointer">
+                <span>🍎</span>
+                <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
               </button>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-          <span data-i18n="deck.faq_next">Guía & FAQ de Viaje</span>
-          <span>→</span>
-        </button>
-      </div>
-    </article>
-
-    <!-- ========== CARD 5: GUÍA & FAQ DE VIAJE (HOLANDA) ========== -->
-    <article id="card-4" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-champagne-200/70 border border-champagne-500/30 text-[9px] font-sans font-semibold uppercase tracking-widest text-champagne-900 mb-1">
-          <span>✈️</span>
-          <span data-i18n="faq.badge">Guía del Invitado</span>
-        </div>
-        <h2 class="font-serif text-xl sm:text-2xl text-espresso mb-3" data-i18n="faq.title">Preguntas Frecuentes</h2>
-
-        <!-- Contenedor con espacio generoso y estilizado para cada tarjeta -->
-        <div class="space-y-2.5 text-left" id="accordionContainer">
-          
-          <!-- FAQ 1: Alojamiento -->
-          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
-            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🏨</span>
-                <span data-i18n="faq.q1">¿Dónde me hospedo? Hoteles & Airbnb</span>
-              </span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a1">
-              <div class="py-2.5">Bloque de habitaciones reservado en el hotel sede de la celebración: <strong>Hotel ReeHorst (Ede)</strong>. También hay opciones Airbnb a 10-15 minutos.</div>
+            <!-- Scroll Indicator -->
+            <div class="mt-8 flex flex-col items-center gap-1">
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <!-- FAQ 2: Aeropuerto & Trenes -->
-          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
-            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🚆</span>
-                <span data-i18n="faq.q2">¿Cómo llego desde el aeropuerto?</span>
-              </span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a2">
-              <div class="py-2.5">Vuela a Schiphol (AMS). Trenes NS directos cada 15 min hasta la estación <strong>Ede-Wageningen</strong>, situada a solo 3 minutos a pie del Hotel ReeHorst. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.</div>
+          <!-- ========== SECTION 4: THE VENUE (EL LUGAR - HOTEL REEHORST) ========== -->
+          <section id="section-venue" class="min-h-[88vh] flex flex-col items-center justify-between p-4 text-center relative border-t border-champagne-500/20">
+            
+            <div>
+              <h3 class="font-script text-4xl sm:text-5xl text-burgundy mt-2" data-i18n="venue.title">
+                The Venue
+              </h3>
+              <p class="font-cormorant italic text-sm text-champagne-800">
+                Hotel & Congrescentrum ReeHorst
+              </p>
             </div>
-          </div>
 
-          <!-- FAQ 3: Dress Code -->
-          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
-            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">👗</span>
-                <span data-i18n="faq.q3">Código de Vestimenta (Dress Code)</span>
-              </span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed">
-              <div class="py-2.5">
-                <span data-i18n="faq.a3">Gala & Black Tie Optional. La celebración se viste de Blanco con Dorado, y el gran salón de gala en Negro con Dorado. Hombres: traje formal o esmoquin. Mujeres: vestido largo de gala.</span>
-                <div class="flex items-center gap-1.5 mt-2">
-                  <span class="text-[9px] uppercase font-sans font-bold text-champagne-800">Tonos:</span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EB] border border-champagne-500 shadow-xs" title="Champagne / Blanco"></span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#DFBE7D] shadow-xs" title="Gold"></span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#8C6726] shadow-xs" title="Bronze"></span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#1A120B] border border-champagne-500/50 shadow-xs" title="Black & Gold"></span>
+            <!-- Watercolor Castle / Venue Artwork -->
+            <div class="relative w-full max-w-[320px] rounded-2xl overflow-hidden shadow-xl border border-champagne-500/40 my-3">
+              <img 
+                src="assets/venue_hotel_reehorst_luxury.jpg" 
+                alt="Hotel ReeHorst Ede Wedding Estate" 
+                class="w-full h-auto object-cover block" 
+              />
+              
+              <!-- Floating Pulsing GPS Location Button (exact match from frame 12) -->
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+                <a 
+                  href="https://maps.google.com/?q=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Netherlands" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="w-12 h-12 rounded-full bg-white/95 border-2 border-emerald-600 shadow-xl flex items-center justify-center text-emerald-700 hover:scale-110 active:scale-95 transition-transform cursor-pointer"
+                  title="Abrir ubicación en Google Maps"
+                >
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Venue Details & Transport Note -->
+            <div class="w-full max-w-[320px] text-center">
+              <p class="font-serif text-sm font-bold text-espresso">
+                Bennekomseweg 24, 6717 LM Ede
+              </p>
+              <p class="text-[11px] font-sans text-champagne-700 mb-2">
+                Gelderland • Países Bajos (Holanda)
+              </p>
+
+              <!-- Travel Highlights -->
+              <div class="bg-white/80 backdrop-blur-md rounded-xl p-3 border border-champagne-500/30 text-left text-[11px] space-y-1.5 shadow-xs">
+                <div class="flex items-start gap-2">
+                  <span class="text-sm">🚆</span>
+                  <p class="text-espresso/90">
+                    <strong data-i18n="venue.train_title">Tren directo:</strong> <span data-i18n="venue.train_desc">Desde Schiphol AMS cada 15 min directo a estación Ede-Wageningen (a 3 min a pie del hotel).</span>
+                  </p>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-sm">✈️</span>
+                  <p class="text-espresso/90">
+                    <strong data-i18n="venue.flight_title">Vuelos desde España:</strong> <span data-i18n="venue.flight_desc">Llegada a Ámsterdam Schiphol o Eindhoven.</span>
+                  </p>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-sm">🏨</span>
+                  <p class="text-espresso/90">
+                    <strong data-i18n="venue.stay_title">Alojamiento:</strong> <span data-i18n="venue.stay_desc">Tarifa especial reservando con código "Boda Yeraldin & Gerwin".</span>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- FAQ 4: Niños y Acompañantes -->
-          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
-            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">👶</span>
-                <span data-i18n="faq.q4">Niños y Acompañantes</span>
+            <!-- Scroll Indicator -->
+            <div class="mt-4 flex flex-col items-center gap-1">
+              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 5: ITINERARY / TIMELINE (PROGRAMA) ========== -->
+          <section id="section-timeline" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
+            
+            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1" data-i18n="timeline.title">
+              Itinerary
+            </h3>
+            <p class="text-[10px] font-sans uppercase tracking-[0.2em] font-bold text-champagne-800 mb-6" data-i18n="timeline.subtitle">
+              Los Momentos Inolvidables
+            </p>
+
+            <!-- Vertical Hanging Timeline (exact match from frame 15) -->
+            <div class="relative w-full max-w-[310px] pl-6 text-left space-y-7 my-2">
+              <!-- Central Line -->
+              <div class="absolute left-9 top-3 bottom-3 w-px bg-champagne-500/40"></div>
+
+              <!-- Node 1: Boda Civil -->
+              <div class="relative flex items-start gap-4">
+                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
+                  💍
+                </div>
+                <div>
+                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">10:00</span>
+                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.civil_title">Boda Civil • 21 Abril</span>
+                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.civil_desc">Ceremonia oficial y firma solemne.</p>
+                </div>
+              </div>
+
+              <!-- Node 2: Banquete de Gala -->
+              <div class="relative flex items-start gap-4">
+                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
+                  🥂
+                </div>
+                <div>
+                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">20:00 - 22:00</span>
+                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.banquet_title">Banquete & Gran Cena • 01 Mayo</span>
+                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.banquet_desc">Brindis de bienvenida y cena gourmet en Salón de Gala ReeHorst.</p>
+                </div>
+              </div>
+
+              <!-- Node 3: Gran Fiesta & Barra Libre -->
+              <div class="relative flex items-start gap-4">
+                <div class="w-7 h-7 rounded-full bg-burgundy text-white flex items-center justify-center text-xs font-bold z-10 shadow-sm shrink-0">
+                  🎉
+                </div>
+                <div>
+                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">22:00 - 02:00</span>
+                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.party_title">Gran Fiesta & Baile</span>
+                  <p class="text-[11px] font-sans text-champagne-800 leading-snug" data-i18n="timeline.party_desc">¡Let yourself go! Baile y barra libre durante 4 horas.</p>
+                </div>
+              </div>
+
+              <!-- Node 4: Fin de Fiesta -->
+              <div class="relative flex items-start gap-4">
+                <div class="w-7 h-7 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-xs font-bold text-champagne-800 z-10 shadow-xs shrink-0">
+                  🚗
+                </div>
+                <div>
+                  <span class="font-serif text-lg font-bold text-burgundy block leading-tight">02:00</span>
+                  <span class="font-script text-xl text-espresso block" data-i18n="timeline.end_title">Fin de Fiesta</span>
+                  <p class="text-[11px] font-sans text-champagne-800 italic leading-snug" data-i18n="timeline.end_desc">All good things come to an end!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Open Bar Highlight Card -->
+            <div class="w-full max-w-[310px] mt-6 p-3 rounded-2xl bg-gradient-to-r from-champagne-100 via-white to-champagne-100 border border-champagne-500/40 text-center shadow-xs">
+              <span class="text-xs uppercase tracking-widest font-sans font-bold text-burgundy block mb-1">
+                🍸 Barra Libre & Bebidas
               </span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a4">
-              <div class="py-2.5">Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo (hasta las 02:00 AM).</div>
+              <p class="text-[11px] font-sans text-espresso leading-snug" data-i18n="timeline.open_bar_note">
+                <strong>4 Horas de Barra Libre Incluidas:</strong> selección de cervezas, vinos y refrescos para todos los invitados. Barra cash bar disponible para cócteles y licores premium.
+              </p>
             </div>
-          </div>
 
-          <!-- FAQ 5: Barra Libre & Bebidas -->
-          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
-            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
-              <span class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🥂</span>
-                <span data-i18n="faq.q5">¿Qué bebidas están incluidas? Barra Libre & Cócteles</span>
-              </span>
-              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a5">
-              <div class="py-2.5">Durante las 4 horas de fiesta contaremos con <strong>Barra Libre incluida de cervezas, vinos selectos y refrescos</strong>. Para quienes deseen cócteles o licores especiales, habrá una barra exclusiva disponible para adquirirlos de forma individual.</div>
+            <!-- Scroll Indicator -->
+            <div class="mt-6 flex flex-col items-center gap-1">
+              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
             </div>
-          </div>
+          </section>
+
+          <!-- ========== SECTION 6: DRESS CODE & GIFTS ========== -->
+          <section id="section-gifts" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20">
+            
+            <!-- Dress Code Preview -->
+            <div class="mb-6 w-full max-w-[310px]">
+              <div class="w-14 h-14 mx-auto mb-2 flex items-center justify-center">
+                <img src="assets/dress_code_attire.png" alt="Dress code novios" class="w-full h-full object-contain" />
+              </div>
+              <h4 class="font-script text-3xl text-burgundy" data-i18n="dress.title">Dress Code</h4>
+              <p class="text-[11px] font-sans uppercase tracking-widest text-espresso font-bold mt-0.5" data-i18n="dress.type">
+                Gala • Black Tie & White/Gold
+              </p>
+              <p class="text-[11px] font-sans text-champagne-800 mt-1" data-i18n="dress.palette">
+                Paleta sugerida: Blanco, Dorado, Champagne, Negro.
+              </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-32 h-px bg-champagne-500/30 my-2"></div>
+
+            <!-- Gifts Card (exact match from frame 18) -->
+            <div class="w-full max-w-[310px] mt-2">
+              <div class="w-12 h-12 mx-auto mb-1 flex items-center justify-center">
+                <img src="assets/gift_icon_watercolor.png" alt="Regalos de boda" class="w-full h-full object-contain" />
+              </div>
+              <h4 class="font-script text-4xl text-burgundy" data-i18n="gifts.title">Gifts</h4>
+              <p class="font-script text-xl text-espresso italic mt-1 leading-snug max-w-[270px] mx-auto" data-i18n="gifts.presence">
+                "Your presence is your gift, but all contributions can go to the bank details below. Thank you!"
+              </p>
+
+              <!-- Bank Details Accordion -->
+              <div class="mt-4 bg-white/80 backdrop-blur-md rounded-2xl border border-champagne-500/30 p-3 shadow-xs">
+                <p class="text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-2" data-i18n="gifts.bank_label">
+                  Prefer to contribute directly?
+                </p>
+                <div class="bg-champagne-100/70 p-2.5 rounded-xl border border-champagne-500/30 flex items-center justify-between">
+                  <div class="text-left">
+                    <span class="block text-[9px] uppercase font-sans text-champagne-700 font-semibold">IBAN / Cuenta</span>
+                    <span class="font-mono text-xs font-bold text-espresso select-all">NL91 ABNA 0417 1643 00</span>
+                    <span class="block text-[9px] text-champagne-800">Beneficiarios: Yeraldin & Gerwin</span>
+                  </div>
+                  <button onclick="copyToClipboard('NL91 ABNA 0417 1643 00')" class="px-2.5 py-1 bg-espresso text-champagne-100 rounded-lg text-[10px] font-sans font-semibold hover:bg-champagne-800 active:scale-95 transition-all">
+                    Copiar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mt-8 flex flex-col items-center gap-1">
+              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 7: FAQ (PREGUNTAS FRECUENTES) ========== -->
+          <section id="section-faq" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20 bg-white/40">
+            
+            <!-- Scroll Icon Header (exact match from frame 21) -->
+            <div class="w-12 h-12 mx-auto mb-1 flex items-center justify-center">
+              <img src="assets/faq_scroll_icon.png" alt="FAQ Pergamino" class="w-full h-full object-contain" />
+            </div>
+
+            <h3 class="font-script text-4xl sm:text-5xl text-burgundy mb-1">
+              FAQ
+            </h3>
+            <p class="text-[10px] font-sans uppercase tracking-[0.2em] font-bold text-champagne-800 mb-5" data-i18n="faq.subtitle">
+              Preguntas Frecuentes
+            </p>
+
+            <!-- FAQ Accordion List -->
+            <div class="w-full max-w-[320px] space-y-2.5 text-left">
+              
+              <!-- FAQ 1 -->
+              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
+                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
+                  <span data-i18n="faq.q1">¿Puedo llevar un acompañante (+1)?</span>
+                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
+                  <span data-i18n="faq.a1">Las invitaciones son personalizadas. Por favor indícanos el nombre de tu acompañante en el formulario de confirmación RSVP para organizar el salón y la cena.</span>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
+                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
+                  <span data-i18n="faq.q2">¿Cómo viajo desde España u otros países?</span>
+                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
+                  <span data-i18n="faq.a2">Te recomendamos volar al aeropuerto de Ámsterdam Schiphol (AMS). Justo debajo del aeropuerto tomas el tren directo de la red NS cada 15 min hasta la estación Ede-Wageningen, que queda a solo 3 minutos a pie del Hotel ReeHorst.</span>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
+                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
+                  <span data-i18n="faq.q3">¿Cómo funciona la barra libre de bebidas?</span>
+                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
+                  <span data-i18n="faq.a3">Contamos con 4 horas completas de barra libre con cerveza holandesa, vinos seleccionados y refrescos incluidos. Además, el hotel dispondrá de barra cash bar para quienes deseen cócteles o licores destilados.</span>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="faq-item bg-white/90 rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs">
+                <button onclick="toggleFaq(this)" class="w-full p-3.5 flex items-center justify-between text-left font-serif text-xs font-semibold text-espresso">
+                  <span data-i18n="faq.q4">¿Dónde puedo hospedarme en Ede?</span>
+                  <svg class="faq-chevron w-4 h-4 text-champagne-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-answer px-3.5 pb-3.5 text-[11px] font-sans text-champagne-800 leading-relaxed border-t border-champagne-500/20 pt-2">
+                  <span data-i18n="faq.a4">El mismo Hotel ReeHorst dispone de amplias habitaciones con descuento especial de boda. Menciona "Boda Yeraldin & Gerwin" al reservar directamente con recepción.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mt-8 flex flex-col items-center gap-1">
+              <span class="text-[9px] font-sans uppercase tracking-[0.25em] font-bold text-burgundy" data-i18n="common.scroll_more">SCROLL FOR MORE DETAILS</span>
+              <div class="w-5 h-8 border-2 border-burgundy rounded-full flex items-start justify-center p-1">
+                <div class="w-1.5 h-2.5 bg-burgundy rounded-full animate-scroll-hint"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 8: RSVP FORM (CONFIRMACIÓN DE ASISTENCIA) ========== -->
+          <section id="section-rsvp" class="min-h-[85vh] flex flex-col items-center justify-center p-5 text-center relative border-t border-champagne-500/20">
+            
+            <h3 class="font-script text-5xl text-burgundy mb-1">
+              RSVP
+            </h3>
+            <p class="font-script text-2xl text-champagne-800 italic" data-i18n="rsvp.cant_wait">
+              We can't wait!
+            </p>
+            <p class="font-script text-xl text-burgundy italic mb-4" data-i18n="rsvp.deadline">
+              Please reply by March 1st, 2027
+            </p>
+
+            <!-- RSVP Form Container -->
+            <form onsubmit="handleRSVPSubmit(event)" class="w-full max-w-[320px] bg-white/90 backdrop-blur-md rounded-2xl border border-champagne-500/30 p-4 shadow-md text-left space-y-3">
+              
+              <div>
+                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
+                  Nombre Completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="rsvpName" 
+                  required 
+                  placeholder="Tu nombre y apellido" 
+                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600"
+                />
+              </div>
+
+              <!-- Attendance Choice -->
+              <div>
+                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
+                  ¿Asistirás a la celebración? *
+                </label>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                  <label class="flex items-center gap-1.5 p-2 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+                    <input type="radio" name="rsvpAttend" value="si" checked class="text-burgundy focus:ring-burgundy" />
+                    <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.yes">¡Sí, asistiré! 🎉</span>
+                  </label>
+                  <label class="flex items-center gap-1.5 p-2 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+                    <input type="radio" name="rsvpAttend" value="no" class="text-burgundy focus:ring-burgundy" />
+                    <span class="font-sans font-medium text-espresso" data-i18n="rsvp.no">No podré ❤️</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Events Attendance Checklist -->
+              <div class="p-2.5 rounded-xl bg-champagne-100/50 border border-champagne-500/30 space-y-1.5">
+                <span class="block text-[9px] uppercase font-sans font-bold text-champagne-800" data-i18n="rsvp.events_title">Eventos que asistirás:</span>
+                <label class="flex items-center gap-2 text-xs text-espresso font-sans">
+                  <input type="checkbox" id="rsvpCheckGala" checked class="rounded-xs text-burgundy" />
+                  <span data-i18n="rsvp.event_gala">Gran Gala & Banquete (01 Mayo)</span>
+                </label>
+                <label class="flex items-center gap-2 text-xs text-espresso font-sans">
+                  <input type="checkbox" id="rsvpCheckCivil" class="rounded-xs text-burgundy" />
+                  <span data-i18n="rsvp.event_civil">Boda Civil (21 Abril)</span>
+                </label>
+              </div>
+
+              <!-- Dietary Needs -->
+              <div>
+                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.diet_label">
+                  Alergias o Restricciones Alimentarias
+                </label>
+                <input 
+                  type="text" 
+                  id="rsvpDiet" 
+                  placeholder="Ej: Vegetariano, sin gluten, mariscos..." 
+                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600"
+                />
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label class="block text-[10px] font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.msg_label">
+                  Mensaje para los novios
+                </label>
+                <textarea 
+                  id="rsvpMessage" 
+                  rows="2" 
+                  placeholder="¡Felicidades por su gran día!" 
+                  class="w-full px-3 py-2 text-xs rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-1 focus:ring-champagne-600 resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button with WhatsApp Routing -->
+              <button 
+                type="submit" 
+                class="w-full py-2.5 rounded-full bg-burgundy hover:bg-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-widest shadow-md transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span data-i18n="rsvp.submit_btn">Enviar Confirmación</span>
+                <span>💌</span>
+              </button>
+            </form>
+
+            <div id="rsvpSuccess" class="hidden mt-3 p-3 bg-emerald-100/90 border border-emerald-500 text-emerald-900 rounded-xl text-xs font-sans font-medium w-full max-w-[320px]">
+              ¡Muchas gracias! Tu confirmación ha sido enviada con éxito.
+            </div>
+
+            <!-- Bottom Monogram Seal Footer -->
+            <div class="mt-8 mb-4 text-center">
+              <span class="font-cormorant font-bold text-2xl text-champagne-700 tracking-tighter">Y&G</span>
+              <p class="text-[9px] uppercase tracking-[0.25em] text-champagne-600 font-sans mt-0.5">
+                Hotel ReeHorst • Ede, Países Bajos • 2027
+              </p>
+            </div>
+          </section>
 
         </div>
-      </div>
 
-      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="nextCard()" class="tap-press flex-1 py-2 bg-espresso text-champagne-100 border border-champagne-500 rounded-full text-xs font-sans uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-          <span data-i18n="deck.rsvp_next">Confirmar Asistencia</span>
-          <span>→</span>
-        </button>
-      </div>
-    </article>
+        <!-- ==================== MOBILE SAFARI BOTTOM BAR (EXACT MOCKUP CLONE) ==================== -->
+        <div class="safari-toolbar flex items-center justify-between text-espresso/80 select-none">
+          <!-- Back / Forward -->
+          <div class="flex items-center gap-3">
+            <button onclick="scrollToTop()" class="hover:text-espresso transition-colors text-sm" title="Inicio">‹</button>
+            <button onclick="scrollToNextSection()" class="hover:text-espresso transition-colors text-sm" title="Siguiente">›</button>
+          </div>
 
-    <!-- ========== CARD 6: CONFIRMACIÓN DE ASISTENCIA (RSVP) ========== -->
-    <article id="card-5" class="invitation-card card-hidden paper-texture gilded-border p-4 sm:p-5 flex flex-col justify-between text-center overflow-y-auto">
-      <div>
-        <div class="w-9 h-9 mx-auto rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center mb-1">
-          <span class="font-cormorant font-bold text-sm text-champagne-800">Y&G</span>
+          <!-- Audio Equalizer Speaker (Frame 3/7/10 match) -->
+          <button onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-200/80 border border-champagne-500/40 flex items-center justify-center text-espresso hover:bg-champagne-300 transition-colors shadow-xs cursor-pointer" title="Activar/Silenciar Música">
+            <svg id="safariSoundIcon" class="w-4 h-4 text-burgundy" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          </button>
+
+          <!-- URL Pill -->
+          <div class="flex items-center gap-1.5 bg-white/90 border border-champagne-500/40 rounded-full px-3 py-1 shadow-xs text-[10px] font-sans font-medium text-espresso/80">
+            <span class="text-[9px]">🔒</span>
+            <span>yeraldin-gerwin.wedding</span>
+            <button onclick="window.location.reload()" class="hover:text-espresso text-[9px]">⟳</button>
+          </div>
+
+          <!-- Share & Tabs -->
+          <div class="flex items-center gap-3 text-xs">
+            <button onclick="shareInvitation()" class="hover:text-espresso transition-colors" title="Compartir">⎙</button>
+            <button onclick="toggleMockupView()" class="hover:text-espresso transition-colors font-bold" title="Cambiar Vista">⧉</button>
+          </div>
         </div>
-        <h2 class="font-serif text-lg sm:text-xl text-espresso mb-0.5" data-i18n="rsvp.title">Confirmación de Asistencia</h2>
-        <p class="font-sans text-[10px] uppercase tracking-wider text-champagne-700 font-bold mb-2.5" data-i18n="rsvp.deadline">✦ Antes del 01 de Febrero 2027 ✦</p>
 
-        <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)" class="space-y-2 text-left text-xs">
-          <div>
-            <div class="grid grid-cols-2 gap-2">
-              <label class="relative flex items-center justify-center p-1.5 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
-                <input type="radio" name="attendance" value="si" checked class="sr-only" />
-                <span class="font-sans text-[11px] font-semibold" data-i18n="rsvp.yes">¡Sí, allí estaré! 🎉</span>
-              </label>
-              <label class="relative flex items-center justify-center p-1.5 rounded-lg border border-champagne-500/40 bg-white cursor-pointer has-[:checked]:bg-champagne-800 has-[:checked]:text-white transition-all shadow-xs text-center">
-                <input type="radio" name="attendance" value="no" class="sr-only" />
-                <span class="font-sans text-[11px] font-semibold" data-i18n="rsvp.no">Lo celebraré de lejos ❤️</span>
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <label for="guestName" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.name_label">Nombre y Apellidos</label>
-            <input type="text" id="guestName" required placeholder="Ej: María Rodríguez" class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
-          </div>
-
-          <div>
-            <label class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.events_label">Eventos a asistir</label>
-            <div class="space-y-1">
-              <label class="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" id="checkCivil" checked class="w-3.5 h-3.5 rounded border-champagne-500 text-champagne-700" />
-                <span class="text-espresso" data-i18n="rsvp.event_civil">Boda Civil (21 Abril 2027)</span>
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" id="checkParty" checked class="w-3.5 h-3.5 rounded border-champagne-500 text-champagne-700" />
-                <span class="text-espresso" data-i18n="rsvp.event_party">Gran Celebración (01 Mayo 2027)</span>
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <label for="dietary" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.dietary_label">Dieta / Alergias (Opcional)</label>
-            <input type="text" id="dietary" placeholder="Vegetariano, celíaco, etc." class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
-          </div>
-
-          <div>
-            <label for="songRequest" class="block font-sans text-[10px] uppercase tracking-wider font-semibold text-champagne-800 mb-0.5" data-i18n="rsvp.song_label">Canción para el DJ</label>
-            <input type="text" id="songRequest" placeholder="Artista - Canción" class="w-full px-2.5 py-1 rounded-lg border border-champagne-500/40 bg-white text-espresso focus:outline-hidden focus:border-champagne-600" />
-          </div>
-
-          <div class="pt-1">
-            <button type="submit" class="tap-press w-full py-2.5 rounded-full bg-espresso text-champagne-100 border border-champagne-500 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-champagne-800 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
-              <span data-i18n="rsvp.submit_btn">Confirmar vía WhatsApp</span>
-            </button>
-          </div>
-        </form>
-
-        <div id="rsvpSuccess" class="hidden mt-2 p-1.5 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 text-[10px] text-center font-sans">
-          ¡Abriendo WhatsApp para enviar confirmación!
+        <!-- iOS Home Indicator -->
+        <div class="py-1 bg-transparent">
+          <div class="w-32 h-1 bg-black/60 rounded-full mx-auto"></div>
         </div>
+
       </div>
+    </div>
+  </div>
 
-      <div class="pt-2 border-t border-champagne-500/20 flex gap-2">
-        <button onclick="prevCard()" class="tap-press px-4 py-2 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-800 font-semibold cursor-pointer">←</button>
-        <button onclick="goToCard(0)" class="tap-press flex-1 py-2 bg-champagne-200/70 border border-champagne-500/40 rounded-full text-xs font-sans uppercase tracking-wider text-champagne-900 font-semibold hover:bg-champagne-300 cursor-pointer">
-          <span data-i18n="deck.restart">Volver al Inicio</span>
-        </button>
-      </div>
-    </article>
+  <!-- Background Wedding Music Element -->
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="assets/wedding_music.mp3" type="audio/mp3" />
+  </audio>
 
-    </div><!-- End of #cardStackDeck 9:16 container -->
-  </main>
-
-  <!-- ==================== BOTTOM DECK DOTS NAVIGATOR ==================== -->
-  <footer class="w-full max-w-xs mx-auto pb-4 pt-1 flex items-center justify-center gap-2 z-40 shrink-0">
-    <button onclick="goToCard(0)" id="dot-0" class="w-2.5 h-2.5 rounded-full bg-champagne-800 transition-all duration-300 scale-125" title="Sobre"></button>
-    <button onclick="goToCard(1)" id="dot-1" class="w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300" title="Fecha"></button>
-    <button onclick="goToCard(2)" id="dot-2" class="w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300" title="Rasca"></button>
-    <button onclick="goToCard(3)" id="dot-3" class="w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300" title="Itinerario"></button>
-    <button onclick="goToCard(4)" id="dot-4" class="w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300" title="FAQ"></button>
-    <button onclick="goToCard(5)" id="dot-5" class="w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300" title="RSVP"></button>
-  </footer>
-
-  <!-- ==================== JAVASCRIPT CONTROLLER ==================== -->
+  <!-- ==================== LOGIC & SCRIPTS ==================== -->
   <script>
-    // ==================== TRILINGUAL STRINGS ====================
-    const i18n = {
+    // ==================== TRILINGUAL TRANSLATIONS DICTIONARY ====================
+    const i18nData = {
       es: {
-        "stepText": "Tarjeta {n} / 6",
-        "hero.save_the_date": "Save The Date & Invitación",
-        "hero.together": "Junto a nuestras familias, los invitamos a celebrar",
-        "hero.tap_open": "Toca el sello para abrir",
-        "hero.location": "Países Bajos (Holanda)",
-        "deck.open": "Abrir Invitación",
-        "countdown.subtitle": "Contando los segundos para nuestro gran día",
-        "countdown.title": "La Cuenta Regresiva • 01 Mayo 2027",
-        "countdown.days": "Días",
-        "countdown.hours": "Horas",
-        "countdown.mins": "Minutos",
-        "countdown.secs": "Segundos",
-        "calendar.google": "Añadir a Google Calendar",
-        "calendar.apple": "Apple / Outlook (.ics)",
-        "deck.scratch_next": "Descubrir Foto (Rasca)",
-        "scratch.badge": "Experiencia Touch",
-        "scratch.title": "Rasca para Revelar",
-        "scratch.subtitle": "Desliza tu dedo o cursor sobre la capa dorada.",
-        "scratch.progress": "Revelado:",
-        "deck.itinerary_next": "Ver Itinerario",
-        "events.subtitle": "Dos Momentos Inolvidables",
-        "events.title": "Programa & Fechas",
-        "event1.tag": "Ceremonia Civil",
-        "event1.title": "Enlace Civil & Firma Oficial",
-        "event1.place_desc": "Países Bajos • 10:00 hrs",
-        "event2.tag": "Gran Celebración",
-        "event2.title": "Banquete & Fiesta de Gala",
-        "event2.place_desc": "Hotel ReeHorst (Ede) • Cena 20:00 hrs | Fiesta 22:00 a 02:00 hrs",
-        "event2.map": "Abrir en Maps",
-        "event1.copy": "Copiar",
-        "deck.faq_next": "Guía & FAQ de Viaje",
-        "faq.badge": "Guía del Invitado",
-        "faq.title": "Preguntas Frecuentes",
-        "faq.q1": "¿Dónde me hospedo? Hoteles & Airbnb",
-        "faq.a1": "Bloque de habitaciones reservado en el hotel sede de la celebración: Hotel ReeHorst (Ede). Opciones Airbnb a 10-15 minutos.",
-        "faq.q2": "¿Cómo llego desde el aeropuerto?",
-        "faq.a2": "Vuela a Schiphol (AMS). Trenes NS directos cada 15 min hasta la estación Ede-Wageningen, a solo 3 min a pie del Hotel ReeHorst. Pago contactless con OV-Pay en los torniquetes.",
-        "faq.q3": "Código de Vestimenta (Dress Code)",
-        "faq.a3": "Gala & Black Tie Optional. La celebración se viste de Blanco con Dorado, y el gran salón de gala en Negro con Dorado. Hombres: traje formal o esmoquin. Mujeres: vestido largo de gala.",
-        "faq.q4": "Niños y Acompañantes",
-        "faq.a4": "Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo (hasta las 02:00 AM).",
-        "faq.q5": "¿Qué bebidas están incluidas? Barra Libre & Cócteles",
-        "faq.a5": "Durante las 4 horas de fiesta contaremos con Barra Libre incluida de cervezas, vinos selectos y refrescos. Para quienes deseen cócteles o licores especiales, habrá una barra exclusiva disponible para adquirirlos de forma individual.",
-        "deck.rsvp_next": "Confirmar Asistencia",
-        "rsvp.title": "Confirmación de Asistencia",
-        "rsvp.deadline": "✦ Antes del 01 de Febrero 2027 ✦",
-        "rsvp.yes": "¡Sí, allí estaré! 🎉",
-        "rsvp.no": "Lo celebraré de lejos ❤️",
-        "rsvp.name_label": "Nombre y Apellidos",
-        "rsvp.events_label": "Eventos a asistir",
-        "rsvp.event_civil": "Boda Civil (21 Abril 2027)",
-        "rsvp.event_party": "Gran Celebración (01 Mayo 2027)",
-        "rsvp.dietary_label": "Dieta / Alergias (Opcional)",
-        "rsvp.song_label": "Canción para el DJ",
-        "rsvp.submit_btn": "Confirmar vía WhatsApp",
-        "deck.restart": "Volver al Inicio"
-      },
-      en: {
-        "stepText": "Card {n} / 6",
-        "hero.save_the_date": "Save The Date & Invitation",
-        "hero.together": "Together with our families, we request your presence",
-        "hero.tap_open": "Tap the seal to open",
-        "hero.location": "The Netherlands (Holland)",
-        "deck.open": "Open Invitation",
-        "countdown.subtitle": "Counting down the seconds to our big day",
-        "countdown.title": "The Countdown • 01 May 2027",
-        "countdown.days": "Days",
-        "countdown.hours": "Hours",
-        "countdown.mins": "Minutes",
-        "countdown.secs": "Seconds",
-        "calendar.google": "Add to Google Calendar",
-        "calendar.apple": "Apple / Outlook (.ics)",
-        "deck.scratch_next": "Scratch & Reveal Photo",
-        "scratch.badge": "Touch Experience",
-        "scratch.title": "Scratch to Reveal",
-        "scratch.subtitle": "Swipe your finger or mouse over the gold foil.",
-        "scratch.progress": "Revealed:",
-        "deck.itinerary_next": "View Schedule",
-        "events.subtitle": "Two Unforgettable Moments",
-        "events.title": "Schedule & Locations",
-        "event1.tag": "Civil Ceremony",
-        "event1.title": "Civil Union & Official Signing",
-        "event1.place_desc": "The Netherlands • 10:00 AM",
-        "event2.tag": "Grand Celebration",
-        "event2.title": "Banquet & Gala Celebration",
-        "event2.place_desc": "Hotel ReeHorst (Ede) • Dinner 8:00 PM | Party 10:00 PM to 2:00 AM",
-        "event2.map": "Open in Maps",
-        "event1.copy": "Copy",
-        "deck.faq_next": "Guest Guide & FAQ",
-        "faq.badge": "Guest Guide",
-        "faq.title": "Frequently Asked Questions",
-        "faq.q1": "Where to stay? Hotels & Airbnb",
-        "faq.a1": "Room block reserved at the venue hotel: Hotel ReeHorst (Ede). Airbnb alternatives available within 10-15 mins.",
-        "faq.q2": "How to get there from the airport?",
-        "faq.a2": "Fly to Amsterdam Schiphol (AMS). Direct NS trains every 15 min to Ede-Wageningen station, just 3 mins walk to Hotel ReeHorst. Tap contactless (OV-Pay) at turnstiles.",
-        "faq.q3": "Dress Code",
-        "faq.a3": "Gala & Black Tie Optional. Celebration theme is White & Gold, and the grand ballroom shines in Black & Gold. Gentlemen: formal suit or tuxedo. Ladies: floor-length evening gown.",
-        "faq.q4": "Children & Plus-Ones",
-        "faq.a4": "Adults-only celebration on May 1st to dance and celebrate to the fullest (until 2:00 AM).",
-        "faq.q5": "What drinks are included? Open Bar & Cocktails",
-        "faq.a5": "During the 4-hour party, we offer an Open Bar of beers, selected wines, and soft drinks. For special cocktails and spirits, a dedicated cash bar will be available.",
-        "deck.rsvp_next": "RSVP Confirmation",
-        "rsvp.title": "RSVP Confirmation",
-        "rsvp.deadline": "✦ Before February 01, 2027 ✦",
-        "rsvp.yes": "Yes, I will attend! 🎉",
-        "rsvp.no": "Celebrating from afar ❤️",
-        "rsvp.name_label": "Full Name",
-        "rsvp.events_label": "Events attending",
-        "rsvp.event_civil": "Civil Ceremony (21 April 2027)",
-        "rsvp.event_party": "Grand Celebration (01 May 2027)",
-        "rsvp.dietary_label": "Dietary Restrictions (Optional)",
-        "rsvp.song_label": "Song recommendation for DJ",
-        "rsvp.submit_btn": "Confirm via WhatsApp",
-        "deck.restart": "Back to Start"
+        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
+        "hero.tap_seal": "Toca el sello para abrir",
+        "hero.together": "Junto a nuestras familias",
+        "card.invitation": "Save The Date & Invitación",
+        "card.gala_subtitle": "Gran Gala & Banquete Nupcial",
+        "card.civil_note": "Boda Civil:",
+        "common.scroll_more": "SCROLL FOR MORE DETAILS",
+        "countdown.title": "Countdown",
+        "countdown.cant_wait": "¡No podemos esperar a este momento!",
+        "countdown.days": "DÍAS",
+        "countdown.hours": "HORAS",
+        "countdown.mins": "MINUTOS",
+        "countdown.secs": "SEGUNDOS",
+        "countdown.google_cal": "Google Calendar",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "venue.title": "The Venue",
+        "venue.train_title": "Tren directo:",
+        "venue.train_desc": "Desde Schiphol AMS cada 15 min directo a estación Ede-Wageningen (a 3 min a pie del hotel).",
+        "venue.flight_title": "Vuelos desde España:",
+        "venue.flight_desc": "Llegada recomendada a Ámsterdam Schiphol o Eindhoven.",
+        "venue.stay_title": "Alojamiento:",
+        "venue.stay_desc": "Tarifa especial reservando con código \"Boda Yeraldin & Gerwin\".",
+        "timeline.title": "Itinerary",
+        "timeline.subtitle": "Los Momentos Inolvidables",
+        "timeline.civil_title": "Boda Civil • 21 Abril",
+        "timeline.civil_desc": "Ceremonia oficial y firma solemne.",
+        "timeline.banquet_title": "Banquete & Gran Cena • 01 Mayo",
+        "timeline.banquet_desc": "Brindis de bienvenida y cena gourmet en Salón de Gala ReeHorst.",
+        "timeline.party_title": "Gran Fiesta & Baile",
+        "timeline.party_desc": "¡Let yourself go! Baile y barra libre durante 4 horas.",
+        "timeline.end_title": "Fin de Fiesta",
+        "timeline.end_desc": "¡Todo lo bueno tiene un final inolvidable!",
+        "timeline.open_bar_note": "4 Horas de Barra Libre Incluidas: selección de cervezas, vinos y refrescos para todos los invitados. Barra cash bar disponible para cócteles y licores premium.",
+        "dress.title": "Dress Code",
+        "dress.type": "Gala • Black Tie & White/Gold",
+        "dress.palette": "Paleta sugerida: Blanco, Dorado, Champagne, Negro.",
+        "gifts.title": "Gifts",
+        "gifts.presence": "\"Tu presencia es nuestro mayor regalo, pero si deseas hacernos un detalle para nuestra nueva etapa juntos, agradecemos tu cariño.\"",
+        "gifts.bank_label": "¿Prefieres contribuir directamente?",
+        "faq.subtitle": "Preguntas Frecuentes",
+        "faq.q1": "¿Puedo llevar un acompañante (+1)?",
+        "faq.a1": "Las invitaciones son personalizadas. Por favor indícanos el nombre de tu acompañante en el formulario de confirmación RSVP para organizar el salón y la cena.",
+        "faq.q2": "¿Cómo viajo desde España u otros países?",
+        "faq.a2": "Te recomendamos volar al aeropuerto de Ámsterdam Schiphol (AMS). Justo debajo del aeropuerto tomas el tren directo de la red NS cada 15 min hasta la estación Ede-Wageningen, que queda a solo 3 minutos a pie del Hotel ReeHorst.",
+        "faq.q3": "¿Cómo funciona la barra libre de bebidas?",
+        "faq.a3": "Contamos con 4 horas completas de barra libre con cerveza holandesa, vinos seleccionados y refrescos incluidos. Además, el hotel dispondrá de barra cash bar para quienes deseen cócteles o licores destilados.",
+        "faq.q4": "¿Dónde puedo hospedarme en Ede?",
+        "faq.a4": "El mismo Hotel ReeHorst dispone de amplias habitaciones con descuento especial de boda. Menciona \"Boda Yeraldin & Gerwin\" al reservar directamente con recepción.",
+        "rsvp.cant_wait": "¡No podemos esperar!",
+        "rsvp.deadline": "Por favor confirma antes del 01 de Marzo de 2027",
+        "rsvp.name_label": "Nombre Completo *",
+        "rsvp.attendance_label": "¿Asistirás a la celebración? *",
+        "rsvp.yes": "¡Sí, asistiré! 🎉",
+        "rsvp.no": "No podré ❤️",
+        "rsvp.events_title": "Eventos que asistirás:",
+        "rsvp.event_gala": "Gran Gala & Banquete (01 Mayo)",
+        "rsvp.event_civil": "Boda Civil (21 Abril)",
+        "rsvp.diet_label": "Alergias o Restricciones Alimentarias",
+        "rsvp.msg_label": "Mensaje para los novios",
+        "rsvp.submit_btn": "Enviar Confirmación",
       },
       nl: {
-        "stepText": "Kaart {n} / 6",
-        "hero.save_the_date": "Save The Date & Uitnodiging",
-        "hero.together": "Samen met onze families nodigen wij u van harte uit",
-        "hero.tap_open": "Tik op het zegel om te openen",
-        "hero.location": "Nederland",
-        "deck.open": "Uitnodiging Openen",
-        "countdown.subtitle": "Wij tellen de seconden af tot onze grote dag",
-        "countdown.title": "Aftellen • 01 Mei 2027",
-        "countdown.days": "Dagen",
-        "countdown.hours": "Uur",
-        "countdown.mins": "Minuten",
-        "countdown.secs": "Seconden",
-        "calendar.google": "Toevoegen aan Google Agenda",
-        "calendar.apple": "Apple / Outlook (.ics)",
-        "deck.scratch_next": "Kras & Onthul Foto",
-        "scratch.badge": "Touch Ervaring",
-        "scratch.title": "Kras om te Onthullen",
-        "scratch.subtitle": "Veeg met je vinger of muis over de goudlaag.",
-        "scratch.progress": "Onthuld:",
-        "deck.itinerary_next": "Bekijk Programma",
-        "events.subtitle": "Twee Onvergetelijke Momenten",
-        "events.title": "Programma & Locaties",
-        "event1.tag": "Burgerlijke Ceremonie",
-        "event1.title": "Burgerlijk Huwelijk & Ondertekening",
-        "event1.place_desc": "Nederland • 10:00 uur",
-        "event2.tag": "Groot Huwelijksfeest",
-        "event2.title": "Banket & Feestelijke Gala",
-        "event2.place_desc": "Hotel ReeHorst (Ede) • Diner 20:00 uur | Feest 22:00 tot 02:00 uur",
-        "event2.map": "Open in Kaarten",
-        "event1.copy": "Kopiëren",
-        "deck.faq_next": "Gids & Reistips",
-        "faq.badge": "Gastengids",
-        "faq.title": "Veelgestelde Vragen",
-        "faq.q1": "Waar te verblijven? Hotels & Airbnb",
-        "faq.a1": "Kamerblok gereserveerd in het feesthotel: Hotel ReeHorst (Ede). Airbnb opties binnen 10-15 min.",
-        "faq.q2": "Hoe kom ik er vanaf Schiphol?",
-        "faq.a2": "Vlieg naar Schiphol (AMS). Directe NS-treinen elke 15 min naar station Ede-Wageningen, op slechts 3 minuten lopen van Hotel ReeHorst. In- en uitchecken met OV-Pay.",
-        "faq.q3": "Kledingvoorschrift (Dress Code)",
-        "faq.a3": "Gala & Black Tie Optional. De viering is in Wit met Goud en de grote feestzaal in Zwart met Goud. Heren: smoking of net pak. Dames: lange galajurk.",
-        "faq.q4": "Kinderen & Introducees",
-        "faq.a4": "Volwassenenfeest op 1 mei om zorgeloos te dansen en te vieren (tot 02:00 uur).",
-        "faq.q5": "Welke drankjes zijn inbegrepen? Open bar & Cocktails",
-        "faq.a5": "Tijdens het 4 uur durende feest is er een open bar met bier, geselecteerde wijnen en frisdrank inbegrepen. Speciale cocktails en sterke dranken zijn verkrijgbaar aan een aparte betaalbar.",
-        "deck.rsvp_next": "Aanwezigheid Bevestigen",
-        "rsvp.title": "Aanwezigheid Bevestigen",
-        "rsvp.deadline": "✦ Vóór 01 Februari 2027 ✦",
-        "rsvp.yes": "Ja, ik kom graag! 🎉",
-        "rsvp.no": "Helaas verhinderd ❤️",
-        "rsvp.name_label": "Voor- en Achternaam",
-        "rsvp.events_label": "Onderdelen aanwezig",
-        "rsvp.event_civil": "Burgerlijk Huwelijk (21 April 2027)",
-        "rsvp.event_party": "Groot Huwelijksfeest (01 Mei 2027)",
-        "rsvp.dietary_label": "Dieetwensen (Optioneel)",
-        "rsvp.song_label": "Muziekverzoek voor de DJ",
-        "rsvp.submit_btn": "Bevestigen via WhatsApp",
-        "deck.restart": "Terug naar Begin"
+        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
+        "hero.tap_seal": "Tik op het zegel om te openen",
+        "hero.together": "Samen met onze families nodigen wij u uit",
+        "card.invitation": "Save The Date & Huwelijksuitnodiging",
+        "card.gala_subtitle": "Groot Gala & Huwelijksbanket",
+        "card.civil_note": "Burgerlijk Huwelijk:",
+        "common.scroll_more": "SCROLL VOOR MEER DETAILS",
+        "countdown.title": "Countdown",
+        "countdown.cant_wait": "We kunnen niet wachten op dit moment!",
+        "countdown.days": "DAGEN",
+        "countdown.hours": "UREN",
+        "countdown.mins": "MINUTEN",
+        "countdown.secs": "SECONDEN",
+        "countdown.google_cal": "Google Agenda",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "venue.title": "De Locatie",
+        "venue.train_title": "Rechtstreekse trein:",
+        "venue.train_desc": "Vanaf Schiphol AMS elke 15 min rechtstreeks naar station Ede-Wageningen (3 min lopen naar Hotel ReeHorst).",
+        "venue.flight_title": "Vluchten vanuit Spanje:",
+        "venue.flight_desc": "Aanbevolen luchthavens: Amsterdam Schiphol of Eindhoven.",
+        "venue.stay_title": "Accommodatie:",
+        "venue.stay_desc": "Speciaal tarief bij boeking met code \"Bruiloft Yeraldin & Gerwin\".",
+        "timeline.title": "Programma",
+        "timeline.subtitle": "De Onvergetelijke Momenten",
+        "timeline.civil_title": "Burgerlijk Huwelijk • 21 April",
+        "timeline.civil_desc": "Officiële ceremonie en handtekening.",
+        "timeline.banquet_title": "Banket & Feestdiner • 01 Mei",
+        "timeline.banquet_desc": "Welkomsttoast en gastronomisch 3-gangendiner in Galazaal ReeHorst.",
+        "timeline.party_title": "Groot Feest & Dans",
+        "timeline.party_desc": "Laat je gaan! Open bar en dansen gedurende 4 uur.",
+        "timeline.end_title": "Einde van het Feest",
+        "timeline.end_desc": "Aan al het goede komt een onvergetelijk einde!",
+        "timeline.open_bar_note": "4 Uur Open Bar Inbegrepen: bier, geselecteerde wijnen en frisdrank voor alle gasten. Cash bar beschikbaar voor cocktails en premium sterke dranken.",
+        "dress.title": "Kledingvoorschrift",
+        "dress.type": "Gala • Black Tie & White/Gold",
+        "dress.palette": "Kleurenpalet: Wit, Goud, Champagne, Zwart.",
+        "gifts.title": "Cadeautip",
+        "gifts.presence": "\"Uw aanwezigheid is ons grootste geschenk, maar wie ons wil verrassen voor onze toekomst samen, kan onderstaande gegevens gebruiken.\"",
+        "gifts.bank_label": "Wilt u direct bijdragen?",
+        "faq.subtitle": "Veelgestelde Vragen",
+        "faq.q1": "Mag ik een introducee (+1) meenemen?",
+        "faq.a1": "Uitnodigingen zijn op naam. Vul alstublieft de naam van uw gast in bij het RSVP-formulier voor de tafelindeling.",
+        "faq.q2": "Hoe reis ik vanuit Spanje of het buitenland?",
+        "faq.a2": "Vlieg naar Amsterdam Schiphol (AMS). Neem direct onder de terminal de NS-intercitytrein naar station Ede-Wageningen. Vandaar is het slechts 3 minuten wandelen naar Hotel ReeHorst.",
+        "faq.q3": "Hoe zit het met de open bar en drankjes?",
+        "faq.a3": "Er is 4 uur lang een open bar met bier, wijn en frisdrank inbegrepen. Voor wie speciale cocktails of sterke drank wil, is er een cash bar aanwezig.",
+        "faq.q4": "Waar kan ik overnachten in Ede?",
+        "faq.a4": "In Hotel ReeHorst zelf zijn kamers beschikbaar tegen een gereduceerd huwelijkstarief. Vermeld \"Bruiloft Yeraldin & Gerwin\".",
+        "rsvp.cant_wait": "We kunnen niet wachten!",
+        "rsvp.deadline": "Gelieve te reageren vóór 01 Maart 2027",
+        "rsvp.name_label": "Volledige Naam *",
+        "rsvp.attendance_label": "Bent u aanwezig? *",
+        "rsvp.yes": "Ja, ik kom vieren! 🎉",
+        "rsvp.no": "Helaas kan ik niet ❤️",
+        "rsvp.events_title": "Onderdelen aanwezig:",
+        "rsvp.event_gala": "Groot Gala & Banket (01 Mei)",
+        "rsvp.event_civil": "Burgerlijk Huwelijk (21 April)",
+        "rsvp.diet_label": "Dieetwensen of allergieën",
+        "rsvp.msg_label": "Wens voor het bruidspaar",
+        "rsvp.submit_btn": "Bevestiging Verzenden",
+      },
+      en: {
+        "hero.viral_hook": "You have never seen a wedding Invitation like this 😍💍🥹",
+        "hero.tap_seal": "Tap the seal to open",
+        "hero.together": "Together with our families",
+        "card.invitation": "Save The Date & Wedding Invitation",
+        "card.gala_subtitle": "Grand Gala & Wedding Banquet",
+        "card.civil_note": "Civil Ceremony:",
+        "common.scroll_more": "SCROLL FOR MORE DETAILS",
+        "countdown.title": "Countdown",
+        "countdown.cant_wait": "We can't wait for this moment!",
+        "countdown.days": "DAYS",
+        "countdown.hours": "HOURS",
+        "countdown.mins": "MINUTES",
+        "countdown.secs": "SECONDS",
+        "countdown.google_cal": "Google Calendar",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "venue.title": "The Venue",
+        "venue.train_title": "Direct Train:",
+        "venue.train_desc": "From Schiphol AMS every 15 min directly to Ede-Wageningen station (3 min walk to Hotel ReeHorst).",
+        "venue.flight_title": "Flights from Spain & Worldwide:",
+        "venue.flight_desc": "Recommended arrival: Amsterdam Schiphol or Eindhoven.",
+        "venue.stay_title": "Accommodation:",
+        "venue.stay_desc": "Special discount rate booking with code \"Wedding Yeraldin & Gerwin\".",
+        "timeline.title": "Itinerary",
+        "timeline.subtitle": "Unforgettable Moments",
+        "timeline.civil_title": "Civil Wedding • April 21",
+        "timeline.civil_desc": "Official ceremony and signing.",
+        "timeline.banquet_title": "Gala Banquet & Dinner • May 01",
+        "timeline.banquet_desc": "Welcome toast and gourmet 3-course dinner in ReeHorst Gala Ballroom.",
+        "timeline.party_title": "Grand Party & Dance",
+        "timeline.party_desc": "Let yourself go! Dance and open bar for 4 hours.",
+        "timeline.end_title": "End of Night",
+        "timeline.end_desc": "All good things come to an unforgettable end!",
+        "timeline.open_bar_note": "4 Hours Open Bar Included: selection of beers, fine wines, and soft drinks. Cash bar available for cocktails and premium spirits.",
+        "dress.title": "Dress Code",
+        "dress.type": "Gala • Black Tie & White/Gold",
+        "dress.palette": "Suggested Palette: White, Gold, Champagne, Black.",
+        "gifts.title": "Gifts",
+        "gifts.presence": "\"Your presence is your gift, but all contributions can go to the bank details below. Thank you!\"",
+        "gifts.bank_label": "Prefer to contribute directly?",
+        "faq.subtitle": "Frequently Asked Questions",
+        "faq.q1": "Can I bring a plus one?",
+        "faq.a1": "Invitations are personalized. Please let us know the name of your companion in the RSVP form for seating and catering arrangements.",
+        "faq.q2": "How do I travel from Spain or abroad?",
+        "faq.a2": "We recommend flying to Amsterdam Schiphol (AMS). Directly under the terminal, take the NS direct intercity train to Ede-Wageningen station, just 3 minutes walk from Hotel ReeHorst.",
+        "faq.q3": "How does the open bar work?",
+        "faq.a3": "There is a 4-hour open bar with beer, wine, and soft drinks included. The venue will also offer a cash bar for cocktails and premium spirits.",
+        "faq.q4": "Where can I stay in Ede?",
+        "faq.a4": "Hotel ReeHorst itself offers rooms with a special wedding discount. Mention \"Wedding Yeraldin & Gerwin\" when booking.",
+        "rsvp.cant_wait": "We can't wait!",
+        "rsvp.deadline": "Please reply by March 1st, 2027",
+        "rsvp.name_label": "Full Name *",
+        "rsvp.attendance_label": "Will you attend? *",
+        "rsvp.yes": "Yes, I will attend! 🎉",
+        "rsvp.no": "Regretfully decline ❤️",
+        "rsvp.events_title": "Events you will attend:",
+        "rsvp.event_gala": "Grand Gala & Banquet (May 01)",
+        "rsvp.event_civil": "Civil Ceremony (April 21)",
+        "rsvp.diet_label": "Dietary requirements or allergies",
+        "rsvp.msg_label": "Message for the couple",
+        "rsvp.submit_btn": "Send Confirmation",
       }
     };
 
     let currentLang = 'es';
 
     function setLanguage(lang) {
-      if (!i18n[lang]) return;
+      if (!i18nData[lang]) return;
       currentLang = lang;
 
-      ['es', 'en', 'nl'].forEach(l => {
+      // Update button active states
+      ['es', 'nl', 'en'].forEach(l => {
         const btn = document.getElementById(`btn-lang-${l}`);
         if (btn) {
           if (l === lang) {
@@ -968,581 +1255,297 @@
         }
       });
 
+      // Update texts
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
-      });
-
-      updateStepCounter();
-      if (!isScratchedComplete) initScratchCanvas();
-    }
-
-    function updateStepCounter() {
-      const stepEl = document.getElementById('stepCounterText');
-      if (stepEl) {
-        const template = i18n[currentLang]?.stepText || "Tarjeta {n} / 6";
-        stepEl.innerText = template.replace('{n}', currentCardIndex + 1);
-      }
-    }
-
-    // ==================== 3D CARD STACK CAROUSEL ENGINE ====================
-    let currentCardIndex = 0;
-    const totalCards = 6;
-
-    function updateDeckCards() {
-      for (let i = 0; i < totalCards; i++) {
-        const card = document.getElementById(`card-${i}`);
-        const dot = document.getElementById(`dot-${i}`);
-
-        if (!card) continue;
-
-        card.classList.remove('card-active', 'card-next', 'card-prev', 'card-hidden');
-
-        if (i === currentCardIndex) {
-          card.classList.add('card-active');
-          if (dot) {
-            dot.className = "w-2.5 h-2.5 rounded-full bg-champagne-800 transition-all duration-300 scale-125 shadow-xs";
-          }
-        } else if (i === currentCardIndex + 1) {
-          card.classList.add('card-next');
-          if (dot) {
-            dot.className = "w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300";
-          }
-        } else if (i < currentCardIndex) {
-          card.classList.add('card-prev');
-          if (dot) {
-            dot.className = "w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300";
-          }
-        } else {
-          card.classList.add('card-hidden');
-          if (dot) {
-            dot.className = "w-2 h-2 rounded-full bg-champagne-400/60 transition-all duration-300";
-          }
+        if (i18nData[lang][key]) {
+          el.innerHTML = i18nData[lang][key];
         }
+      });
+    }
+
+    // ==================== PHONE MOCKUP VIEW CONTROLS ====================
+    let isMockupView = true;
+
+    function toggleMockupView() {
+      const container = document.getElementById('deviceContainer');
+      const btnText = document.getElementById('mockupText');
+      const btnIcon = document.getElementById('mockupIcon');
+      
+      isMockupView = !isMockupView;
+      if (isMockupView) {
+        container.classList.remove('fullscreen-mode');
+        if (btnText) btnText.textContent = "Ver Pantalla Completa";
+        if (btnIcon) btnIcon.textContent = "📱";
+      } else {
+        container.classList.add('fullscreen-mode');
+        if (btnText) btnText.textContent = "Ver Modo Celular";
+        if (btnIcon) btnIcon.textContent = "🖥️";
       }
+    }
 
-      updateStepCounter();
+    function setTheme(themeName) {
+      const container = document.getElementById('deviceContainer');
+      container.className = `${themeName} w-full h-full sm:h-auto flex items-center justify-center relative ${!isMockupView ? 'fullscreen-mode' : ''}`;
+    }
 
-      // Trigger canvas sizing if entering scratch card
-      if (currentCardIndex === 2 && !isScratchedComplete) {
-        setTimeout(initScratchCanvas, 150);
+    // ==================== ENVELOPE OPENING AUDIO & ANIMATION ====================
+    let isOpened = false;
+
+    function playWaxSealBreakSound() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        
+        // 1. Crisp wax snap / crack
+        const snapOsc = ctx.createOscillator();
+        const snapGain = ctx.createGain();
+        snapOsc.type = 'triangle';
+        snapOsc.frequency.setValueAtTime(140, ctx.currentTime);
+        snapOsc.frequency.exponentialRampToValueAtTime(45, ctx.currentTime + 0.12);
+        snapGain.gain.setValueAtTime(0.7, ctx.currentTime);
+        snapGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+        snapOsc.connect(snapGain);
+        snapGain.connect(ctx.destination);
+        snapOsc.start();
+        snapOsc.stop(ctx.currentTime + 0.15);
+
+        // 2. Ethereal golden chime chord
+        [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+          const chimeOsc = ctx.createOscillator();
+          const chimeGain = ctx.createGain();
+          chimeOsc.type = 'sine';
+          chimeOsc.frequency.value = freq;
+          chimeGain.gain.setValueAtTime(0.18, ctx.currentTime + 0.08 + i * 0.04);
+          chimeGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2 + i * 0.08);
+          chimeOsc.connect(chimeGain);
+          chimeGain.connect(ctx.destination);
+          chimeOsc.start(ctx.currentTime + 0.08 + i * 0.04);
+          chimeOsc.stop(ctx.currentTime + 1.4);
+        });
+      } catch (e) {
+        console.warn("AudioContext error", e);
       }
     }
 
     function openEnvelope(e) {
       if (e) e.stopPropagation();
-      const seal = document.getElementById('waxSealElem');
-      if (seal) {
-        seal.classList.add('seal-cracking');
-        playSealBreakChime();
+      playWaxSealBreakSound();
+
+      const bloom = document.getElementById('openLightBloom');
+      if (bloom) {
+        bloom.style.opacity = '1';
+        setTimeout(() => { bloom.style.opacity = '0'; }, 1000);
       }
+
+      // Auto play wedding music on first interaction
+      playAudio();
+
+      // Smooth scroll directly to the baroque floral card
       setTimeout(() => {
-        nextCard();
-        setTimeout(() => {
-          if (seal) seal.classList.remove('seal-cracking');
-        }, 600);
-      }, 350);
-    }
-
-    function playSealBreakChime() {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContext) return;
-        const ctx = new AudioContext();
-        const now = ctx.currentTime;
-
-        // Warm fundamental golden chime (D5 to A5)
-        const osc1 = ctx.createOscillator();
-        const gain1 = ctx.createGain();
-        osc1.type = 'sine';
-        osc1.frequency.setValueAtTime(587.33, now);
-        osc1.frequency.exponentialRampToValueAtTime(880, now + 0.08);
-        gain1.gain.setValueAtTime(0.35, now);
-        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
-        osc1.connect(gain1);
-        gain1.connect(ctx.destination);
-        osc1.start(now);
-        osc1.stop(now + 0.85);
-
-        // Crystal overtone (D6 bell harmonic)
-        const osc2 = ctx.createOscillator();
-        const gain2 = ctx.createGain();
-        osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(1174.66, now + 0.03);
-        gain2.gain.setValueAtTime(0.2, now + 0.03);
-        gain2.gain.exponentialRampToValueAtTime(0.001, now + 1.1);
-        osc2.connect(gain2);
-        gain2.connect(ctx.destination);
-        osc2.start(now + 0.03);
-        osc2.stop(now + 1.1);
-      } catch (err) {}
-    }
-
-    function nextCard() {
-      if (currentCardIndex < totalCards - 1) {
-        playCardSound();
-        currentCardIndex++;
-        updateDeckCards();
-      }
-    }
-
-    function prevCard() {
-      if (currentCardIndex > 0) {
-        playCardSound();
-        currentCardIndex--;
-        updateDeckCards();
-      }
-    }
-
-    function goToCard(idx) {
-      if (idx >= 0 && idx < totalCards) {
-        playCardSound();
-        currentCardIndex = idx;
-        updateDeckCards();
-      }
-    }
-
-    // Touch Swipe Gestures on Card Stack
-    let touchStartX = 0;
-    let touchStartY = 0;
-
-    const deck = document.getElementById('cardStackDeck');
-    if (deck) {
-      deck.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-      }, { passive: true });
-
-      deck.addEventListener('touchend', (e) => {
-        // Do not intercept if scratching on card 2
-        if (currentCardIndex === 2 && !isScratchedComplete) return;
-
-        const touchEndX = e.changedTouches[0].clientX;
-        const touchEndY = e.changedTouches[0].clientY;
-        const dx = touchEndX - touchStartX;
-        const dy = touchEndY - touchStartY;
-
-        if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
-          if (dx < 0) nextCard();
-          else prevCard();
+        const target = document.getElementById('section-main-card');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
         }
-      }, { passive: true });
+      }, 550);
     }
 
-    // Keyboard Arrow navigation
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.key === ' ') nextCard();
-      else if (e.key === 'ArrowLeft') prevCard();
-    });
+    function scrollToNextSection() {
+      const sections = ['section-envelope', 'section-main-card', 'section-countdown', 'section-venue', 'section-timeline', 'section-gifts', 'section-faq', 'section-rsvp'];
+      const scrollEl = document.getElementById('scrollContainer');
+      const currentScroll = scrollEl.scrollTop;
 
-    // Subtle tactile card sound
-    function playCardSound() {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContext) return;
-        const ctx = new AudioContext();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(320, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(540, ctx.currentTime + 0.08);
-        gain.gain.setValueAtTime(0.04, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.08);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.09);
-      } catch (e) {}
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop > currentScroll + 40) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+      }
     }
 
-    // ==================== WEDDING MUSIC AUDIO ====================
-    let isAmbientPlaying = false;
-    const bgAudio = new Audio('assets/wedding_music.mp3');
-    bgAudio.loop = true;
+    function scrollToTop() {
+      const scrollEl = document.getElementById('scrollContainer');
+      scrollEl.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ==================== WEDDING AUDIO CONTROLLER ====================
+    let isPlaying = false;
+    const audio = document.getElementById('weddingMusic');
+    const safariSoundIcon = document.getElementById('safariSoundIcon');
+    const islandWaveform = document.getElementById('islandWaveform');
+
+    function playAudio() {
+      if (!audio) return;
+      audio.play().then(() => {
+        isPlaying = true;
+        updateAudioIcons();
+      }).catch(err => {
+        console.log("Autoplay waiting for direct tap", err);
+      });
+    }
 
     function toggleAudio() {
-      isAmbientPlaying = !isAmbientPlaying;
-      const on = document.getElementById('soundIconOn');
-      const off = document.getElementById('soundIconOff');
-      if (isAmbientPlaying) {
-        on.classList.remove('hidden');
-        off.classList.add('hidden');
-        bgAudio.play().catch(() => {});
+      if (!audio) return;
+      if (isPlaying) {
+        audio.pause();
+        isPlaying = false;
       } else {
-        on.classList.add('hidden');
-        off.classList.remove('hidden');
-        bgAudio.pause();
+        audio.play().then(() => {
+          isPlaying = true;
+        });
+      }
+      updateAudioIcons();
+    }
+
+    function updateAudioIcons() {
+      if (isPlaying) {
+        safariSoundIcon.innerHTML = '<path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>';
+        safariSoundIcon.classList.add('text-burgundy');
+        if (islandWaveform) islandWaveform.classList.remove('opacity-40');
+      } else {
+        safariSoundIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
+        safariSoundIcon.classList.remove('text-burgundy');
+        if (islandWaveform) islandWaveform.classList.add('opacity-40');
       }
     }
 
-    // ==================== REAL-TIME COUNTDOWN TO MAY 1, 2027 ====================
-    const weddingDate = new Date('2027-05-01T16:30:00+02:00').getTime();
+    // ==================== LIVE COUNTDOWN TIMER ====================
+    const WEDDING_TARGET = new Date('2027-05-01T20:00:00+02:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
-      const distance = weddingDate - now;
+      const diff = WEDDING_TARGET - now;
 
-      if (distance < 0) {
-        document.getElementById('days').innerText = "0";
-        document.getElementById('hours').innerText = "0";
-        document.getElementById('mins').innerText = "0";
-        document.getElementById('secs').innerText = "0";
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
         return;
       }
 
-      document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-      document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      document.getElementById('mins').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      document.getElementById('secs').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
     }
+
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    function downloadICS() {
-      const icsData = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//Yeraldin and Gerwin//Wedding Invitation//ES",
-        "CALSCALE:GREGORIAN",
-        "METHOD:PUBLISH",
-        "BEGIN:VEVENT",
-        "UID:wedding-yeraldin-gerwin-20270501@wedding",
-        "DTSTAMP:20260928T220000Z",
-        "DTSTART:20270501T180000Z",
-        "DTEND:20270502T000000Z",
-        "SUMMARY:Boda Yeraldin & Gerwin (Fiesta de Gala en Hotel ReeHorst, Ede)",
-        "DESCRIPTION:Gran Celebración de Boda de Yeraldin & Gerwin en Hotel ReeHorst (Ede, Países Bajos).\\n• Cena: 20:00 - 22:00 hrs\\n• Fiesta: 22:00 - 02:00 hrs\\n• Vestimenta: Gala / Black Tie Optional.",
-        "LOCATION:Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos",
-        "STATUS:CONFIRMED",
-        "END:VEVENT",
-        "END:VCALENDAR"
-      ].join("\r\n");
+    // ==================== IOS CLOCK ====================
+    function updateClock() {
+      const now = new Date();
+      let h = now.getHours();
+      let m = String(now.getMinutes()).padStart(2, '0');
+      const el = document.getElementById('iosClock');
+      if (el) el.textContent = `${h}:${m}`;
+    }
+    setInterval(updateClock, 30000);
+    updateClock();
 
-      const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
-      const link = document.createElement("a");
+    // ==================== CALENDAR INTEGRATION ====================
+    function addToGoogleCalendar() {
+      const title = encodeURIComponent("Boda Yeraldin & Gerwin — Gran Gala");
+      const details = encodeURIComponent("Celebración del matrimonio de Yeraldin & Gerwin en Hotel ReeHorst, Ede, Países Bajos. Banquete de gala y fiesta con barra libre.");
+      const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
+      const dates = "20270501T180000Z/20270502T000000Z";
+      window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
+    }
+
+    function downloadICS() {
+      const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Yeraldin & Gerwin Wedding 2027//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-yeraldin-gerwin-2027@reehorst
+DTSTAMP:20270501T180000Z
+DTSTART:20270501T180000Z
+DTEND:20270502T000000Z
+SUMMARY:Boda Real Yeraldin & Gerwin — Gran Gala
+DESCRIPTION:Banquete de gala y gran celebración de boda de Yeraldin & Gerwin. Hotel ReeHorst, Ede, Países Bajos.
+LOCATION:Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.setAttribute("download", "Boda_Yeraldin_y_Gerwin_2027.ics");
+      link.setAttribute('download', 'Boda_Yeraldin_y_Gerwin_2027.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
 
-    // ==================== INTERACTIVE SCRATCH CARD ====================
-    const scratchCanvas = document.getElementById('scratchCanvas');
-    const scratchCtx = scratchCanvas ? scratchCanvas.getContext('2d', { willReadFrequently: true }) : null;
-    let isDrawing = false;
-    let isScratchedComplete = false;
-    let lastPoint = null;
-
-    function initScratchCanvas() {
-      if (!scratchCanvas || isScratchedComplete) return;
-
-      const rect = scratchCanvas.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      scratchCanvas.width = rect.width * dpr;
-      scratchCanvas.height = rect.height * dpr;
-
-      scratchCtx.scale(dpr, dpr);
-      const w = rect.width;
-      const h = rect.height;
-      if (w === 0 || h === 0) return;
-
-      const grad = scratchCtx.createLinearGradient(0, 0, w, h);
-      grad.addColorStop(0, '#A98338');
-      grad.addColorStop(0.25, '#D4AF37');
-      grad.addColorStop(0.5, '#F7E7A9');
-      grad.addColorStop(0.75, '#C5A059');
-      grad.addColorStop(1, '#8C6726');
-
-      scratchCtx.fillStyle = grad;
-      scratchCtx.fillRect(0, 0, w, h);
-
-      scratchCtx.fillStyle = 'rgba(255, 255, 255, 0.45)';
-      for (let i = 0; i < 90; i++) {
-        scratchCtx.beginPath();
-        scratchCtx.arc(Math.random() * w, Math.random() * h, Math.random() * 1.5, 0, Math.PI * 2);
-        scratchCtx.fill();
-      }
-
-      scratchCtx.strokeStyle = 'rgba(255, 235, 170, 0.55)';
-      scratchCtx.lineWidth = 1;
-      scratchCtx.strokeRect(8, 8, w - 16, h - 16);
-
-      // Crest
-      scratchCtx.save();
-      scratchCtx.beginPath();
-      scratchCtx.arc(w / 2, h / 2 - 20, 32, 0, Math.PI * 2);
-      scratchCtx.fillStyle = 'rgba(88, 53, 28, 0.12)';
-      scratchCtx.fill();
-      scratchCtx.strokeStyle = '#2A1B0E';
-      scratchCtx.lineWidth = 1;
-      scratchCtx.stroke();
-      scratchCtx.restore();
-
-      scratchCtx.font = 'bold 22px "Cormorant Garamond", serif';
-      scratchCtx.fillStyle = '#2A1B0E';
-      scratchCtx.textAlign = 'center';
-      scratchCtx.textBaseline = 'middle';
-      scratchCtx.fillText('G & G', w / 2, h / 2 - 20);
-
-      const instructions = {
-        es: "✦ RASCA CON EL DEDO ✦",
-        en: "✦ SCRATCH WITH FINGER ✦",
-        nl: "✦ KRAS MET VINGER ✦"
-      };
-      scratchCtx.font = '600 11px "Outfit", sans-serif';
-      scratchCtx.letterSpacing = '1px';
-      scratchCtx.fillText(instructions[currentLang] || instructions.es, w / 2, h / 2 + 30);
-    }
-
-    function getCanvasCoordinates(e) {
-      const rect = scratchCanvas.getBoundingClientRect();
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-      return { x: clientX - rect.left, y: clientY - rect.top };
-    }
-
-    function scratch(point) {
-      if (!scratchCtx || isScratchedComplete) return;
-
-      scratchCtx.save();
-      scratchCtx.globalCompositeOperation = 'destination-out';
-      scratchCtx.beginPath();
-      const brushRadius = 26;
-
-      if (lastPoint) {
-        scratchCtx.lineWidth = brushRadius * 2;
-        scratchCtx.lineCap = 'round';
-        scratchCtx.lineJoin = 'round';
-        scratchCtx.moveTo(lastPoint.x, lastPoint.y);
-        scratchCtx.lineTo(point.x, point.y);
-        scratchCtx.stroke();
-      } else {
-        scratchCtx.arc(point.x, point.y, brushRadius, 0, Math.PI * 2);
-        scratchCtx.fill();
-      }
-      scratchCtx.restore();
-      lastPoint = point;
-    }
-
-    let throttleCheck = null;
-    function checkScratchProgress() {
-      if (isScratchedComplete || !scratchCtx) return;
-
-      if (throttleCheck) return;
-      throttleCheck = setTimeout(() => {
-        throttleCheck = null;
-        const w = scratchCanvas.width;
-        const h = scratchCanvas.height;
-        if (w === 0 || h === 0) return;
-
-        const imgData = scratchCtx.getImageData(0, 0, w, h);
-        const data = imgData.data;
-        let transparent = 0;
-        const step = 4 * 16;
-        const total = data.length / step;
-
-        for (let i = 3; i < data.length; i += step) {
-          if (data[i] === 0) transparent++;
-        }
-
-        const percent = Math.min(100, Math.round((transparent / total) * 100));
-        const percentText = document.getElementById('scratchPercentText');
-        const progressBar = document.getElementById('scratchProgressBar');
-        if (percentText) percentText.innerText = `${percent}%`;
-        if (progressBar) progressBar.style.width = `${percent}%`;
-
-        if (percent >= 38 && !isScratchedComplete) {
-          triggerDestelloCelebration();
-        }
-      }, 70);
-    }
-
-    function triggerDestelloCelebration() {
-      isScratchedComplete = true;
-
-      const percentText = document.getElementById('scratchPercentText');
-      const progressBar = document.getElementById('scratchProgressBar');
-      if (percentText) percentText.innerText = "100%";
-      if (progressBar) progressBar.style.width = "100%";
-
-      scratchCanvas.style.opacity = '0';
-      setTimeout(() => { scratchCanvas.style.display = 'none'; }, 600);
-
-      const destelloOverlay = document.getElementById('destelloOverlay');
-      if (destelloOverlay) {
-        destelloOverlay.classList.remove('hidden');
-        destelloOverlay.classList.add('animate-destello');
-      }
-
-      playCelebrationHarp();
-      startGoldenConfetti();
-
-      const callout = document.getElementById('revealedConfirmationCallout');
-      if (callout) callout.classList.remove('hidden');
-    }
-
-    function playCelebrationHarp() {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContext) return;
-        const ctx = new AudioContext();
-        const now = ctx.currentTime;
-        const notes = [440, 554.37, 659.25, 880, 1108.73];
-        notes.forEach((freq, i) => {
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-          osc.type = 'triangle';
-          osc.frequency.setValueAtTime(freq, now + i * 0.08);
-          gain.gain.setValueAtTime(0.12, now + i * 0.08);
-          gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.08 + 1.2);
-          osc.connect(gain);
-          gain.connect(ctx.destination);
-          osc.start(now + i * 0.08);
-          osc.stop(now + i * 0.08 + 1.3);
-        });
-      } catch (e) {}
-    }
-
-    function startGoldenConfetti() {
-      const pCanvas = document.getElementById('particleCanvas');
-      if (!pCanvas) return;
-      const ctx = pCanvas.getContext('2d');
-      const rect = pCanvas.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      pCanvas.width = rect.width * dpr;
-      pCanvas.height = rect.height * dpr;
-      ctx.scale(dpr, dpr);
-
-      const particles = [];
-      const colors = ['#D4AF37', '#FFF3C4', '#C5A059', '#FFFFFF'];
-
-      for (let i = 0; i < 55; i++) {
-        particles.push({
-          x: rect.width / 2,
-          y: rect.height / 2,
-          vx: (Math.random() - 0.5) * 8,
-          vy: (Math.random() - 0.5) * 8 - 2,
-          size: Math.random() * 4 + 1.5,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          alpha: 1,
-          decay: Math.random() * 0.02 + 0.01
-        });
-      }
-
-      function render() {
-        ctx.clearRect(0, 0, rect.width, rect.height);
-        let active = false;
-
-        particles.forEach(p => {
-          if (p.alpha > 0) {
-            active = true;
-            p.x += p.vx;
-            p.y += p.vy;
-            p.vy += 0.12;
-            p.alpha -= p.decay;
-
-            ctx.save();
-            ctx.globalAlpha = Math.max(0, p.alpha);
-            ctx.fillStyle = p.color;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.restore();
-          }
-        });
-
-        if (active) requestAnimationFrame(render);
-        else ctx.clearRect(0, 0, rect.width, rect.height);
-      }
-      render();
-    }
-
-    if (scratchCanvas) {
-      const startDraw = (e) => {
-        isDrawing = true;
-        lastPoint = getCanvasCoordinates(e);
-        scratch(lastPoint);
-      };
-      const moveDraw = (e) => {
-        if (!isDrawing) return;
-        const point = getCanvasCoordinates(e);
-        scratch(point);
-        checkScratchProgress();
-      };
-      const endDraw = () => {
-        isDrawing = false;
-        lastPoint = null;
-      };
-
-      scratchCanvas.addEventListener('pointerdown', startDraw);
-      window.addEventListener('pointermove', moveDraw);
-      window.addEventListener('pointerup', endDraw);
-      window.addEventListener('pointercancel', endDraw);
-
-      scratchCanvas.addEventListener('touchstart', (e) => { e.preventDefault(); startDraw(e); }, { passive: false });
-      window.addEventListener('touchmove', (e) => { if (isDrawing) { e.preventDefault(); moveDraw(e); } }, { passive: false });
-      window.addEventListener('touchend', endDraw);
-    }
-
-    // ==================== ACCORDION CONTROLLER ====================
-    function toggleAccordion(button) {
-      const item = button.closest('.accordion-item');
-      const container = document.getElementById('accordionContainer');
-      const allItems = container.querySelectorAll('.accordion-item');
-
-      allItems.forEach(i => {
+    // ==================== FAQ ACCORDION ====================
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const all = document.querySelectorAll('.faq-item');
+      all.forEach(i => {
         if (i !== item) i.classList.remove('active');
       });
       item.classList.toggle('active');
     }
 
-    function copyAddress(text) {
+    function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
-        alert("Dirección copiada: " + text);
+        alert("Copiado al portapapeles: " + text);
       }).catch(() => {
-        alert("Dirección: " + text);
+        alert("Número: " + text);
       });
     }
 
+    function shareInvitation() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Boda Yeraldin & Gerwin 2027",
+          text: "¡Estás invitado a la boda de Yeraldin & Gerwin en Países Bajos!",
+          url: window.location.href,
+        }).catch(() => {});
+      } else {
+        copyToClipboard(window.location.href);
+      }
+    }
+
+    // ==================== RSVP FORM SUBMISSION ====================
     function handleRSVPSubmit(e) {
       e.preventDefault();
-      
-      const attendance = document.querySelector('input[name="attendance"]:checked').value;
-      const name = document.getElementById('guestName').value.trim();
-      const civil = document.getElementById('checkCivil').checked ? "Sí" : "No";
-      const party = document.getElementById('checkParty').checked ? "Sí" : "No";
-      const dietary = document.getElementById('dietary').value.trim() || "Ninguna";
-      const song = document.getElementById('songRequest').value.trim() || "A elección del DJ";
+      const name = document.getElementById('rsvpName').value.trim();
+      const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
+      const checkGala = document.getElementById('rsvpCheckGala').checked ? "Sí" : "No";
+      const checkCivil = document.getElementById('rsvpCheckCivil').checked ? "Sí" : "No";
+      const diet = document.getElementById('rsvpDiet').value.trim() || "Ninguna";
+      const msg = document.getElementById('rsvpMessage').value.trim() || "¡Muchas felicidades!";
 
-      const attendsText = (attendance === "si") ? "¡SÍ, ASISTIRÉ! 🎉" : "Lamentablemente no podré asistir ❤️";
-
-      let message = `💍 *CONFIRMACIÓN DE ASISTENCIA — BODA YERALDIN & GERWIN*\n\n`;
-      message += `👤 *Invitado:* ${name}\n`;
-      message += `✨ *Respuesta:* ${attendsText}\n`;
-      if (attendance === "si") {
-        message += `🏛️ *Boda Civil (21 Abr):* ${civil}\n`;
-        message += `🏰 *Gran Celebración (01 May):* ${party}\n`;
-        message += `🥗 *Dieta/Alergias:* ${dietary}\n`;
-        message += `🎵 *Canción sugerida:* ${song}\n`;
+      let text = `💍 *CONFIRMACIÓN RSVP — BODA YERALDIN & GERWIN*\n\n`;
+      text += `👤 *Invitado:* ${name}\n`;
+      text += `✨ *Asistencia:* ${attend === 'si' ? '¡SÍ, ASISTIRÉ! 🎉' : 'Lamentablemente no podré asistir ❤️'}\n`;
+      if (attend === 'si') {
+        text += `🏰 *Gran Gala & Banquete (01 Mayo):* ${checkGala}\n`;
+        text += `🏛️ *Boda Civil (21 Abril):* ${checkCivil}\n`;
+        text += `🥗 *Dieta / Alergias:* ${diet}\n`;
+        text += `💌 *Mensaje:* ${msg}\n`;
       }
-      message += `\n_Enviado desde la invitación interactiva en tarjetas._`;
+      text += `\n_Enviado desde el Mockup Interactivo de Boda._`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
 
-      const encodedMsg = encodeURIComponent(message);
-      const waUrl = `https://api.whatsapp.com/send?text=${encodedMsg}`;
-
+      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
       setTimeout(() => {
         window.open(waUrl, '_blank');
       }, 700);
     }
-
-    window.addEventListener('load', () => {
-      updateDeckCards();
-      setTimeout(initScratchCanvas, 300);
-    });
   </script>
 </body>
 </html>

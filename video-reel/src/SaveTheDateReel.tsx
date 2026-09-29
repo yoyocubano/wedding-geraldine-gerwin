@@ -14,9 +14,11 @@ import {
 // ==================== STYLES & FONTS ====================
 const FONT_SERIF = "'Playfair Display', Georgia, serif";
 const FONT_EDITORIAL = "'Cormorant Garamond', Garamond, serif";
+const FONT_SCRIPT = "'Great Vibes', 'Alex Brush', cursive";
 const FONT_SANS = "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
 const GOLD_METALLIC = 'linear-gradient(135deg, #A98338 0%, #D4AF37 35%, #FFF2B2 50%, #C5A059 70%, #8C6726 100%)';
+const BURGUNDY = '#5B1E28';
 
 export interface ReelProps {
   lang?: 'es' | 'nl';
@@ -88,6 +90,7 @@ export const SaveTheDateReel: React.FC<ReelProps> = ({ lang = 'es' }) => {
           border: '1.5px solid rgba(197, 160, 89, 0.45)',
           borderRadius: 40,
           pointerEvents: 'none',
+          zIndex: 10,
         }}
       >
         <div
@@ -98,71 +101,55 @@ export const SaveTheDateReel: React.FC<ReelProps> = ({ lang = 'es' }) => {
             borderRadius: 28,
           }}
         />
-        {/* Corner florets */}
-        <span style={{ position: 'absolute', top: 24, left: 24, fontSize: 24, color: '#C5A059' }}>✦</span>
-        <span style={{ position: 'absolute', top: 24, right: 24, fontSize: 24, color: '#C5A059' }}>✦</span>
-        <span style={{ position: 'absolute', bottom: 24, left: 24, fontSize: 24, color: '#C5A059' }}>✦</span>
-        <span style={{ position: 'absolute', bottom: 24, right: 24, fontSize: 24, color: '#C5A059' }}>✦</span>
       </div>
 
-      {/* ========================================================================= */}
-      {/* SCENE 1: WAX SEAL OPENING & SAVE THE DATE (Frames 0 - 190 / ~6.3s)         */}
-      {/* ========================================================================= */}
+      {/* ==================== 5 MASTER VIDEO SEQUENCES (900 FRAMES = 30 SEC) ==================== */}
+
+      {/* SCENE 1 (Frames 0 - 195 | 6.5s): THE EMBROIDERED ENVELOPE & WAX SEAL REVEAL */}
       <Sequence from={0} durationInFrames={195}>
-        <Scene1WaxSeal frame={frame} fps={fps} lang={lang} />
+        <Scene1Envelope frame={frame} fps={fps} lang={lang} />
       </Sequence>
 
-      {/* ========================================================================= */}
-      {/* SCENE 2: COUPLE PORTRAIT & SOFT GOLD FLARE (Frames 175 - 375 / ~6.6s)     */}
-      {/* ========================================================================= */}
+      {/* SCENE 2 (Frames 175 - 375 | 6.6s): THE BAROQUE FLORAL ARCH CARTUCHE */}
       <Sequence from={175} durationInFrames={200}>
-        <Scene2PhotoReveal frame={frame - 175} fps={fps} lang={lang} />
+        <Scene2BaroqueCard frame={frame - 175} fps={fps} lang={lang} />
       </Sequence>
 
-      {/* ========================================================================= */}
-      {/* SCENE 3: DUAL CELEBRATION DATES (Frames 355 - 555 / ~6.6s)                */}
-      {/* ========================================================================= */}
+      {/* SCENE 3 (Frames 355 - 555 | 6.6s): THE WATERCOLOR VENUE (HOTEL REEHORST) */}
       <Sequence from={355} durationInFrames={200}>
-        <Scene3Itinerary frame={frame - 355} fps={fps} lang={lang} />
+        <Scene3Venue frame={frame - 355} fps={fps} lang={lang} />
       </Sequence>
 
-      {/* ========================================================================= */}
-      {/* SCENE 4: FAQ & TRAVEL GUIDE (Frames 535 - 735 / ~6.6s)                    */}
-      {/* ========================================================================= */}
+      {/* SCENE 4 (Frames 535 - 735 | 6.6s): ITINERARY & OPEN BAR CELEBRATION */}
       <Sequence from={535} durationInFrames={200}>
-        <Scene4FAQ frame={frame - 535} fps={fps} lang={lang} />
+        <Scene4Itinerary frame={frame - 535} fps={fps} lang={lang} />
       </Sequence>
 
-      {/* ========================================================================= */}
-      {/* SCENE 5: FINAL CALL TO ACTION & RSVP (Frames 715 - 900 / ~6.2s)           */}
-      {/* ========================================================================= */}
+      {/* SCENE 5 (Frames 715 - 900 | 6.2s): SAVE THE DATE & RSVP */}
       <Sequence from={715} durationInFrames={185}>
-        <Scene5RSVPClose frame={frame - 715} fps={fps} lang={lang} />
+        <Scene5SaveTheDate frame={frame - 715} fps={fps} lang={lang} />
       </Sequence>
     </AbsoluteFill>
   );
 };
 
-// ==================== SCENE 1: WAX SEAL OPENING ====================
-const Scene1WaxSeal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
-  // Ultra-smooth luxurious damping
-  const sealScale = spring({
+// ==================== SCENE 1: THE EMBROIDERED ENVELOPE & WAX SEAL ====================
+const Scene1Envelope: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
+  const scale = spring({
     frame,
     fps,
     config: { damping: 20, mass: 1.2 },
   });
 
-  // Slow, cinematic fade-in and smooth fade-out
-  const sealOpacity = interpolate(frame, [0, 30, 160, 190], [0, 1, 1, 0], {
+  const opacity = interpolate(frame, [0, 25, 165, 195], [0, 1, 1, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
 
-  const letterSpacing = interpolate(frame, [0, 120], [6, 16], {
+  const bloomOpacity = interpolate(frame, [100, 130, 180], [0, 0.8, 0], {
+    extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-
-  const pulse = Math.sin(frame * 0.06) * 0.03;
 
   return (
     <AbsoluteFill
@@ -171,119 +158,76 @@ const Scene1WaxSeal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }>
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        opacity: sealOpacity,
+        opacity,
         textAlign: 'center',
-        padding: '0 80px',
+        padding: '0 60px',
       }}
     >
-      <div style={{ transform: `scale(${sealScale + pulse})`, marginBottom: 65, position: 'relative' }}>
-        {/* Pulsing Golden Aura */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: -35,
-            borderRadius: '50%',
-            border: '2px solid rgba(212, 175, 55, 0.45)',
-            boxShadow: '0 0 60px 12px rgba(212, 175, 55, 0.35)',
-            transform: `scale(${1 + pulse * 2})`,
-          }}
-        />
-
-        {/* 3D Real Wax Seal */}
-        <div
-          style={{
-            width: 230,
-            height: 230,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 35% 30%, #FFFBE6 0%, #F8DA89 22%, #D4AF37 45%, #9E7422 75%, #593A0B 100%)',
-            boxShadow: '0 38px 65px -10px rgba(60, 36, 10, 0.65), 0 15px 25px rgba(0, 0, 0, 0.28), inset 0 4px 8px rgba(255, 255, 255, 0.9), inset 0 -6px 12px rgba(45, 25, 5, 0.8)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {/* Inner stamped ring */}
-          <div
-            style={{
-              width: 178,
-              height: 178,
-              borderRadius: '50%',
-              border: '3px dashed rgba(255, 245, 200, 0.6)',
-              boxShadow: 'inset 0 6px 12px rgba(45, 25, 5, 0.7), inset 0 -2px 5px rgba(255, 255, 255, 0.5)',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'radial-gradient(circle at 40% 35%, #CFA551 0%, #A3792A 60%, #785315 100%)',
-            }}
-          >
-            <span
-              style={{
-                fontFamily: FONT_EDITORIAL,
-                fontWeight: 700,
-                fontSize: 70,
-                color: '#FFF8DB',
-                letterSpacing: -2,
-                textShadow: '0 2px 4px rgba(0,0,0,0.7)',
-              }}
-            >
-              Y&G
-            </span>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 18,
-                letterSpacing: 6,
-                color: '#FFE8A3',
-                fontWeight: 700,
-                marginTop: -4,
-              }}
-            >
-              2027
-            </span>
-          </div>
-        </div>
-      </div>
-
+      {/* Hook Text at top */}
       <p
         style={{
           fontFamily: FONT_SANS,
-          fontSize: 26,
-          textTransform: 'uppercase',
-          letterSpacing,
-          color: '#8C6726',
-          fontWeight: 600,
-          marginBottom: 16,
+          fontSize: 32,
+          fontWeight: 700,
+          color: '#2A1B0E',
+          marginBottom: 35,
+          letterSpacing: 1,
         }}
       >
-        ✦ Save The Date ✦
+        You have never seen a wedding invitation like this 😍💍🥹
       </p>
 
-      <h1
+      {/* Floating Envelope Mockup */}
+      <div
         style={{
-          fontFamily: FONT_SERIF,
-          fontSize: 84,
-          color: '#2A1B0E',
-          lineHeight: 1.1,
-          margin: 0,
+          transform: `scale(${scale})`,
+          width: 760,
+          height: 980,
+          borderRadius: 36,
+          overflow: 'hidden',
+          boxShadow: '0 45px 90px -15px rgba(42, 27, 14, 0.4), 0 0 0 2px rgba(212, 175, 55, 0.5)',
+          position: 'relative',
         }}
       >
-        Yeraldin
-        <span
+        <Img
+          src={staticFile('envelope_yg_hero.jpg')}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+
+        {/* Radiant Golden Light Burst upon opening */}
+        <div
           style={{
-            display: 'block',
-            fontFamily: "'Alex Brush', cursive",
-            fontSize: 92,
-            background: GOLD_METALLIC,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            margin: '8px 0',
+            position: 'absolute',
+            inset: 0,
+            background: 'radial-gradient(circle, rgba(255,248,210,0.9) 0%, rgba(212,175,55,0.4) 60%, transparent 80%)',
+            opacity: bloomOpacity,
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Tap Badge Overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 60,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            backgroundColor: 'rgba(36, 23, 17, 0.92)',
+            border: '1.5px solid rgba(212, 175, 55, 0.7)',
+            borderRadius: 50,
+            padding: '12px 34px',
+            color: '#F3E8D2',
+            fontFamily: FONT_SANS,
+            fontSize: 20,
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            letterSpacing: 4,
+            boxShadow: '0 10px 25px rgba(0,0,0,0.4)',
           }}
         >
-          &
-        </span>
-        Gerwin
-      </h1>
+          ✦ {lang === 'nl' ? 'Tik om te openen' : 'Toca el sello para abrir'} ✦
+        </div>
+      </div>
 
       <p
         style={{
@@ -291,35 +235,25 @@ const Scene1WaxSeal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }>
           fontStyle: 'italic',
           fontSize: 34,
           color: '#6E5020',
-          marginTop: 24,
+          marginTop: 40,
         }}
       >
-        {lang === 'nl' ? 'Nederland • 2027' : 'Países Bajos • 2027'}
+        Yeraldin & Gerwin • 2027
       </p>
     </AbsoluteFill>
   );
 };
 
-// ==================== SCENE 2: COUPLE PHOTO & SOFT FLARE ====================
-const Scene2PhotoReveal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
-  const cardY = spring({
+// ==================== SCENE 2: THE ROYAL BAROQUE FLORAL ARCH CARTUCHE ====================
+const Scene2BaroqueCard: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
+  const cardScale = spring({
     frame,
     fps,
     config: { damping: 22, mass: 1.2 },
   });
 
-  const cardOpacity = interpolate(frame, [0, 25, 165, 195], [0, 1, 1, 0], {
+  const opacity = interpolate(frame, [0, 25, 170, 200], [0, 1, 1, 0], {
     extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
-  // Softer, prolonged golden destello flare
-  const flashOpacity = interpolate(frame, [20, 45, 80], [0, 0.75, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
-  const photoScale = interpolate(frame, [0, 195], [1.06, 1.0], {
     extrapolateRight: 'clamp',
   });
 
@@ -330,457 +264,343 @@ const Scene2PhotoReveal: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        opacity: cardOpacity,
-        transform: `translateY(${interpolate(cardY, [0, 1], [80, 0])}px)`,
-        padding: '0 80px',
+        opacity,
+        transform: `scale(${cardScale})`,
+        padding: '0 60px',
+      }}
+    >
+      {/* Baroque Floral Frame */}
+      <div
+        style={{
+          width: 780,
+          height: 1200,
+          borderRadius: 36,
+          overflow: 'hidden',
+          boxShadow: '0 45px 90px -15px rgba(42, 27, 14, 0.4), 0 0 0 2px rgba(212, 175, 55, 0.5)',
+          position: 'relative',
+        }}
+      >
+        <Img
+          src={staticFile('wooow_floral_frame_clean.jpg')}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+
+        {/* Central Overlay Typography */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: '130px 100px 160px 100px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          }}
+        >
+          {/* Monogram Seal */}
+          <div
+            style={{
+              width: 80,
+              height: 80,
+              borderRadius: '50%',
+              border: '1.5px solid rgba(197, 160, 89, 0.6)',
+              backgroundColor: 'rgba(255, 253, 247, 0.85)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: 16,
+              boxShadow: '0 4px 12px rgba(140, 103, 38, 0.15)',
+            }}
+          >
+            <span style={{ fontFamily: FONT_EDITORIAL, fontWeight: 700, fontSize: 32, color: '#58351C' }}>
+              Y&G
+            </span>
+          </div>
+
+          <p
+            style={{
+              fontFamily: FONT_SANS,
+              fontSize: 18,
+              textTransform: 'uppercase',
+              letterSpacing: 6,
+              color: BURGUNDY,
+              fontWeight: 700,
+              margin: '0 0 8px 0',
+            }}
+          >
+            {lang === 'nl' ? 'Huwelijksuitnodiging' : 'Save The Date & Invitación'}
+          </p>
+
+          <h2
+            style={{
+              fontFamily: FONT_SCRIPT,
+              fontSize: 90,
+              color: BURGUNDY,
+              lineHeight: 1.0,
+              margin: '6px 0',
+            }}
+          >
+            Yeraldin
+          </h2>
+          <span
+            style={{
+              fontFamily: FONT_SCRIPT,
+              fontSize: 56,
+              background: GOLD_METALLIC,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              margin: '0',
+            }}
+          >
+            &
+          </span>
+          <h2
+            style={{
+              fontFamily: FONT_SCRIPT,
+              fontSize: 90,
+              color: BURGUNDY,
+              lineHeight: 1.0,
+              margin: '6px 0 16px 0',
+            }}
+          >
+            Gerwin
+          </h2>
+
+          {/* Diamond Divider */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '8px 0' }}>
+            <span style={{ fontSize: 16, color: '#A98338' }}>✦</span>
+            <div style={{ width: 60, height: 1, backgroundColor: 'rgba(169, 131, 56, 0.5)' }} />
+            <span style={{ fontSize: 14, color: '#A98338' }}>❖</span>
+            <div style={{ width: 60, height: 1, backgroundColor: 'rgba(169, 131, 56, 0.5)' }} />
+            <span style={{ fontSize: 16, color: '#A98338' }}>✦</span>
+          </div>
+
+          <p
+            style={{
+              fontFamily: FONT_SERIF,
+              fontSize: 38,
+              fontWeight: 700,
+              color: '#2A1B0E',
+              letterSpacing: 4,
+              margin: '10px 0 2px 0',
+            }}
+          >
+            2027-05-01
+          </p>
+          <p
+            style={{
+              fontFamily: FONT_SANS,
+              fontSize: 16,
+              textTransform: 'uppercase',
+              letterSpacing: 4,
+              color: '#58351C',
+              fontWeight: 600,
+              margin: 0,
+            }}
+          >
+            {lang === 'nl' ? 'Groot Gala & Feest' : 'Gran Gala & Banquete'}
+          </p>
+        </div>
+      </div>
+
+      {/* Scroll indicator below */}
+      <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+        <span style={{ fontFamily: FONT_SANS, fontSize: 16, letterSpacing: 4, textTransform: 'uppercase', color: BURGUNDY, fontWeight: 700 }}>
+          SCROLL FOR MORE DETAILS
+        </span>
+        <div style={{ width: 22, height: 38, border: `2px solid ${BURGUNDY}`, borderRadius: 20, display: 'flex', justifyContent: 'center', paddingTop: 6 }}>
+          <div style={{ width: 6, height: 10, backgroundColor: BURGUNDY, borderRadius: 4 }} />
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// ==================== SCENE 3: THE VENUE (HOTEL REEHORST WATERCOLOR) ====================
+const Scene3Venue: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
+  const opacity = interpolate(frame, [0, 25, 170, 200], [0, 1, 1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const slideY = spring({
+    frame,
+    fps,
+    config: { damping: 22, mass: 1.2 },
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity,
+        transform: `translateY(${interpolate(slideY, [0, 1], [60, 0])}px)`,
+        padding: '0 60px',
+        textAlign: 'center',
+      }}
+    >
+      <h3
+        style={{
+          fontFamily: FONT_SCRIPT,
+          fontSize: 84,
+          color: BURGUNDY,
+          margin: '0 0 6px 0',
+        }}
+      >
+        {lang === 'nl' ? 'De Locatie' : 'The Venue'}
+      </h3>
+      <p
+        style={{
+          fontFamily: FONT_EDITORIAL,
+          fontStyle: 'italic',
+          fontSize: 34,
+          color: '#6E5020',
+          margin: '0 0 30px 0',
+        }}
+      >
+        Hotel & Congrescentrum ReeHorst
+      </p>
+
+      {/* Watercolor Venue Art */}
+      <div
+        style={{
+          width: 740,
+          height: 860,
+          borderRadius: 36,
+          overflow: 'hidden',
+          boxShadow: '0 35px 70px rgba(42, 27, 14, 0.3), 0 0 0 1.5px rgba(212, 175, 55, 0.5)',
+          position: 'relative',
+        }}
+      >
+        <Img
+          src={staticFile('venue_hotel_reehorst_luxury.jpg')}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+
+        {/* Circular GPS Pin Button */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 30,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 76,
+            height: 76,
+            borderRadius: '50%',
+            backgroundColor: '#FFF',
+            border: '3px solid #059669',
+            boxShadow: '0 12px 30px rgba(0,0,0,0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: 36,
+          }}
+        >
+          📍
+        </div>
+      </div>
+
+      <div style={{ marginTop: 28 }}>
+        <p style={{ fontFamily: FONT_SERIF, fontSize: 32, fontWeight: 700, color: '#2A1B0E', margin: 0 }}>
+          Bennekomseweg 24, 6717 LM Ede
+        </p>
+        <p style={{ fontFamily: FONT_SANS, fontSize: 20, color: '#8C6726', fontWeight: 600, marginTop: 6 }}>
+          Gelderland • {lang === 'nl' ? 'Nederland' : 'Países Bajos'} (3 min NS Ede-Wageningen)
+        </p>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// ==================== SCENE 4: ITINERARY & OPEN BAR ====================
+const Scene4Itinerary: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
+  const opacity = interpolate(frame, [0, 25, 170, 200], [0, 1, 1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const slideY = spring({
+    frame,
+    fps,
+    config: { damping: 22, mass: 1.2 },
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity,
+        transform: `translateY(${interpolate(slideY, [0, 1], [60, 0])}px)`,
+        padding: '0 60px',
       }}
     >
       <div
         style={{
           backgroundColor: '#FAF7F0',
           borderRadius: 38,
-          padding: '46px 40px',
+          padding: '48px 46px',
           width: '100%',
           maxWidth: 820,
           boxShadow: '0 40px 80px -15px rgba(42, 27, 14, 0.35), 0 0 0 1.5px rgba(212, 175, 55, 0.55)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          position: 'relative',
         }}
       >
-        <span
-          style={{
-            fontFamily: FONT_SANS,
-            fontSize: 20,
-            textTransform: 'uppercase',
-            letterSpacing: 8,
-            color: '#8C6726',
-            fontWeight: 600,
-            marginBottom: 22,
-          }}
-        >
-          {lang === 'nl' ? '✦ Onze Bruiloft ✦' : '✦ Nuestra Boda ✦'}
-        </span>
-
-        {/* Photo Container with Gilded Frame */}
-        <div
-          style={{
-            width: 580,
-            height: 720,
-            borderRadius: 26,
-            overflow: 'hidden',
-            border: '3px solid rgba(212, 175, 55, 0.7)',
-            boxShadow: '0 25px 50px rgba(0,0,0,0.25)',
-            position: 'relative',
-          }}
-        >
-          <Img
-            src={staticFile('geraldine_profile.jpg')}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              transform: `scale(${photoScale})`,
-            }}
-          />
-
-          {/* Golden Flash Flare (Destello Suave) */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'radial-gradient(circle, rgba(255,248,210,0.95) 0%, rgba(212,175,55,0.45) 50%, transparent 80%)',
-              opacity: flashOpacity,
-              pointerEvents: 'none',
-            }}
-          />
-
-          {/* Bottom Gradient Overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 'auto 0 0 0',
-              padding: '40px 20px 20px',
-              background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%)',
-              textAlign: 'center',
-              color: '#FFF',
-            }}
-          >
-            <p style={{ fontFamily: FONT_SERIF, fontSize: 36, margin: 0 }}>Yeraldin & Gerwin</p>
-            <p style={{ fontFamily: FONT_SANS, fontSize: 16, letterSpacing: 4, color: '#FFE8A3', marginTop: 4 }}>
-              {lang === 'nl' ? 'NEDERLAND • 2027' : 'PAÍSES BAJOS • 2027'}
-            </p>
-          </div>
-        </div>
-
-        <p
-          style={{
-            fontFamily: FONT_EDITORIAL,
-            fontStyle: 'italic',
-            fontSize: 32,
-            color: '#6E5020',
-            marginTop: 30,
-            marginBottom: 0,
-            textAlign: 'center',
-            lineHeight: 1.25,
-          }}
-        >
-          {lang === 'nl'
-            ? '“Samen met onze families willen we deze droom met jullie delen”'
-            : '“Junto a nuestras familias, queremos compartir este sueño con ustedes”'}
+        <h3 style={{ fontFamily: FONT_SCRIPT, fontSize: 72, color: BURGUNDY, margin: '0 0 8px 0' }}>
+          Itinerary
+        </h3>
+        <p style={{ fontFamily: FONT_SANS, fontSize: 18, textTransform: 'uppercase', letterSpacing: 6, color: '#8C6726', fontWeight: 700, marginBottom: 30 }}>
+          {lang === 'nl' ? '✦ Belangrijke Tijden ✦' : '✦ Momentos Clave ✦'}
         </p>
-      </div>
-    </AbsoluteFill>
-  );
-};
 
-// ==================== SCENE 3: DUAL DATES & ITINERARY ====================
-const Scene3Itinerary: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
-  const cardOpacity = interpolate(frame, [0, 25, 165, 195], [0, 1, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
-  const slideY = spring({
-    frame,
-    fps,
-    config: { damping: 22, mass: 1.2 },
-  });
-
-  return (
-    <AbsoluteFill
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        opacity: cardOpacity,
-        transform: `translateY(${interpolate(slideY, [0, 1], [70, 0])}px)`,
-        padding: '0 80px',
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: '#FAF7F0',
-          borderRadius: 38,
-          padding: '50px 42px',
-          width: '100%',
-          maxWidth: 840,
-          boxShadow: '0 40px 80px -15px rgba(42, 27, 14, 0.35), 0 0 0 1.5px rgba(212, 175, 55, 0.55)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: FONT_SANS,
-            fontSize: 20,
-            textTransform: 'uppercase',
-            letterSpacing: 8,
-            color: '#8C6726',
-            fontWeight: 600,
-            marginBottom: 10,
-          }}
-        >
-          {lang === 'nl' ? '✦ Twee Onvergetelijke Momenten ✦' : '✦ Dos Momentos Inolvidables ✦'}
-        </span>
-
-        <h2
-          style={{
-            fontFamily: FONT_SERIF,
-            fontSize: 54,
-            color: '#2A1B0E',
-            marginTop: 0,
-            marginBottom: 40,
-          }}
-        >
-          {lang === 'nl' ? 'Huwelijksdata' : 'Fechas de Celebración'}
-        </h2>
-
-        {/* Event 1: Civil Ceremony */}
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#FFFDF9',
-            border: '1.5px solid rgba(197, 160, 89, 0.45)',
-            borderRadius: 24,
-            padding: '28px 36px',
-            marginBottom: 26,
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            boxShadow: '0 10px 25px rgba(140, 103, 38, 0.08)',
-          }}
-        >
+        {/* Timeline Row 1: Civil */}
+        <div style={{ width: '100%', backgroundColor: '#FFFDF9', border: '1.5px solid rgba(197, 160, 89, 0.45)', borderRadius: 20, padding: '20px 28px', marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 16,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 3,
-                backgroundColor: '#F3E8D2',
-                color: '#58351C',
-                padding: '4px 14px',
-                borderRadius: 20,
-              }}
-            >
-              {lang === 'nl' ? 'Burgerlijk Huwelijk' : 'Ceremonia Civil'}
+            <span style={{ fontFamily: FONT_SANS, fontSize: 15, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, backgroundColor: '#F3E8D2', color: '#58351C', padding: '3px 12px', borderRadius: 15 }}>
+              21 ABRIL 2027
             </span>
-            <h3 style={{ fontFamily: FONT_SERIF, fontSize: 36, color: '#2A1B0E', margin: '12px 0 4px' }}>
-              {lang === 'nl' ? 'Huwelijksvoltrekking & Handtekening' : 'Enlace Civil & Firma Oficial'}
-            </h3>
-            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 24, color: '#6E5020', margin: 0 }}>
-              {lang === 'nl' ? 'Nederland • 10:00 uur' : 'Países Bajos • 10:00 hrs'}
+            <h4 style={{ fontFamily: FONT_SERIF, fontSize: 30, color: '#2A1B0E', margin: '8px 0 2px' }}>
+              {lang === 'nl' ? 'Burgerlijk Huwelijk' : 'Boda Civil Oficial'}
+            </h4>
+            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 22, color: '#6E5020', margin: 0 }}>
+              10:00 hrs • Países Bajos
             </p>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <span style={{ fontFamily: FONT_SERIF, fontSize: 52, fontWeight: 700, color: '#A98338' }}>21</span>
-            <span style={{ display: 'block', fontFamily: FONT_SANS, fontSize: 18, letterSpacing: 2, color: '#58351C', fontWeight: 600 }}>
-              {lang === 'nl' ? 'APRIL 2027' : 'ABRIL 2027'}
-            </span>
-          </div>
+          <span style={{ fontSize: 38 }}>💍</span>
         </div>
 
-        {/* Event 2: Grand Gala Celebration at Hotel ReeHorst */}
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#1A120B',
-            border: '2px solid rgba(212, 175, 55, 0.7)',
-            borderRadius: 24,
-            padding: '28px 36px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            boxShadow: '0 20px 40px rgba(42, 27, 14, 0.35)',
-            color: '#FFF',
-          }}
-        >
+        {/* Timeline Row 2: Banquet */}
+        <div style={{ width: '100%', backgroundColor: '#1A120B', border: '2px solid rgba(212, 175, 55, 0.7)', borderRadius: 20, padding: '20px 28px', marginBottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: '#FFF' }}>
           <div>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 16,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 3,
-                backgroundColor: 'rgba(212, 175, 55, 0.3)',
-                color: '#FFE8A3',
-                padding: '4px 14px',
-                borderRadius: 20,
-              }}
-            >
-              {lang === 'nl' ? 'Grote Viering' : 'Gran Celebración'}
+            <span style={{ fontFamily: FONT_SANS, fontSize: 15, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 2, backgroundColor: 'rgba(212, 175, 55, 0.3)', color: '#FFE8A3', padding: '3px 12px', borderRadius: 15 }}>
+              01 MAYO 2027 • REEHORST
             </span>
-            <h3 style={{ fontFamily: FONT_SERIF, fontSize: 36, color: '#FFF', margin: '12px 0 4px' }}>
-              Hotel ReeHorst (Ede)
-            </h3>
-            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 23, color: '#DFBE7D', margin: 0 }}>
-              {lang === 'nl' ? 'Diner 20:00 • Feest 22:00-02:00 uur' : 'Cena 20:00 • Fiesta 22:00-02:00 hrs'}
+            <h4 style={{ fontFamily: FONT_SERIF, fontSize: 30, color: '#FFF', margin: '8px 0 2px' }}>
+              {lang === 'nl' ? 'Diner & Feest' : 'Banquete & Gran Fiesta'}
+            </h4>
+            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 22, color: '#DFBE7D', margin: 0 }}>
+              20:00 - 02:00 hrs • Salón de Gala
             </p>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <span style={{ fontFamily: FONT_SERIF, fontSize: 52, fontWeight: 700, color: '#FFF2B2' }}>01</span>
-            <span style={{ display: 'block', fontFamily: FONT_SANS, fontSize: 18, letterSpacing: 2, color: '#DFBE7D', fontWeight: 600 }}>
-              {lang === 'nl' ? 'MEI 2027' : 'MAYO 2027'}
-            </span>
-          </div>
+          <span style={{ fontSize: 38 }}>🥂</span>
         </div>
-      </div>
-    </AbsoluteFill>
-  );
-};
 
-// ==================== SCENE 4: FAQ / PREGUNTAS FRECUENTES ====================
-const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
-  const cardOpacity = interpolate(frame, [0, 25, 165, 195], [0, 1, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
-  const slideY = spring({
-    frame,
-    fps,
-    config: { damping: 22, mass: 1.2 },
-  });
-
-  return (
-    <AbsoluteFill
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        opacity: cardOpacity,
-        transform: `translateY(${interpolate(slideY, [0, 1], [70, 0])}px)`,
-        padding: '0 80px',
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: '#FAF7F0',
-          borderRadius: 38,
-          padding: '48px 40px',
-          width: '100%',
-          maxWidth: 840,
-          boxShadow: '0 40px 80px -15px rgba(42, 27, 14, 0.35), 0 0 0 1.5px rgba(212, 175, 55, 0.55)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: FONT_SANS,
-            fontSize: 20,
-            textTransform: 'uppercase',
-            letterSpacing: 8,
-            color: '#8C6726',
-            fontWeight: 600,
-            marginBottom: 8,
-          }}
-        >
-          {lang === 'nl' ? '✦ Gastengids ✦' : '✦ Guía del Invitado ✦'}
-        </span>
-
-        <h2
-          style={{
-            fontFamily: FONT_SERIF,
-            fontSize: 52,
-            color: '#2A1B0E',
-            marginTop: 0,
-            marginBottom: 36,
-          }}
-        >
-          {lang === 'nl' ? 'Veelgestelde Vragen' : 'Preguntas Frecuentes'}
-        </h2>
-
-        {/* Item 1: Dress Code */}
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#FFFDF9',
-            border: '1.5px solid rgba(197, 160, 89, 0.45)',
-            borderRadius: 22,
-            padding: '22px 28px',
-            marginBottom: 20,
-            boxShadow: '0 8px 20px rgba(140, 103, 38, 0.08)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
-            <span style={{ fontSize: 24, color: '#C5A059' }}>✦</span>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 18,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 2,
-                color: '#58351C',
-              }}
-            >
-              {lang === 'nl' ? 'Kledingvoorschrift (Dress Code)' : 'Código de Vestimenta'}
-            </span>
-          </div>
-          <p
-            style={{
-              fontFamily: FONT_EDITORIAL,
-              fontSize: 26,
-              color: '#2A1B0E',
-              margin: '4px 0 0 36px',
-              lineHeight: 1.3,
-            }}
-          >
-            {lang === 'nl'
-              ? 'Gala & Black Tie • Wit & Goud (Feestzaal Zwart & Goud).'
-              : 'Gala & Black Tie Optional • Blanco & Dorado (Salón Negro & Dorado).'}
+        {/* Open Bar Highlight */}
+        <div style={{ width: '100%', backgroundColor: '#FAF2E2', border: '1.5px dashed rgba(212, 175, 55, 0.7)', borderRadius: 20, padding: '18px 24px', textAlign: 'center' }}>
+          <p style={{ fontFamily: FONT_SANS, fontSize: 16, textTransform: 'uppercase', letterSpacing: 3, color: BURGUNDY, fontWeight: 700, margin: '0 0 4px 0' }}>
+            🍸 {lang === 'nl' ? '4 Uur Open Bar Inbegrepen' : '4 Horas de Barra Libre Incluida'}
           </p>
-        </div>
-
-        {/* Item 2: Drinks & Open Bar */}
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#FFFDF9',
-            border: '1.5px solid rgba(197, 160, 89, 0.45)',
-            borderRadius: 22,
-            padding: '22px 28px',
-            marginBottom: 20,
-            boxShadow: '0 8px 20px rgba(140, 103, 38, 0.08)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
-            <span style={{ fontSize: 24, color: '#C5A059' }}>✦</span>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 18,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 2,
-                color: '#58351C',
-              }}
-            >
-              {lang === 'nl' ? 'Open Bar & Drankjes' : 'Barra Libre & Bebidas'}
-            </span>
-          </div>
-          <p
-            style={{
-              fontFamily: FONT_EDITORIAL,
-              fontSize: 26,
-              color: '#2A1B0E',
-              margin: '4px 0 0 36px',
-              lineHeight: 1.3,
-            }}
-          >
+          <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 22, color: '#2A1B0E', margin: 0 }}>
             {lang === 'nl'
-              ? 'Bier, wijn & frisdrank inbegrepen (4 uur feest) • Cocktails aan betaalbar.'
-              : 'Cerveza, vino y refrescos incluidos (4 hrs fiesta) • Cócteles en barra.'}
-          </p>
-        </div>
-
-        {/* Item 3: Travel & Stay */}
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#FFFDF9',
-            border: '1.5px solid rgba(197, 160, 89, 0.45)',
-            borderRadius: 22,
-            padding: '22px 28px',
-            boxShadow: '0 8px 20px rgba(140, 103, 38, 0.08)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
-            <span style={{ fontSize: 24, color: '#C5A059' }}>✦</span>
-            <span
-              style={{
-                fontFamily: FONT_SANS,
-                fontSize: 18,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: 2,
-                color: '#58351C',
-              }}
-            >
-              {lang === 'nl' ? 'Hotel & Trein' : 'Hotel ReeHorst & Llegada'}
-            </span>
-          </div>
-          <p
-            style={{
-              fontFamily: FONT_EDITORIAL,
-              fontSize: 26,
-              color: '#2A1B0E',
-              margin: '4px 0 0 36px',
-              lineHeight: 1.3,
-            }}
-          >
-            {lang === 'nl'
-              ? 'Hotel ReeHorst (Ede) • Op slechts 3 min lopen van station Ede-Wageningen.'
-              : 'Hotel ReeHorst (Ede) • A solo 3 min a pie de estación Ede-Wageningen.'}
+              ? 'Bier, wijn & frisdrank inbegrepen voor alle gasten.'
+              : 'Cerveza, vino y refrescos incluidos para todos los invitados.'}
           </p>
         </div>
       </div>
@@ -788,17 +608,16 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
   );
 };
 
-// ==================== SCENE 5: FINAL CALL TO ACTION & RSVP ====================
-const Scene5RSVPClose: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
-  const cardOpacity = interpolate(frame, [0, 25, 155, 185], [0, 1, 1, 0], {
+// ==================== SCENE 5: SAVE THE DATE & RSVP ====================
+const Scene5SaveTheDate: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = ({ frame, fps, lang }) => {
+  const opacity = interpolate(frame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
   });
 
   const scale = spring({
     frame,
     fps,
-    config: { damping: 20, mass: 1.1 },
+    config: { damping: 20, mass: 1.2 },
   });
 
   return (
@@ -808,92 +627,97 @@ const Scene5RSVPClose: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' 
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        opacity: cardOpacity,
-        textAlign: 'center',
+        opacity,
+        transform: `scale(${scale})`,
         padding: '0 80px',
+        textAlign: 'center',
       }}
     >
-      <div style={{ transform: `scale(${scale})`, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        {/* Monogram Seal */}
-        <div
-          style={{
-            width: 145,
-            height: 145,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 35% 30%, #FFFBE6 0%, #D4AF37 45%, #6B4716 100%)',
-            boxShadow: '0 25px 45px rgba(60, 36, 10, 0.5), inset 0 2px 4px rgba(255,255,255,0.8)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: 36,
-          }}
-        >
-          <span style={{ fontFamily: FONT_EDITORIAL, fontSize: 54, fontWeight: 700, color: '#FFF8DB' }}>
-            Y&G
-          </span>
-        </div>
-
-        <p
-          style={{
-            fontFamily: FONT_SANS,
-            fontSize: 22,
-            letterSpacing: 8,
-            textTransform: 'uppercase',
-            color: '#8C6726',
-            fontWeight: 700,
-            marginBottom: 12,
-          }}
-        >
-          {lang === 'nl' ? '✦ Bevestiging van Aanwezigheid ✦' : '✦ Confirmación de Asistencia ✦'}
-        </p>
-
-        <h2
-          style={{
-            fontFamily: FONT_SERIF,
-            fontSize: 72,
-            color: '#2A1B0E',
-            margin: '0 0 26px',
-          }}
-        >
-          {lang === 'nl' ? 'Wij Verheugen Ons!' : '¡Los Esperamos!'}
-        </h2>
-
-        <div
-          style={{
-            backgroundColor: '#2A1B0E',
-            color: '#FFF',
-            border: '2px solid rgba(212, 175, 55, 0.7)',
-            borderRadius: 50,
-            padding: '22px 50px',
-            fontSize: 26,
-            fontFamily: FONT_SANS,
-            letterSpacing: 4,
-            textTransform: 'uppercase',
-            fontWeight: 700,
-            boxShadow: '0 20px 45px rgba(42, 27, 14, 0.35)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 16,
-          }}
-        >
-          <span>{lang === 'nl' ? 'RSVP via WhatsApp' : 'RSVP vía WhatsApp'}</span>
-          <span>→</span>
-        </div>
-
-        <p
-          style={{
-            fontFamily: FONT_SANS,
-            fontSize: 20,
-            letterSpacing: 3,
-            color: '#8C6726',
-            fontWeight: 600,
-            marginTop: 30,
-            textTransform: 'uppercase',
-          }}
-        >
-          {lang === 'nl' ? '✦ Gelieve te reageren vóór 1 Februari 2027 ✦' : '✦ Confirmar antes del 01 de Febrero 2027 ✦'}
-        </p>
+      <div
+        style={{
+          width: 140,
+          height: 140,
+          borderRadius: '50%',
+          border: '2px solid rgba(212, 175, 55, 0.6)',
+          backgroundColor: '#FFFDF9',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: 30,
+          boxShadow: '0 15px 35px rgba(140, 103, 38, 0.2)',
+        }}
+      >
+        <span style={{ fontFamily: FONT_EDITORIAL, fontWeight: 700, fontSize: 56, color: '#58351C' }}>
+          Y&G
+        </span>
       </div>
+
+      <h2
+        style={{
+          fontFamily: FONT_SCRIPT,
+          fontSize: 100,
+          color: BURGUNDY,
+          lineHeight: 1.0,
+          margin: 0,
+        }}
+      >
+        Save The Date
+      </h2>
+
+      <p
+        style={{
+          fontFamily: FONT_SERIF,
+          fontSize: 48,
+          fontWeight: 700,
+          color: '#2A1B0E',
+          margin: '20px 0 10px',
+        }}
+      >
+        01 • MAYO • 2027
+      </p>
+
+      <p
+        style={{
+          fontFamily: FONT_SANS,
+          fontSize: 24,
+          textTransform: 'uppercase',
+          letterSpacing: 6,
+          color: '#8C6726',
+          fontWeight: 600,
+          margin: '0 0 40px 0',
+        }}
+      >
+        Hotel ReeHorst • Ede, Países Bajos
+      </p>
+
+      <div
+        style={{
+          backgroundColor: BURGUNDY,
+          borderRadius: 50,
+          padding: '18px 50px',
+          color: '#FFF',
+          fontFamily: FONT_SANS,
+          fontSize: 22,
+          fontWeight: 700,
+          letterSpacing: 4,
+          textTransform: 'uppercase',
+          boxShadow: '0 15px 35px rgba(91, 30, 40, 0.4)',
+        }}
+      >
+        ✦ RSVP: yeraldin-gerwin.wedding ✦
+      </div>
+
+      <p
+        style={{
+          fontFamily: FONT_EDITORIAL,
+          fontStyle: 'italic',
+          fontSize: 30,
+          color: '#6E5020',
+          marginTop: 40,
+        }}
+      >
+        {lang === 'nl' ? 'We kunnen niet wachten om dit te vieren!' : '¡Los esperamos para celebrar nuestro amor!'}
+      </p>
     </AbsoluteFill>
   );
 };
