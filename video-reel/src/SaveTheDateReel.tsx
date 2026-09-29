@@ -531,10 +531,10 @@ const Scene3Itinerary: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' 
               {lang === 'nl' ? 'Burgerlijk Huwelijk' : 'Ceremonia Civil'}
             </span>
             <h3 style={{ fontFamily: FONT_SERIF, fontSize: 36, color: '#2A1B0E', margin: '12px 0 4px' }}>
-              {lang === 'nl' ? 'Huwelijksvoltrekking & Handtekening' : 'Enlace Civil & Firma'}
+              {lang === 'nl' ? 'Huwelijksvoltrekking & Handtekening' : 'Enlace Civil & Firma Oficial'}
             </h3>
             <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 24, color: '#6E5020', margin: 0 }}>
-              {lang === 'nl' ? 'Nederland • 14:00 uur' : 'Países Bajos • 14:00 hrs'}
+              {lang === 'nl' ? 'Nederland • 10:00 uur' : 'Países Bajos • 10:00 hrs'}
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
@@ -545,11 +545,11 @@ const Scene3Itinerary: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' 
           </div>
         </div>
 
-        {/* Event 2: Grand Gala Celebration */}
+        {/* Event 2: Grand Gala Celebration at Hotel ReeHorst */}
         <div
           style={{
             width: '100%',
-            backgroundColor: '#2A1B0E',
+            backgroundColor: '#1A120B',
             border: '2px solid rgba(212, 175, 55, 0.7)',
             borderRadius: 24,
             padding: '28px 36px',
@@ -577,10 +577,10 @@ const Scene3Itinerary: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' 
               {lang === 'nl' ? 'Grote Viering' : 'Gran Celebración'}
             </span>
             <h3 style={{ fontFamily: FONT_SERIF, fontSize: 36, color: '#FFF', margin: '12px 0 4px' }}>
-              {lang === 'nl' ? 'Huwelijksfeest & Receptie' : 'Banquete & Gala'}
+              Hotel ReeHorst (Ede)
             </h3>
-            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 24, color: '#DFBE7D', margin: 0 }}>
-              {lang === 'nl' ? 'Kasteel & Hotel Nederland • 16:30 uur' : 'Kasteel & Hotel Holandés • 16:30 hrs'}
+            <p style={{ fontFamily: FONT_EDITORIAL, fontSize: 23, color: '#DFBE7D', margin: 0 }}>
+              {lang === 'nl' ? 'Diner 20:00 • Feest 22:00-02:00 uur' : 'Cena 20:00 • Fiesta 22:00-02:00 hrs'}
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
@@ -696,12 +696,12 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
             }}
           >
             {lang === 'nl'
-              ? 'Gala & Black Tie Optional • Heren smoking/donker pak, dames lange galajurk.'
-              : 'Gala & Black Tie Optional • Hombres traje formal/esmoquin, mujeres vestido largo.'}
+              ? 'Gala & Black Tie • Wit & Goud (Feestzaal Zwart & Goud).'
+              : 'Gala & Black Tie Optional • Blanco & Dorado (Salón Negro & Dorado).'}
           </p>
         </div>
 
-        {/* Item 2: Children & Party */}
+        {/* Item 2: Drinks & Open Bar */}
         <div
           style={{
             width: '100%',
@@ -725,7 +725,7 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
                 color: '#58351C',
               }}
             >
-              {lang === 'nl' ? 'Kinderen & Viering' : 'Niños y Acompañantes'}
+              {lang === 'nl' ? 'Open Bar & Drankjes' : 'Barra Libre & Bebidas'}
             </span>
           </div>
           <p
@@ -738,8 +738,8 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
             }}
           >
             {lang === 'nl'
-              ? 'Volwassenenfeest op 1 mei zodat iedereen zorgeloos kan dansen en genieten.'
-              : 'Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo.'}
+              ? 'Bier, wijn & frisdrank inbegrepen (4 uur feest) • Cocktails aan betaalbar.'
+              : 'Cerveza, vino y refrescos incluidos (4 hrs fiesta) • Cócteles en barra.'}
           </p>
         </div>
 
@@ -766,7 +766,7 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
                 color: '#58351C',
               }}
             >
-              {lang === 'nl' ? 'Reis & Verblijf' : 'Vuelos & Alojamiento'}
+              {lang === 'nl' ? 'Hotel & Trein' : 'Hotel ReeHorst & Llegada'}
             </span>
           </div>
           <p
@@ -779,8 +779,8 @@ const Scene4FAQ: React.FC<{ frame: number; fps: number; lang: 'es' | 'nl' }> = (
             }}
           >
             {lang === 'nl'
-              ? 'Vlieg naar Schiphol (AMS) • Kamerblok gereserveerd bij het feesthotel.'
-              : 'Vuelos directos a Schiphol (AMS) • Bloque de habitaciones reservado en hotel sede.'}
+              ? 'Hotel ReeHorst (Ede) • Op slechts 3 min lopen van station Ede-Wageningen.'
+              : 'Hotel ReeHorst (Ede) • A solo 3 min a pie de estación Ede-Wageningen.'}
           </p>
         </div>
       </div>

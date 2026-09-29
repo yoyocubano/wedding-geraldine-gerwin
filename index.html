@@ -99,17 +99,18 @@
         inset 0 1.5px 2.5px rgba(255, 255, 255, 0.95);
     }
 
-    /* Gilded double hairline border with corner flourishes */
+    /* Gilded double hairline border with handcrafted embroidery stitching effect */
     .gilded-border {
       position: relative;
-      border: 1px solid rgba(197, 160, 89, 0.6);
+      border: 1.5px solid rgba(197, 160, 89, 0.65);
     }
     .gilded-border::before {
       content: '';
       position: absolute;
-      inset: 8px;
-      border: 1px solid rgba(197, 160, 89, 0.32);
-      border-radius: calc(1.5rem - 8px);
+      inset: 7px;
+      border: 1px dashed rgba(212, 175, 55, 0.55);
+      border-radius: calc(1.5rem - 7px);
+      box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.12), 0 0 2px rgba(255, 255, 255, 0.7);
       pointer-events: none;
     }
 
@@ -449,7 +450,7 @@
 
         <!-- Calendar Buttons -->
         <div class="flex flex-col gap-2 max-w-xs mx-auto my-2">
-          <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Yeraldin+%26+Gerwin&dates=20270501T143000Z/20270502T020000Z&details=Gran+Celebraci%C3%B3n+de+Boda+de+Yeraldin+%26+Gerwin+en+Pa%C3%ADses+Bajos.&location=Pa%C3%ADses+Bajos" class="py-2 px-3.5 rounded-full bg-white border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-espresso shadow-xs hover:bg-champagne-100 flex items-center justify-center gap-2 cursor-pointer">
+          <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Yeraldin+%26+Gerwin+(ReeHorst,+Ede)&dates=20270501T180000Z/20270502T000000Z&details=Gran+Celebraci%C3%B3n+de+Boda+de+Yeraldin+%26+Gerwin+en+Hotel+ReeHorst+(Ede,+Pa%C3%ADses+Bajos).%0A%E2%80%A2+Cena:+20:00+a+22:00+hrs%0A%E2%80%A2+Fiesta:+22:00+a+02:00+hrs%0A%E2%80%A2+Vestimenta:+Gala+/+Black+Tie+Optional.&location=Hotel+ReeHorst,+Bennekomseweg+24,+6717+LM+Ede,+Netherlands" class="py-2 px-3.5 rounded-full bg-white border border-champagne-500/40 text-[11px] font-sans uppercase tracking-wider font-semibold text-espresso shadow-xs hover:bg-champagne-100 flex items-center justify-center gap-2 cursor-pointer">
             <svg class="w-3.5 h-3.5 text-champagne-600" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
             <span data-i18n="calendar.google">Añadir a Google Calendar</span>
           </a>
@@ -541,24 +542,30 @@
               <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-900 bg-champagne-200/80 px-2 py-0.5 rounded-full" data-i18n="event1.tag">Ceremonia Civil</span>
               <span class="font-serif text-xs text-champagne-700 italic">21 Abril 2027</span>
             </div>
-            <h3 class="font-serif text-sm text-espresso font-semibold" data-i18n="event1.title">Enlace Civil & Firma</h3>
-            <p class="text-[11px] text-champagne-900 mt-0.5" data-i18n="event1.place_desc">Países Bajos • 14:00 hrs</p>
+            <h3 class="font-serif text-sm text-espresso font-semibold" data-i18n="event1.title">Enlace Civil & Firma Oficial</h3>
+            <p class="text-[11px] text-champagne-900 mt-0.5" data-i18n="event1.place_desc">Países Bajos • 10:00 hrs</p>
           </div>
 
-          <!-- Event 2: Gala Celebration -->
-          <div class="p-3 rounded-xl bg-champagne-800 text-champagne-100 border border-champagne-500/60 shadow-sm">
-            <div class="flex items-center justify-between mb-0.5">
-              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-200 bg-white/15 px-2 py-0.5 rounded-full" data-i18n="event2.tag">Gran Celebración</span>
+          <!-- Event 2: Gala Celebration en Hotel ReeHorst, Ede -->
+          <div class="p-3.5 rounded-xl bg-[#1A120B] text-champagne-100 border border-champagne-500/70 shadow-md">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[9px] font-sans font-semibold uppercase tracking-wider text-champagne-200 bg-champagne-500/20 px-2 py-0.5 rounded-full border border-champagne-500/40" data-i18n="event2.tag">Gran Celebración</span>
               <span class="font-serif text-xs text-champagne-200 italic">01 Mayo 2027</span>
             </div>
-            <h3 class="font-serif text-sm text-white font-semibold" data-i18n="event2.title">Banquete & Fiesta de Gala</h3>
-            <p class="text-[11px] text-champagne-200 mt-0.5" data-i18n="event2.place_desc">Kasteel & Hotel Venue Holandés • 16:30 hrs</p>
-            <div class="mt-2 pt-1.5 border-t border-champagne-500/30 flex gap-2">
-              <a href="https://maps.google.com/?q=Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-1 bg-champagne-500/90 text-espresso rounded-lg text-[9px] font-sans uppercase tracking-wider font-semibold text-center flex items-center justify-center gap-1 hover:bg-champagne-400">
+            <h3 class="font-serif text-base text-white font-semibold flex items-center gap-1.5" data-i18n="event2.title">
+              <span>Hotel ReeHorst</span>
+              <span class="text-xs text-gold-metallic">✦ Ede</span>
+            </h3>
+            <p class="text-[11px] text-champagne-200 mt-1 leading-snug" data-i18n="event2.place_desc">
+              🍽️ <strong>Cena:</strong> 20:00 – 22:00 hrs &nbsp;|&nbsp; 🥂 <strong>Fiesta:</strong> 22:00 – 02:00 hrs<br>
+              <span class="text-champagne-300/80 text-[10px]">Bennekomseweg 24, 6717 LM Ede (a 3 min de estación Ede-Wageningen)</span>
+            </p>
+            <div class="mt-2.5 pt-2 border-t border-champagne-500/30 flex gap-2">
+              <a href="https://maps.google.com/?q=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Netherlands" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 bg-gradient-to-r from-champagne-500 to-champagne-400 text-espresso rounded-lg text-[9px] font-sans uppercase tracking-wider font-bold text-center flex items-center justify-center gap-1.5 hover:opacity-95 transition-opacity">
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
                 <span data-i18n="event2.map">Abrir en Maps</span>
               </a>
-              <button onclick="copyAddress('Países Bajos - Kasteel Venue')" class="px-2.5 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-[9px] font-sans uppercase tracking-wider text-champagne-100 flex items-center justify-center gap-1">
+              <button onclick="copyAddress('Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos')" class="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-[9px] font-sans uppercase tracking-wider text-champagne-100 flex items-center justify-center gap-1">
                 <span data-i18n="event1.copy">Copiar</span>
               </button>
             </div>
@@ -597,7 +604,7 @@
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a1">
-              <div class="py-2.5">Bloque de habitaciones reservado en el hotel de la fiesta (código disponible este viernes tras la firma). Opciones Airbnb a 10-15 minutos.</div>
+              <div class="py-2.5">Bloque de habitaciones reservado en el hotel sede de la celebración: <strong>Hotel ReeHorst (Ede)</strong>. También hay opciones Airbnb a 10-15 minutos.</div>
             </div>
           </div>
 
@@ -611,7 +618,7 @@
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a2">
-              <div class="py-2.5">Vuela a Schiphol (AMS). Trenes NS directos cada 15 min. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.</div>
+              <div class="py-2.5">Vuela a Schiphol (AMS). Trenes NS directos cada 15 min hasta la estación <strong>Ede-Wageningen</strong>, situada a solo 3 minutos a pie del Hotel ReeHorst. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.</div>
             </div>
           </div>
 
@@ -626,13 +633,13 @@
             </button>
             <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed">
               <div class="py-2.5">
-                <span data-i18n="faq.a3">Gala & Black Tie Optional. Hombres traje formal/esmoquin, mujeres vestido largo.</span>
+                <span data-i18n="faq.a3">Gala & Black Tie Optional. La celebración se viste de Blanco con Dorado, y el gran salón de gala en Negro con Dorado. Hombres: traje formal o esmoquin. Mujeres: vestido largo de gala.</span>
                 <div class="flex items-center gap-1.5 mt-2">
                   <span class="text-[9px] uppercase font-sans font-bold text-champagne-800">Tonos:</span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EB] border border-champagne-500 shadow-xs" title="Champagne"></span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EB] border border-champagne-500 shadow-xs" title="Champagne / Blanco"></span>
                   <span class="w-3.5 h-3.5 rounded-full bg-[#DFBE7D] shadow-xs" title="Gold"></span>
                   <span class="w-3.5 h-3.5 rounded-full bg-[#8C6726] shadow-xs" title="Bronze"></span>
-                  <span class="w-3.5 h-3.5 rounded-full bg-[#2A1B0E] shadow-xs" title="Black Tie"></span>
+                  <span class="w-3.5 h-3.5 rounded-full bg-[#1A120B] border border-champagne-500/50 shadow-xs" title="Black & Gold"></span>
                 </div>
               </div>
             </div>
@@ -648,7 +655,21 @@
               <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a4">
-              <div class="py-2.5">Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo.</div>
+              <div class="py-2.5">Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo (hasta las 02:00 AM).</div>
+            </div>
+          </div>
+
+          <!-- FAQ 5: Barra Libre & Bebidas -->
+          <div class="accordion-item border border-champagne-500/35 rounded-xl overflow-hidden bg-white/95 shadow-xs hover:border-champagne-500/60 transition-all duration-200">
+            <button onclick="toggleAccordion(this)" class="w-full px-3.5 py-2.5 text-left flex items-center justify-between gap-2.5 hover:bg-champagne-50/70 text-xs font-serif text-espresso font-semibold cursor-pointer">
+              <span class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-champagne-100 flex items-center justify-center text-xs shrink-0 border border-champagne-500/20">🥂</span>
+                <span data-i18n="faq.q5">¿Qué bebidas están incluidas? Barra Libre & Cócteles</span>
+              </span>
+              <svg class="accordion-icon w-3.5 h-3.5 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="accordion-content px-3.5 bg-champagne-50/70 border-t border-champagne-500/20 text-[11px] text-champagne-950 leading-relaxed" data-i18n="faq.a5">
+              <div class="py-2.5">Durante las 4 horas de fiesta contaremos con <strong>Barra Libre incluida de cervezas, vinos selectos y refrescos</strong>. Para quienes deseen cócteles o licores especiales, habrá una barra exclusiva disponible para adquirirlos de forma individual.</div>
             </div>
           </div>
 
@@ -778,24 +799,26 @@
         "events.subtitle": "Dos Momentos Inolvidables",
         "events.title": "Programa & Fechas",
         "event1.tag": "Ceremonia Civil",
-        "event1.title": "Enlace Civil & Firma",
-        "event1.place_desc": "Países Bajos • 14:00 hrs",
+        "event1.title": "Enlace Civil & Firma Oficial",
+        "event1.place_desc": "Países Bajos • 10:00 hrs",
         "event2.tag": "Gran Celebración",
         "event2.title": "Banquete & Fiesta de Gala",
-        "event2.place_desc": "Kasteel & Hotel Venue Holandés • 16:30 hrs",
+        "event2.place_desc": "Hotel ReeHorst (Ede) • Cena 20:00 hrs | Fiesta 22:00 a 02:00 hrs",
         "event2.map": "Abrir en Maps",
         "event1.copy": "Copiar",
         "deck.faq_next": "Guía & FAQ de Viaje",
         "faq.badge": "Guía del Invitado",
         "faq.title": "Preguntas Frecuentes",
         "faq.q1": "¿Dónde me hospedo? Hoteles & Airbnb",
-        "faq.a1": "Bloque de habitaciones reservado en el hotel de la fiesta (código disponible este viernes tras la firma). Opciones Airbnb a 10-15 minutos.",
+        "faq.a1": "Bloque de habitaciones reservado en el hotel sede de la celebración: Hotel ReeHorst (Ede). Opciones Airbnb a 10-15 minutos.",
         "faq.q2": "¿Cómo llego desde el aeropuerto?",
-        "faq.a2": "Vuela a Schiphol (AMS). Trenes NS directos cada 15 min. Puedes pagar con tarjeta bancaria Contactless (OV-Pay) directamente al pasar los torniquetes.",
+        "faq.a2": "Vuela a Schiphol (AMS). Trenes NS directos cada 15 min hasta la estación Ede-Wageningen, a solo 3 min a pie del Hotel ReeHorst. Pago contactless con OV-Pay en los torniquetes.",
         "faq.q3": "Código de Vestimenta (Dress Code)",
-        "faq.a3": "Gala & Black Tie Optional. Hombres traje formal/esmoquin, mujeres vestido largo.",
+        "faq.a3": "Gala & Black Tie Optional. La celebración se viste de Blanco con Dorado, y el gran salón de gala en Negro con Dorado. Hombres: traje formal o esmoquin. Mujeres: vestido largo de gala.",
         "faq.q4": "Niños y Acompañantes",
-        "faq.a4": "Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo.",
+        "faq.a4": "Celebración para adultos el 1 de Mayo para bailar y disfrutar al máximo (hasta las 02:00 AM).",
+        "faq.q5": "¿Qué bebidas están incluidas? Barra Libre & Cócteles",
+        "faq.a5": "Durante las 4 horas de fiesta contaremos con Barra Libre incluida de cervezas, vinos selectos y refrescos. Para quienes deseen cócteles o licores especiales, habrá una barra exclusiva disponible para adquirirlos de forma individual.",
         "deck.rsvp_next": "Confirmar Asistencia",
         "rsvp.title": "Confirmación de Asistencia",
         "rsvp.deadline": "✦ Antes del 01 de Febrero 2027 ✦",
@@ -835,23 +858,25 @@
         "events.title": "Schedule & Locations",
         "event1.tag": "Civil Ceremony",
         "event1.title": "Civil Union & Official Signing",
-        "event1.place_desc": "Netherlands • 2:00 PM",
+        "event1.place_desc": "The Netherlands • 10:00 AM",
         "event2.tag": "Grand Celebration",
         "event2.title": "Banquet & Gala Celebration",
-        "event2.place_desc": "Dutch Kasteel & Hotel Venue • 4:30 PM",
+        "event2.place_desc": "Hotel ReeHorst (Ede) • Dinner 8:00 PM | Party 10:00 PM to 2:00 AM",
         "event2.map": "Open in Maps",
         "event1.copy": "Copy",
         "deck.faq_next": "Guest Guide & FAQ",
         "faq.badge": "Guest Guide",
         "faq.title": "Frequently Asked Questions",
         "faq.q1": "Where to stay? Hotels & Airbnb",
-        "faq.a1": "Room block reserved at the celebration hotel (promotional code shared this Friday). Airbnb options within 10-15 mins.",
+        "faq.a1": "Room block reserved at the venue hotel: Hotel ReeHorst (Ede). Airbnb alternatives available within 10-15 mins.",
         "faq.q2": "How to get there from the airport?",
-        "faq.a2": "Fly to Amsterdam Schiphol (AMS). Direct NS trains every 15 min. Tap your contactless card or phone directly at the turnstiles (OV-Pay).",
+        "faq.a2": "Fly to Amsterdam Schiphol (AMS). Direct NS trains every 15 min to Ede-Wageningen station, just 3 mins walk to Hotel ReeHorst. Tap contactless (OV-Pay) at turnstiles.",
         "faq.q3": "Dress Code",
-        "faq.a3": "Gala & Black Tie Optional. Gentlemen: tuxedo or formal suit. Ladies: floor-length gown or cocktail dress.",
+        "faq.a3": "Gala & Black Tie Optional. Celebration theme is White & Gold, and the grand ballroom shines in Black & Gold. Gentlemen: formal suit or tuxedo. Ladies: floor-length evening gown.",
         "faq.q4": "Children & Plus-Ones",
-        "faq.a4": "Adults-only celebration on May 1st so everyone can dance and celebrate freely.",
+        "faq.a4": "Adults-only celebration on May 1st to dance and celebrate to the fullest (until 2:00 AM).",
+        "faq.q5": "What drinks are included? Open Bar & Cocktails",
+        "faq.a5": "During the 4-hour party, we offer an Open Bar of beers, selected wines, and soft drinks. For special cocktails and spirits, a dedicated cash bar will be available.",
         "deck.rsvp_next": "RSVP Confirmation",
         "rsvp.title": "RSVP Confirmation",
         "rsvp.deadline": "✦ Before February 01, 2027 ✦",
@@ -891,23 +916,25 @@
         "events.title": "Programma & Locaties",
         "event1.tag": "Burgerlijke Ceremonie",
         "event1.title": "Burgerlijk Huwelijk & Ondertekening",
-        "event1.place_desc": "Nederland • 14:00 uur",
+        "event1.place_desc": "Nederland • 10:00 uur",
         "event2.tag": "Groot Huwelijksfeest",
         "event2.title": "Banket & Feestelijke Gala",
-        "event2.place_desc": "Nederlands Kasteel & Hotel • 16:30 uur",
+        "event2.place_desc": "Hotel ReeHorst (Ede) • Diner 20:00 uur | Feest 22:00 tot 02:00 uur",
         "event2.map": "Open in Kaarten",
         "event1.copy": "Kopiëren",
         "deck.faq_next": "Gids & Reistips",
         "faq.badge": "Gastengids",
         "faq.title": "Veelgestelde Vragen",
         "faq.q1": "Waar te verblijven? Hotels & Airbnb",
-        "faq.a1": "Kamerblok gereserveerd bij het feesthotel (code beschikbaar na vrijdag). Airbnb alternatieven op 10-15 min.",
+        "faq.a1": "Kamerblok gereserveerd in het feesthotel: Hotel ReeHorst (Ede). Airbnb opties binnen 10-15 min.",
         "faq.q2": "Hoe kom ik er vanaf Schiphol?",
-        "faq.a2": "Vlieg naar Schiphol (AMS). Directe NS-treinen elke 15 min. In- en uitchecken met je contactloze bankpas (OV-Pay).",
+        "faq.a2": "Vlieg naar Schiphol (AMS). Directe NS-treinen elke 15 min naar station Ede-Wageningen, op slechts 3 minuten lopen van Hotel ReeHorst. In- en uitchecken met OV-Pay.",
         "faq.q3": "Kledingvoorschrift (Dress Code)",
-        "faq.a3": "Gala & Black Tie Optional. Heren smoking/donker pak, dames lange galajurk.",
+        "faq.a3": "Gala & Black Tie Optional. De viering is in Wit met Goud en de grote feestzaal in Zwart met Goud. Heren: smoking of net pak. Dames: lange galajurk.",
         "faq.q4": "Kinderen & Introducees",
-        "faq.a4": "Volwassenenfeest op 1 mei zodat iedereen zorgeloos kan dansen.",
+        "faq.a4": "Volwassenenfeest op 1 mei om zorgeloos te dansen en te vieren (tot 02:00 uur).",
+        "faq.q5": "Welke drankjes zijn inbegrepen? Open bar & Cocktails",
+        "faq.a5": "Tijdens het 4 uur durende feest is er een open bar met bier, geselecteerde wijnen en frisdrank inbegrepen. Speciale cocktails en sterke dranken zijn verkrijgbaar aan een aparte betaalbar.",
         "deck.rsvp_next": "Aanwezigheid Bevestigen",
         "rsvp.title": "Aanwezigheid Bevestigen",
         "rsvp.deadline": "✦ Vóór 01 Februari 2027 ✦",
@@ -1179,13 +1206,13 @@
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         "BEGIN:VEVENT",
-        "UID:wedding-geraldine-gerwin-20270501@wedding",
+        "UID:wedding-yeraldin-gerwin-20270501@wedding",
         "DTSTAMP:20260928T220000Z",
-        "DTSTART:20270501T143000Z",
-        "DTEND:20270502T020000Z",
-        "SUMMARY:Boda Yeraldin & Gerwin (Fiesta de Gala)",
-        "DESCRIPTION:Gran Celebración de Boda de Yeraldin & Gerwin en Países Bajos.\\nVestimenta: Black Tie / Gala.",
-        "LOCATION:Países Bajos (Holanda)",
+        "DTSTART:20270501T180000Z",
+        "DTEND:20270502T000000Z",
+        "SUMMARY:Boda Yeraldin & Gerwin (Fiesta de Gala en Hotel ReeHorst, Ede)",
+        "DESCRIPTION:Gran Celebración de Boda de Yeraldin & Gerwin en Hotel ReeHorst (Ede, Países Bajos).\\n• Cena: 20:00 - 22:00 hrs\\n• Fiesta: 22:00 - 02:00 hrs\\n• Vestimenta: Gala / Black Tie Optional.",
+        "LOCATION:Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos",
         "STATUS:CONFIRMED",
         "END:VEVENT",
         "END:VCALENDAR"
