@@ -79,8 +79,12 @@
   </script>
 
   <style>
-    body {
+    html {
       background-color: #FAF7F2;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: transparent;
       color: #1A120B;
       font-family: 'EB Garamond', serif;
       -webkit-font-smoothing: antialiased;
@@ -105,7 +109,7 @@
 
     /* Subtle Paper Texture */
     .paper-texture {
-      background-color: #FAF7F2;
+      background-color: transparent;
       background-image: 
         radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 75%),
         radial-gradient(circle at 1px 1px, rgba(160, 120, 50, 0.04) 1px, transparent 0);
@@ -128,6 +132,23 @@
   </style>
 </head>
 <body class="selection:bg-champagne-300 selection:text-espresso relative">
+
+  <!-- ==================== FIXED GLOBAL BACKGROUND (YERALDING & GERWIN PHOTO + BLUR ON SCROLL) ==================== -->
+  <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+    <img 
+      id="globalBgImg"
+      src="assets/geraldine_gerwin_portrait.jpg" 
+      alt="Yeralding & Gerwin Boda Real" 
+      class="w-full h-full object-cover object-[50%_25%] will-change-transform scale-105"
+      style="filter: blur(0px) brightness(0.9) contrast(1.05); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
+    />
+    <!-- Hero Dark Vignette Overlay for High-Contrast Text -->
+    <div id="heroBgVignette" class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75 transition-opacity duration-300 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-radial from-transparent via-black/20 to-black/40 pointer-events-none"></div>
+    
+    <!-- Warm Luxury Frosted Parchment Veil (fades in as user scrolls down, replacing flat paper) -->
+    <div id="scrollBgVeil" class="absolute inset-0 bg-[#FAF7F2] transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+  </div>
 
   <!-- ==================== FLOATING LUXURY NAVBAR ==================== -->
   <nav class="fixed top-4 inset-x-3 z-50 max-w-5xl mx-auto">
@@ -171,20 +192,8 @@
   </nav>
 
   <!-- ==================== HERO SECTION: CANVA-INSPIRED EDITORIAL ROMANCE ==================== -->
-  <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
     
-    <!-- Background Image with Soft Light & Vignette Overlay -->
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="assets/geraldine_gerwin_portrait.jpg" 
-        alt="Yeralding y Gerwin Boda Real" 
-        class="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05]"
-      />
-      <!-- Soft ambient gradient overlays -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75"></div>
-      <div class="absolute inset-0 bg-radial from-transparent via-black/20 to-black/60"></div>
-    </div>
-
     <!-- Central Floating Hero Content -->
     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 py-28 text-center text-white flex flex-col items-center justify-center">
       
@@ -255,8 +264,8 @@
   </header>
 
   <!-- ==================== AUDIO SECTION: "OUR WEDDING SONG" ==================== -->
-  <section class="py-10 px-4 bg-white/90 border-b border-champagne-500/20 relative">
-    <div class="max-w-md mx-auto p-4 rounded-2xl bg-champagne-50/80 border border-champagne-500/30 shadow-xs flex items-center justify-between gap-4">
+  <section class="py-10 px-4 bg-transparent border-b border-champagne-500/20 relative">
+    <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-espresso text-champagne-200 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md cursor-pointer">
           <svg id="songPlayIcon" class="w-5 h-5 ml-0.5 text-champagne-300" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -277,7 +286,7 @@
   </section>
 
   <!-- ==================== SECTION: PERSONAL LOVE LETTER / BIENVENIDA ==================== -->
-  <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-parchment paper-texture relative">
+  <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="welcome.subtitle">
@@ -289,7 +298,7 @@
       </h2>
 
       <!-- Exact Heartfelt Text as Requested by Geraldine in Audio -->
-      <div class="bg-white/95 border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury text-left relative">
+      <div class="bg-white/90 backdrop-blur-md border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury text-left relative">
         <!-- Delicate gold quotation mark -->
         <span class="font-serif text-6xl text-champagne-400/40 absolute top-4 left-6 select-none">“</span>
         
@@ -315,7 +324,7 @@
   </section>
 
   <!-- ==================== SECTION: COUNTDOWN ("UNTIL WE SAY I DO") ==================== -->
-  <section class="py-16 px-4 bg-white/70 border-y border-champagne-500/20 text-center relative">
+  <section class="py-16 px-4 bg-transparent border-y border-champagne-500/20 text-center relative">
     <div class="max-w-2xl mx-auto">
       
       <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Until</p>
@@ -328,19 +337,19 @@
 
       <!-- 4 Countdown Cards -->
       <div class="grid grid-cols-4 gap-3 max-w-md mx-auto my-6">
-        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
           <span id="cd-days" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">213</span>
           <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.days">DÍAS</span>
         </div>
-        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
           <span id="cd-hours" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">22</span>
           <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.hours">HORAS</span>
         </div>
-        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
           <span id="cd-mins" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">30</span>
           <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.mins">MINUTOS</span>
         </div>
-        <div class="bg-champagne-50/90 border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
           <span id="cd-secs" class="block font-serif text-3xl sm:text-4xl font-bold text-gold-metallic">00</span>
           <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.secs">SEGUNDOS</span>
         </div>
@@ -348,7 +357,7 @@
 
       <!-- Add to Calendar Buttons -->
       <div class="flex items-center justify-center gap-3 mt-6">
-        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-white border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-white/90 backdrop-blur-md border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
           <span>📅</span>
           <span data-i18n="countdown.google_cal">Google Calendar</span>
         </button>
@@ -362,7 +371,7 @@
   </section>
 
   <!-- ==================== SPECIAL YERALDING SECTION: CHECKLIST DEL INVITADO ==================== -->
-  <section id="checklist" class="py-20 px-4 sm:px-6 bg-champagne-50/70 relative border-b border-champagne-500/20">
+  <section id="checklist" class="py-20 px-4 sm:px-6 bg-transparent relative border-b border-champagne-500/20">
     <div class="max-w-3xl mx-auto">
       
       <div class="text-center mb-10">
@@ -378,7 +387,7 @@
       </div>
 
       <!-- Checklist Container -->
-      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury">
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury">
         
         <!-- Progress Bar Header -->
         <div class="mb-8 pb-6 border-b border-champagne-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -531,7 +540,7 @@
   </section>
 
   <!-- ==================== SPECIAL SECTION: TU VIAJE A PAÍSES BAJOS (NETHERLANDS) ==================== -->
-  <section id="tu-viaje" class="py-20 px-4 sm:px-6 bg-[#FAF5EB] relative">
+  <section id="tu-viaje" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-4xl mx-auto">
       
       <div class="text-center mb-12">
@@ -550,9 +559,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
         
         <!-- Step 1: Vuelo -->
-        <div class="bg-white/95 rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-champagne-100/90 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
               ✈️
             </div>
             <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-700" data-i18n="travel.step1_tag">Paso 1: Vuelo</span>
@@ -567,12 +576,12 @@
         </div>
 
         <!-- Step 2: Tren Directo NS -->
-        <div class="bg-gradient-to-b from-white to-champagne-50 rounded-3xl p-6 border-2 border-champagne-500/50 shadow-luxury flex flex-col justify-between relative overflow-hidden">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 border-2 border-champagne-500/50 shadow-luxury flex flex-col justify-between relative overflow-hidden">
           <div class="absolute top-3 right-3 bg-champagne-600 text-white text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
             Recomendado
           </div>
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-200 flex items-center justify-center text-2xl mb-4 border border-champagne-500/40">
+            <div class="w-12 h-12 rounded-2xl bg-champagne-200/90 flex items-center justify-center text-2xl mb-4 border border-champagne-500/40">
               🚆
             </div>
             <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-800" data-i18n="travel.step2_tag">Paso 2: Tren Directo</span>
@@ -587,9 +596,9 @@
         </div>
 
         <!-- Step 3: Llegada a Hotel ReeHorst -->
-        <div class="bg-white/95 rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/30 shadow-luxury flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
+            <div class="w-12 h-12 rounded-2xl bg-champagne-100/90 flex items-center justify-center text-2xl mb-4 border border-champagne-500/30">
               🚶
             </div>
             <span class="text-[10px] font-sans uppercase tracking-widest font-bold text-champagne-700" data-i18n="travel.step3_tag">Paso 3: Llegada</span>
@@ -606,7 +615,7 @@
       </div>
 
       <!-- Recommendation Card: Hotel ReeHorst Stay -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left flex flex-col sm:flex-row items-center gap-6">
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left flex flex-col sm:flex-row items-center gap-6">
         <div class="w-20 h-20 rounded-2xl bg-champagne-100 border border-champagne-500/30 flex items-center justify-center text-3xl shrink-0">
           🏨
         </div>
@@ -635,7 +644,7 @@
   </section>
 
   <!-- ==================== THE VENUE SECTION: HOTEL REEHORST ==================== -->
-  <section id="lugar" class="py-20 px-4 sm:px-6 bg-white relative">
+  <section id="lugar" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-4xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="venue.subtitle">
@@ -672,21 +681,21 @@
 
       <!-- Highlights Pills -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mt-8 text-left text-xs font-sans">
-        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+        <div class="p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-xs flex items-center gap-3">
           <span class="text-2xl">❄️/♨️</span>
           <div>
             <strong class="block text-espresso">Salón Climatizado</strong>
             <span class="text-champagne-700">Calefacción y A/C. ¡El clima exterior no importa!</span>
           </div>
         </div>
-        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+        <div class="p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-xs flex items-center gap-3">
           <span class="text-2xl">🚗</span>
           <div>
             <strong class="block text-espresso">Parking Gratuito</strong>
             <span class="text-champagne-700">Aparcamiento en el propio hotel para invitados.</span>
           </div>
         </div>
-        <div class="p-4 rounded-2xl bg-champagne-50 border border-champagne-500/30 shadow-xs flex items-center gap-3">
+        <div class="p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-xs flex items-center gap-3">
           <span class="text-2xl">✨</span>
           <div>
             <strong class="block text-espresso">Decoración de Gala</strong>
@@ -699,7 +708,7 @@
   </section>
 
   <!-- ==================== WEDDING TIMELINE: LA AGENDA DEL DÍA ==================== -->
-  <section id="itinerario" class="py-20 px-4 sm:px-6 bg-parchment paper-texture relative">
+  <section id="itinerario" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-3xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="timeline.subtitle">
@@ -719,7 +728,7 @@
           <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-champagne-600 flex items-center justify-center text-lg z-10 shadow-md shrink-0">
             💍
           </div>
-          <div class="bg-white/95 rounded-2xl p-5 sm:p-6 border border-champagne-500/30 shadow-luxury flex-1">
+          <div class="bg-white/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-champagne-500/30 shadow-luxury flex-1">
             <div class="flex items-center justify-between mb-1">
               <span class="font-cinzel text-lg sm:text-xl font-bold text-champagne-800">10:00 AM</span>
               <span class="text-[10px] uppercase font-sans font-bold px-2.5 py-0.5 rounded-full bg-champagne-100 text-champagne-800">
@@ -789,7 +798,7 @@
   </section>
 
   <!-- ==================== DETAILS & PROTOCOL (LO QUE NECESITAS SABER) ==================== -->
-  <section id="detalles" class="py-20 px-4 sm:px-6 bg-white relative">
+  <section id="detalles" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-4xl mx-auto">
       
       <div class="text-center mb-12">
@@ -808,7 +817,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
         
         <!-- Dress Code -->
-        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
           <div class="text-2xl mb-2">👗👔</div>
           <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.dress_title">Dress Code</h3>
           <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Casual Chic / Gala</p>
@@ -818,7 +827,7 @@
         </div>
 
         <!-- Niños / Adults Only -->
-        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
           <div class="text-2xl mb-2">👶✨</div>
           <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.kids_title">Adults Only</h3>
           <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Fiesta sin ataduras</p>
@@ -828,7 +837,7 @@
         </div>
 
         <!-- Alojamiento -->
-        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
           <div class="text-2xl mb-2">🏨🥂</div>
           <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.hotel_title">Hotel ReeHorst</h3>
           <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Todo en un solo lugar</p>
@@ -838,7 +847,7 @@
         </div>
 
         <!-- Regalos / Transferencia -->
-        <div class="bg-champagne-50/80 rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl p-5 border border-champagne-500/30 shadow-luxury text-center hover:shadow-xl transition-all">
           <div class="text-2xl mb-2">🎁💌</div>
           <h3 class="font-serif text-lg font-bold text-espresso mb-1" data-i18n="details.gifts_title">Mesa de Regalos</h3>
           <p class="text-[11px] font-sans font-bold text-champagne-700 uppercase tracking-wider mb-1">Para nuestra nueva vida</p>
@@ -850,7 +859,7 @@
       </div>
 
       <!-- Bank Transfer Box -->
-      <div class="bg-champagne-100/70 border border-champagne-500/40 rounded-2xl p-5 mb-14 max-w-xl mx-auto shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="bg-white/85 backdrop-blur-md border border-champagne-500/40 rounded-2xl p-5 mb-14 max-w-xl mx-auto shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="text-center sm:text-left">
           <span class="block text-[10px] uppercase font-sans text-champagne-800 font-bold tracking-wider">Número de Cuenta Oficial (ABN AMRO)</span>
           <span class="font-mono text-sm sm:text-base font-bold text-espresso select-all tracking-wider">NL91 ABNA 0417 1643 00</span>
@@ -863,7 +872,7 @@
       </div>
 
       <!-- FAQ Section Container -->
-      <div class="bg-champagne-50/60 rounded-3xl p-6 sm:p-10 border border-champagne-500/30 shadow-luxury">
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-champagne-500/30 shadow-luxury">
         
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-champagne-500/20">
           <div>
@@ -1210,7 +1219,7 @@
   </section>
 
   <!-- ==================== RSVP FORM: CONFIRMACIÓN DE ASISTENCIA ==================== -->
-  <section id="rsvp" class="py-20 px-4 sm:px-6 bg-[#FAF5EB] relative">
+  <section id="rsvp" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2">
@@ -1224,7 +1233,7 @@
       </p>
 
       <!-- Form Container -->
-      <form onsubmit="handleRSVPSubmit(event)" class="bg-white rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
+      <form onsubmit="handleRSVPSubmit(event)" class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
         
         <div>
           <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
@@ -1313,7 +1322,7 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="py-12 px-4 bg-darknoir text-center text-champagne-200/80 border-t border-champagne-500/30">
+  <footer class="py-12 px-4 bg-espresso/95 backdrop-blur-md text-center text-champagne-200/80 border-t border-champagne-500/30 relative z-10">
     <div class="max-w-md mx-auto">
       <div class="w-12 h-12 rounded-full border border-champagne-400/50 flex items-center justify-center mx-auto mb-3 bg-black/40">
         <span class="font-cormorant font-bold text-base text-champagne-200">Y&G</span>
@@ -1902,12 +1911,52 @@ END:VCALENDAR`;
       if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
     }
 
+    // ==================== DYNAMIC BLURRED PHOTO BACKGROUND ON SCROLL ====================
+    function handleBackgroundScroll() {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const bgImg = document.getElementById('globalBgImg');
+      const heroVignette = document.getElementById('heroBgVignette');
+      const scrollVeil = document.getElementById('scrollBgVeil');
+      
+      if (!bgImg) return;
+      
+      // Calculate progress across hero height (~500px)
+      const maxScroll = 500;
+      const progress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+      
+      // Blur increases progressively from 0px in Hero up to 14px in lower sections
+      const blurPx = progress * 14;
+      // Scale from 1.05 to 1.10 to prevent edge clipping during blur
+      const scale = 1.05 + progress * 0.05;
+      // Subtle brightness adjustment
+      const brightness = 0.90 + progress * 0.12;
+      
+      bgImg.style.filter = `blur(${blurPx.toFixed(1)}px) brightness(${brightness.toFixed(2)}) contrast(1.05)`;
+      bgImg.style.transform = `scale(${scale.toFixed(3)})`;
+      
+      // Hero dark vignette smoothly fades out as user scrolls down
+      if (heroVignette) {
+        heroVignette.style.opacity = (1 - progress * 0.8).toFixed(2);
+      }
+      
+      // Warm luxury frosted veil fades in (opacity: 0 -> 0.82) replacing flat paper tone
+      if (scrollVeil) {
+        scrollVeil.style.opacity = (progress * 0.82).toFixed(2);
+      }
+    }
+
+    window.addEventListener('scroll', handleBackgroundScroll, { passive: true });
+
     // Auto-open first FAQ item & load checklist on load
     window.addEventListener('DOMContentLoaded', () => {
+      handleBackgroundScroll();
       const firstFaq = document.querySelector('.faq-item');
       if (firstFaq) firstFaq.classList.add('active');
       loadChecklist();
     });
+
+    // Run immediately for initial render
+    handleBackgroundScroll();
   </script>
 </body>
 </html>
