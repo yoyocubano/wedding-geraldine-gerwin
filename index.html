@@ -8,7 +8,9 @@
   <meta name="description" content="Invitación de Boda oficial de Yeralding & Gerwin. 21 de Abril & 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
   <meta property="og:title" content="Yeralding & Gerwin — Boda 2027" />
   <meta property="og:description" content="Celebra nuestro amor en Países Bajos. Guía para invitados, horarios, mapa y confirmación RSVP." />
-  <meta property="og:image" content="assets/geraldine_gerwin_portrait.jpg" />
+  <meta property="og:image" content="assets/yeralding_gerwin_hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/yeralding_gerwin_hero.jpg" />
 
   <!-- Google Fonts: Luxury Editorial Serif, Romantic Calligraphy & Modern Clean Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -133,19 +135,15 @@
 </head>
 <body class="selection:bg-champagne-300 selection:text-espresso relative">
 
-  <!-- ==================== FIXED GLOBAL BACKGROUND (YERALDING & GERWIN PHOTO + BLUR ON SCROLL) ==================== -->
+  <!-- ==================== FIXED GLOBAL BACKGROUND (YERALDING & GERWIN AUTHENTIC PHOTO + BLUR ON SCROLL) ==================== -->
   <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
     <img 
       id="globalBgImg"
-      src="assets/geraldine_gerwin_portrait.jpg" 
+      src="assets/yeralding_gerwin_hero.jpg" 
       alt="Yeralding & Gerwin Boda Real" 
-      class="w-full h-full object-cover object-[50%_25%] will-change-transform scale-105"
-      style="filter: blur(0px) brightness(0.9) contrast(1.05); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
+      class="w-full h-full object-cover object-[50%_10%] will-change-transform scale-105"
+      style="filter: blur(0px) brightness(0.98) contrast(1.02); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
     />
-    <!-- Hero Dark Vignette Overlay for High-Contrast Text -->
-    <div id="heroBgVignette" class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75 transition-opacity duration-300 pointer-events-none"></div>
-    <div class="absolute inset-0 bg-radial from-transparent via-black/20 to-black/40 pointer-events-none"></div>
-    
     <!-- Warm Luxury Frosted Parchment Veil (fades in as user scrolls down, replacing flat paper) -->
     <div id="scrollBgVeil" class="absolute inset-0 bg-[#FAF7F2] transition-opacity duration-300 opacity-0 pointer-events-none"></div>
   </div>
@@ -195,72 +193,78 @@
   <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
     
     <!-- Central Floating Hero Content -->
-    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 py-28 text-center text-white flex flex-col items-center justify-center">
+    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 pt-16 pb-10 text-center text-white flex flex-col items-center justify-between min-h-screen">
       
-      <!-- Top Monogram Badge -->
-      <div class="w-14 h-14 rounded-full border border-champagne-400/60 bg-black/40 backdrop-blur-md flex items-center justify-center mb-6 shadow-glow-gold">
-        <span class="font-cormorant font-bold text-xl text-champagne-200 tracking-tight">Y&G</span>
-      </div>
-
-      <!-- Glowing Neon Script (Signature from Canva reference) -->
-      <div class="my-2 flex flex-col items-center">
-        <h2 class="font-script text-6xl sm:text-7xl lg:text-8xl text-white neon-script-glow leading-none transform -rotate-2 select-none">
-          We Say Yes
-        </h2>
-        <div class="w-10 h-10 -mt-2 text-champagne-300 animate-pulse">
-          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <!-- Top Group: Monogram & Glowing Script (In the sky above the castle) -->
+      <div class="flex flex-col items-center pt-2">
+        <!-- Top Monogram Badge -->
+        <div class="w-10 h-10 rounded-full border border-champagne-400/60 bg-black/40 backdrop-blur-md flex items-center justify-center mb-1 shadow-glow-gold">
+          <span class="font-cormorant font-bold text-base text-champagne-200 tracking-tight">Y&G</span>
         </div>
+
+        <!-- Glowing Neon Script -->
+        <div class="my-0.5 flex flex-col items-center">
+          <h2 class="font-script text-4xl sm:text-5xl lg:text-6xl text-white neon-script-glow leading-none transform -rotate-2 select-none drop-shadow-lg">
+            We Say Yes
+          </h2>
+          <div class="w-6 h-6 -mt-1 text-champagne-300 animate-pulse drop-shadow-md">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+        </div>
+
+        <!-- Together With Their Families -->
+        <p class="font-sans text-[10px] sm:text-xs uppercase tracking-[0.3em] text-champagne-100 font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.7)] mt-0.5" data-i18n="hero.together">
+          TOGETHER WITH THEIR FAMILIES
+        </p>
       </div>
 
-      <!-- Together With Their Families -->
-      <p class="font-sans text-xs sm:text-sm uppercase tracking-[0.35em] text-champagne-200/90 font-medium mt-4 mb-2" data-i18n="hero.together">
-        TOGETHER WITH THEIR FAMILIES
-      </p>
+      <!-- Bottom Group: Names, Dates & CTA -->
+      <div class="flex flex-col items-center w-full mt-auto mb-4">
+        <!-- Couple Names in Editorial Serif -->
+        <h1 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl tracking-[0.16em] text-white font-bold my-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+          YERALDING <span class="font-script text-3xl sm:text-4xl text-gold-metallic font-normal block sm:inline drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">&</span> GERWIN
+        </h1>
 
-      <!-- Couple Names in Editorial Serif -->
-      <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl tracking-[0.18em] text-white font-bold my-2 drop-shadow-md">
-        YERALDING <span class="font-script text-4xl sm:text-5xl text-gold-metallic font-normal block sm:inline">&</span> GERWIN
-      </h1>
+        <p class="font-cormorant italic text-base sm:text-lg text-champagne-100 max-w-lg mx-auto mb-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]" data-i18n="hero.invite_sub">
+          Tenemos el honor de invitarte a celebrar nuestra boda
+        </p>
 
-      <p class="font-cormorant italic text-lg sm:text-xl text-champagne-100 max-w-lg mx-auto my-3" data-i18n="hero.invite_sub">
-        Tenemos el honor de invitarte a celebrar nuestra boda
-      </p>
+        <!-- Date Banner (Elena & Daniel Style) -->
+        <div class="my-2 py-2 px-6 rounded-full bg-black/60 backdrop-blur-md border border-champagne-400/50 inline-flex items-center gap-3 text-center shadow-luxury">
+          <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold" data-i18n="hero.month">MAYO</span>
+          <span class="w-px h-5 bg-champagne-400/60"></span>
+          <span class="font-cinzel text-2xl sm:text-3xl font-bold text-white tracking-widest">01</span>
+          <span class="w-px h-5 bg-champagne-400/60"></span>
+          <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
+        </div>
 
-      <!-- Date Banner (Elena & Daniel Style) -->
-      <div class="my-6 py-3 px-8 rounded-full bg-black/40 backdrop-blur-md border border-champagne-400/40 inline-flex items-center gap-4 text-center">
-        <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold" data-i18n="hero.month">MAYO</span>
-        <span class="w-px h-6 bg-champagne-400/50"></span>
-        <span class="font-cinzel text-3xl sm:text-4xl font-bold text-white tracking-widest">01</span>
-        <span class="w-px h-6 bg-champagne-400/50"></span>
-        <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
-      </div>
+        <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] mt-1">
+          Hotel ReeHorst • Ede, Países Bajos
+        </p>
 
-      <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold">
-        Hotel ReeHorst • Ede, Países Bajos
-      </p>
+        <!-- Civil Wedding Date Subtitle -->
+        <p class="text-[11px] font-sans text-champagne-300 tracking-wider mt-0.5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+          <span data-i18n="hero.civil_note">Boda Civil:</span> <strong>21 Abril 2027 • 10:00h</strong>
+        </p>
 
-      <!-- Civil Wedding Date Subtitle -->
-      <p class="text-[11px] font-sans text-champagne-300/80 tracking-wider mt-1">
-        <span data-i18n="hero.civil_note">Boda Civil:</span> <strong>21 Abril 2027 • 10:00h</strong>
-      </p>
+        <!-- Comenzar Button -->
+        <div class="mt-4">
+          <a 
+            href="#bienvenida" 
+            class="px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 cursor-pointer"
+          >
+            <span data-i18n="hero.btn_start">Comenzar</span>
+            <span>↓</span>
+          </a>
+        </div>
 
-      <!-- Comenzar Button (As instructed by Geraldine: Simple and elegant) -->
-      <div class="mt-10">
-        <a 
-          href="#bienvenida" 
-          class="px-8 py-3.5 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 cursor-pointer"
-        >
-          <span data-i18n="hero.btn_start">Comenzar</span>
-          <span>↓</span>
+        <!-- Soft Scroll Down Arrow -->
+        <a href="#bienvenida" class="mt-4 text-white/80 hover:text-white transition-colors animate-bounce cursor-pointer" aria-label="Desplazar a Bienvenida">
+          <svg class="w-5 h-5 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
         </a>
       </div>
 
     </div>
-
-    <!-- Soft Scroll Down Arrow -->
-    <a href="#bienvenida" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-    </a>
   </header>
 
   <!-- ==================== AUDIO SECTION: "OUR WEDDING SONG" ==================== -->
@@ -1928,10 +1932,7 @@ END:VCALENDAR`;
       const blurPx = progress * 14;
       // Scale from 1.05 to 1.10 to prevent edge clipping during blur
       const scale = 1.05 + progress * 0.05;
-      // Subtle brightness adjustment
-      const brightness = 0.90 + progress * 0.12;
-      
-      bgImg.style.filter = `blur(${blurPx.toFixed(1)}px) brightness(${brightness.toFixed(2)}) contrast(1.05)`;
+      bgImg.style.filter = `blur(${blurPx.toFixed(1)}px)`;
       bgImg.style.transform = `scale(${scale.toFixed(3)})`;
       
       // Hero dark vignette smoothly fades out as user scrolls down
