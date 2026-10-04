@@ -195,7 +195,7 @@
         <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
       </div>
 
-      <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] mt-1">
+      <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] mt-1" data-i18n="hero.location">
         Hotel ReeHorst • Ede, Países Bajos
       </p>
 
@@ -341,7 +341,7 @@
         <div class="mb-6 pb-4 border-b border-champagne-500/20 flex items-center justify-between gap-4">
           <div class="flex items-center gap-2">
             <span id="checklistScore" class="font-serif text-xl font-bold text-espresso">0 de 8</span>
-            <span class="text-xs font-sans text-champagne-800">completados</span>
+            <span id="checklistCompletedLabel" class="text-xs font-sans text-champagne-800" data-i18n="checklist.completed">completados</span>
           </div>
           <div class="w-36 sm:w-48 bg-champagne-100 rounded-full h-2.5 overflow-hidden border border-champagne-500/30">
             <div id="checklistProgressBar" class="bg-gradient-to-r from-champagne-500 to-[#C5A059] h-full w-0 transition-all duration-300"></div>
@@ -577,6 +577,7 @@
             id="rsvpName" 
             required 
             placeholder="Tu nombre y apellido" 
+            data-i18n-placeholder="rsvp.name_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
           />
         </div>
@@ -607,6 +608,7 @@
             type="text" 
             id="rsvpDiet" 
             placeholder="Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher..." 
+            data-i18n-placeholder="rsvp.diet_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
           />
         </div>
@@ -620,6 +622,7 @@
             type="text" 
             id="rsvpSong" 
             placeholder="Título de la canción y artista" 
+            data-i18n-placeholder="rsvp.song_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
           />
         </div>
@@ -634,7 +637,7 @@
         </button>
       </form>
 
-      <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold">
+      <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold" data-i18n="rsvp.success">
         ¡Muchas gracias! Tu confirmación ha sido preparada y enviada con éxito.
       </div>
 
@@ -650,10 +653,10 @@
       <p class="font-cinzel text-base tracking-widest text-white font-bold">
         YERALDING Y GERWIN
       </p>
-      <p class="text-xs font-sans text-champagne-400 tracking-wider mt-1">
+      <p class="text-xs font-sans text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
         01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
       </p>
-      <p class="font-script text-2xl text-[#C5A059] mt-4">
+      <p class="font-script text-2xl text-[#C5A059] mt-4" data-i18n="footer.waiting">
         ¡Os esperamos con todo nuestro cariño!
       </p>
     </div>
@@ -675,6 +678,7 @@
         "hero.together": "Junto a nuestra familia",
         "hero.invite_sub": "Tenemos el honor de invitarte a celebrar nuestra boda",
         "hero.month": "MAYO",
+        "hero.location": "Hotel ReeHorst • Ede, Países Bajos",
         "hero.btn_start": "Comenzar",
         "audio.label": "Música de la Boda",
         "audio.title": "Alex Warren — Ordinary",
@@ -694,6 +698,7 @@
         "countdown.apple_cal": "Apple iCal (.ics)",
         "checklist.title": "¿Vienes a nuestra boda desde Madrid / España?",
         "checklist.intro": "Aquí tienes tu check list paso a paso para que organices el viaje sin estrés:",
+        "checklist.completed": "completados",
         "checklist.item1": "1. Confirmar asistencia",
         "checklist.item2": "2. Reservar vuelo",
         "checklist.item3": "3. Reservar el hospedaje",
@@ -720,72 +725,86 @@
         "rsvp.subtitle": "✦ Confirmación de Asistencia ✦",
         "rsvp.deadline": "Por favor confirma tu asistencia antes del 31 de Diciembre de 2026",
         "rsvp.name_label": "Nombre Completo *",
+        "rsvp.name_placeholder": "Tu nombre y apellido",
         "rsvp.attendance_label": "¿Asistirás a la celebración? *",
         "rsvp.yes": "¡Sí, asistiré! 🎉",
         "rsvp.no": "No podré asistir ❤️",
         "rsvp.diet_label": "Alergias o Restricciones Alimentarias (Muy importante para el chef)",
+        "rsvp.diet_placeholder": "Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher...",
         "rsvp.song_label": "Canción favorita de sugerencia para el DJ 🎵",
-        "rsvp.submit_btn": "Enviar Confirmación por WhatsApp"
+        "rsvp.song_placeholder": "Título de la canción y artista",
+        "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.success": "¡Muchas gracias! Tu confirmación ha sido preparada y enviada con éxito.",
+        "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
+        "footer.waiting": "¡Os esperamos con todo nuestro cariño!"
       },
       nl: {
         "nav.welcome": "Welkom",
         "nav.checklist": "Checklist",
         "nav.faq": "Veelgestelde Vragen",
         "nav.rsvp": "RSVP",
-        "hero.together": "Samen met onze familie",
-        "hero.invite_sub": "Wij hebben de eer u uit te nodigen voor onze bruiloft",
+        "hero.together": "Samen met onze families",
+        "hero.invite_sub": "Wij hebben de eer jullie uit te nodigen voor onze bruiloft",
         "hero.month": "MEI",
-        "hero.btn_start": "Beginnen",
-        "audio.label": "Bruiloft Muziek",
+        "hero.location": "Hotel ReeHorst • Ede, Nederland",
+        "hero.btn_start": "Ontdekken",
+        "audio.label": "Bruiloftsmuziek",
         "audio.title": "Alex Warren — Ordinary",
-        "audio.subtitle": "Piano Cover by Pianella Piano",
+        "audio.subtitle": "Piano Cover door Pianella Piano",
         "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
         "welcome.title": "Wij Gaan Trouwen!",
-        "welcome.text_p1": "Wij geven elkaar het ja-woord in de gemeente Wageningen, en willen dit groots vieren met jullie op 1 mei 2027 in Hotel ReeHorst in Ede, Nederland.",
-        "welcome.text_p2": "We weten dat dit voor velen van jullie betekent: koffers pakken, het vliegtuig instappen en hierheen reizen. Daarom hebben we deze gids samengesteld met alles wat u moet weten.",
-        "countdown.until": "Until",
+        "welcome.text_p1": "Wij geven elkaar het jawoord in de gemeente Wageningen, en willen dit groots met jullie vieren op 1 mei 2027 in Hotel ReeHorst in Ede, Nederland.",
+        "welcome.text_p2": "We weten dat dit voor velen van jullie betekent: koffers pakken, het vliegtuig instappen en hierheen reizen. Daarom hebben we deze gids samengesteld met alles wat jullie moeten weten om van de reis en vooral van het feest te genieten.",
+        "countdown.until": "Tot",
         "countdown.we_say_ido": "WE SAY I DO",
-        "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jou, voeg het toe aan je agenda zodat je het niet mist",
+        "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
         "countdown.days": "DAGEN",
         "countdown.hours": "UREN",
         "countdown.mins": "MINUTEN",
         "countdown.secs": "SECONDEN",
         "countdown.google_cal": "Google Agenda",
         "countdown.apple_cal": "Apple iCal (.ics)",
-        "checklist.title": "Komt u vanuit Spanje / Buitenland?",
-        "checklist.intro": "Hier is uw stapsgewijze checklist om uw reis stressvrij te plannen:",
+        "checklist.title": "Reis je naar onze bruiloft vanuit Spanje of elders?",
+        "checklist.intro": "Hier is je stapsgewijze checklist om je reis zonder stress te plannen:",
+        "checklist.completed": "voltooid",
         "checklist.item1": "1. Aanwezigheid bevestigen (RSVP)",
         "checklist.item2": "2. Vlucht boeken",
-        "checklist.item3": "3. Hotel boeken",
-        "checklist.item4": "4. Dieetwensen en allergieën doorgeven",
-        "checklist.item5": "5. Outfit voorbereiden",
-        "checklist.item6": "6. Treinvervoer of huurauto regelen",
+        "checklist.item3": "3. Hotelkamer reserveren",
+        "checklist.item4": "4. Dieetwensen en allergieën doorgeven voor het diner",
+        "checklist.item5": "5. Feestelijke outfit kiezen",
+        "checklist.item6": "6. Treinreis of huurauto regelen",
         "checklist.item7": "7. Koffers inpakken",
         "checklist.item8": "8. Komen vieren met ons! 🎉",
-        "faq.title": "Veelgestelde vragen",
-        "faq.q1": "✈️ 1. Aanbevolen luchthaven: Amsterdam Schiphol (AMS)",
-        "faq.a1": "Waar je ook vandaan komt, we raden aan om naar Amsterdam Schiphol (AMS) te vliegen. Dit is de makkelijkste optie om bij het hotel te komen, omdat je vanaf de luchthaven rechtstreeks de trein naar Ede-Wageningen kunt nemen, het dichtstbijzijnde station. ✈️🚆",
-        "faq.q2": "✈️ 2. Hoe kom je vanaf Schiphol bij Hotel ReeHorst?",
-        "faq.a2": "Heel gemakkelijk! 😊 Zodra je aankomt op Amsterdam Schiphol, kun je rechtstreeks vanaf de luchthaven de trein naar Ede-Wageningen nemen. Het treinkaartje kun je op de luchthaven kopen, voordat je naar het treinstation gaat.<br/><br/>De treinreis duurt ongeveer 50 minuten en een kaartje kost ongeveer € 18,80 per enkele reis. Bij aankomst op station Ede-Wageningen ligt het hotel recht tegenover het station. 🏨<br/><br/>Liever een auto huren? Hotel ReeHorst beschikt over gratis parkeergelegenheid voor hotelgasten. 🚗",
-        "faq.q3": "✦ 3. Waarom raden we aan om in Hotel ReeHorst te verblijven?",
-        "faq.a3": "Je kunt je kamer boeken in hetzelfde hotel waar we ons feest vieren. Er zijn eenpersoons- en familiekamers beschikbaar. 🏨<br/><br/>Zo kun je volop genieten van de feestavond en daarna gewoon naar boven gaan om te ontspannen, zonder je zorgen te hoeven maken over taxi's of vervoer als je van ver bent gekomen. 🥂<br/><br/>Zodra je je aanwezigheid op onze bruiloft hebt bevestigd, sturen we je een speciale reserveringscode, waarmee je je kamer rechtstreeks bij het hotel kunt reserveren.<br/><br/>Je kunt alle beschikbare kamertypes en meer informatie bekijken op de website van Hotel ReeHorst:<br/><a href=\"https://reehorst.nl/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">Hotel ReeHorst – Kamers</a>",
-        "faq.q4": "🍹 4. Open bar",
-        "faq.a4": "Bier, wijn en frisdranken zijn de hele avond inbegrepen. 🥂<br/><br/>Voor wie graag iets anders wil, zijn er ook speciale cocktails te bestellen aan de bar, voor eigen rekening. 🍹",
-        "faq.q5": "👗 5. Dresscode",
-        "faq.a5": "<strong>Casual Chic / Formeel</strong><br/><br/>Draag vooral je favoriete kleuren. Wit houden we met liefde gereserveerd voor de bruid. 🤍",
-        "faq.q6": "✦ 6. Hoe is het weer in mei?",
-        "faq.a6": "In mei is het weer in Nederland meestal fris en aangenaam, met temperaturen die doorgaans rond de 14 °C tot 18 °C liggen. 🌷<br/><br/>De viering vindt plaats in een afgesloten en verwarmde/gekoelde zaal in het hotel, zodat we tijdens het feest comfortabel zitten, ongeacht het weer buiten. 🥂<br/><br/>Voor momenten buiten het hotel — zoals tijdens het reizen, wandelen of andere verplaatsingen — is het goed om er rekening mee te houden dat het vooral in de middag en avond wat frisser kan worden. Als je het snel koud hebt, kan een lichte jas een goed idee zijn. 🧥",
-        "faq.q7": "⏱️🇳🇱 7. Op tijd komen in Nederland",
-        "faq.a7": "Belangrijk: hier betekent de afgesproken tijd ook echt de afgesproken tijd. 😅<br/><br/>In Nederland is 10 minuten te vroeg gewoon op tijd. Voor veel Latijns-Amerikanen valt 10 minuten te laat nog onder: 'Ik ben er bijna!' 😂<br/><br/>Dus laten we elkaar deze keer ergens in het midden ontmoeten! 😉 We raden aan om een paar minuten eerder te komen, zodat je niets van de viering hoeft te missen. 🥂",
+        "faq.title": "Veelgestelde Vragen",
+        "faq.q1": "1. ✈️ Aanbevolen luchthaven: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Waar je ook vandaan reist, we raden aan om naar <strong>Amsterdam Schiphol (AMS)</strong> te vliegen. Dit is de makkelijkste optie om bij het hotel te komen, omdat je vanaf de luchthaven rechtstreeks de intercity naar station Ede-Wageningen kunt nemen. ✈️",
+        "faq.q2": "2. ✈️ Hoe reis je vanaf Schiphol naar Hotel ReeHorst?",
+        "faq.a2": "Heel eenvoudig! 😊 Zodra je landt op Amsterdam Schiphol, kun je direct op de luchthaven de rechtstreekse trein nemen richting <strong>Ede-Wageningen</strong>. Treinkaartjes koop je op Schiphol Plaza bij de NS-automaten vóórdat je naar de perrons afdaalt. De treinreis duurt circa <strong>50 minuten</strong> en kost ongeveer <strong>€ 18,80 per enkele reis</strong>. Bij aankomst op station Ede-Wageningen ligt het hotel direct tegenover het station. 🏨<br/><br/>Kom je liever met een huurauto? Hotel ReeHorst beschikt over <strong>gratis parkeergelegenheid</strong> voor gasten. 🚗",
+        "faq.q3": "3. ✦ Waarom raden we aan om in Hotel ReeHorst te overnachten?",
+        "faq.a3": "Je kunt een kamer boeken in hetzelfde hotel waar we het feest vieren. Er zijn zowel comfortabele eenpersoons- als familiekamers beschikbaar, inclusief heerlijk ontbijt. 🏨<br/><br/>Zo kun je volop van de avond genieten en na afloop gewoon naar boven lopen om te slapen, zonder je zorgen te maken over taxi's of rijden na een drankje. 🥂<br/><br/>Zodra je je aanwezigheid bevestigt, <strong>ontvang je van ons een speciale boekingscode</strong> waarmee je rechtstreeks bij het hotel kunt reserveren.<br/><br/>Bekijk alle beschikbare kamertypes op de officiële website van Hotel ReeHorst:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. 🍹 Open bar",
+        "faq.a4": "Bier, wijn en frisdrank zijn de hele avond inbegrepen. 🥂<br/><br/>Voor wie graag een speciale cocktail wil, zijn deze verkrijgbaar aan de bar voor eigen rekening. 🍹",
+        "faq.q5": "5. 👗 Dresscode: Casual Chic / Feestelijk Formeel",
+        "faq.a5": "Draag vooral je favoriete feestelijke kleuren. Wit houden we met liefde gereserveerd voor de bruid. 🤍",
+        "faq.q6": "6. 🌷 Wat voor weer is het in mei en hoe is de feestzaal?",
+        "faq.a6": "In mei is het weer in Nederland meestal fris en aangenaam, met temperaturen rond de <strong>14 °C tot 18 °C</strong>. 🌷<br/><br/>De viering vindt plaats in een <strong>sfeervolle, overdekte en geklimatiseerde zaal</strong> in het hotel. We zitten dus heerlijk comfortabel, ongeacht het weer buiten. 🥂<br/><br/>Voor momenten buiten (vervoer, wandelen) kan het 's avonds afkoelen, dus een colbert of een lichte jas is aan te raden. 🧥",
+        "faq.q7": "7. ⏱️🇳🇱 Stiptheid in Nederland",
+        "faq.a7": "Belangrijk weetje: hier betekent de afgesproken tijd ook echt de afgesproken tijd! 😅<br/><br/>In Nederland is 10 minuten van tevoren aanwezig zijn de norm. Voor veel latino's valt 10 minuten te laat nog onder 'ik ben er bijna!'. 😂<br/><br/>Laten we elkaar deze keer tegemoetkomen! 😉 We raden aan om ruim op tijd te komen zodat je niets van het feest hoeft te missen. 🥂",
         "rsvp.subtitle": "✦ Aanwezigheid Bevestigen ✦",
-        "rsvp.deadline": "Gelieve uw aanwezigheid te bevestigen vóór 31 December 2026",
+        "rsvp.deadline": "Gelieve je aanwezigheid te bevestigen vóór 31 december 2026",
         "rsvp.name_label": "Volledige Naam *",
-        "rsvp.attendance_label": "Bent u aanwezig? *",
-        "rsvp.yes": "Ja, ik kom vieren! 🎉",
+        "rsvp.name_placeholder": "Je voor- en achternaam",
+        "rsvp.attendance_label": "Ben je aanwezig bij de viering? *",
+        "rsvp.yes": "Ja, ik ben erbij! 🎉",
         "rsvp.no": "Helaas kan ik niet ❤️",
         "rsvp.diet_label": "Dieetwensen of allergieën (zeer belangrijk voor de chef)",
-        "rsvp.song_label": "Favoriet nummer als suggestie voor de DJ 🎵",
-        "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp"
+        "rsvp.diet_placeholder": "Bijv.: Geen schaaldieren, glutenvrij (coeliakie), vegetarisch...",
+        "rsvp.song_label": "Favoriet verzoeknummer voor de DJ 🎵",
+        "rsvp.song_placeholder": "Titel van het nummer en artiest",
+        "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.success": "Hartelijk dank! Je bevestiging is voorbereid en succesvol verzonden.",
+        "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
+        "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!"
       },
       en: {
         "nav.welcome": "Welcome",
@@ -795,6 +814,7 @@
         "hero.together": "Together with our families",
         "hero.invite_sub": "We have the honor to invite you to celebrate our wedding",
         "hero.month": "MAY",
+        "hero.location": "Hotel ReeHorst • Ede, The Netherlands",
         "hero.btn_start": "Begin",
         "audio.label": "Wedding Music",
         "audio.title": "Alex Warren — Ordinary",
@@ -814,6 +834,7 @@
         "countdown.apple_cal": "Apple iCal (.ics)",
         "checklist.title": "Traveling from Abroad / Spain?",
         "checklist.intro": "Here is your step-by-step checklist to organize your trip with zero stress:",
+        "checklist.completed": "completed",
         "checklist.item1": "1. Confirm RSVP attendance",
         "checklist.item2": "2. Book flight",
         "checklist.item3": "3. Book accommodation",
@@ -840,12 +861,18 @@
         "rsvp.subtitle": "✦ Attendance Confirmation ✦",
         "rsvp.deadline": "Please confirm your attendance before December 31st, 2026",
         "rsvp.name_label": "Full Name *",
+        "rsvp.name_placeholder": "Your full name",
         "rsvp.attendance_label": "Will you attend? *",
         "rsvp.yes": "Yes, I will attend! 🎉",
         "rsvp.no": "Regretfully decline ❤️",
         "rsvp.diet_label": "Dietary requirements or allergies (very important for the chef)",
+        "rsvp.diet_placeholder": "e.g.: No shellfish, gluten-free, vegetarian, kosher...",
         "rsvp.song_label": "Favorite song suggestion for the DJ 🎵",
-        "rsvp.submit_btn": "Send Confirmation via WhatsApp"
+        "rsvp.song_placeholder": "Song title and artist",
+        "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.success": "Thank you so much! Your confirmation has been prepared and sent successfully.",
+        "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
+        "footer.waiting": "We look forward to celebrating with you!"
       }
     };
 
@@ -872,6 +899,15 @@
           el.innerHTML = i18n[lang][key];
         }
       });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (i18n[lang][key]) {
+          el.setAttribute('placeholder', i18n[lang][key]);
+        }
+      });
+
+      loadChecklist();
     }
 
     // ==================== AUDIO CONTROLLER (SOFT BACKGROUND AUTOPLAY) ====================
@@ -1039,18 +1075,33 @@ END:VCALENDAR`;
       e.preventDefault();
       const name = document.getElementById('rsvpName').value.trim();
       const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
-      const diet = document.getElementById('rsvpDiet').value.trim() || "Ninguna";
-      const song = document.getElementById('rsvpSong').value.trim() || "Ninguna sugerida";
+      const diet = document.getElementById('rsvpDiet').value.trim();
+      const song = document.getElementById('rsvpSong').value.trim();
 
-      let text = `💍 *CONFIRMACIÓN RSVP — BODA YERALDING Y GERWIN*\n\n`;
-      text += `👤 *Invitado:* ${name}\n`;
-      text += `✨ *Asistencia:* ${attend === 'si' ? '¡SÍ, ASISTIRÉ! 🎉' : 'Lamentablemente no podré asistir ❤️'}\n`;
+      const isNL = currentLang === 'nl';
+      const isEN = currentLang === 'en';
+
+      const header = isNL ? '💍 *RSVP BEVESTIGING — BRUILOFT YERALDING Y GERWIN*' : (isEN ? '💍 *RSVP CONFIRMATION — WEDDING YERALDING Y GERWIN*' : '💍 *CONFIRMACIÓN RSVP — BODA YERALDING Y GERWIN*');
+      const guestLabel = isNL ? '👤 *Gast:*' : (isEN ? '👤 *Guest:*' : '👤 *Invitado:*');
+      const attendLabel = isNL ? '✨ *Aanwezigheid:*' : (isEN ? '✨ *Attendance:*' : '✨ *Asistencia:*');
+      const yesText = isNL ? 'JA, IK BEN ERBIJ! 🎉' : (isEN ? 'YES, I WILL ATTEND! 🎉' : '¡SÍ, ASISTIRÉ! 🎉');
+      const noText = isNL ? 'Helaas kan ik niet ❤️' : (isEN ? 'Regretfully decline ❤️' : 'Lamentablemente no podré asistir ❤️');
+      const hotelNotice = isNL ? '🏨 *Viering in Hotel ReeHorst (01 Mei 2027)*' : (isEN ? '🏨 *Celebration at Hotel ReeHorst (May 1, 2027)*' : '🏨 *Celebración en Hotel ReeHorst (01 Mayo 2027)*');
+      const dietLabel = isNL ? '🥗 *Dieetwensen / Allergieën voor de chef:*' : (isEN ? '🥗 *Dietary / Allergies for the Chef:*' : '🥗 *Dieta / Alergias para el Chef:*');
+      const songLabel = isNL ? '🎵 *Verzoeknummer voor de DJ:*' : (isEN ? '🎵 *Song suggestion for the DJ:*' : '🎵 *Sugerencia de Canción para el DJ:*');
+      const noneDiet = isNL ? 'Geen' : (isEN ? 'None' : 'Ninguna');
+      const noneSong = isNL ? 'Geen voorkeur' : (isEN ? 'No preference' : 'Ninguna sugerida');
+      const footerMsg = isNL ? '_Bevestiging verzonden vóór 31/12/2026 via de officiële bruiloftswebsite._' : (isEN ? '_Confirmation sent before 31/12/2026 from official wedding website._' : '_Confirmación enviada antes del 31/12/2026 desde la web oficial de boda._');
+
+      let text = `${header}\n\n`;
+      text += `${guestLabel} ${name}\n`;
+      text += `${attendLabel} ${attend === 'si' ? yesText : noText}\n`;
       if (attend === 'si') {
-        text += `🏨 *Celebración en Hotel ReeHorst (01 Mayo 2027)*\n`;
-        text += `🥗 *Dieta / Alergias para el Chef:* ${diet}\n`;
-        text += `🎵 *Sugerencia de Canción para el DJ:* ${song}\n`;
+        text += `${hotelNotice}\n`;
+        text += `${dietLabel} ${diet || noneDiet}\n`;
+        text += `${songLabel} ${song || noneSong}\n`;
       }
-      text += `\n_Confirmación enviada antes del 31/12/2026 desde la web oficial de boda._`;
+      text += `\n${footerMsg}`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
@@ -1088,9 +1139,10 @@ END:VCALENDAR`;
 
       localStorage.setItem('yg_wedding_checklist_state', JSON.stringify(state));
 
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
       const scoreEl = document.getElementById('checklistScore');
       const barEl = document.getElementById('checklistProgressBar');
-      if (scoreEl) scoreEl.textContent = `${checkedCount} de ${allChecks.length}`;
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
       if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
     }
 
@@ -1109,9 +1161,10 @@ END:VCALENDAR`;
           });
         } catch(e) {}
       }
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
       const scoreEl = document.getElementById('checklistScore');
       const barEl = document.getElementById('checklistProgressBar');
-      if (scoreEl) scoreEl.textContent = `${checkedCount} de ${allChecks.length}`;
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
       if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
     }
 
