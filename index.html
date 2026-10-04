@@ -874,7 +874,7 @@
       });
     }
 
-    // ==================== AUDIO CONTROLLER ====================
+    // ==================== AUDIO CONTROLLER (SOFT BACKGROUND AUTOPLAY) ====================
     let isPlaying = false;
     const audio = document.getElementById('weddingMusic');
     const soundIconOn = document.getElementById('soundIconOn');
@@ -882,24 +882,92 @@
     const songPlayIcon = document.getElementById('songPlayIcon');
     const musicBars = document.getElementById('musicBars');
 
+    // Soft ambient volume (22%) - gentle piano background that doesn't overpower
+    const TARGET_VOLUME = 0.22;
+    let fadeTimer = null;
+    let gestureTriggered = false;
+
+    function updateAudioUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        if (soundIconOn) soundIconOn.classList.remove('hidden');
+        if (soundIconOff) soundIconOff.classList.add('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+        if (musicBars) musicBars.classList.remove('opacity-30');
+      } else {
+        if (soundIconOn) soundIconOn.classList.add('hidden');
+        if (soundIconOff) soundIconOff.classList.remove('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        if (musicBars) musicBars.classList.add('opacity-30');
+      }
+    }
+
+    function fadeInAudio(target = TARGET_VOLUME, duration = 1800) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      audio.volume = 0;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          updateAudioUI(true);
+          const steps = 30;
+          const stepTime = duration / steps;
+          const volStep = target / steps;
+          fadeTimer = setInterval(() => {
+            if (audio.volume + volStep < target) {
+              audio.volume += volStep;
+            } else {
+              audio.volume = target;
+              clearInterval(fadeTimer);
+            }
+          }, stepTime);
+        }).catch(err => {
+          updateAudioUI(false);
+          setupGestureAutoplay();
+        });
+      }
+    }
+
+    function fadeOutAudio(duration = 600) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      const steps = 20;
+      const stepTime = duration / steps;
+      const volStep = audio.volume / steps;
+      fadeTimer = setInterval(() => {
+        if (audio.volume - volStep > 0) {
+          audio.volume -= volStep;
+        } else {
+          audio.volume = 0;
+          audio.pause();
+          clearInterval(fadeTimer);
+          updateAudioUI(false);
+        }
+      }, stepTime);
+    }
+
     function toggleAudio() {
       if (!audio) return;
       if (isPlaying) {
-        audio.pause();
-        isPlaying = false;
-        soundIconOn.classList.add('hidden');
-        soundIconOff.classList.remove('hidden');
-        songPlayIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-        if (musicBars) musicBars.classList.add('opacity-30');
+        fadeOutAudio();
       } else {
-        audio.play().then(() => {
-          isPlaying = true;
-          soundIconOn.classList.remove('hidden');
-          soundIconOff.classList.add('hidden');
-          songPlayIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-          if (musicBars) musicBars.classList.remove('opacity-30');
-        }).catch(e => console.log("Audio waiting for user gesture", e));
+        fadeInAudio(TARGET_VOLUME);
       }
+    }
+
+    function triggerGesturePlay() {
+      if (gestureTriggered || isPlaying) return;
+      gestureTriggered = true;
+      fadeInAudio(TARGET_VOLUME);
+      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+        window.removeEventListener(ev, triggerGesturePlay);
+      });
+    }
+
+    function setupGestureAutoplay() {
+      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+        window.addEventListener(ev, triggerGesturePlay, { once: true, passive: true });
+      });
     }
 
     // ==================== LIVE COUNTDOWN TIMER ====================
@@ -1073,9 +1141,14 @@ END:VCALENDAR`;
     window.addEventListener('DOMContentLoaded', () => {
       handleBackgroundScroll();
       loadChecklist();
+      fadeInAudio(TARGET_VOLUME);
+      setupGestureAutoplay();
     });
 
     handleBackgroundScroll();
+    // Immediate pre-emptive play attempt
+    fadeInAudio(TARGET_VOLUME);
+    setupGestureAutoplay();
   </script>
 </body>
 </html>
