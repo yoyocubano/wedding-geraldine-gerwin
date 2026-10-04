@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yeralding y Gerwin — Nuestra Boda 2027</title>
+  <title>Gerwin & Yeralding — Nuestra Boda 2027</title>
   
-  <meta name="description" content="Invitación de Boda oficial de Yeralding y Gerwin. 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
-  <meta property="og:title" content="Yeralding y Gerwin — Boda 2027" />
+  <meta name="description" content="Invitación de Boda oficial de Gerwin & Yeralding. 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
+  <meta property="og:title" content="Gerwin & Yeralding — Boda 2027" />
   <meta property="og:description" content="Celebra nuestro amor en Países Bajos. Guía para invitados, transporte, hotel y confirmación RSVP." />
   <meta property="og:image" content="assets/yeralding_gerwin_hero.jpg" />
   <meta name="twitter:image" content="assets/yeralding_gerwin_hero.jpg" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <!-- Favicon: Minimización de foto de Gerwin & Yeralding -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- Google Fonts: Luxury Editorial Serif, Romantic Calligraphy & Modern Clean Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -120,7 +122,7 @@
     <img 
       id="globalBgImg"
       src="assets/yeralding_gerwin_hero.jpg" 
-      alt="Yeralding y Gerwin Boda Real" 
+      alt="Gerwin & Yeralding Boda Real" 
       class="w-full h-full object-cover object-top will-change-transform scale-105"
       style="filter: blur(0px) brightness(0.98) contrast(1.02); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
     />
@@ -132,12 +134,10 @@
   <nav class="fixed top-4 inset-x-3 z-50 max-w-5xl mx-auto">
     <div class="backdrop-blur-md bg-white/85 border border-champagne-500/30 rounded-full px-4 sm:px-6 py-2.5 shadow-luxury flex items-center justify-between transition-all duration-300">
       
-      <!-- Monogram & Couple Name -->
+      <!-- Couple Name & Photo Avatar (Sin sello Y&G) -->
       <a href="#hero" class="flex items-center gap-2.5 group cursor-pointer">
-        <div class="w-8 h-8 rounded-full border border-champagne-500/60 flex items-center justify-center bg-champagne-100/80 shadow-xs group-hover:scale-105 transition-transform">
-          <span class="font-cormorant font-bold text-xs text-champagne-800 tracking-tighter">Y&G</span>
-        </div>
-        <span class="font-cinzel text-xs tracking-widest text-espresso font-semibold hidden sm:inline">YERALDING Y GERWIN</span>
+        <img src="assets/favicon-32.png" alt="Gerwin & Yeralding" class="w-8 h-8 rounded-full border border-champagne-500/60 shadow-xs group-hover:scale-105 transition-transform object-cover" />
+        <span class="font-cinzel text-xs tracking-widest text-espresso font-semibold hidden sm:inline">GERWIN & YERALDING</span>
       </a>
 
       <!-- Quick Nav Links -->
@@ -179,7 +179,7 @@
 
       <!-- Couple Names in Great Vibes / Alex Brush Romantic Script in Solid Gold -->
       <h1 class="font-script text-5xl sm:text-6xl lg:text-7xl text-[#C5A059] leading-tight my-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
-        Yeralding y Gerwin
+        Gerwin & Yeralding
       </h1>
 
       <p class="font-cormorant italic text-base sm:text-xl text-champagne-100 max-w-lg mx-auto mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.invite_sub">
@@ -266,7 +266,7 @@
         <!-- Clean Solid Gold Signature Without Blur, Without Monogram Seal, Without Ede 2027 -->
         <div class="border-t border-champagne-500/20 pt-4 text-center sm:text-left">
           <span class="font-script text-3xl sm:text-4xl text-[#C5A059] font-normal block tracking-wide">
-            Yeralding y Gerwin
+            Gerwin & Yeralding
           </span>
         </div>
       </div>
@@ -647,11 +647,11 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="py-12 px-4 bg-espresso/95 backdrop-blur-md text-center text-champagne-200/80 border-t border-champagne-500/30 relative z-10">
     <div class="max-w-md mx-auto">
-      <div class="w-12 h-12 rounded-full border border-champagne-400/50 flex items-center justify-center mx-auto mb-3 bg-black/40">
-        <span class="font-cormorant font-bold text-base text-champagne-200">Y&G</span>
+      <div class="w-12 h-12 rounded-full border border-champagne-400/50 overflow-hidden mx-auto mb-3 shadow-luxury">
+        <img src="assets/favicon-64.png" alt="Gerwin & Yeralding" class="w-full h-full object-cover" />
       </div>
       <p class="font-cinzel text-base tracking-widest text-white font-bold">
-        YERALDING Y GERWIN
+        GERWIN & YERALDING
       </p>
       <p class="text-xs font-sans text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
         01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
@@ -1036,8 +1036,8 @@
 
     // ==================== CALENDAR INTEGRATION ====================
     function addToGoogleCalendar() {
-      const title = encodeURIComponent("Boda Yeralding y Gerwin — Gran Celebración");
-      const details = encodeURIComponent("Celebración de boda de Yeralding y Gerwin en Hotel ReeHorst, Ede, Países Bajos.");
+      const title = encodeURIComponent("Boda Gerwin & Yeralding — Gran Celebración");
+      const details = encodeURIComponent("Celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.");
       const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
       const dates = "20270501T180000Z/20270502T010000Z";
       window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
@@ -1046,16 +1046,16 @@
     function downloadICS() {
       const ics = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Yeralding y Gerwin Wedding 2027//ES
+PRODID:-//Gerwin & Yeralding Wedding 2027//ES
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:wedding-yeralding-gerwin-2027@reehorst
+UID:wedding-gerwin-yeralding-2027@reehorst
 DTSTAMP:20270501T180000Z
 DTSTART:20270501T180000Z
 DTEND:20270502T010000Z
-SUMMARY:Boda Yeralding y Gerwin
-DESCRIPTION:Gran celebración de boda de Yeralding y Gerwin en Hotel ReeHorst, Ede, Países Bajos.
+SUMMARY:Boda Gerwin & Yeralding
+DESCRIPTION:Gran celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.
 LOCATION:Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos
 STATUS:CONFIRMED
 END:VEVENT
@@ -1064,7 +1064,7 @@ END:VCALENDAR`;
       const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.setAttribute('download', 'Boda_Yeralding_y_Gerwin_2027.ics');
+      link.setAttribute('download', 'Boda_Gerwin_y_Yeralding_2027.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -1081,7 +1081,7 @@ END:VCALENDAR`;
       const isNL = currentLang === 'nl';
       const isEN = currentLang === 'en';
 
-      const header = isNL ? '💍 *RSVP BEVESTIGING — BRUILOFT YERALDING Y GERWIN*' : (isEN ? '💍 *RSVP CONFIRMATION — WEDDING YERALDING Y GERWIN*' : '💍 *CONFIRMACIÓN RSVP — BODA YERALDING Y GERWIN*');
+      const header = isNL ? '💍 *RSVP BEVESTIGING — BRUILOFT GERWIN & YERALDING*' : (isEN ? '💍 *RSVP CONFIRMATION — WEDDING GERWIN & YERALDING*' : '💍 *CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING*');
       const guestLabel = isNL ? '👤 *Gast:*' : (isEN ? '👤 *Guest:*' : '👤 *Invitado:*');
       const attendLabel = isNL ? '✨ *Aanwezigheid:*' : (isEN ? '✨ *Attendance:*' : '✨ *Asistencia:*');
       const yesText = isNL ? 'JA, IK BEN ERBIJ! 🎉' : (isEN ? 'YES, I WILL ATTEND! 🎉' : '¡SÍ, ASISTIRÉ! 🎉');
