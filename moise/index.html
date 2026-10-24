@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Gerwin &amp; Yeralding — Nuestra Boda 2027</title>
+<meta property="og:title" content="Gerwin &amp; Yeralding — Nuestra Boda 2027"/>
+<meta property="og:description" content="Celebra nuestro amor en Países Bajos. Programa, hotel y confirmación RSVP."/>
+<meta property="og:image" content="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/yeralding_gerwin_hero.jpg"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon-32.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
@@ -134,7 +140,9 @@ footer{max-width:680px;margin:56px auto 0;padding:32px 24px 56px;text-align:cent
 <label><input type="radio" name="ra" value="no"/> <span data-i18n="rsvp.no"></span></label></div>
 <label class="f" data-i18n="rsvp.diet_label"></label><input type="text" id="rd" data-i18n-placeholder="rsvp.diet_placeholder"/>
 <label class="f" data-i18n="rsvp.song_label"></label><input type="text" id="rs" data-i18n-placeholder="rsvp.song_placeholder"/>
-<p class="center"><button class="btn" type="submit" data-i18n="rsvp.submit_btn"></button></p></form>
+<p class="center"><button class="btn" type="submit" data-i18n="rsvp.submit_btn"></button></p>
+<p class="center" style="margin-top:14px"><button class="btn" style="background:#fff;color:var(--ink);border:1px solid var(--line)" type="button" onclick="rsvpMail(event)" data-i18n="rsvp.email_btn"></button></p>
+<p class="center" style="font-size:16px"><span data-i18n="rsvp.email_note"></span> <a href="mailto:rondonyeralding@gmail.com">rondonyeralding@gmail.com</a></p></form>
 <p id="ok" style="display:none" class="card center" data-i18n="rsvp.success"></p></section>
 
 <section><p class="eyebrow" style="text-align:center" data-i18n="guia.subtitle"></p>
@@ -216,6 +224,8 @@ footer{max-width:680px;margin:56px auto 0;padding:32px 24px 56px;text-align:cent
         "rsvp.song_label": "Canción favorita de sugerencia para el DJ 🎵",
         "rsvp.song_placeholder": "Título de la canción y artista",
         "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.email_btn": "Enviar confirmación por correo",
+        "rsvp.email_note": "o escríbenos a",
         "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
@@ -332,6 +342,8 @@ footer{max-width:680px;margin:56px auto 0;padding:32px 24px 56px;text-align:cent
         "rsvp.song_label": "Favoriet verzoeknummer voor de DJ 🎵",
         "rsvp.song_placeholder": "Titel van het nummer en artiest",
         "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.email_btn": "Bevestiging verzenden per e-mail",
+        "rsvp.email_note": "of schrijf ons op",
         "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
@@ -448,6 +460,8 @@ footer{max-width:680px;margin:56px auto 0;padding:32px 24px 56px;text-align:cent
         "rsvp.song_label": "Favorite song suggestion for the DJ 🎵",
         "rsvp.song_placeholder": "Song title and artist",
         "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.email_btn": "Send confirmation by email",
+        "rsvp.email_note": "or write to us at",
         "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
         "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
         "footer.waiting": "We look forward to celebrating with you!",
@@ -513,7 +527,7 @@ function updCheck(){ const c=document.querySelectorAll('.mcheck'); let n=0; c.fo
   try{localStorage.setItem('moise_wedding_checklist',JSON.stringify([...c].map(x=>x.checked)));}catch(e){} }
 function loadCheck(){ try{const s=JSON.parse(localStorage.getItem('moise_wedding_checklist')||'null');
   if(s){document.querySelectorAll('.mcheck').forEach((x,i)=>{if(s[i])x.checked=true;});}}catch(e){} updCheck(); }
-function rsvp(e){ e.preventDefault();
+function buildRsvpText(){
   const name=document.getElementById('rn').value.trim(), em=document.getElementById('re').value.trim(),
         ph=document.getElementById('rp').value.trim(), di=document.getElementById('rd').value.trim(),
         so=document.getElementById('rs').value.trim(),
@@ -523,8 +537,13 @@ function rsvp(e){ e.preventDefault();
   let t=H+'\n\n'+name+'\n'+(at==='si'?(L==='nl'?'JA, IK BEN ERBIJ!':(L==='en'?'YES, I WILL ATTEND!':'¡SÍ, ASISTIRÉ!')):(L==='nl'?'Helaas kan ik niet':(L==='en'?'Regretfully decline':'Lamentablemente no podré asistir')))+'\n';
   if(em)t+='Email: '+em+'\n'; if(ph)t+='Tel: '+ph+'\n';
   if(at==='si'){ t+='Hotel ReeHorst (01-05-2027)\n'; t+='Dieta/Alergias: '+(di||'-')+'\n'; t+='Canción DJ: '+(so||'-')+'\n'; }
+  return t; }
+function rsvp(e){ e.preventDefault(); const t=buildRsvpText();
   document.getElementById('ok').style.display='block';
   window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(t),'_blank'); }
+function rsvpMail(e){ e.preventDefault(); const t=buildRsvpText();
+  document.getElementById('ok').style.display='block';
+  window.location.href='mailto:rondonyeralding@gmail.com?subject='+encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')+'&body='+encodeURIComponent(t); }
 const target=new Date('2027-05-01T19:30:00+02:00').getTime();
 setInterval(()=>{ let d=target-Date.now(); if(d<0)d=0;
   document.getElementById('d').textContent=Math.floor(d/864e5);

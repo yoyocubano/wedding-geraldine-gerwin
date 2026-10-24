@@ -796,6 +796,18 @@
           <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
           <span>💌</span>
         </button>
+        <button
+          type="button"
+          onclick="handleRSVPMail(event)"
+          class="w-full py-4 rounded-full bg-white border-2 border-champagne-500/60 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span data-i18n="rsvp.email_btn">Enviar confirmación por correo</span>
+          <span>✉️</span>
+        </button>
+        <p class="text-center text-xs font-sans text-champagne-800 mt-2">
+          <span data-i18n="rsvp.email_note">o escríbenos a</span>
+          <a href="mailto:rondonyeralding@gmail.com" class="font-bold underline">rondonyeralding@gmail.com</a>
+        </p>
       </form>
 
       <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold" data-i18n="rsvp.success">
@@ -920,6 +932,8 @@
         "rsvp.song_label": "Canción favorita de sugerencia para el DJ 🎵",
         "rsvp.song_placeholder": "Título de la canción y artista",
         "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.email_btn": "Enviar confirmación por correo",
+        "rsvp.email_note": "o escríbenos a",
         "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
@@ -1036,6 +1050,8 @@
         "rsvp.song_label": "Favoriet verzoeknummer voor de DJ 🎵",
         "rsvp.song_placeholder": "Titel van het nummer en artiest",
         "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.email_btn": "Bevestiging verzenden per e-mail",
+        "rsvp.email_note": "of schrijf ons op",
         "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
@@ -1152,6 +1168,8 @@
         "rsvp.song_label": "Favorite song suggestion for the DJ 🎵",
         "rsvp.song_placeholder": "Song title and artist",
         "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.email_btn": "Send confirmation by email",
+        "rsvp.email_note": "or write to us at",
         "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
         "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
         "footer.waiting": "We look forward to celebrating with you!",
@@ -1441,6 +1459,53 @@ END:VCALENDAR`;
       const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
       setTimeout(() => {
         window.open(waUrl, '_blank');
+      }, 700);
+    }
+
+    function handleRSVPMail(e) {
+      e.preventDefault();
+      const name = document.getElementById('rsvpName').value.trim();
+      const email = document.getElementById('rsvpEmail').value.trim();
+      const phone = document.getElementById('rsvpPhone').value.trim();
+      const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
+      const diet = document.getElementById('rsvpDiet').value.trim();
+      const song = document.getElementById('rsvpSong').value.trim();
+
+      const isNL = currentLang === 'nl';
+      const isEN = currentLang === 'en';
+
+      const header = isNL ? '💍 *RSVP BEVESTIGING — BRUILOFT GERWIN & YERALDING*' : (isEN ? '💍 *RSVP CONFIRMATION — WEDDING GERWIN & YERALDING*' : '💍 *CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING*');
+      const guestLabel = isNL ? '👤 *Gast:*' : (isEN ? '👤 *Guest:*' : '👤 *Invitado:*');
+      const emailLabel = isNL ? '📧 *E-mail:*' : (isEN ? '📧 *Email:*' : '📧 *Correo:*');
+      const phoneLabel = isNL ? '📱 *Telefoon:*' : (isEN ? '📱 *Phone:*' : '📱 *Teléfono:*');
+      const attendLabel = isNL ? '✨ *Aanwezigheid:*' : (isEN ? '✨ *Attendance:*' : '✨ *Asistencia:*');
+      const yesText = isNL ? 'JA, IK BEN ERBIJ! 🎉' : (isEN ? 'YES, I WILL ATTEND! 🎉' : '¡SÍ, ASISTIRÉ! 🎉');
+      const noText = isNL ? 'Helaas kan ik niet ❤️' : (isEN ? 'Regretfully decline ❤️' : 'Lamentablemente no podré asistir ❤️');
+      const hotelNotice = isNL ? '🏨 *Viering in Hotel ReeHorst (01 Mei 2027)*' : (isEN ? '🏨 *Celebration at Hotel ReeHorst (May 1, 2027)*' : '🏨 *Celebración en Hotel ReeHorst (01 Mayo 2027)*');
+      const dietLabel = isNL ? '🥗 *Dieetwensen / Allergieën voor de chef:*' : (isEN ? '🥗 *Dietary / Allergies for the Chef:*' : '🥗 *Dieta / Alergias para el Chef:*');
+      const songLabel = isNL ? '🎵 *Verzoeknummer voor de DJ:*' : (isEN ? '🎵 *Song suggestion for the DJ:*' : '🎵 *Sugerencia de Canción para el DJ:*');
+      const noneDiet = isNL ? 'Geen' : (isEN ? 'None' : 'Ninguna');
+      const noneSong = isNL ? 'Geen voorkeur' : (isEN ? 'No preference' : 'Ninguna sugerida');
+      const footerMsg = isNL ? '_Bevestiging verzonden vóór 31/12/2026 via de officiële bruiloftswebsite._' : (isEN ? '_Confirmation sent before 31/12/2026 from official wedding website._' : '_Confirmación enviada antes del 31/12/2026 desde la web oficial de boda._');
+
+      let text = `${header}\n\n`;
+      text += `${guestLabel} ${name}\n`;
+      if (email) text += `${emailLabel} ${email}\n`;
+      if (phone) text += `${phoneLabel} ${phone}\n`;
+      text += `${attendLabel} ${attend === 'si' ? yesText : noText}\n`;
+      if (attend === 'si') {
+        text += `${hotelNotice}\n`;
+        text += `${dietLabel} ${diet || noneDiet}\n`;
+        text += `${songLabel} ${song || noneSong}\n`;
+      }
+      text += `\n${footerMsg}`;
+
+      const toastMail = null;
+      const toast = document.getElementById('rsvpSuccess');
+      toast.classList.remove('hidden');
+
+      setTimeout(() => {
+        window.location.href = `mailto:rondonyeralding@gmail.com?subject=${encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')}&body=${encodeURIComponent(text)}`;
       }, 700);
     }
 
