@@ -156,8 +156,8 @@
       <div class="flex items-center gap-2">
         <!-- Audio Player Toggle -->
         <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-100/90 border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200 transition-colors shadow-xs cursor-pointer" title="Música romántica de boda">
-          <svg id="soundIconOn" class="w-4 h-4 text-champagne-700" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-500" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          <svg id="soundIconOn" class="w-4 h-4 hidden text-champagne-700" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          <svg id="soundIconOff" class="w-4 h-4 text-champagne-500" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
         </button>
 
         <!-- Trilingual Switcher (ES | NL | EN) -->
@@ -177,7 +177,7 @@
     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
       
       <!-- Together With Our Families -->
-      <p class="font-script text-3xl sm:text-4xl text-[#C5A059] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" data-i18n="hero.ours">Nuestro sí</p>
+      <p class="font-script text-4xl sm:text-5xl text-[#C5A059] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style="-webkit-text-stroke: 0.7px #C5A059; text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(197,160,89,0.7);" data-i18n="hero.ours">Nuestro sí</p>
         <p class="font-sans text-xs sm:text-sm uppercase tracking-[0.3em] text-champagne-100 font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
@@ -187,8 +187,8 @@
         Gerwin & Yeralding
       </h1>
 
-      <p class="font-cormorant italic text-base sm:text-xl text-champagne-100 max-w-lg mx-auto mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.invite_sub">
-        Tenemos el honor de invitarte a celebrar nuestra boda
+      <p class="font-cormorant italic font-medium text-xl sm:text-2xl text-white max-w-lg mx-auto mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);" data-i18n="hero.invite_sub">
+        Tenemos el honor de invitarte a celebrar nuestra unión matrimonial
       </p>
 
       <!-- Date Banner: 01 Mayo 2027 -->
@@ -204,6 +204,15 @@
         <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] mt-1" data-i18n="hero.location">
         Hotel ReeHorst • Ede, Países Bajos
       </p>
+
+      <div class="mt-3 space-y-1 text-center">
+        <p class="text-xs sm:text-sm font-sans font-semibold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.address">
+          <a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a>
+        </p>
+        <p class="text-xs sm:text-sm font-sans font-semibold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.time">Recepción: 19:30</p>
+        <p class="text-xs sm:text-sm font-sans text-champagne-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.venues">Cena: Claire's Lounge · Celebración: Salón New York</p>
+        <p class="text-xs font-sans text-champagne-200 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.parking">Estacionamiento gratuito</p>
+      </div>
 
       <!-- Comenzar Button -->
       <div class="mt-5">
@@ -247,7 +256,7 @@
   </section>
 
   <!-- ==================== SECTION: CARTA A NUESTROS INVITADOS ==================== -->
-  <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-transparent relative">
+  <section id="bienvenida" class="py-12 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="welcome.subtitle">
@@ -255,7 +264,7 @@
       </span>
 
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold mb-6 tracking-wide" data-i18n="welcome.title">
-        ¡Nos Casamos!
+        Queridos amigos!
       </h2>
 
       <!-- Heartfelt Text with Wageningen and ReeHorst Celebration -->
@@ -263,16 +272,16 @@
         <span class="font-serif text-6xl text-champagne-400/40 absolute top-4 left-6 select-none">“</span>
         
         <p class="font-cormorant text-xl sm:text-2xl text-espresso/90 leading-relaxed italic mb-4 pt-2 relative z-10" data-i18n="welcome.text_p1">
-          Daremos el «Sí, quiero» en la comuna de Wageningen, y queremos celebrarlo por todo lo alto con vosotros el 1 de mayo de 2027 en el Hotel ReeHorst en Ede, Países Bajos.
+          Aunque hayan pasado los años y hoy nos separen tantos kilómetros, hay amistades que siguen sintiéndose cerquita, y ustedes son eso para mí. Los llevo en mi corazón y guardo con muchísimo cariño tantos recuerdos de nuestra historia juntos.
         </p>
         <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed mb-6 relative z-10" data-i18n="welcome.text_p2">
-          Sabemos que para muchos de vosotros esto significa hacer las maletas, coger un avión y venir hasta aquí. Por eso hemos preparado esta pequeña guía con todo lo que necesitáis saber para disfrutar del viaje y, sobre todo, de la celebración.
+          El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para mí y nuestra familia tenerlos ahí significa muchísimo. Gerwin está feliz porque tiene por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que tanto le hablo. Así que vayan preparando sus mejores looks, porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos.
         </p>
 
         <!-- Clean Solid Gold Signature Without Blur, Without Monogram Seal, Without Ede 2027 -->
         <div class="border-t border-champagne-500/20 pt-4 text-center sm:text-left">
-          <span class="font-script text-3xl sm:text-4xl text-[#C5A059] font-normal block tracking-wide">
-            Gerwin & Yeralding
+          <span class="font-script text-3xl sm:text-4xl text-[#C5A059] font-normal block tracking-wide" data-i18n="welcome.signature">
+            Yeralding & Gerwin
           </span>
         </div>
       </div>
@@ -281,16 +290,25 @@
   </section>
 
   <!-- ==================== SECTION: COUNTDOWN ("UNTIL WE SAY I DO") ==================== -->
-  <section class="py-16 px-4 bg-transparent border-y border-champagne-500/20 text-center relative">
+  <section class="py-10 px-4 bg-transparent border-y border-champagne-500/20 text-center relative">
     <div class="max-w-2xl mx-auto">
       
-      <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Until</p>
+      <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Hasta que</p>
       <h3 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-widest mb-2" data-i18n="countdown.we_say_ido">
-        WE SAY I DO
+        DIGAMOS SÍ
       </h3>
       <p class="font-cormorant italic text-base sm:text-lg text-champagne-800 mb-8 max-w-xl mx-auto" data-i18n="countdown.cant_imagine">
         No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto
       </p>
+
+      <!-- Anillos entrelazados y corazón dorado -->
+      <div class="flex items-center justify-center my-2" aria-hidden="true">
+        <svg class="w-24 h-14" viewBox="0 0 96 56" fill="none">
+          <circle cx="33" cy="20" r="15" stroke="#C5A059" stroke-width="3"/>
+          <circle cx="63" cy="20" r="15" stroke="#C9A227" stroke-width="3"/>
+          <path d="M48 52 C43 48 39 44 39 40 a4.5 4.5 0 0 1 9 0 a4.5 4.5 0 0 1 9 0 C57 44 53 48 48 52 Z" stroke="#C5A059" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
 
       <!-- 4 Countdown Cards -->
       <div class="grid grid-cols-4 gap-3 max-w-md mx-auto my-6">
@@ -329,7 +347,7 @@
 
 
   <!-- ==================== SECTION: PROGRAMA DEL DÍA (TIMELINE) ==================== -->
-  <section id="programa" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="programa" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="programa.subtitle">
         ✦ El día de la celebración ✦
@@ -338,47 +356,66 @@
         Programa del día
       </h2>
       <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="programa.venue">
-        Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados
+        Hotel ReeHorst · <a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-champagne-500 hover:text-espresso">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a> · Estacionamiento gratuito para todos nuestros invitados
       </p>
+      <!-- Copa de champán que se llena al avanzar por el programa -->
+      <div class="flex justify-center mb-2" aria-hidden="true">
+        <svg id="champagneGlass" class="w-16 h-28" viewBox="0 0 80 150" fill="none">
+          <defs>
+            <clipPath id="glassClip">
+              <path d="M22 8 H58 L54 82 Q52 104 40 104 Q28 104 26 82 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#glassClip)">
+            <rect id="glassLiquid" x="18" y="104" width="44" height="0" fill="#E9CD7A" opacity="0.9"/>
+            <circle class="glass-bubble" cx="34" cy="92" r="2.5" fill="#FFF8DC" opacity="0"/>
+            <circle class="glass-bubble" cx="45" cy="78" r="2" fill="#FFF8DC" opacity="0"/>
+            <circle class="glass-bubble" cx="38" cy="60" r="2.5" fill="#FFF8DC" opacity="0"/>
+          </g>
+          <path d="M22 8 H58 L54 82 Q52 104 40 104 Q28 104 26 82 Z" stroke="#C5A059" stroke-width="2.5" fill="rgba(255,255,255,0.25)"/>
+          <line x1="40" y1="104" x2="40" y2="132" stroke="#C5A059" stroke-width="2.5"/>
+          <line x1="22" y1="132" x2="58" y2="132" stroke="#C5A059" stroke-width="2.5"/>
+        </svg>
+      </div>
       <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left space-y-4">
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
-          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e1">Recepción y bienvenida</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e1_detail"></span></span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
+          <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e1">Recepción y bienvenida</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e1_detail">Llegada de los invitados y acompañamiento a sus respectivos asientos.</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">20:00–22:00</span>
-          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e2">Cena estilo bufé</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span></span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">20:00–22:00</span>
+          <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e2">Cena estilo bufé</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:30</span>
-          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e3">Apertura de la celebración</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_ny">Salón New York</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e3_detail"></span></span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:30</span>
+          <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e3">Apertura de la celebración</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_ny">Salón New York</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e3_detail">Nos reuniremos para compartir los momentos más especiales de la noche.</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:40</span>
-          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e4">Lectura de votos</span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:40</span>
+          <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e4">Lectura de votos</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:50</span>
-          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e5">Nuestro primer baile</span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:50</span>
+          <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e5">Nuestro primer baile</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:00</span>
-          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e6">Brindis</span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:00</span>
+          <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e6">Brindis</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:15</span>
-          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e7">Celebración</span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:15</span>
+          <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e7">Celebración</span>
         </div>
         <div class="flex gap-4 items-baseline">
-          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">02:30–03:00</span>
-          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e8">Fin de la celebración</span>
+          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">02:30–03:00</span>
+          <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e8">Fin de la celebración</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==================== SECTION: CÓDIGO DE VESTIMENTA ==================== -->
-  <section id="vestimenta" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="vestimenta" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="vestimenta.subtitle">
         ✦ Código de vestimenta ✦
@@ -390,24 +427,27 @@
         Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.
       </p>
       <div class="grid sm:grid-cols-2 gap-4 text-left">
-        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 border border-champagne-500/40 shadow-luxury">
           <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="vestimenta.women_label">Mujeres</p>
-          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.women_text">Chic con un toque elegante</p>
+          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.women_text">Casual chic con un toque elegante</p>
         </div>
-        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-5 border border-champagne-500/40 shadow-luxury">
           <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="vestimenta.men_label">Hombres</p>
           <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.men_text">Traje formal</p>
         </div>
       </div>
-      <p class="font-cormorant italic text-lg text-champagne-800 mt-6" data-i18n="vestimenta.note">
+      <p class="mt-6 mx-auto max-w-md border border-[#C5A059]/70 bg-[#C5A059]/10 rounded-2xl px-5 py-4 font-cormorant italic text-lg font-semibold text-espresso shadow-luxury" data-i18n="vestimenta.note">
         Un detalle especial: el blanco está reservado exclusivamente para la novia.
       </p>
-        <p class="font-serif text-base text-champagne-800 mt-6 max-w-xl mx-auto" data-i18n="vestimenta.outro"></p>
+        <div class="mt-6 mx-auto max-w-md border-2 border-dashed border-champagne-500/50 rounded-2xl px-5 py-4 text-center">
+          <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold" data-i18n="vestimenta.photos_label">Fotos de ejemplo</p>
+          <p class="font-serif text-base text-champagne-800 mt-1" data-i18n="vestimenta.photos_soon">Próximamente</p>
+        </div>
     </div>
   </section>
 
   <!-- ==================== SECTION: HOSPEDAJE ==================== -->
-  <section id="hospedaje" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="hospedaje" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="hospedaje.subtitle">
         ✦ Hospedaje ✦
@@ -416,10 +456,7 @@
         Hospedaje
       </h2>
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 mt-2 mb-2 max-w-xl mx-auto" data-i18n="hospedaje.text">
-        Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración.
-      </p>
-      <p class="font-serif italic text-base text-champagne-800 mb-6 max-w-xl mx-auto" data-i18n="hospedaje.rooms">
-        Habitaciones individuales y familiares con desayuno.
+        Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.
       </p>
       <a href="https://hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener" class="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="hospedaje.btn">
         Consultar tarifas y reservar habitación
@@ -433,7 +470,7 @@
   </section>
 
   <!-- ==================== SECTION: REGALO ==================== -->
-  <section id="regalo" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="regalo" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="regalo.subtitle">
         ✦ Un regalo para nuestra aventura ✦
@@ -458,7 +495,7 @@
   </section>
 
   <!-- ==================== SECTION: CHECKLIST DEL INVITADO (MINIMAL & CLEAR) ==================== -->
-  <section id="checklist" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="checklist" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto">
       
       <div class="text-center mb-10">
@@ -543,7 +580,7 @@
   </section>
 
   <!-- ==================== FAQ SECTION: PREGUNTAS FRECUENTES (DIRECTAS Y COMPLETAS) ==================== -->
-  <section id="faq" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="faq" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-3xl mx-auto">
       
       <div class="text-center mb-10">
@@ -674,7 +711,7 @@
   </section>
 
   <!-- ==================== RSVP FORM: CONFIRMACIÓN DE ASISTENCIA (DEADLINE 31/12/2026) ==================== -->
-  <section id="rsvp" class="py-20 px-4 sm:px-6 bg-transparent relative">
+  <section id="rsvp" class="py-12 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="rsvp.subtitle">
@@ -693,14 +730,29 @@
         <!-- Nombre Completo -->
         <div>
           <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
-            Nombre Completo *
+            Nombre *
           </label>
           <input 
             type="text" 
             id="rsvpName" 
             required 
-            placeholder="Tu nombre y apellido" 
+            placeholder="Tu nombre" 
             data-i18n-placeholder="rsvp.name_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Apellido -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.lastname_label">
+            Apellido *
+          </label>
+          <input
+            type="text"
+            id="rsvpLastName"
+            required
+            placeholder="Tu apellido"
+            data-i18n-placeholder="rsvp.lastname_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
           />
         </div>
@@ -808,7 +860,7 @@
   </section>
 
   <!-- ==================== SECTION: GUÍA DE VIAJE ==================== -->
-  <section id="guia" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+  <section id="guia" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
       <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="guia.subtitle">
         ✦ Guía de viaje ✦
@@ -852,7 +904,45 @@
   </audio>
 
   <!-- ==================== JAVASCRIPT LOGIC & TRILINGUAL DICTIONARY ==================== -->
+  <!-- ==================== CARTA POST-CONFIRMACIÓN: SOBRE QUE SE ABRE AL TOCAR ==================== -->
+  <style>
+    @keyframes envelopeIn { from { transform: scale(0.5) translateY(50px); opacity: 0; } 60% { transform: scale(1.05) translateY(-6px); opacity: 1; } to { transform: scale(1) translateY(0); opacity: 1; } }
+    .envelope-in { animation: envelopeIn 0.8s cubic-bezier(.2,.9,.3,1.2) both; }
+    @keyframes letterIn { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .letter-in { animation: letterIn 0.5s ease both; }
+    @media (prefers-reduced-motion: reduce) { .envelope-in, .letter-in { animation: none; } }
+  </style>
+  <div id="confirmLetterModal" class="fixed inset-0 z-[90] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" onclick="closeConfirmLetterOnBackdrop(this)">
+    <div id="confirmEnvelope" class="envelope-in relative w-80 max-w-full cursor-pointer select-none" onclick="event.stopPropagation(); openConfirmLetter()" role="button" aria-label="Abrir carta">
+      <svg viewBox="0 0 320 230" class="w-full h-auto drop-shadow-2xl">
+        <rect x="10" y="30" width="300" height="180" rx="10" fill="#FDF8EE" stroke="#C5A059" stroke-width="2"/>
+        <path d="M15 185 L160 115 L305 185" fill="none" stroke="#C5A059" stroke-width="1.5" opacity="0.5"/>
+        <path d="M10 30 L160 120 L310 30" fill="#F3E6C8" stroke="#C5A059" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="160" cy="120" r="20" fill="#C5A059" stroke="#A8853B" stroke-width="1.5"/>
+        <path d="M160 128 C153 122 148 117 148 112 a5 5 0 0 1 10 0 a5 5 0 0 1 10 0 C172 117 167 122 160 128 Z" fill="#FDF8EE"/>
+      </svg>
+      <p class="text-center text-white font-sans font-bold text-sm mt-4 animate-pulse drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-i18n="confirm_letter.tap_hint">Toca para abrir</p>
+    </div>
+    <div id="confirmLetterCard" class="letter-in hidden relative bg-white/95 backdrop-blur-md border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury max-w-2xl w-full max-h-[85vh] overflow-y-auto text-center" onclick="event.stopPropagation()">
+      <button onclick="closeConfirmLetter()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-espresso text-champagne-200 font-bold hover:scale-105 active:scale-95 transition-transform cursor-pointer" aria-label="Cerrar">✕</button>
+      <h3 class="font-cinzel text-2xl sm:text-3xl text-espresso font-bold tracking-wide mb-4 pr-8" data-i18n="confirm_letter.title">¡Querida familia y amigos! 🤍</h3>
+      <div class="text-left space-y-4">
+        <p class="font-cormorant text-xl sm:text-2xl text-espresso/90 leading-relaxed italic" data-i18n="confirm_letter.p1">Hay momentos en la vida que se vuelven aún más especiales cuando los compartimos con las personas que queremos. ¿Y qué más bonito que celebrar el amor rodeados de quienes ocupan un lugar especial en nuestros corazones?</p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-i18n="confirm_letter.p2">El 21 de abril de 2027 nos daremos el sí, y el 1 de mayo queremos celebrar esta felicidad con todos ustedes. ❤️</p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-i18n="confirm_letter.p3">Nos hace mucha ilusión compartir este día, lleno de amor, risas, abrazos y nuevos recuerdos. Aunque algunos años y muchos kilómetros nos separen, el cariño permanece intacto. Para nosotros significa muchísimo tenerlos aquí, y Gerwin está feliz de conocer por fin a esos amigos de los que Yeralding habla con tanto cariño.</p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-i18n="confirm_letter.p4">¡Preparen sus mejores looks, que tenemos fotos pendientes y muchos recuerdos por crear!</p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-i18n="confirm_letter.p5">Los esperamos con el corazón lleno y los brazos abiertos.</p>
+      </div>
+      <p class="font-cormorant italic text-lg text-champagne-800 mt-6" data-i18n="confirm_letter.signoff">Con mucho amor,</p>
+      <p class="font-script text-3xl sm:text-4xl text-[#C5A059] mt-1" data-i18n="confirm_letter.signature">Gerwin & Yeralding 💍</p>
+    </div>
+  </div>
+
   <script>
+    // La invitación siempre abre en la portada, aunque la URL traiga #rsvp u otro ancla
+    if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+    window.scrollTo(0, 0);
+    if (window.location.hash) { history.replaceState(null, '', window.location.pathname + window.location.search); }
     const i18n = {
       es: {
         "nav.welcome": "Bienvenidos",
@@ -864,6 +954,10 @@
         "hero.invite_sub": "Tenemos el honor de invitarte a celebrar nuestra unión matrimonial",
         "hero.month": "MAYO",
         "hero.location": "Hotel ReeHorst • Ede, Países Bajos",
+        "hero.address": "<a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200\">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a>",
+        "hero.time": "Recepción: 19:30",
+        "hero.venues": "Cena: Claire's Lounge · Celebración: Salón New York",
+        "hero.parking": "Estacionamiento gratuito",
         "hero.weekday": "sábado",
         "hero.btn_start": "Comenzar",
         "audio.label": "Música de la Boda",
@@ -872,9 +966,10 @@
         "welcome.subtitle": "✦ Carta a nuestro invitado ✦",
         "welcome.title": "Queridos amigos!",
         "welcome.text_p1": "Aunque hayan pasado los años y hoy nos separen tantos kilómetros, hay amistades que siguen sintiéndose cerquita, y ustedes son eso para mí. Los llevo en mi corazón y guardo con muchísimo cariño tantos recuerdos de nuestra historia juntos.",
-        "welcome.text_p2": "El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para mí y nuestra familia tenerlos ahí significa muchísimo. Gerwin está feliz de tener por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que…",
-        "countdown.until": "Until",
-        "countdown.we_say_ido": "WE SAY I DO",
+        "welcome.text_p2": "El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para mí y nuestra familia tenerlos ahí significa muchísimo. Gerwin está feliz porque tiene por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que tanto le hablo. Así que vayan preparando sus mejores looks, porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos.",
+        "welcome.signature": "Yeralding & Gerwin",
+        "countdown.until": "Hasta que",
+        "countdown.we_say_ido": "DIGAMOS SÍ",
         "countdown.cant_imagine": "No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto",
         "countdown.days": "DÍAS",
         "countdown.hours": "HORAS",
@@ -909,8 +1004,10 @@
         "faq.final": "El mejor viaje es el que nos lleva de vuelta a las personas que queremos! ¡NOS VEMOS EN MAYO!",
         "rsvp.subtitle": "✦ Confirmación de Asistencia ✦",
         "rsvp.deadline": "Por favor confirma tu asistencia antes del 31 de Diciembre de 2026",
-        "rsvp.name_label": "Nombre Completo *",
-        "rsvp.name_placeholder": "Tu nombre y apellido",
+        "rsvp.name_label": "Nombre *",
+        "rsvp.name_placeholder": "Tu nombre",
+        "rsvp.lastname_label": "Apellido *",
+        "rsvp.lastname_placeholder": "Tu apellido",
         "rsvp.email_label": "Correo electrónico",
         "rsvp.email_placeholder": "Tu correo electrónico",
         "rsvp.phone_label": "Teléfono",
@@ -926,6 +1023,15 @@
         "rsvp.email_btn": "Enviar confirmación por correo",
         "rsvp.email_note": "o escríbenos a",
         "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
+        "confirm_letter.tap_hint": "Toca para abrir",
+        "confirm_letter.title": "¡Querida familia y amigos! 🤍",
+        "confirm_letter.p1": "Hay momentos en la vida que se vuelven aún más especiales cuando los compartimos con las personas que queremos. ¿Y qué más bonito que celebrar el amor rodeados de quienes ocupan un lugar especial en nuestros corazones?",
+        "confirm_letter.p2": "El 21 de abril de 2027 nos daremos el sí, y el 1 de mayo queremos celebrar esta felicidad con todos ustedes. ❤️",
+        "confirm_letter.p3": "Nos hace mucha ilusión compartir este día, lleno de amor, risas, abrazos y nuevos recuerdos. Aunque algunos años y muchos kilómetros nos separen, el cariño permanece intacto. Para nosotros significa muchísimo tenerlos aquí, y Gerwin está feliz de conocer por fin a esos amigos de los que Yeralding habla con tanto cariño.",
+        "confirm_letter.p4": "¡Preparen sus mejores looks, que tenemos fotos pendientes y muchos recuerdos por crear!",
+        "confirm_letter.p5": "Los esperamos con el corazón lleno y los brazos abiertos.",
+        "confirm_letter.signoff": "Con mucho amor,",
+        "confirm_letter.signature": "Gerwin & Yeralding 💍",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
         "nav.timeline": "Programa",
@@ -934,7 +1040,7 @@
         "nav.gift": "Regalo",
         "programa.subtitle": "✦ El día de la celebración ✦",
         "programa.title": "Programa del día",
-        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados",
+        "programa.venue": "Hotel ReeHorst · <a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-2 decoration-champagne-500 hover:text-espresso\">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a> · Estacionamiento gratuito para todos nuestros invitados",
         "programa.e1": "Recepción y bienvenida",
         "programa.e1_detail": "Llegada de los invitados y acompañamiento a sus respectivos asientos.",
         "programa.e2": "Cena estilo bufé",
@@ -955,11 +1061,11 @@
         "vestimenta.men_label": "Hombres",
         "vestimenta.men_text": "Traje formal",
         "vestimenta.note": "Un detalle especial: el blanco está reservado exclusivamente para la novia.",
-        "vestimenta.outro": "Así que vayan preparando sus mejores looks, porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos. — Yeralding & Gerwin.",
+        "vestimenta.photos_label": "Fotos de ejemplo",
+        "vestimenta.photos_soon": "Próximamente",
         "hospedaje.subtitle": "✦ Hospedaje ✦",
         "hospedaje.title": "Hospedaje",
         "hospedaje.text": "Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.",
-        "hospedaje.rooms": "Habitaciones individuales y familiares con desayuno.",
         "hospedaje.btn": "Consultar tarifas y reservar habitación",
         "hospedaje.code_label": "Código especial de la pareja",
         "hospedaje.code_value": "[Código XXX]",
@@ -986,6 +1092,10 @@
         "hero.invite_sub": "Wij hebben de eer jullie uit te nodigen voor ons huwelijk",
         "hero.month": "MEI",
         "hero.location": "Hotel ReeHorst • Ede, Nederland",
+        "hero.address": "<a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200\">Bennekomseweg 24, 6717 LM Ede, Nederland</a>",
+        "hero.time": "Ontvangst: 19:30",
+        "hero.venues": "Diner: Claire's Lounge · Feest: Salon New York",
+        "hero.parking": "Gratis parkeergelegenheid",
         "hero.weekday": "zaterdag",
         "hero.btn_start": "Ontdekken",
         "audio.label": "Bruiloftsmuziek",
@@ -994,7 +1104,8 @@
         "welcome.subtitle": "✦ Brief aan onze gast ✦",
         "welcome.title": "Beste vrienden!",
         "welcome.text_p1": "Ook al zijn de jaren voorbijgegaan en scheiden zoveel kilometers ons vandaag, er zijn vriendschappen die dichtbij blijven voelen, en dat zijn jullie voor mij. Ik draag jullie in mijn hart en bewaar met heel veel liefde zoveel herinneringen aan onze gezamenlijke geschiedenis.",
-        "welcome.text_p2": "Op 21 april 2027 zullen Gerwin en ik elkaar het jawoord geven en op 1 mei vieren we het met jullie. Voor mij en onze familie betekent het ontzettend veel dat jullie erbij zijn. Gerwin is blij dat hij eindelijk de kans krijgt jullie te ontmoeten en persoonlijk kennis te maken met die vrienden over wie…",
+        "welcome.text_p2": "Op 21 april 2027 zullen Gerwin en ik elkaar het jawoord geven en op 1 mei vieren we het met jullie. Voor mij en onze familie betekent het ontzettend veel dat jullie erbij zijn. Gerwin is blij dat hij eindelijk de kans krijgt jullie te ontmoeten en persoonlijk kennis te maken met die vrienden over wie ik hem zoveel vertel. Bereid dus jullie mooiste looks alvast voor, want we hebben jaren aan foto’s om bij te werken en veel nieuwe herinneringen om te creëren. Heel erg bedankt voor de moeite om te komen en deel uit te maken van zo’n belangrijk moment voor ons. We wachten op jullie met een vol hart en open armen.",
+        "welcome.signature": "Yeralding & Gerwin",
         "countdown.until": "Tot",
         "countdown.we_say_ido": "WE SAY I DO",
         "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
@@ -1031,8 +1142,10 @@
         "faq.final": "De mooiste reis is de reis die ons terugbrengt naar de mensen van wie we houden! TOT ZIENS IN MEI!",
         "rsvp.subtitle": "✦ Aanwezigheid Bevestigen ✦",
         "rsvp.deadline": "Gelieve je aanwezigheid te bevestigen vóór 31 december 2026",
-        "rsvp.name_label": "Volledige Naam *",
-        "rsvp.name_placeholder": "Je voor- en achternaam",
+        "rsvp.name_label": "Voornaam *",
+        "rsvp.name_placeholder": "Je voornaam",
+        "rsvp.lastname_label": "Achternaam *",
+        "rsvp.lastname_placeholder": "Je achternaam",
         "rsvp.email_label": "E-mail",
         "rsvp.email_placeholder": "Je e-mailadres",
         "rsvp.phone_label": "Telefoon",
@@ -1048,6 +1161,15 @@
         "rsvp.email_btn": "Bevestiging verzenden per e-mail",
         "rsvp.email_note": "of schrijf ons op",
         "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
+        "confirm_letter.tap_hint": "Tik om te openen",
+        "confirm_letter.title": "Lieve familie en vrienden! 🤍",
+        "confirm_letter.p1": "Er zijn momenten in het leven die nog specialer worden als we ze delen met de mensen van wie we houden. En wat is er mooier dan de liefde vieren omringd door wie een speciale plek in ons hart heeft?",
+        "confirm_letter.p2": "Op 21 april 2027 geven we elkaar het jawoord, en op 1 mei willen we dit geluk met jullie allemaal vieren. ❤️",
+        "confirm_letter.p3": "We kijken er enorm naar uit om deze dag te delen, vol liefde, lachen, knuffels en nieuwe herinneringen. Ook al scheiden sommige jaren en vele kilometers ons, de genegenheid blijft intact. Het betekent ontzettend veel voor ons dat jullie erbij zijn, en Gerwin is blij om eindelijk die vrienden te ontmoeten over wie Yeralding met zoveel genegenheid spreekt.",
+        "confirm_letter.p4": "Bereid dus jullie mooiste looks alvast voor, want we hebben foto's om bij te werken en veel herinneringen om te creëren!",
+        "confirm_letter.p5": "We wachten op jullie met een vol hart en open armen.",
+        "confirm_letter.signoff": "Met veel liefde,",
+        "confirm_letter.signature": "Gerwin & Yeralding 💍",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
         "nav.timeline": "Programma",
@@ -1056,7 +1178,7 @@
         "nav.gift": "Cadeau",
         "programa.subtitle": "✦ Het programma van de dag ✦",
         "programa.title": "Programma van de dag",
-        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Nederland · Gratis parkeergelegenheid voor al onze gasten",
+        "programa.venue": "Hotel ReeHorst · <a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-2 decoration-champagne-500 hover:text-espresso\">Bennekomseweg 24, 6717 LM Ede, Nederland</a> · Gratis parkeergelegenheid voor al onze gasten",
         "programa.e1": "Ontvangst en welkom",
         "programa.e1_detail": "Aankomst van de gasten en begeleiding naar hun plaatsen.",
         "programa.e2": "Diner in buffetvorm",
@@ -1077,11 +1199,11 @@
         "vestimenta.men_label": "Heren",
         "vestimenta.men_text": "Formeel pak",
         "vestimenta.note": "Een bijzonder detail: wit is exclusief gereserveerd voor de bruid.",
-        "vestimenta.outro": "Bereid dus jullie mooiste looks alvast voor, want we hebben jaren aan foto’s om bij te werken en veel nieuwe herinneringen om te creëren. Heel erg bedankt voor de moeite om te komen en deel uit te maken van zo’n belangrijk moment voor ons. We wachten op jullie met een vol hart en open armen. — Yeralding & Gerwin.",
+        "vestimenta.photos_label": "Voorbeeldfoto's",
+        "vestimenta.photos_soon": "Binnenkort beschikbaar",
         "hospedaje.subtitle": "✦ Overnachten ✦",
         "hospedaje.title": "Overnachten",
         "hospedaje.text": "Voor jullie comfort raden we aan te overnachten in het hotel waar onze viering plaatsvindt. Via de onderstaande link kunnen jullie de tarieven bekijken en direct jullie kamer reserveren.",
-        "hospedaje.rooms": "Eenpersoons- en familiekamers met ontbijt.",
         "hospedaje.btn": "Bekijk tarieven en reserveer je kamer",
         "hospedaje.code_label": "Speciale code van het bruidspaar",
         "hospedaje.code_value": "[Code XXX]",
@@ -1108,6 +1230,10 @@
         "hero.invite_sub": "We have the honor to invite you to celebrate our marriage",
         "hero.month": "MAY",
         "hero.location": "Hotel ReeHorst • Ede, The Netherlands",
+        "hero.address": "<a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200\">Bennekomseweg 24, 6717 LM Ede, The Netherlands</a>",
+        "hero.time": "Reception: 19:30",
+        "hero.venues": "Dinner: Claire's Lounge · Celebration: Salon New York",
+        "hero.parking": "Free parking",
         "hero.weekday": "Saturday",
         "hero.btn_start": "Begin",
         "audio.label": "Wedding Music",
@@ -1116,7 +1242,8 @@
         "welcome.subtitle": "✦ Letter to our guest ✦",
         "welcome.title": "Dear friends!",
         "welcome.text_p1": "Even though the years have passed and so many kilometers separate us today, there are friendships that still feel close, and that is what you are to me. I carry you in my heart and keep with great affection so many memories of our story together.",
-        "welcome.text_p2": "On April 21, 2027, Gerwin and I will say yes, and on May 1 we will celebrate with you. For me and our family, having you there means so much. Gerwin is happy to finally have the opportunity to meet you and discover in person those friends about whom…",
+        "welcome.text_p2": "On April 21, 2027, Gerwin and I will say yes, and on May 1 we will celebrate with you. For me and our family, having you there means so much. Gerwin is happy to finally have the opportunity to meet you and discover in person those friends about whom I tell him so much. So start preparing your best looks, because we have years of photos to update and many new memories to create. Thank you so much for making the effort to come and be part of such an important moment for us. We await you with full hearts and open arms.",
+        "welcome.signature": "Yeralding & Gerwin",
         "countdown.until": "Until",
         "countdown.we_say_ido": "WE SAY I DO",
         "countdown.cant_imagine": "We can't imagine this day without you, add it to your calendar so you don't miss it",
@@ -1153,8 +1280,10 @@
         "faq.final": "The best journey is the one that brings us back to the people we love! SEE YOU IN MAY!",
         "rsvp.subtitle": "✦ Attendance Confirmation ✦",
         "rsvp.deadline": "Please confirm your attendance before December 31st, 2026",
-        "rsvp.name_label": "Full Name *",
-        "rsvp.name_placeholder": "Your full name",
+        "rsvp.name_label": "First Name *",
+        "rsvp.name_placeholder": "Your first name",
+        "rsvp.lastname_label": "Last Name *",
+        "rsvp.lastname_placeholder": "Your last name",
         "rsvp.email_label": "Email",
         "rsvp.email_placeholder": "Your email address",
         "rsvp.phone_label": "Phone",
@@ -1170,6 +1299,15 @@
         "rsvp.email_btn": "Send confirmation by email",
         "rsvp.email_note": "or write to us at",
         "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
+        "confirm_letter.tap_hint": "Tap to open",
+        "confirm_letter.title": "Dear family and friends! 🤍",
+        "confirm_letter.p1": "There are moments in life that become even more special when we share them with the people we love. And what could be more beautiful than celebrating love surrounded by those who hold a special place in our hearts?",
+        "confirm_letter.p2": "On April 21, 2027 we will say yes, and on May 1 we want to celebrate this happiness with all of you. ❤️",
+        "confirm_letter.p3": "We are so excited to share this day, full of love, laughter, hugs and new memories. Even though some years and many kilometers may separate us, the affection remains intact. It means so much to us to have you here, and Gerwin is happy to finally meet those friends Yeralding speaks of with such affection.",
+        "confirm_letter.p4": "So start preparing your best looks, because we have photos to update and many memories to create!",
+        "confirm_letter.p5": "We await you with full hearts and open arms.",
+        "confirm_letter.signoff": "With much love,",
+        "confirm_letter.signature": "Gerwin & Yeralding 💍",
         "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
         "footer.waiting": "We look forward to celebrating with you!",
         "nav.timeline": "Program",
@@ -1178,7 +1316,7 @@
         "nav.gift": "Gift",
         "programa.subtitle": "✦ The Day's Program ✦",
         "programa.title": "Program of the Day",
-        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, The Netherlands · Free parking for all our guests",
+        "programa.venue": "Hotel ReeHorst · <a href=\"https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline underline-offset-2 decoration-champagne-500 hover:text-espresso\">Bennekomseweg 24, 6717 LM Ede, The Netherlands</a> · Free parking for all our guests",
         "programa.e1": "Reception and welcome",
         "programa.e1_detail": "Arrival of the guests and accompaniment to their seats.",
         "programa.e2": "Buffet-style dinner",
@@ -1199,11 +1337,11 @@
         "vestimenta.men_label": "Gentlemen",
         "vestimenta.men_text": "Formal suit",
         "vestimenta.note": "One special detail: white is reserved exclusively for the bride.",
-        "vestimenta.outro": "So start preparing your best looks, because we have years of photos to update and many new memories to create. Thank you so much for making the effort to come and be part of such an important moment for us. We await you with full hearts and open arms. — Yeralding & Gerwin.",
+        "vestimenta.photos_label": "Example photos",
+        "vestimenta.photos_soon": "Coming soon",
         "hospedaje.subtitle": "✦ Accommodation ✦",
         "hospedaje.title": "Accommodation",
         "hospedaje.text": "For your comfort, we recommend staying at the hotel where our celebration will take place. Through the link below you can check the rates and book your room directly.",
-        "hospedaje.rooms": "Single and family rooms with breakfast.",
         "hospedaje.btn": "Check rates and book your room",
         "hospedaje.code_label": "The couple's special code",
         "hospedaje.code_value": "[Code XXX]",
@@ -1353,7 +1491,7 @@
     }
 
     // ==================== LIVE COUNTDOWN TIMER ====================
-    const TARGET_DATE = new Date('2027-05-01T20:00:00+02:00').getTime();
+    const TARGET_DATE = new Date('2027-05-01T19:30:00+02:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -1385,7 +1523,7 @@
       const title = encodeURIComponent("Boda Gerwin & Yeralding — Gran Celebración");
       const details = encodeURIComponent("Celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.");
       const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
-      const dates = "20270501T180000Z/20270502T010000Z";
+      const dates = "20270501T173000Z/20270502T010000Z";
       window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
     }
 
@@ -1398,7 +1536,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:wedding-gerwin-yeralding-2027@reehorst
 DTSTAMP:20270501T180000Z
-DTSTART:20270501T180000Z
+DTSTART:20270501T173000Z
 DTEND:20270502T010000Z
 SUMMARY:Boda Gerwin & Yeralding
 DESCRIPTION:Gran celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.
@@ -1419,7 +1557,9 @@ END:VCALENDAR`;
     // ==================== RSVP FORM HANDLER ====================
     function handleRSVPSubmit(e) {
       e.preventDefault();
-      const name = document.getElementById('rsvpName').value.trim();
+      const firstName = document.getElementById('rsvpName').value.trim();
+      const lastName = document.getElementById('rsvpLastName').value.trim();
+      const name = `${firstName} ${lastName}`.trim();
       const email = document.getElementById('rsvpEmail').value.trim();
       const phone = document.getElementById('rsvpPhone').value.trim();
       const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
@@ -1457,6 +1597,7 @@ END:VCALENDAR`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
+      if (attend === 'si') { showConfirmEnvelope(); }
 
       const waUrl = `https://api.whatsapp.com/send?phone=352661503947&text=${encodeURIComponent(text)}`;
       setTimeout(() => {
@@ -1466,7 +1607,9 @@ END:VCALENDAR`;
 
     function handleRSVPMail(e) {
       e.preventDefault();
-      const name = document.getElementById('rsvpName').value.trim();
+      const firstName = document.getElementById('rsvpName').value.trim();
+      const lastName = document.getElementById('rsvpLastName').value.trim();
+      const name = `${firstName} ${lastName}`.trim();
       const email = document.getElementById('rsvpEmail').value.trim();
       const phone = document.getElementById('rsvpPhone').value.trim();
       const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
@@ -1505,10 +1648,45 @@ END:VCALENDAR`;
       const toastMail = null;
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
+      if (attend === 'si') { showConfirmEnvelope(); }
 
       setTimeout(() => {
         window.location.href = `mailto:rondonyeralding@gmail.com?subject=${encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')}&body=${encodeURIComponent(text)}`;
       }, 700);
+    }
+
+    // ==================== CARTA POST-CONFIRMACIÓN (SOBRE) ====================
+    function showConfirmEnvelope() {
+      const modal = document.getElementById('confirmLetterModal');
+      const env = document.getElementById('confirmEnvelope');
+      const card = document.getElementById('confirmLetterCard');
+      if (!modal || !env || !card) return;
+      card.classList.add('hidden');
+      env.classList.remove('hidden');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function openConfirmLetter() {
+      const env = document.getElementById('confirmEnvelope');
+      const card = document.getElementById('confirmLetterCard');
+      if (!env || !card) return;
+      env.classList.add('hidden');
+      card.classList.remove('hidden');
+    }
+
+    function closeConfirmLetter() {
+      const modal = document.getElementById('confirmLetterModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function closeConfirmLetterOnBackdrop(el) {
+      const card = document.getElementById('confirmLetterCard');
+      if (el === document.getElementById('confirmLetterModal') && card && !card.classList.contains('hidden')) {
+        closeConfirmLetter();
+      }
     }
 
     // ==================== FAQ ACCORDION LOGIC ====================
@@ -1567,6 +1745,29 @@ END:VCALENDAR`;
       if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
     }
 
+    // ==================== CHAMPAGNE GLASS FILL ON SCROLL (PROGRAMA) ====================
+    function updateChampagneGlass() {
+      const liquid = document.getElementById('glassLiquid');
+      const section = document.getElementById('programa');
+      if (!liquid || !section) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        liquid.setAttribute('y', '10');
+        liquid.setAttribute('height', '94');
+        return;
+      }
+      const rect = section.getBoundingClientRect();
+      const total = rect.height + window.innerHeight;
+      const progress = Math.min(Math.max((window.innerHeight - rect.top) / total, 0), 1);
+      const h = progress * 94;
+      liquid.setAttribute('y', String(104 - h));
+      liquid.setAttribute('height', String(h));
+      document.querySelectorAll('.glass-bubble').forEach((b, i) => {
+        b.setAttribute('opacity', progress > 0.15 + i * 0.2 ? '0.8' : '0');
+      });
+    }
+
+    window.addEventListener('scroll', updateChampagneGlass, { passive: true });
+
     // ==================== DYNAMIC BLURRED PHOTO BACKGROUND ON SCROLL ====================
     function handleBackgroundScroll() {
       const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -1591,13 +1792,16 @@ END:VCALENDAR`;
     window.addEventListener('scroll', handleBackgroundScroll, { passive: true });
 
     window.addEventListener('DOMContentLoaded', () => {
+      window.scrollTo(0, 0);
       handleBackgroundScroll();
       loadChecklist();
+      updateChampagneGlass();
       fadeInAudio(TARGET_VOLUME);
       setupGestureAutoplay();
     });
 
     handleBackgroundScroll();
+    window.addEventListener('load', () => { window.scrollTo(0, 0); updateChampagneGlass(); });
     // Immediate pre-emptive play attempt
     fadeInAudio(TARGET_VOLUME);
     setupGestureAutoplay();
