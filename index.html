@@ -1456,7 +1456,7 @@ END:VCALENDAR`;
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
 
-      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+      const waUrl = `https://api.whatsapp.com/send?phone=352661503947&text=${encodeURIComponent(text)}`;
       setTimeout(() => {
         window.open(waUrl, '_blank');
       }, 700);

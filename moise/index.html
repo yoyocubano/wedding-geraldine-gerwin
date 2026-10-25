@@ -540,7 +540,7 @@ function buildRsvpText(){
   return t; }
 function rsvp(e){ e.preventDefault(); const t=buildRsvpText();
   document.getElementById('ok').style.display='block';
-  window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(t),'_blank'); }
+  window.open('https://api.whatsapp.com/send?phone=352661503947&text='+encodeURIComponent(t),'_blank'); }
 function rsvpMail(e){ e.preventDefault(); const t=buildRsvpText();
   document.getElementById('ok').style.display='block';
   window.location.href='mailto:rondonyeralding@gmail.com?subject='+encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')+'&body='+encodeURIComponent(t); }
