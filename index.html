@@ -301,13 +301,9 @@
         No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto
       </p>
 
-      <!-- Anillos entrelazados y corazón dorado -->
-      <div class="flex items-center justify-center my-2" aria-hidden="true">
-        <svg class="w-24 h-14" viewBox="0 0 96 56" fill="none">
-          <circle cx="33" cy="20" r="15" stroke="#C5A059" stroke-width="3"/>
-          <circle cx="63" cy="20" r="15" stroke="#C9A227" stroke-width="3"/>
-          <path d="M48 52 C43 48 39 44 39 40 a4.5 4.5 0 0 1 9 0 a4.5 4.5 0 0 1 9 0 C57 44 53 48 48 52 Z" stroke="#C5A059" stroke-width="2" fill="none"/>
-        </svg>
+      <!-- Foto de la pareja (sustituye al dibujo de anillos) -->
+      <div class="flex justify-center my-4">
+        <img src="assets/couple_portrait.jpg" alt="Gerwin & Yeralding" class="w-56 sm:w-64 rounded-3xl border border-champagne-500/40 shadow-luxury object-cover" />
       </div>
 
       <!-- 4 Countdown Cards -->
@@ -358,25 +354,7 @@
       <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="programa.venue">
         Hotel ReeHorst · <a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-champagne-500 hover:text-espresso">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a> · Estacionamiento gratuito para todos nuestros invitados
       </p>
-      <!-- Copa de champán que se llena al avanzar por el programa -->
-      <div class="flex justify-center mb-2" aria-hidden="true">
-        <svg id="champagneGlass" class="w-16 h-28" viewBox="0 0 80 150" fill="none">
-          <defs>
-            <clipPath id="glassClip">
-              <path d="M22 8 H58 L54 82 Q52 104 40 104 Q28 104 26 82 Z"/>
-            </clipPath>
-          </defs>
-          <g clip-path="url(#glassClip)">
-            <rect id="glassLiquid" x="18" y="104" width="44" height="0" fill="#E9CD7A" opacity="0.9"/>
-            <circle class="glass-bubble" cx="34" cy="92" r="2.5" fill="#FFF8DC" opacity="0"/>
-            <circle class="glass-bubble" cx="45" cy="78" r="2" fill="#FFF8DC" opacity="0"/>
-            <circle class="glass-bubble" cx="38" cy="60" r="2.5" fill="#FFF8DC" opacity="0"/>
-          </g>
-          <path d="M22 8 H58 L54 82 Q52 104 40 104 Q28 104 26 82 Z" stroke="#C5A059" stroke-width="2.5" fill="rgba(255,255,255,0.25)"/>
-          <line x1="40" y1="104" x2="40" y2="132" stroke="#C5A059" stroke-width="2.5"/>
-          <line x1="22" y1="132" x2="58" y2="132" stroke="#C5A059" stroke-width="2.5"/>
-        </svg>
-      </div>
+      <!-- Vídeo de copa llenándose: pendiente de recibir el archivo de vídeo; dibujo anterior eliminado -->
       <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left space-y-4">
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
           <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
@@ -935,6 +913,7 @@
       </div>
       <p class="font-cormorant italic text-lg text-champagne-800 mt-6" data-i18n="confirm_letter.signoff">Con mucho amor,</p>
       <p class="font-script text-3xl sm:text-4xl text-[#C5A059] mt-1" data-i18n="confirm_letter.signature">Gerwin & Yeralding 💍</p>
+      <button onclick="closeConfirmLetter()" class="mt-8 px-8 py-3 rounded-full bg-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl hover:scale-105 active:scale-95 transition-transform cursor-pointer">Cerrar y enviar mi confirmación</button>
     </div>
   </div>
 
@@ -1597,12 +1576,9 @@ END:VCALENDAR`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
-      if (attend === 'si') { showConfirmEnvelope(); }
-
       const waUrl = `https://api.whatsapp.com/send?phone=352661503947&text=${encodeURIComponent(text)}`;
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 700);
+      if (attend === 'si') { showConfirmEnvelope(waUrl, false); }
+      else { setTimeout(() => { window.open(waUrl, '_blank'); }, 700); }
     }
 
     function handleRSVPMail(e) {
@@ -1645,18 +1621,19 @@ END:VCALENDAR`;
       }
       text += `\n${footerMsg}`;
 
-      const toastMail = null;
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
-      if (attend === 'si') { showConfirmEnvelope(); }
-
-      setTimeout(() => {
-        window.location.href = `mailto:rondonyeralding@gmail.com?subject=${encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')}&body=${encodeURIComponent(text)}`;
-      }, 700);
+      const mailUrl = `mailto:rondonyeralding@gmail.com?subject=${encodeURIComponent('Confirmación RSVP — Boda Gerwin & Yeralding')}&body=${encodeURIComponent(text)}`;
+      if (attend === 'si') { showConfirmEnvelope(mailUrl, true); }
+      else { setTimeout(() => { window.location.href = mailUrl; }, 700); }
     }
 
     // ==================== CARTA POST-CONFIRMACIÓN (SOBRE) ====================
-    function showConfirmEnvelope() {
+    // La carta SOLO aparece tras confirmar que SÍ asiste, y ANTES de abrir WhatsApp o el correo.
+    // Nada se abre en paralelo: la acción pendiente se lanza solo cuando se cierra la carta.
+    let pendingRSVPAction = null;
+    function showConfirmEnvelope(actionUrl, isMail) {
+      pendingRSVPAction = actionUrl ? { url: actionUrl, isMail: !!isMail } : null;
       const modal = document.getElementById('confirmLetterModal');
       const env = document.getElementById('confirmEnvelope');
       const card = document.getElementById('confirmLetterCard');
@@ -1680,6 +1657,12 @@ END:VCALENDAR`;
       if (!modal) return;
       modal.classList.add('hidden');
       modal.classList.remove('flex');
+      const pending = pendingRSVPAction;
+      pendingRSVPAction = null;
+      if (pending) {
+        if (pending.isMail) { window.location.href = pending.url; }
+        else { window.open(pending.url, '_blank'); }
+      }
     }
 
     function closeConfirmLetterOnBackdrop(el) {
