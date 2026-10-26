@@ -237,6 +237,7 @@
 
   <!-- ==================== AUDIO SECTION: ALEX WARREN - ORDINARY (PIANELLA PIANO) ==================== -->
   <section class="py-10 px-4 bg-transparent border-b border-champagne-500/20 relative">
+    <div class="text-center mb-3 text-3xl text-[#C5A059] tracking-widest animate-pulse" aria-hidden="true">♪&nbsp;♫&nbsp;♪</div>
     <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-espresso text-champagne-200 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md cursor-pointer">
@@ -295,21 +296,9 @@
   <section class="py-10 px-4 bg-transparent border-y border-champagne-500/20 text-center relative">
     <div class="max-w-2xl mx-auto">
       
-      <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Hasta que</p>
-      <h3 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-widest mb-2" data-i18n="countdown.we_say_ido">
+      <h3 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-widest mb-6" data-i18n="countdown.we_say_ido">
         DIGAMOS SÍ
       </h3>
-      <p class="font-cormorant italic text-base sm:text-lg text-champagne-800 mb-4 max-w-xl mx-auto" data-i18n="countdown.cant_imagine">
-        No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto
-      </p>
-      <div class="flex justify-center mb-4" aria-hidden="true">
-        <svg viewBox="0 0 100 90" class="w-16 h-14 text-[#C5A059]" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 82 C20 60 5 42 5 26 C5 12 16 4 28 4 C38 4 46 10 50 20 C54 10 62 4 72 4 C84 4 95 12 95 26 C95 42 80 60 50 82 Z"/></svg>
-      </div>
-
-      <!-- Foto de la pareja (sustituye al dibujo de anillos) -->
-      <div class="flex justify-center my-4">
-        <img src="assets/couple_portrait.jpg" alt="Gerwin & Yeralding" class="w-56 sm:w-64 rounded-3xl border border-champagne-500/40 shadow-luxury object-cover" />
-      </div>
 
       <!-- 4 Countdown Cards -->
       <div class="grid grid-cols-4 gap-3 max-w-md mx-auto my-6">
@@ -331,18 +320,50 @@
         </div>
       </div>
 
+      <!-- Dos anillos -->
+      <div class="flex justify-center my-4">
+        <img src="assets/rings_gold.jpg" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 rounded-3xl border border-champagne-500/40 shadow-luxury object-cover bg-white" />
+      </div>
+
+      <p class="font-cormorant italic text-base sm:text-lg text-champagne-800 mb-4 max-w-xl mx-auto" data-i18n="countdown.cant_imagine">
+        No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto
+      </p>
+      <div class="flex justify-center mb-4 animate-bounce" aria-hidden="true">
+        <svg viewBox="0 0 100 90" class="w-16 h-14 text-[#C5A059]" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 82 C20 60 5 42 5 26 C5 12 16 4 28 4 C38 4 46 10 50 20 C54 10 62 4 72 4 C84 4 95 12 95 26 C95 42 80 60 50 82 Z"/></svg>
+      </div>
+
       <!-- Add to Calendar Buttons -->
       <div class="flex items-center justify-center gap-3 mt-6">
-        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-white/90 backdrop-blur-md border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold text-xs font-sans uppercase tracking-wider font-semibold transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
           <span>📅</span>
           <span data-i18n="countdown.google_cal">Google Calendar</span>
         </button>
-        <button onclick="downloadICS()" class="px-5 py-2 rounded-full bg-espresso text-champagne-100 border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+        <button onclick="downloadICS()" class="px-5 py-2 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold text-xs font-sans uppercase tracking-wider font-semibold transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
           <span>🍎</span>
           <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
         </button>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION: LUGAR DE LA CELEBRACIÓN ==================== -->
+  <section id="lugar" class="py-12 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2">
+        ✦ El lugar ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide">
+        Lugar de la celebración
+      </h2>
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury mt-8 space-y-2">
+        <p class="font-serif text-xl font-bold text-espresso">Hotel ReeHorst</p>
+        <p class="font-sans text-base text-champagne-900/90"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-champagne-500 hover:text-espresso">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a></p>
+        <p class="font-sans text-base font-bold text-espresso">Recepción: 19:30</p>
+        <p class="font-sans text-base text-champagne-900/90">Cena: Claire's Lounge (dentro del hotel) · Celebración: Salón New York</p>
+        <p class="font-sans text-base text-champagne-900/90">El hotel dispone de estacionamiento gratuito para todos nuestros invitados</p>
+      </div>
     </div>
   </section>
 
@@ -380,37 +401,40 @@
       </div>
       <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left space-y-4">
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">1</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
           <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e1">Recepción y bienvenida</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e1_detail">Llegada de los invitados y acompañamiento a sus respectivos asientos.</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">20:00–22:00</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">2</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">20:00–22:00</span>
           <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e2">Cena estilo bufé</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:30</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">3</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:30</span>
           <span><span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e3">Apertura de la celebración</span><br/><span class="text-xs font-sans italic text-champagne-800" data-i18n="programa.v_ny">Salón New York</span><br/><span class="text-xs font-sans italic text-champagne-700" data-i18n="programa.e3_detail">Nos reuniremos para compartir los momentos más especiales de la noche.</span></span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:40</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">4</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:40</span>
           <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e4">Lectura de votos</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:50</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">5</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:50</span>
           <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e5">Nuestro primer baile</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:00</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">6</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:00</span>
           <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e6">Brindis</span>
         </div>
         <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:15</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">7</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:15</span>
           <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e7">Celebración</span>
         </div>
         <div class="flex gap-4 items-baseline">
-          <span class="text-[#C5A059] font-bold shrink-0 select-none" aria-hidden="true">✝</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">02:30–03:00</span>
+          <span class="w-7 h-7 rounded-full bg-[#C5A059] text-white text-xs font-bold flex items-center justify-center shrink-0" aria-hidden="true">8</span><span class="font-cinzel font-bold text-espresso w-28 shrink-0">02:30–03:00</span>
           <span class="font-script text-2xl text-champagne-800 leading-tight" data-i18n="programa.e8">Fin de la celebración</span>
         </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <img src="assets/hands_rings.jpg" alt="Manos de los novios con sus anillos entrelazadas" class="w-full max-w-md rounded-3xl border border-champagne-500/40 shadow-luxury object-cover" />
       </div>
     </div>
   </section>
@@ -485,7 +509,7 @@
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-6 mb-6 max-w-xl mx-auto" data-i18n="regalo.text">
         Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.
       </p>
-      <button onclick="document.getElementById('giftBankPanel').classList.toggle('hidden')" class="px-8 py-3 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.btn">
+      <button onclick="document.getElementById('giftBankPanel').classList.toggle('hidden')" class="px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold font-sans font-bold text-xs uppercase tracking-[0.25em] hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.btn">
         Una nueva aventura comienza juntos
       </button>
       <div id="giftBankPanel" class="hidden bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-6 max-w-md mx-auto">
@@ -834,7 +858,7 @@
         <!-- Submit Button -->
         <button 
           type="submit" 
-          class="w-full py-4 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso hover:from-champagne-900 hover:to-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-4"
+          class="w-full py-4 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold font-sans font-bold text-xs uppercase tracking-[0.25em] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-4"
         >
           <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
           <span>💌</span>
@@ -842,7 +866,7 @@
         <button
           type="button"
           onclick="handleRSVPMail(event)"
-          class="w-full py-4 rounded-full bg-white border-2 border-champagne-500/60 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+          class="w-full py-4 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold font-sans font-bold text-xs uppercase tracking-[0.25em] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
         >
           <span data-i18n="rsvp.email_btn">Enviar confirmación por correo</span>
           <span>✉️</span>
@@ -872,7 +896,7 @@
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-4 mb-6 max-w-xl mx-auto" data-i18n="guia.text">
         Si viajas desde el extranjero, aquí encontrarás próximamente la guía con todo lo necesario para llegar fácil, cómodo y económico.
       </p>
-      <span class="inline-flex px-8 py-3 rounded-full bg-champagne-100/90 border border-champagne-500/40 text-champagne-800 font-sans font-bold text-xs uppercase tracking-[0.25em]" data-i18n="guia.btn">
+      <span class="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold font-sans font-bold text-xs uppercase tracking-[0.25em]" data-i18n="guia.btn">
         Próximamente
       </span>
       <p class="text-xs font-sans text-champagne-800 mt-4 max-w-md mx-auto" data-i18n="guia.note">
@@ -936,7 +960,7 @@
       </div>
       <p class="font-cormorant italic text-lg text-champagne-800 mt-6" data-i18n="confirm_letter.signoff">Con mucho amor,</p>
       <p class="font-script text-3xl sm:text-4xl text-[#C5A059] mt-1" data-i18n="confirm_letter.signature">Gerwin & Yeralding 💍</p>
-      <button onclick="closeConfirmLetter()" class="mt-8 px-8 py-3 rounded-full bg-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl hover:scale-105 active:scale-95 transition-transform cursor-pointer">Cerrar y enviar mi confirmación</button>
+      <button onclick="closeConfirmLetter()" class="mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso shadow-glow-gold font-sans font-bold text-xs uppercase tracking-[0.25em] hover:scale-105 active:scale-95 transition-transform cursor-pointer">Cerrar y enviar mi confirmación</button>
     </div>
   </div>
 
@@ -970,7 +994,6 @@
         "welcome.text_p1": "Aunque hayan pasado los años y hoy nos separen tantos kilómetros, hay amistades que siguen sintiéndose cerquita, y ustedes son eso para mí. Los llevo en mi corazón y guardo con muchísimo cariño tantos recuerdos de nuestra historia juntos.",
         "welcome.text_p2": "El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para mí y nuestra familia tenerlos ahí significa muchísimo. Gerwin está feliz porque tiene por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que tanto le hablo. Así que vayan preparando sus mejores looks, porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos.",
         "welcome.signature": "Yeralding & Gerwin",
-        "countdown.until": "Hasta que",
         "countdown.we_say_ido": "DIGAMOS SÍ",
         "countdown.cant_imagine": "No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto",
         "countdown.days": "DÍAS",
@@ -1108,7 +1131,6 @@
         "welcome.text_p1": "Ook al zijn de jaren voorbijgegaan en scheiden zoveel kilometers ons vandaag, er zijn vriendschappen die dichtbij blijven voelen, en dat zijn jullie voor mij. Ik draag jullie in mijn hart en bewaar met heel veel liefde zoveel herinneringen aan onze gezamenlijke geschiedenis.",
         "welcome.text_p2": "Op 21 april 2027 zullen Gerwin en ik elkaar het jawoord geven en op 1 mei vieren we het met jullie. Voor mij en onze familie betekent het ontzettend veel dat jullie erbij zijn. Gerwin is blij dat hij eindelijk de kans krijgt jullie te ontmoeten en persoonlijk kennis te maken met die vrienden over wie ik hem zoveel vertel. Bereid dus jullie mooiste looks alvast voor, want we hebben jaren aan foto’s om bij te werken en veel nieuwe herinneringen om te creëren. Heel erg bedankt voor de moeite om te komen en deel uit te maken van zo’n belangrijk moment voor ons. We wachten op jullie met een vol hart en open armen.",
         "welcome.signature": "Yeralding & Gerwin",
-        "countdown.until": "Tot",
         "countdown.we_say_ido": "WE SAY I DO",
         "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
         "countdown.days": "DAGEN",
@@ -1246,7 +1268,6 @@
         "welcome.text_p1": "Even though the years have passed and so many kilometers separate us today, there are friendships that still feel close, and that is what you are to me. I carry you in my heart and keep with great affection so many memories of our story together.",
         "welcome.text_p2": "On April 21, 2027, Gerwin and I will say yes, and on May 1 we will celebrate with you. For me and our family, having you there means so much. Gerwin is happy to finally have the opportunity to meet you and discover in person those friends about whom I tell him so much. So start preparing your best looks, because we have years of photos to update and many new memories to create. Thank you so much for making the effort to come and be part of such an important moment for us. We await you with full hearts and open arms.",
         "welcome.signature": "Yeralding & Gerwin",
-        "countdown.until": "Until",
         "countdown.we_say_ido": "WE SAY I DO",
         "countdown.cant_imagine": "We can't imagine this day without you, add it to your calendar so you don't miss it",
         "countdown.days": "DAYS",
@@ -1796,7 +1817,7 @@ END:VCALENDAR`;
       bgImg.style.transform = `scale(${scale.toFixed(3)})`;
       
       if (scrollVeil) {
-        scrollVeil.style.opacity = (progress * 0.85).toFixed(2);
+        scrollVeil.style.opacity = (progress * 0.45).toFixed(2);
       }
     }
 
