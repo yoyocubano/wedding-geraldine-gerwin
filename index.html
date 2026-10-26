@@ -171,14 +171,15 @@
   </nav>
 
   <!-- ==================== HERO SECTION: FACES CLEAR, TEXT IN LOWER HALF ==================== -->
-  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-12 pt-32">
+  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-8 pt-24">
+    <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 via-black/45 to-transparent pointer-events-none" aria-hidden="true"></div>
     
     <!-- Hero Content Placed in Lower Half so Faces are Completely Visible -->
     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
       
       <!-- Together With Our Families -->
-      <p class="font-script text-4xl sm:text-5xl text-[#C5A059] leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style="-webkit-text-stroke: 0.7px #C5A059; text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(197,160,89,0.7);" data-i18n="hero.ours">Nuestro sí</p>
-        <p class="font-sans text-xs sm:text-sm uppercase tracking-[0.3em] text-champagne-100 font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mb-2" data-i18n="hero.together">
+      <p class="font-script text-4xl sm:text-5xl text-white font-bold leading-tight bg-black/50 rounded-full px-6 py-1" style="-webkit-text-stroke: 1px #FFFFFF; text-shadow: 0 3px 10px rgba(0,0,0,1), 0 0 4px rgba(0,0,0,1);" data-i18n="hero.ours">Nuestro sí</p>
+        <p class="font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-extrabold bg-black/50 rounded-full px-4 py-1 drop-shadow-[0_2px_6px_rgba(0,0,0,1)] mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
 
@@ -187,7 +188,7 @@
         Gerwin & Yeralding
       </h1>
 
-      <p class="font-cormorant italic font-medium text-xl sm:text-2xl text-white max-w-lg mx-auto mb-3 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" style="text-shadow: 0 2px 10px rgba(0,0,0,0.9);" data-i18n="hero.invite_sub">
+      <p class="font-cormorant italic font-bold text-2xl sm:text-3xl text-white max-w-lg mx-auto mb-3 bg-black/50 rounded-2xl px-4 py-2" style="text-shadow: 0 3px 10px rgba(0,0,0,1);" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra unión matrimonial
       </p>
 
@@ -205,13 +206,14 @@
         Hotel ReeHorst • Ede, Países Bajos
       </p>
 
-      <div class="mt-3 space-y-1 text-center">
-        <p class="text-xs sm:text-sm font-sans font-semibold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.address">
-          <a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200">Bennekomseweg 24, 6717 LM Ede, Países Bajos</a>
+      <div class="mt-3 space-y-1 text-center bg-black/55 backdrop-blur-sm rounded-2xl px-4 py-3">
+        <p class="text-sm sm:text-base font-sans font-extrabold text-white uppercase tracking-widest">Lugar de celebración</p>
+        <p class="text-sm sm:text-base font-sans font-bold text-white" data-i18n="hero.address">
+          <a href="https://www.google.com/maps/search/?api=1&query=Hotel+ReeHorst+Bennekomseweg+24+6717+LM+Ede+Nederland" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 decoration-champagne-300 hover:text-champagne-200">Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos</a>
         </p>
-        <p class="text-xs sm:text-sm font-sans font-semibold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.time">Recepción: 19:30</p>
-        <p class="text-xs sm:text-sm font-sans text-champagne-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.venues">Cena: Claire's Lounge · Celebración: Salón New York</p>
-        <p class="text-xs font-sans text-champagne-200 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]" data-i18n="hero.parking">Estacionamiento gratuito</p>
+        <p class="text-sm sm:text-base font-sans font-bold text-white" data-i18n="hero.time">Recepción: 19:30</p>
+        <p class="text-sm sm:text-base font-sans font-bold text-white" data-i18n="hero.venues">Cena: Claire's Lounge (dentro del hotel) · Celebración: Salón New York</p>
+        <p class="text-sm font-sans font-bold text-white" data-i18n="hero.parking">El hotel dispone de estacionamiento gratuito para todos nuestros invitados</p>
       </div>
 
       <!-- Comenzar Button -->
@@ -1401,18 +1403,24 @@
       }
     }
 
+    // Estado deseado: la pausa manual siempre gana. Sin esto, un fundido de entrada
+    // pendiente (o un gesto automático) volvía a arrancar la música tras pulsar pausa.
+    let audioWanted = false;
+    let userPaused = false;
     function fadeInAudio(target = TARGET_VOLUME, duration = 1800) {
-      if (!audio) return;
+      if (!audio || !audioWanted) return;
       clearInterval(fadeTimer);
       audio.volume = 0;
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise.then(() => {
+          if (!audioWanted) { audio.pause(); updateAudioUI(false); return; }
           updateAudioUI(true);
           const steps = 30;
           const stepTime = duration / steps;
           const volStep = target / steps;
           fadeTimer = setInterval(() => {
+            if (!audioWanted) { clearInterval(fadeTimer); audio.pause(); updateAudioUI(false); return; }
             if (audio.volume + volStep < target) {
               audio.volume += volStep;
             } else {
@@ -1422,41 +1430,40 @@
           }, stepTime);
         }).catch(err => {
           updateAudioUI(false);
-          setupGestureAutoplay();
+          if (!userPaused) setupGestureAutoplay();
         });
       }
     }
 
-    function fadeOutAudio(duration = 600) {
+    function stopAudioNow() {
       if (!audio) return;
+      audioWanted = false;
       clearInterval(fadeTimer);
-      const steps = 20;
-      const stepTime = duration / steps;
-      const volStep = audio.volume / steps;
-      fadeTimer = setInterval(() => {
-        if (audio.volume - volStep > 0) {
-          audio.volume -= volStep;
-        } else {
-          audio.volume = 0;
-          audio.pause();
-          clearInterval(fadeTimer);
-          updateAudioUI(false);
-        }
-      }, stepTime);
+      try { audio.pause(); } catch (e) {}
+      audio.volume = 0;
+      updateAudioUI(false);
     }
 
     function toggleAudio() {
       if (!audio) return;
-      if (isPlaying) {
-        fadeOutAudio();
+      if (isPlaying || audioWanted) {
+        userPaused = true;
+        gestureTriggered = true;
+        ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+          window.removeEventListener(ev, triggerGesturePlay);
+        });
+        stopAudioNow();
       } else {
+        userPaused = false;
+        audioWanted = true;
         fadeInAudio(TARGET_VOLUME);
       }
     }
 
     function triggerGesturePlay() {
-      if (gestureTriggered || isPlaying) return;
+      if (gestureTriggered || isPlaying || userPaused) return;
       gestureTriggered = true;
+      audioWanted = true;
       fadeInAudio(TARGET_VOLUME);
       ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
         window.removeEventListener(ev, triggerGesturePlay);
