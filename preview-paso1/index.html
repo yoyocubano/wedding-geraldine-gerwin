@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerwin & Yeralding — Nuestra Boda 2027</title>
+  
+  <meta name="description" content="Invitación de Boda oficial de Gerwin & Yeralding. 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
+  <meta property="og:title" content="Gerwin & Yeralding — Boda 2027" />
+  <meta property="og:description" content="Celebra nuestro amor en Países Bajos. Guía para invitados, transporte, hotel y confirmación RSVP." />
+  <meta property="og:image" content="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/yeralding_gerwin_hero.jpg" />
+  <meta name="twitter:image" content="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/yeralding_gerwin_hero.jpg" />
+
+  <!-- Favicon: Minimización de foto de Gerwin & Yeralding -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Google Fonts: Luxury Editorial Serif, Romantic Calligraphy & Modern Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            champagne: {
+              50: '#FDFBF7',
+              100: '#FAF5EB',
+              200: '#F3E8D2',
+              300: '#DFBE7D',
+              400: '#D4AF37',
+              500: '#C5A059',
+              600: '#A98338',
+              700: '#8C6726',
+              800: '#58351C',
+              900: '#2A1B0E',
+            },
+            parchment: '#FBF9F4',
+            warmwhite: '#FAF7F2',
+            espresso: '#1A120B',
+            darknoir: '#0F0B08',
+            goldfoil: '#C5A059',
+          },
+          fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+            alex: ['"Alex Brush"', 'cursive'],
+            body: ['"EB Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          boxShadow: {
+            'luxury': '0 25px 60px -15px rgba(26, 18, 11, 0.12), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'luxury-dark': '0 30px 70px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(212, 175, 55, 0.35)',
+            'glow-gold': '0 0 35px 5px rgba(197, 160, 89, 0.45)',
+          },
+          animation: {
+            'pulse-slow': 'pulseSlow 3s infinite ease-in-out',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            pulseSlow: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.03)', opacity: '0.9' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      background-color: #FAF7F2;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: transparent;
+      color: #1A120B;
+      font-family: 'EB Garamond', serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Metallic Gold Gradient Text */
+    .text-gold-metallic {
+      background: linear-gradient(135deg, #B8903B 0%, #E6C86E 35%, #FFF6D1 50%, #C5A059 70%, #99732B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Luxury Accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+    }
+    .faq-item.active .faq-answer {
+      max-height: 650px;
+      transition: max-height 0.55s ease-in-out;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  
+    /* PASO 1 + MUSICA (preview only, checkpoint intacto) */
+    @keyframes heroFadeIn { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1.05); } }
+    @keyframes heroTextFadeIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes heartbeat { 0%,100% { transform: scale(1) rotate(-12deg); } 14% { transform: scale(1.22) rotate(-12deg); } 28% { transform: scale(1) rotate(-12deg); } 42% { transform: scale(1.18) rotate(-12deg); } 70% { transform: scale(1) rotate(-12deg); } }
+    #globalPhotoBg img { animation: heroFadeIn 1.6s ease-out both; }
+    .hero-fade { animation: heroTextFadeIn 1.2s ease-out both; }
+    .hero-fade-d1 { animation-delay: .35s; } .hero-fade-d2 { animation-delay: .7s; } .hero-fade-d3 { animation-delay: 1s; }
+    .hero-we-say { font-family: 'Great Vibes', 'Alex Brush', cursive; color: #fff; text-shadow: 0 0 18px rgba(255,255,255,.95), 0 0 42px rgba(255,255,255,.55), 0 3px 10px rgba(0,0,0,.9); line-height: .95; }
+    .hero-heart { animation: heartbeat 1.6s ease-in-out infinite; transform-origin: center; filter: drop-shadow(0 0 8px rgba(197,160,89,.9)); }
+    .notes-left { -webkit-mask-image: linear-gradient(to right, black 55%, transparent 98%); mask-image: linear-gradient(to right, black 55%, transparent 98%); }
+    .notes-right { -webkit-mask-image: linear-gradient(to left, black 55%, transparent 98%); mask-image: linear-gradient(to left, black 55%, transparent 98%); }
+    @media (prefers-reduced-motion: reduce) { #globalPhotoBg img, .hero-fade, .hero-heart { animation: none !important; } }
+  </style>
+</head>
+<body class="selection:bg-champagne-300 selection:text-espresso relative">
+
+  <!-- ==================== FIXED GLOBAL BACKGROUND (AUTHENTIC PHOTO + BLUR ON SCROLL) ==================== -->
+  <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+    <img 
+      id="globalBgImg"
+      src="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/yeralding_gerwin_hero.jpg" 
+      alt="Gerwin & Yeralding Boda Real" 
+      class="w-full h-full object-cover object-top will-change-transform scale-105"
+      style="filter: blur(0px) brightness(0.98) contrast(1.02); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
+    />
+    <!-- Warm Luxury Frosted Parchment Veil -->
+    <div id="scrollBgVeil" class="absolute inset-0 bg-[#FAF7F2] transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+  </div>
+
+  <!-- ==================== FLOATING LUXURY NAVBAR ==================== -->
+  <nav class="fixed top-4 inset-x-3 z-50 max-w-5xl mx-auto">
+    <div class="backdrop-blur-md bg-white/85 border border-champagne-500/30 rounded-full px-4 sm:px-6 py-2.5 shadow-luxury flex items-center justify-between transition-all duration-300">
+      
+      <!-- Couple Name & Photo Avatar -->
+      <a href="#hero" class="flex items-center gap-2.5 group cursor-pointer">
+        <img src="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon-32.png" alt="Gerwin & Yeralding" class="w-8 h-8 rounded-full border border-champagne-500/60 shadow-xs group-hover:scale-105 transition-transform object-cover" />
+        <span class="font-cinzel text-xs tracking-widest text-espresso font-semibold hidden sm:inline">GERWIN & YERALDING</span>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-[11px] uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-semibold">
+        <a href="#bienvenida" class="hover:text-champagne-600 transition-colors" data-i18n="nav.welcome">Bienvenidos</a>
+        <a href="#programa" class="hover:text-champagne-600 transition-colors" data-i18n="nav.timeline">Programa</a>
+        <a href="#vestimenta" class="hover:text-champagne-600 transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
+        <a href="#hospedaje" class="hover:text-champagne-600 transition-colors" data-i18n="nav.lodging">Hospedaje</a>
+        <a href="#regalo" class="hover:text-champagne-600 transition-colors" data-i18n="nav.gift">Regalo</a>
+        <a href="#checklist" class="hover:text-champagne-600 transition-colors text-gold-metallic font-bold" data-i18n="nav.checklist">Checklist</a>
+        <a href="#faq" class="hover:text-champagne-600 transition-colors" data-i18n="nav.faq">Preguntas Frecuentes</a>
+        <a href="#rsvp" class="hover:text-champagne-600 transition-colors font-bold text-champagne-700" data-i18n="nav.rsvp">RSVP</a>
+      </div>
+
+      <!-- Right Controls: Audio & Language Switcher -->
+      <div class="flex items-center gap-2">
+        <!-- Audio Player Toggle -->
+        <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-100/90 border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200 transition-colors shadow-xs cursor-pointer" title="Música romántica de boda">
+          <svg id="soundIconOn" class="w-4 h-4 text-champagne-700" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-500" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+
+        <!-- Trilingual Switcher (ES | NL | EN) -->
+        <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-[11px] font-sans font-medium">
+          <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
+          <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+          <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION: FACES CLEAR, TEXT IN LOWER HALF ==================== -->
+  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-12 pt-32">
+    
+    <!-- Hero Content Placed in Lower Half so Faces are Completely Visible -->
+    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
+      
+      <!-- PASO 1: estilo de la imagen de referencia, texto en la mitad inferior para no tapar caras -->
+      <div class="hero-fade hero-fade-d1 text-center">
+        <div class="hero-we-say text-6xl sm:text-7xl lg:text-8xl select-none" aria-label="We Say Yes">
+          <span>We</span>
+          <svg class="hero-heart inline-block w-10 h-10 sm:w-12 sm:h-12 -mx-1 align-middle" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 C 6 16.5 3 13.2 3 9.6 C 3 7 5 5 7.5 5 C 9.3 5 11 6.1 12 7.6 C 13 6.1 14.7 5 16.5 5 C 19 5 21 7 21 9.6 C 21 13.2 18 16.5 12 20.5 Z"/></svg>
+          <span>Say</span><br /><span>Yes</span>
+        </div>
+      </div>
+      <p class="hero-fade hero-fade-d2 font-sans text-xs sm:text-sm uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mt-4 mb-2" data-i18n="hero.together">
+        Junto a nuestra familia
+      </p>
+      <h1 class="hero-fade hero-fade-d2 font-cinzel text-3xl sm:text-4xl lg:text-5xl text-white leading-tight my-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
+        GERWIN <span class="font-script normal-case tracking-normal text-[#C5A059] text-4xl sm:text-5xl lg:text-6xl">&amp;</span> YERALDING
+      </h1>
+      <p class="hero-fade hero-fade-d3 font-sans text-[11px] sm:text-xs uppercase tracking-[0.3em] text-white font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] max-w-lg mx-auto mb-3" data-i18n="hero.invite_sub">
+        Tenemos el honor de invitarte a celebrar nuestra boda
+      </p>
+
+      <!-- Date Banner: 01 Mayo 2027 -->
+      <div class="my-2 py-2 px-6 rounded-full bg-black/60 backdrop-blur-md border border-champagne-400/50 inline-flex items-center gap-3 text-center shadow-luxury">
+        <span class="font-sans text-xs uppercase tracking-widest text-white font-semibold" data-i18n="hero.month">MAYO</span>
+        <span class="w-px h-8 bg-white/80"></span>
+        <span class="font-cinzel text-4xl sm:text-5xl font-bold text-white tracking-widest">01</span>
+        <span class="w-px h-8 bg-white/80"></span>
+        <span class="font-sans text-xs uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
+      </div>
+
+      <p class="text-xs uppercase tracking-[0.25em] font-sans text-champagne-200 font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] mt-1" data-i18n="hero.location">
+        Hotel ReeHorst • Ede, Países Bajos
+      </p>
+
+      <!-- Comenzar Button -->
+      <div class="mt-5">
+        <a 
+          href="#bienvenida" 
+          class="px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 cursor-pointer"
+        >
+          <span data-i18n="hero.btn_start">Comenzar</span>
+          <span>↓</span>
+        </a>
+      </div>
+
+      <!-- Soft Scroll Down Arrow -->
+      <a href="#bienvenida" class="mt-4 text-white/80 hover:text-white transition-colors animate-bounce cursor-pointer" aria-label="Desplazar a Bienvenida">
+        <svg class="w-5 h-5 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ==================== AUDIO SECTION: ALEX WARREN - ORDINARY (PIANELLA PIANO) ==================== -->
+  <section class="py-10 px-2 sm:px-4 bg-white border-b border-champagne-500/20 relative overflow-hidden">
+    <p class="font-script text-3xl sm:text-4xl text-[#C5A059] text-center mb-1">Our wedding song</p>
+    <div class="flex items-stretch justify-center gap-2 max-w-5xl mx-auto">
+      <div class="notes-left hidden sm:block w-1/4 opacity-90" aria-hidden="true"><svg viewBox="0 0 300 180" class="w-full h-full" aria-hidden="true"><g stroke="#111" stroke-width="1.2"><line x1="0" y1="30" x2="300" y2="20"/><line x1="0" y1="60" x2="300" y2="50"/><line x1="0" y1="90" x2="300" y2="80"/><line x1="0" y1="120" x2="300" y2="110"/><line x1="0" y1="150" x2="300" y2="140"/></g><g fill="#111"><ellipse cx="60" cy="52" rx="14" ry="10" transform="rotate(-20 60 52)"/><rect x="70" y="8" width="4" height="44"/><ellipse cx="140" cy="82" rx="14" ry="10" transform="rotate(-20 140 82)"/><rect x="150" y="38" width="4" height="44"/><ellipse cx="220" cy="112" rx="14" ry="10" transform="rotate(-20 220 112)"/><rect x="230" y="68" width="4" height="44"/><ellipse cx="270" cy="32" rx="12" ry="9" transform="rotate(-20 270 32)"/><rect x="279" y="-10" width="4" height="42"/></g></svg></div>
+    <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/85 backdrop-blur-md border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-espresso text-champagne-200 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-md cursor-pointer">
+          <svg id="songPlayIcon" class="w-5 h-5 ml-0.5 text-champagne-300" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="text-left">
+          <span class="block text-[10px] uppercase font-sans tracking-widest text-champagne-700 font-bold" data-i18n="audio.label">Música de la Boda</span>
+          <span class="font-serif text-sm font-bold text-espresso block" data-i18n="audio.title">Alex Warren — Ordinary</span>
+          <span class="text-[11px] font-sans text-champagne-800" data-i18n="audio.subtitle">Piano Cover by Pianella Piano</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 h-5 pr-2" id="musicBars">
+        <span class="w-1 h-3 bg-champagne-600 rounded-full animate-pulse"></span>
+        <span class="w-1 h-5 bg-champagne-400 rounded-full animate-pulse" style="animation-delay: 0.15s"></span>
+        <span class="w-1 h-2 bg-champagne-600 rounded-full animate-pulse" style="animation-delay: 0.3s"></span>
+        <span class="w-1 h-4 bg-champagne-500 rounded-full animate-pulse" style="animation-delay: 0.45s"></span>
+      </div>
+    </div>
+      <div class="notes-right hidden sm:block w-1/4 opacity-90" aria-hidden="true"><svg viewBox="0 0 300 180" class="w-full h-full" aria-hidden="true"><g stroke="#111" stroke-width="1.2"><line x1="0" y1="30" x2="300" y2="20"/><line x1="0" y1="60" x2="300" y2="50"/><line x1="0" y1="90" x2="300" y2="80"/><line x1="0" y1="120" x2="300" y2="110"/><line x1="0" y1="150" x2="300" y2="140"/></g><g fill="#111"><ellipse cx="60" cy="52" rx="14" ry="10" transform="rotate(-20 60 52)"/><rect x="70" y="8" width="4" height="44"/><ellipse cx="140" cy="82" rx="14" ry="10" transform="rotate(-20 140 82)"/><rect x="150" y="38" width="4" height="44"/><ellipse cx="220" cy="112" rx="14" ry="10" transform="rotate(-20 220 112)"/><rect x="230" y="68" width="4" height="44"/><ellipse cx="270" cy="32" rx="12" ry="9" transform="rotate(-20 270 32)"/><rect x="279" y="-10" width="4" height="42"/></g></svg></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CARTA A NUESTROS INVITADOS ==================== -->
+  <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-transparent relative">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="welcome.subtitle">
+        ✦ Carta a Nuestros Invitados ✦
+      </span>
+
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold mb-6 tracking-wide" data-i18n="welcome.title">
+        ¡Nos Casamos!
+      </h2>
+
+      <!-- Heartfelt Text with Wageningen and ReeHorst Celebration -->
+      <div class="bg-white/90 backdrop-blur-md border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury text-left relative">
+        <span class="font-serif text-6xl text-champagne-400/40 absolute top-4 left-6 select-none">“</span>
+        
+        <p class="font-cormorant text-xl sm:text-2xl text-espresso/90 leading-relaxed italic mb-4 pt-2 relative z-10" data-i18n="welcome.text_p1">
+          Daremos el «Sí, quiero» en la comuna de Wageningen, y queremos celebrarlo por todo lo alto con vosotros el 1 de mayo de 2027 en el Hotel ReeHorst en Ede, Países Bajos.
+        </p>
+        <p class="font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed mb-6 relative z-10" data-i18n="welcome.text_p2">
+          Sabemos que para muchos de vosotros esto significa hacer las maletas, coger un avión y venir hasta aquí. Por eso hemos preparado esta pequeña guía con todo lo que necesitáis saber para disfrutar del viaje y, sobre todo, de la celebración.
+        </p>
+
+        <!-- Clean Solid Gold Signature Without Blur, Without Monogram Seal, Without Ede 2027 -->
+        <div class="border-t border-champagne-500/20 pt-4 text-center sm:text-left">
+          <span class="font-script text-3xl sm:text-4xl text-[#C5A059] font-normal block tracking-wide">
+            Gerwin & Yeralding
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: COUNTDOWN ("UNTIL WE SAY I DO") ==================== -->
+  <section class="py-16 px-4 bg-transparent border-y border-champagne-500/20 text-center relative">
+    <div class="max-w-2xl mx-auto">
+      
+      <p class="font-script text-4xl text-champagne-700 italic mb-1" data-i18n="countdown.until">Until</p>
+      <h3 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-widest mb-2" data-i18n="countdown.we_say_ido">
+        WE SAY I DO
+      </h3>
+      <p class="font-cormorant italic text-base sm:text-lg text-champagne-800 mb-8 max-w-xl mx-auto" data-i18n="countdown.cant_imagine">
+        No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto
+      </p>
+
+      <!-- 4 Countdown Cards -->
+      <div class="grid grid-cols-4 gap-3 max-w-md mx-auto my-6">
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-days" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">--</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.days">DÍAS</span>
+        </div>
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-hours" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">--</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.hours">HORAS</span>
+        </div>
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-mins" class="block font-serif text-3xl sm:text-4xl font-bold text-espresso">--</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.mins">MINUTOS</span>
+        </div>
+        <div class="bg-white/85 backdrop-blur-md border border-champagne-500/30 rounded-2xl p-3 sm:p-4 shadow-xs">
+          <span id="cd-secs" class="block font-serif text-3xl sm:text-4xl font-bold text-[#C5A059]">--</span>
+          <span class="text-[10px] font-sans uppercase tracking-wider text-champagne-700 font-bold" data-i18n="countdown.secs">SEGUNDOS</span>
+        </div>
+      </div>
+
+      <!-- Add to Calendar Buttons -->
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-white/90 backdrop-blur-md border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold text-espresso hover:bg-champagne-100 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+          <span>📅</span>
+          <span data-i18n="countdown.google_cal">Google Calendar</span>
+        </button>
+        <button onclick="downloadICS()" class="px-5 py-2 rounded-full bg-espresso text-champagne-100 border border-champagne-500/40 text-xs font-sans uppercase tracking-wider font-semibold hover:bg-champagne-800 transition-colors shadow-xs flex items-center gap-2 cursor-pointer">
+          <span>🍎</span>
+          <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION: PROGRAMA DEL DÍA (TIMELINE) ==================== -->
+  <section id="programa" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="programa.subtitle">
+        ✦ El día de la celebración ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="programa.title">
+        Programa del día
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="programa.venue">
+        Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados
+      </p>
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury text-left space-y-4">
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">19:30</span>
+          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e1">Recepción y bienvenida</span><br/><span class="text-xs font-sans text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span></span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">20:00–22:00</span>
+          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e2">Cena estilo bufé</span><br/><span class="text-xs font-sans text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</span></span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:30</span>
+          <span><span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e3">Apertura de la celebración</span><br/><span class="text-xs font-sans text-champagne-800" data-i18n="programa.v_ny">Salón New York</span></span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:40</span>
+          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e4">Lectura de votos</span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">22:50</span>
+          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e5">Nuestro primer baile</span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:00</span>
+          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e6">Brindis</span>
+        </div>
+        <div class="flex gap-4 items-baseline border-b border-champagne-500/15 pb-3">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">23:15</span>
+          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e7">Celebración</span>
+        </div>
+        <div class="flex gap-4 items-baseline">
+          <span class="font-cinzel font-bold text-espresso w-28 shrink-0">02:30–03:00</span>
+          <span class="font-serif font-bold text-espresso text-lg" data-i18n="programa.e8">Fin de la celebración</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CÓDIGO DE VESTIMENTA ==================== -->
+  <section id="vestimenta" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="vestimenta.subtitle">
+        ✦ Código de vestimenta ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="vestimenta.title">
+        Código de vestimenta
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="vestimenta.intro">
+        Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 text-left">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
+          <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="vestimenta.women_label">Mujeres</p>
+          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.women_text">Chic con un toque elegante</p>
+        </div>
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
+          <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="vestimenta.men_label">Hombres</p>
+          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.men_text">Traje formal</p>
+        </div>
+      </div>
+      <p class="font-cormorant italic text-lg text-champagne-800 mt-6" data-i18n="vestimenta.note">
+        Un detalle especial: el blanco está reservado exclusivamente para la novia.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: HOSPEDAJE ==================== -->
+  <section id="hospedaje" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="hospedaje.subtitle">
+        ✦ Hospedaje ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="hospedaje.title">
+        Hospedaje
+      </h2>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 mt-2 mb-2 max-w-xl mx-auto" data-i18n="hospedaje.text">
+        Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración.
+      </p>
+      <p class="font-serif italic text-base text-champagne-800 mb-6 max-w-xl mx-auto" data-i18n="hospedaje.rooms">
+        Habitaciones individuales y familiares con desayuno.
+      </p>
+      <a href="https://hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener" class="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="hospedaje.btn">
+        Consultar tarifas y reservar habitación
+      </a>
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-8 max-w-md mx-auto">
+        <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="hospedaje.code_label">Código especial de la pareja</p>
+        <p class="font-cinzel text-2xl font-bold text-[#C5A059] tracking-widest" data-i18n="hospedaje.code_value">[Código XXX]</p>
+        <p class="text-xs font-sans text-champagne-800 mt-2" data-i18n="hospedaje.code_note">En cuanto la pareja comparta su código, aparecerá aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: REGALO ==================== -->
+  <section id="regalo" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="regalo.subtitle">
+        ✦ Un regalo para nuestra aventura ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="regalo.title">
+        Un regalo para nuestra aventura
+      </h2>
+      <div class="rounded-3xl overflow-hidden border border-champagne-500/40 shadow-luxury mt-8">
+        <img src="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/gift_honeymoon.jpg" alt="Luna de miel" class="w-full h-64 sm:h-80 object-cover" />
+      </div>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-6 mb-6 max-w-xl mx-auto" data-i18n="regalo.text">
+        Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.
+      </p>
+      <button onclick="document.getElementById('giftBankPanel').classList.toggle('hidden')" class="px-8 py-3 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.btn">
+        Una nueva aventura comienza juntos
+      </button>
+      <div id="giftBankPanel" class="hidden bg-white/90 backdrop-blur-md rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-6 max-w-md mx-auto">
+        <p class="text-xs font-sans uppercase tracking-widest text-champagne-700 font-bold mb-1" data-i18n="regalo.bank_title">Datos bancarios · Pendientes</p>
+        <p class="text-sm font-sans text-champagne-800" data-i18n="regalo.bank_note">En cuanto la pareja comparta sus datos, aparecerán aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CHECKLIST DEL INVITADO (MINIMAL & CLEAR) ==================== -->
+  <section id="checklist" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="checklist.title">
+          Tu viaje a Países Bajos
+        </h2>
+        <p class="font-serif italic text-base text-champagne-800 mt-2 max-w-xl mx-auto" data-i18n="checklist.intro">
+          Aquí tienes tu check list paso a paso para que organices el viaje sin estrés:
+        </p>
+      </div>
+
+      <!-- Checklist Container -->
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury">
+        
+        <!-- Progress Bar Header -->
+        <div class="mb-6 pb-4 border-b border-champagne-500/20 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <span id="checklistScore" class="font-serif text-xl font-bold text-espresso">0 de 8</span>
+            <span id="checklistCompletedLabel" class="text-xs font-sans text-champagne-800" data-i18n="checklist.completed">completados</span>
+          </div>
+          <div class="w-36 sm:w-48 bg-champagne-100 rounded-full h-2.5 overflow-hidden border border-champagne-500/30">
+            <div id="checklistProgressBar" class="bg-gradient-to-r from-champagne-500 to-[#C5A059] h-full w-0 transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <!-- The 8 Concise Checklist Items (Without paragraphs, clean checks) -->
+        <div class="space-y-2.5" id="guestChecklistItems">
+          
+          <!-- 1. Confirmar asistencia -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 0)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item1">1. Confirmar asistencia</span>
+          </label>
+
+          <!-- 2. Reservar vuelo -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 1)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item2">2. Reservar vuelo</span>
+          </label>
+
+          <!-- 3. Reservar el hospedaje -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 2)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item3">3. Reservar el hospedaje</span>
+          </label>
+
+          <!-- 4. Para la cena indicarnos alergias e intolerancias -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 3)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item4">4. Para la cena indicarnos alergias e intolerancias</span>
+          </label>
+
+          <!-- 5. Preparar el look -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 4)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item5">5. Preparar el look</span>
+          </label>
+
+          <!-- 6. Organizar el transporte en tren o alquiler de coche -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 5)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item6">6. Organizar el transporte en tren o alquiler de coche</span>
+          </label>
+
+          <!-- 7. Hacer maletas -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 6)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item7">7. Hacer maletas</span>
+          </label>
+
+          <!-- 8. Venir a celebrar con nosotros -->
+          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border-2 border-champagne-500/60 bg-champagne-100/80 hover:bg-champagne-100 transition-all cursor-pointer">
+            <input type="checkbox" onchange="updateChecklist(this, 7)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
+            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item8">8. Venir a celebrar con nosotros 🎉</span>
+          </label>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ SECTION: PREGUNTAS FRECUENTES (DIRECTAS Y COMPLETAS) ==================== -->
+  <section id="faq" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="faq.title">
+          Preguntas Frecuentes
+        </h2>
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-champagne-500/30 shadow-luxury">
+
+        <div class="space-y-3.5" id="faqAccordionList">
+          
+          <!-- Item 1: Vuelos Schiphol -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all active">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q1">1. ✈️ Aeropuerto recomendado: Amsterdam Schiphol (AMS)</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a1">
+                Vengas desde donde vengas, te recomendamos volar a <strong>Amsterdam Schiphol (AMS)</strong>. Es la opción más fácil para llegar al hotel, ya que desde el aeropuerto puedes tomar directamente un tren hasta Ede-Wageningen, la estación más cercana. ✈️
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Cómo llegar desde el aeropuerto al Hotel ReeHorst -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q2">2. ✈️ ¿Cómo llegar desde el aeropuerto Schiphol hasta el Hotel ReeHorst?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a2">
+                ¡Llegar es muy fácil! 😊 Al aterrizar en Amsterdam Schiphol, puedes tomar el tren directamente desde el aeropuerto con destino a <strong>Ede-Wageningen</strong>. El billete se puede comprar en el propio aeropuerto, antes de bajar a la zona de trenes. El trayecto dura aproximadamente <strong>50 minutos</strong> y el billete cuesta alrededor de <strong>18,80 € por trayecto</strong>. Al llegar a la estación de Ede-Wageningen, el hotel se encuentra justo frente a la estación. 🏨<br/><br/>
+                Si prefieres alquilar un coche, el Hotel ReeHorst cuenta con <strong>parking gratuito</strong> para sus huéspedes. 🚗
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Alojamiento en Hotel ReeHorst -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q3">3. ✦ ¿Por qué recomendamos hospedarse en el Hotel ReeHorst?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a3">
+                Puedes reservar tu habitación en el mismo hotel donde celebraremos la fiesta. Hay habitaciones individuales y familiares, además de opciones con desayuno incluido. 🏨<br/><br/>
+                Así podrás disfrutar de la celebración con tranquilidad y, al terminar, simplemente subir a descansar sin preocuparte por taxis, desplazamientos o conducir después de haber bebido. 🥂<br/><br/>
+                Una vez que confirmes tu asistencia a la boda, <strong>te enviaremos un código especial de reserva</strong> para que puedas reservar tu habitación directamente con el hotel.<br/><br/>
+                Puedes consultar todos los tipos de habitaciones disponibles y conocer más detalles en la página del Hotel ReeHorst:<br/>
+                <a href="https://www.hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">https://www.hotelreehorst.nl/hotelkamers/</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Barra Libre -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q4">4. 🍹 Barra libre</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a4">
+                Cervezas, vinos y refrescos estarán incluidos durante toda la noche. 🥂<br/><br/>
+                Para quienes quieran disfrutar de algo diferente, también habrá cócteles especiales disponibles en la barra, por cuenta propia. 🍹
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: Dress Code -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q5">5. 👗 Dress Code: Casual Chic / Traje Formal</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a5">
+                Viste con tus colores favoritos. El blanco queda reservado con cariño para la novia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6: Clima y Temperatura en Mayo -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q6">6. 🌷 ¿Qué tiempo hace en mayo y cómo es el salón?</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a6">
+                En mayo, el clima en Países Bajos suele ser fresco y agradable, con temperaturas que generalmente rondan los <strong>14 °C a 18 °C</strong>. 🌷<br/><br/>
+                La celebración tendrá lugar en un <strong>salón cerrado y climatizado</strong> dentro del hotel, así que estaremos cómodos durante la fiesta independientemente del tiempo que haga fuera. 🥂<br/><br/>
+                Para los momentos fuera del hotel —como traslados, paseos o desplazamientos— te recomendamos tener en cuenta que puede refrescar, especialmente por la tarde o noche. Si eres de los que sienten frío fácilmente, una chaqueta ligera puede ser una buena idea. 🧥
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 7: Puntualidad Neerlandesa -->
+          <div class="faq-item bg-white rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
+            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-700 transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5">
+                <span class="text-champagne-600 text-sm">✦</span>
+                <span data-i18n="faq.q7">7. ⏱️🇳🇱 Puntualidad en Países Bajos</span>
+              </span>
+              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs sm:text-sm font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
+              <p data-i18n="faq.a7">
+                Aviso importante: aquí la hora significa la hora. 😅<br/><br/>
+                En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. 😂<br/><br/>
+                Así que, por una vez, ¡intentemos encontrarnos a mitad de camino! 😉 Te recomendamos llegar unos minutos antes para no perderte nada de la celebración. 🥂
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== RSVP FORM: CONFIRMACIÓN DE ASISTENCIA (DEADLINE 31/12/2026) ==================== -->
+  <section id="rsvp" class="py-20 px-4 sm:px-6 bg-transparent relative">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="rsvp.subtitle">
+        ✦ Confirmación de Asistencia ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide">
+        R. S. V. P.
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-1 mb-8" data-i18n="rsvp.deadline">
+        Por favor confirma tu asistencia antes del 31 de Diciembre de 2026
+      </p>
+
+      <!-- Form Container -->
+      <form onsubmit="handleRSVPSubmit(event)" class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
+        
+        <!-- Nombre Completo -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
+            Nombre Completo *
+          </label>
+          <input 
+            type="text" 
+            id="rsvpName" 
+            required 
+            placeholder="Tu nombre y apellido" 
+            data-i18n-placeholder="rsvp.name_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Correo electrónico -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.email_label">
+            Correo electrónico
+          </label>
+          <input
+            type="email"
+            id="rsvpEmail"
+            placeholder="Tu correo electrónico"
+            data-i18n-placeholder="rsvp.email_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.phone_label">
+            Teléfono
+          </label>
+          <input
+            type="tel"
+            id="rsvpPhone"
+            placeholder="Tu teléfono"
+            data-i18n-placeholder="rsvp.phone_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Asistencia (Sí / No) -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
+            ¿Asistirás a la celebración? *
+          </label>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="si" checked class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.yes">¡Sí, asistiré! 🎉</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="no" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-medium text-espresso" data-i18n="rsvp.no">No podré asistir ❤️</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Alergias o Restricciones Alimentarias -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.diet_label">
+            Alergias o Restricciones Alimentarias (Muy importante para el chef)
+          </label>
+          <input 
+            type="text" 
+            id="rsvpDiet" 
+            placeholder="Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher..." 
+            data-i18n-placeholder="rsvp.diet_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Canción favorita de sugerencia para el DJ -->
+        <div>
+          <label class="block text-xs font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.song_label">
+            Canción favorita de sugerencia para el DJ 🎵
+          </label>
+          <input 
+            type="text" 
+            id="rsvpSong" 
+            placeholder="Título de la canción y artista" 
+            data-i18n-placeholder="rsvp.song_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full py-4 rounded-full bg-gradient-to-r from-espresso via-champagne-900 to-espresso hover:from-champagne-900 hover:to-espresso text-champagne-100 font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-4"
+        >
+          <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
+          <span>💌</span>
+        </button>
+      </form>
+
+      <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold" data-i18n="rsvp.success">
+        ¡Muchas gracias! Tu confirmación ha sido preparada y enviada con éxito.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: GUÍA DE VIAJE ==================== -->
+  <section id="guia" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] font-sans font-semibold text-champagne-700 block mb-2" data-i18n="guia.subtitle">
+        ✦ Guía de viaje ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="guia.title">
+        Guía de viaje para nuestros invitados
+      </h2>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-4 mb-6 max-w-xl mx-auto" data-i18n="guia.text">
+        Si viajas desde el extranjero, aquí encontrarás próximamente la guía con todo lo necesario para llegar fácil, cómodo y económico.
+      </p>
+      <span class="inline-flex px-8 py-3 rounded-full bg-champagne-100/90 border border-champagne-500/40 text-champagne-800 font-sans font-bold text-xs uppercase tracking-[0.25em]" data-i18n="guia.btn">
+        Próximamente
+      </span>
+      <p class="text-xs font-sans text-champagne-800 mt-4 max-w-md mx-auto" data-i18n="guia.note">
+        La guía se abrirá aquí en cuanto se comparta su enlace. La invitación y la guía comparten la misma música de fondo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 px-4 bg-espresso/95 backdrop-blur-md text-center text-champagne-200/80 border-t border-champagne-500/30 relative z-10">
+    <div class="max-w-md mx-auto">
+      <div class="w-12 h-12 rounded-full border border-champagne-400/50 overflow-hidden mx-auto mb-3 shadow-luxury">
+        <img src="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/favicon-64.png" alt="Gerwin & Yeralding" class="w-full h-full object-cover" />
+      </div>
+      <p class="font-cinzel text-base tracking-widest text-white font-bold">
+        GERWIN & YERALDING
+      </p>
+      <p class="text-xs font-sans text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
+        01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
+      </p>
+      <p class="font-script text-2xl text-[#C5A059] mt-4" data-i18n="footer.waiting">
+        ¡Os esperamos con todo nuestro cariño!
+      </p>
+    </div>
+  </footer>
+
+  <!-- Audio Element -->
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="https://yoyocubano.github.io/wedding-geraldine-gerwin/assets/wedding_music.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- ==================== JAVASCRIPT LOGIC & TRILINGUAL DICTIONARY ==================== -->
+  <script>
+    const i18n = {
+      es: {
+        "nav.welcome": "Bienvenidos",
+        "nav.checklist": "Checklist",
+        "nav.faq": "Preguntas Frecuentes",
+        "nav.rsvp": "RSVP",
+        "hero.together": "Junto a nuestra familia",
+        "hero.invite_sub": "Tenemos el honor de invitarte a celebrar nuestra boda",
+        "hero.month": "MAYO",
+        "hero.location": "Hotel ReeHorst • Ede, Países Bajos",
+        "hero.btn_start": "Comenzar",
+        "audio.label": "Música de la Boda",
+        "audio.title": "Alex Warren — Ordinary",
+        "audio.subtitle": "Piano Cover by Pianella Piano",
+        "welcome.subtitle": "✦ Carta a Nuestros Invitados ✦",
+        "welcome.title": "¡Nos Casamos!",
+        "welcome.text_p1": "Daremos el «Sí, quiero» en la comuna de Wageningen, y queremos celebrarlo por todo lo alto con vosotros el 1 de mayo de 2027 en el Hotel ReeHorst en Ede, Países Bajos.",
+        "welcome.text_p2": "Sabemos que para muchos de vosotros esto significa hacer las maletas, coger un avión y venir hasta aquí. Por eso hemos preparado esta pequeña guía con todo lo que necesitáis saber para disfrutar del viaje y, sobre todo, de la celebración.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto",
+        "countdown.days": "DÍAS",
+        "countdown.hours": "HORAS",
+        "countdown.mins": "MINUTOS",
+        "countdown.secs": "SEGUNDOS",
+        "countdown.google_cal": "Google Calendar",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "checklist.title": "Tu viaje a Países Bajos",
+        "checklist.intro": "Aquí tienes tu check list paso a paso para que organices el viaje sin estrés:",
+        "checklist.completed": "completados",
+        "checklist.item1": "1. Confirmar asistencia",
+        "checklist.item2": "2. Reservar vuelo",
+        "checklist.item3": "3. Reservar el hospedaje",
+        "checklist.item4": "4. Para la cena indicarnos alergias e intolerancias",
+        "checklist.item5": "5. Preparar el look",
+        "checklist.item6": "6. Organizar el transporte en tren o alquiler de coche",
+        "checklist.item7": "7. Hacer maletas",
+        "checklist.item8": "8. Venir a celebrar con nosotros 🎉",
+        "faq.title": "Preguntas Frecuentes",
+        "faq.q1": "1. ✈️ Aeropuerto recomendado: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Vengas desde donde vengas, te recomendamos volar a <strong>Amsterdam Schiphol (AMS)</strong>. Es la opción más fácil para llegar al hotel, ya que desde el aeropuerto puedes tomar directamente un tren hasta Ede-Wageningen, la estación más cercana. ✈️",
+        "faq.q2": "2. ✈️ ¿Cómo llegar desde el aeropuerto Schiphol hasta el Hotel ReeHorst?",
+        "faq.a2": "¡Llegar es muy fácil! 😊 Al aterrizar en Amsterdam Schiphol, puedes tomar el tren directamente desde el aeropuerto con destino a <strong>Ede-Wageningen</strong>. El billete se puede comprar en el propio aeropuerto, antes de bajar a la zona de trenes. El trayecto dura aproximadamente <strong>50 minutos</strong> y el billete cuesta alrededor de <strong>18,80 € por trayecto</strong>. Al llegar a la estación de Ede-Wageningen, el hotel se encuentra justo frente a la estación. 🏨<br/><br/>Si prefieres alquilar un coche, el Hotel ReeHorst cuenta con <strong>parking gratuito</strong> para sus huéspedes. 🚗",
+        "faq.q3": "3. ✦ ¿Por qué recomendamos hospedarse en el Hotel ReeHorst?",
+        "faq.a3": "Puedes reservar tu habitación en el mismo hotel donde celebraremos la fiesta. Hay habitaciones individuales y familiares, además de opciones con desayuno incluido. 🏨<br/><br/>Así podrás disfrutar de la celebración con tranquilidad y, al terminar, simplemente subir a descansar sin preocuparte por taxis, desplazamientos o conducir después de haber bebido. 🥂<br/><br/>Una vez que confirmes tu asistencia a la boda, <strong>te enviaremos un código especial de reserva</strong> para que puedas reservar tu habitación directamente con el hotel.<br/><br/>Puedes consultar todos los tipos de habitaciones disponibles y conocer más detalles en la página del Hotel ReeHorst:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. 🍹 Barra libre",
+        "faq.a4": "Cervezas, vinos y refrescos estarán incluidos durante toda la noche. 🥂<br/><br/>Para quienes quieran disfrutar de algo diferente, también habrá cócteles especiales disponibles en la barra, por cuenta propia. 🍹",
+        "faq.q5": "5. 👗 Dress Code: Casual Chic / Traje Formal",
+        "faq.a5": "Viste con tus colores favoritos. El blanco queda reservado con cariño para la novia.",
+        "faq.q6": "6. 🌷 ¿Qué tiempo hace en mayo y cómo es el salón?",
+        "faq.a6": "En mayo, el clima en Países Bajos suele ser fresco y agradable, con temperaturas que generalmente rondan los <strong>14 °C a 18 °C</strong>. 🌷<br/><br/>La celebración tendrá lugar en un <strong>salón cerrado y climatizado</strong> dentro del hotel, así que estaremos cómodos durante la fiesta independientemente del tiempo que haga fuera. 🥂<br/><br/>Para los momentos fuera del hotel —como traslados, paseos o desplazamientos— te recomendamos tener en cuenta que puede refrescar, especialmente por la tarde o noche. Si eres de los que sienten frío fácilmente, una chaqueta ligera puede ser una buena idea. 🧥",
+        "faq.q7": "7. ⏱️🇳🇱 Puntualidad en Países Bajos",
+        "faq.a7": "Aviso importante: aquí la hora significa la hora. 😅<br/><br/>En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. 😂<br/><br/>Así que, por una vez, ¡intentemos encontrarnos a mitad de camino! 😉 Te recomendamos llegar unos minutos antes para no perderte nada de la celebración. 🥂",
+        "rsvp.subtitle": "✦ Confirmación de Asistencia ✦",
+        "rsvp.deadline": "Por favor confirma tu asistencia antes del 31 de Diciembre de 2026",
+        "rsvp.name_label": "Nombre Completo *",
+        "rsvp.name_placeholder": "Tu nombre y apellido",
+        "rsvp.email_label": "Correo electrónico",
+        "rsvp.email_placeholder": "Tu correo electrónico",
+        "rsvp.phone_label": "Teléfono",
+        "rsvp.phone_placeholder": "Tu teléfono",
+        "rsvp.attendance_label": "¿Asistirás a la celebración? *",
+        "rsvp.yes": "¡Sí, asistiré! 🎉",
+        "rsvp.no": "No podré asistir ❤️",
+        "rsvp.diet_label": "Alergias o Restricciones Alimentarias (Muy importante para el chef)",
+        "rsvp.diet_placeholder": "Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher...",
+        "rsvp.song_label": "Canción favorita de sugerencia para el DJ 🎵",
+        "rsvp.song_placeholder": "Título de la canción y artista",
+        "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
+        "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
+        "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
+                "nav.timeline": "Programa",
+        "nav.dresscode": "Vestimenta",
+        "nav.lodging": "Hospedaje",
+        "nav.gift": "Regalo",
+        "programa.subtitle": "✦ El día de la celebración ✦",
+        "programa.title": "Programa del día",
+        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados",
+        "programa.e1": "Recepción y bienvenida",
+        "programa.e2": "Cena estilo bufé",
+        "programa.e3": "Apertura de la celebración",
+        "programa.e4": "Lectura de votos",
+        "programa.e5": "Nuestro primer baile",
+        "programa.e6": "Brindis",
+        "programa.e7": "Celebración",
+        "programa.e8": "Fin de la celebración",
+        "programa.v_claires": "Claire's Lounge",
+        "programa.v_ny": "Salón New York",
+        "vestimenta.subtitle": "✦ Código de vestimenta ✦",
+        "vestimenta.title": "Código de vestimenta",
+        "vestimenta.intro": "Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.",
+        "vestimenta.women_label": "Mujeres",
+        "vestimenta.women_text": "Chic con un toque elegante",
+        "vestimenta.men_label": "Hombres",
+        "vestimenta.men_text": "Traje formal",
+        "vestimenta.note": "Un detalle especial: el blanco está reservado exclusivamente para la novia.",
+        "hospedaje.subtitle": "✦ Hospedaje ✦",
+        "hospedaje.title": "Hospedaje",
+        "hospedaje.text": "Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración.",
+        "hospedaje.rooms": "Habitaciones individuales y familiares con desayuno.",
+        "hospedaje.btn": "Consultar tarifas y reservar habitación",
+        "hospedaje.code_label": "Código especial de la pareja",
+        "hospedaje.code_value": "[Código XXX]",
+        "hospedaje.code_note": "En cuanto la pareja comparta su código, aparecerá aquí.",
+        "regalo.subtitle": "✦ Un regalo para nuestra aventura ✦",
+        "regalo.title": "Un regalo para nuestra aventura",
+        "regalo.text": "Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.",
+        "regalo.btn": "Una nueva aventura comienza juntos",
+        "regalo.bank_title": "Datos bancarios · Pendientes",
+        "regalo.bank_note": "En cuanto la pareja comparta sus datos, aparecerán aquí.",
+        "guia.subtitle": "✦ Guía de viaje ✦",
+        "guia.title": "Guía de viaje para nuestros invitados",
+        "guia.text": "Si viajas desde el extranjero, aquí encontrarás próximamente la guía con todo lo necesario para llegar fácil, cómodo y económico.",
+        "guia.btn": "Próximamente",
+        "guia.note": "La guía se abrirá aquí en cuanto se comparta su enlace. La invitación y la guía comparten la misma música de fondo."
+      },
+      nl: {
+        "nav.welcome": "Welkom",
+        "nav.checklist": "Checklist",
+        "nav.faq": "Veelgestelde Vragen",
+        "nav.rsvp": "RSVP",
+        "hero.together": "Samen met onze families",
+        "hero.invite_sub": "Wij hebben de eer jullie uit te nodigen voor onze bruiloft",
+        "hero.month": "MEI",
+        "hero.location": "Hotel ReeHorst • Ede, Nederland",
+        "hero.btn_start": "Ontdekken",
+        "audio.label": "Bruiloftsmuziek",
+        "audio.title": "Alex Warren — Ordinary",
+        "audio.subtitle": "Piano Cover door Pianella Piano",
+        "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
+        "welcome.title": "Wij Gaan Trouwen!",
+        "welcome.text_p1": "Wij geven elkaar het jawoord in de gemeente Wageningen, en willen dit groots met jullie vieren op 1 mei 2027 in Hotel ReeHorst in Ede, Nederland.",
+        "welcome.text_p2": "We weten dat dit voor velen van jullie betekent: koffers pakken, het vliegtuig instappen en hierheen reizen. Daarom hebben we deze gids samengesteld met alles wat jullie moeten weten om van de reis en vooral van het feest te genieten.",
+        "countdown.until": "Tot",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
+        "countdown.days": "DAGEN",
+        "countdown.hours": "UREN",
+        "countdown.mins": "MINUTEN",
+        "countdown.secs": "SECONDEN",
+        "countdown.google_cal": "Google Agenda",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "checklist.title": "Jouw reis naar Nederland",
+        "checklist.intro": "Hier is je stapsgewijze checklist om je reis zonder stress te plannen:",
+        "checklist.completed": "voltooid",
+        "checklist.item1": "1. Aanwezigheid bevestigen (RSVP)",
+        "checklist.item2": "2. Vlucht boeken",
+        "checklist.item3": "3. Hotelkamer reserveren",
+        "checklist.item4": "4. Dieetwensen en allergieën doorgeven voor het diner",
+        "checklist.item5": "5. Feestelijke outfit kiezen",
+        "checklist.item6": "6. Treinreis of huurauto regelen",
+        "checklist.item7": "7. Koffers inpakken",
+        "checklist.item8": "8. Komen vieren met ons! 🎉",
+        "faq.title": "Veelgestelde Vragen",
+        "faq.q1": "1. ✈️ Aanbevolen luchthaven: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Waar je ook vandaan reist, we raden aan om naar <strong>Amsterdam Schiphol (AMS)</strong> te vliegen. Dit is de makkelijkste optie om bij het hotel te komen, omdat je vanaf de luchthaven rechtstreeks de intercity naar station Ede-Wageningen kunt nemen. ✈️",
+        "faq.q2": "2. ✈️ Hoe reis je vanaf Schiphol naar Hotel ReeHorst?",
+        "faq.a2": "Heel eenvoudig! 😊 Zodra je landt op Amsterdam Schiphol, kun je direct op de luchthaven de rechtstreekse trein nemen richting <strong>Ede-Wageningen</strong>. Treinkaartjes koop je op Schiphol Plaza bij de NS-automaten vóórdat je naar de perrons afdaalt. De treinreis duurt circa <strong>50 minuten</strong> en kost ongeveer <strong>€ 18,80 per enkele reis</strong>. Bij aankomst op station Ede-Wageningen ligt het hotel direct tegenover het station. 🏨<br/><br/>Kom je liever met een huurauto? Hotel ReeHorst beschikt over <strong>gratis parkeergelegenheid</strong> voor gasten. 🚗",
+        "faq.q3": "3. ✦ Waarom raden we aan om in Hotel ReeHorst te overnachten?",
+        "faq.a3": "Je kunt een kamer boeken in hetzelfde hotel waar we het feest vieren. Er zijn zowel comfortabele eenpersoons- als familiekamers beschikbaar, inclusief heerlijk ontbijt. 🏨<br/><br/>Zo kun je volop van de avond genieten en na afloop gewoon naar boven lopen om te slapen, zonder je zorgen te maken over taxi's of rijden na een drankje. 🥂<br/><br/>Zodra je je aanwezigheid bevestigt, <strong>ontvang je van ons een speciale boekingscode</strong> waarmee je rechtstreeks bij het hotel kunt reserveren.<br/><br/>Bekijk alle beschikbare kamertypes op de officiële website van Hotel ReeHorst:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. 🍹 Open bar",
+        "faq.a4": "Bier, wijn en frisdrank zijn de hele avond inbegrepen. 🥂<br/><br/>Voor wie graag een speciale cocktail wil, zijn deze verkrijgbaar aan de bar voor eigen rekening. 🍹",
+        "faq.q5": "5. 👗 Dresscode: Casual Chic / Feestelijk Formeel",
+        "faq.a5": "Draag vooral je favoriete feestelijke kleuren. Wit houden we met liefde gereserveerd voor de bruid. 🤍",
+        "faq.q6": "6. 🌷 Wat voor weer is het in mei en hoe is de feestzaal?",
+        "faq.a6": "In mei is het weer in Nederland meestal fris en aangenaam, met temperaturen rond de <strong>14 °C tot 18 °C</strong>. 🌷<br/><br/>De viering vindt plaats in een <strong>sfeervolle, overdekte en geklimatiseerde zaal</strong> in het hotel. We zitten dus heerlijk comfortabel, ongeacht het weer buiten. 🥂<br/><br/>Voor momenten buiten (vervoer, wandelen) kan het 's avonds afkoelen, dus een colbert of een lichte jas is aan te raden. 🧥",
+        "faq.q7": "7. ⏱️🇳🇱 Stiptheid in Nederland",
+        "faq.a7": "Belangrijk weetje: hier betekent de afgesproken tijd ook echt de afgesproken tijd! 😅<br/><br/>In Nederland is 10 minuten van tevoren aanwezig zijn de norm. Voor veel latino's valt 10 minuten te laat nog onder 'ik ben er bijna!'. 😂<br/><br/>Laten we elkaar deze keer tegemoetkomen! 😉 We raden aan om ruim op tijd te komen zodat je niets van het feest hoeft te missen. 🥂",
+        "rsvp.subtitle": "✦ Aanwezigheid Bevestigen ✦",
+        "rsvp.deadline": "Gelieve je aanwezigheid te bevestigen vóór 31 december 2026",
+        "rsvp.name_label": "Volledige Naam *",
+        "rsvp.name_placeholder": "Je voor- en achternaam",
+        "rsvp.email_label": "E-mail",
+        "rsvp.email_placeholder": "Je e-mailadres",
+        "rsvp.phone_label": "Telefoon",
+        "rsvp.phone_placeholder": "Je telefoonnummer",
+        "rsvp.attendance_label": "Ben je aanwezig bij de viering? *",
+        "rsvp.yes": "Ja, ik ben erbij! 🎉",
+        "rsvp.no": "Helaas kan ik niet ❤️",
+        "rsvp.diet_label": "Dieetwensen of allergieën (zeer belangrijk voor de chef)",
+        "rsvp.diet_placeholder": "Bijv.: Geen schaaldieren, glutenvrij (coeliakie), vegetarisch...",
+        "rsvp.song_label": "Favoriet verzoeknummer voor de DJ 🎵",
+        "rsvp.song_placeholder": "Titel van het nummer en artiest",
+        "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
+        "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
+        "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
+                "nav.timeline": "Programma",
+        "nav.dresscode": "Dresscode",
+        "nav.lodging": "Overnachten",
+        "nav.gift": "Cadeau",
+        "programa.subtitle": "✦ Het programma van de dag ✦",
+        "programa.title": "Programma van de dag",
+        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Nederland · Gratis parkeergelegenheid voor al onze gasten",
+        "programa.e1": "Ontvangst en welkom",
+        "programa.e2": "Diner in buffetvorm",
+        "programa.e3": "Opening van het feest",
+        "programa.e4": "Lezen van de geloften",
+        "programa.e5": "Onze eerste dans",
+        "programa.e6": "Toast",
+        "programa.e7": "Feest",
+        "programa.e8": "Einde van het feest",
+        "programa.v_claires": "Claire's Lounge",
+        "programa.v_ny": "Salon New York",
+        "vestimenta.subtitle": "✦ Dresscode ✦",
+        "vestimenta.title": "Dresscode",
+        "vestimenta.intro": "We kijken er enorm naar uit om deze bijzondere dag met jullie te delen en jullie met ons te zien vieren. We willen in onze albums foto's bewaren vol vreugde, liefde en onvergetelijke momenten.",
+        "vestimenta.women_label": "Dames",
+        "vestimenta.women_text": "Chic met een elegante toets",
+        "vestimenta.men_label": "Heren",
+        "vestimenta.men_text": "Formeel pak",
+        "vestimenta.note": "Een bijzonder detail: wit is exclusief gereserveerd voor de bruid.",
+        "hospedaje.subtitle": "✦ Overnachten ✦",
+        "hospedaje.title": "Overnachten",
+        "hospedaje.text": "Voor jullie comfort raden we aan te overnachten in het hotel waar onze viering plaatsvindt.",
+        "hospedaje.rooms": "Eenpersoons- en familiekamers met ontbijt.",
+        "hospedaje.btn": "Bekijk tarieven en reserveer je kamer",
+        "hospedaje.code_label": "Speciale code van het bruidspaar",
+        "hospedaje.code_value": "[Code XXX]",
+        "hospedaje.code_note": "Zodra het bruidspaar hun code deelt, verschijnt deze hier.",
+        "regalo.subtitle": "✦ Een cadeau voor ons avontuur ✦",
+        "regalo.title": "Een cadeau voor ons avontuur",
+        "regalo.text": "We kijken er enorm naar uit om aan deze nieuwe fase te beginnen, nieuwe bestemmingen te ontdekken en onvergetelijke herinneringen te creëren. Als jullie ons een cadeau willen geven, kunnen jullie ons helpen onze droomhuwelijksreis waar te maken: elke bijdrage brengt ons dichter bij nieuwe ervaringen en avonturen samen.",
+        "regalo.btn": "Een nieuw avontuur begint samen",
+        "regalo.bank_title": "Bankgegevens · In afwachting",
+        "regalo.bank_note": "Zodra het bruidspaar hun gegevens deelt, verschijnen deze hier.",
+        "guia.subtitle": "✦ Reisgids ✦",
+        "guia.title": "Reisgids voor onze gasten",
+        "guia.text": "Reis je vanuit het buitenland? Hier vind je binnenkort de gids met alles wat je nodig hebt om gemakkelijk, comfortabel en voordelig aan te komen.",
+        "guia.btn": "Binnenkort beschikbaar",
+        "guia.note": "De gids opent hier zodra de link wordt gedeeld. De uitnodiging en de gids delen dezelfde achtergrondmuziek."
+      },
+      en: {
+        "nav.welcome": "Welcome",
+        "nav.checklist": "Checklist",
+        "nav.faq": "FAQ",
+        "nav.rsvp": "RSVP",
+        "hero.together": "Together with our families",
+        "hero.invite_sub": "We have the honor to invite you to celebrate our wedding",
+        "hero.month": "MAY",
+        "hero.location": "Hotel ReeHorst • Ede, The Netherlands",
+        "hero.btn_start": "Begin",
+        "audio.label": "Wedding Music",
+        "audio.title": "Alex Warren — Ordinary",
+        "audio.subtitle": "Piano Cover by Pianella Piano",
+        "welcome.subtitle": "✦ A Letter to Our Guests ✦",
+        "welcome.title": "We Are Getting Married!",
+        "welcome.text_p1": "We will say 'I Do' in the municipality of Wageningen, and we want to celebrate with you on May 1, 2027 at Hotel ReeHorst in Ede, Netherlands.",
+        "welcome.text_p2": "We know that for many of you this means packing suitcases, catching a plane, and traveling here. That is why we prepared this guide with everything you need to know.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.cant_imagine": "We can't imagine this day without you, add it to your calendar so you don't miss it",
+        "countdown.days": "DAYS",
+        "countdown.hours": "HOURS",
+        "countdown.mins": "MINUTES",
+        "countdown.secs": "SECONDS",
+        "countdown.google_cal": "Google Calendar",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "checklist.title": "Your trip to the Netherlands",
+        "checklist.intro": "Here is your step-by-step checklist to organize your trip with zero stress:",
+        "checklist.completed": "completed",
+        "checklist.item1": "1. Confirm RSVP attendance",
+        "checklist.item2": "2. Book flight",
+        "checklist.item3": "3. Book accommodation",
+        "checklist.item4": "4. Inform dietary requirements & allergies",
+        "checklist.item5": "5. Prepare your look",
+        "checklist.item6": "6. Organize train tickets or rental car",
+        "checklist.item7": "7. Pack suitcases",
+        "checklist.item8": "8. Come celebrate with us! 🎉",
+        "faq.title": "Frequently Asked Questions",
+        "faq.q1": "1. ✈️ Recommended Airport: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Wherever you are coming from, we recommend flying to <strong>Amsterdam Schiphol (AMS)</strong>. It is the easiest option because you can take a direct train to Ede-Wageningen station. ✈️",
+        "faq.q2": "2. ✈️ How to get from Schiphol Airport to Hotel ReeHorst?",
+        "faq.a2": "Getting here is very easy! 😊 Take the direct train inside the airport to <strong>Ede-Wageningen</strong> (~50 min, ~18.80 € each way). The hotel is located directly opposite the station. 🏨<br/><br/>If you rent a car, Hotel ReeHorst offers <strong>free private parking</strong> for guests. 🚗",
+        "faq.q3": "3. ✦ Why do we recommend staying at Hotel ReeHorst?",
+        "faq.a3": "You can book your room directly at the hotel where the party takes place. Single and family rooms with breakfast are available. 🏨<br/><br/>You can freely enjoy the celebration and simply head upstairs to bed without taxis or driving. 🥂<br/><br/>Once you confirm your RSVP, <strong>we will send you a special booking code</strong> for the hotel.<br/><br/>View room details at:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. 🍹 Open Bar",
+        "faq.a4": "Beers, wines, and soft drinks are included throughout the night. 🥂<br/><br/>Special cocktails prepared by the bartender are available for purchase at the bar. 🍹",
+        "faq.q5": "5. 👗 Dress Code: Casual Chic / Formal Gala",
+        "faq.a5": "Wear your favorite festive colors. Pure white is reserved with love for the bride.",
+        "faq.q6": "6. 🌷 What is the weather like in May and what is the ballroom like?",
+        "faq.a6": "In May, Dutch weather is mild and fresh (<strong>14 °C to 18 °C</strong>). 🌷<br/><br/>The event is held in a <strong>fully climate-controlled indoor ballroom</strong>; outside weather won't affect us. 🥂<br/><br/>For outdoor moments, a light jacket or blazer is recommended for the evening. 🧥",
+        "faq.q7": "7. ⏱️🇳🇱 Punctuality in The Netherlands",
+        "faq.a7": "Important note: time means time here! 😅<br/><br/>In the Netherlands, arriving 10 minutes early is on time. Please arrive a few minutes before so you don't miss anything. 🥂",
+        "rsvp.subtitle": "✦ Attendance Confirmation ✦",
+        "rsvp.deadline": "Please confirm your attendance before December 31st, 2026",
+        "rsvp.name_label": "Full Name *",
+        "rsvp.name_placeholder": "Your full name",
+        "rsvp.email_label": "Email",
+        "rsvp.email_placeholder": "Your email address",
+        "rsvp.phone_label": "Phone",
+        "rsvp.phone_placeholder": "Your phone number",
+        "rsvp.attendance_label": "Will you attend? *",
+        "rsvp.yes": "Yes, I will attend! 🎉",
+        "rsvp.no": "Regretfully decline ❤️",
+        "rsvp.diet_label": "Dietary requirements or allergies (very important for the chef)",
+        "rsvp.diet_placeholder": "e.g.: No shellfish, gluten-free, vegetarian, kosher...",
+        "rsvp.song_label": "Favorite song suggestion for the DJ 🎵",
+        "rsvp.song_placeholder": "Song title and artist",
+        "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
+        "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
+        "footer.waiting": "We look forward to celebrating with you!",
+                "nav.timeline": "Program",
+        "nav.dresscode": "Dress Code",
+        "nav.lodging": "Accommodation",
+        "nav.gift": "Gift",
+        "programa.subtitle": "✦ The Day's Program ✦",
+        "programa.title": "Program of the Day",
+        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, The Netherlands · Free parking for all our guests",
+        "programa.e1": "Reception and welcome",
+        "programa.e2": "Buffet-style dinner",
+        "programa.e3": "Opening of the celebration",
+        "programa.e4": "Reading of the vows",
+        "programa.e5": "Our first dance",
+        "programa.e6": "Toast",
+        "programa.e7": "Celebration",
+        "programa.e8": "End of the celebration",
+        "programa.v_claires": "Claire's Lounge",
+        "programa.v_ny": "Salon New York",
+        "vestimenta.subtitle": "✦ Dress Code ✦",
+        "vestimenta.title": "Dress Code",
+        "vestimenta.intro": "We would love to share this very special day with you and see you celebrate with us. We want to keep in our albums photographs full of joy, love and unforgettable moments.",
+        "vestimenta.women_label": "Ladies",
+        "vestimenta.women_text": "Chic with an elegant touch",
+        "vestimenta.men_label": "Gentlemen",
+        "vestimenta.men_text": "Formal suit",
+        "vestimenta.note": "One special detail: white is reserved exclusively for the bride.",
+        "hospedaje.subtitle": "✦ Accommodation ✦",
+        "hospedaje.title": "Accommodation",
+        "hospedaje.text": "For your comfort, we recommend staying at the hotel where our celebration will take place.",
+        "hospedaje.rooms": "Single and family rooms with breakfast.",
+        "hospedaje.btn": "Check rates and book your room",
+        "hospedaje.code_label": "The couple's special code",
+        "hospedaje.code_value": "[Code XXX]",
+        "hospedaje.code_note": "As soon as the couple shares their code, it will appear here.",
+        "regalo.subtitle": "✦ A Gift for Our Adventure ✦",
+        "regalo.title": "A Gift for Our Adventure",
+        "regalo.text": "We are so excited to begin this new chapter discovering new destinations and creating unforgettable memories. If you would like to give us a gift, you can help make our dream honeymoon come true: every contribution brings us closer to living new experiences and adventures together.",
+        "regalo.btn": "A New Adventure Begins Together",
+        "regalo.bank_title": "Bank Details · Pending",
+        "regalo.bank_note": "As soon as the couple shares their details, they will appear here.",
+        "guia.subtitle": "✦ Travel Guide ✦",
+        "guia.title": "Travel Guide for Our Guests",
+        "guia.text": "Traveling from abroad? Here you will soon find the guide with everything you need to arrive easily, comfortably and affordably.",
+        "guia.btn": "Coming soon",
+        "guia.note": "The guide will open here as soon as its link is shared. The invitation and the guide share the same background music."
+      }
+    };
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      if (!i18n[lang]) return;
+      currentLang = lang;
+
+      ['es', 'nl', 'en'].forEach(l => {
+        const btn = document.getElementById(`btn-lang-${l}`);
+        if (btn) {
+          if (l === lang) {
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold";
+          } else {
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso";
+          }
+        }
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (i18n[lang][key]) {
+          el.setAttribute('placeholder', i18n[lang][key]);
+        }
+      });
+
+      loadChecklist();
+    }
+
+    // ==================== AUDIO CONTROLLER (SOFT BACKGROUND AUTOPLAY) ====================
+    let isPlaying = false;
+    const audio = document.getElementById('weddingMusic');
+    const soundIconOn = document.getElementById('soundIconOn');
+    const soundIconOff = document.getElementById('soundIconOff');
+    const songPlayIcon = document.getElementById('songPlayIcon');
+    const musicBars = document.getElementById('musicBars');
+
+    // Soft ambient volume (22%) - gentle piano background that doesn't overpower
+    const TARGET_VOLUME = 0.22;
+    let fadeTimer = null;
+    let gestureTriggered = false;
+
+    function updateAudioUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        if (soundIconOn) soundIconOn.classList.remove('hidden');
+        if (soundIconOff) soundIconOff.classList.add('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+        if (musicBars) musicBars.classList.remove('opacity-30');
+      } else {
+        if (soundIconOn) soundIconOn.classList.add('hidden');
+        if (soundIconOff) soundIconOff.classList.remove('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        if (musicBars) musicBars.classList.add('opacity-30');
+      }
+    }
+
+    function fadeInAudio(target = TARGET_VOLUME, duration = 1800) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      audio.volume = 0;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          updateAudioUI(true);
+          const steps = 30;
+          const stepTime = duration / steps;
+          const volStep = target / steps;
+          fadeTimer = setInterval(() => {
+            if (audio.volume + volStep < target) {
+              audio.volume += volStep;
+            } else {
+              audio.volume = target;
+              clearInterval(fadeTimer);
+            }
+          }, stepTime);
+        }).catch(err => {
+          updateAudioUI(false);
+          setupGestureAutoplay();
+        });
+      }
+    }
+
+    function fadeOutAudio(duration = 600) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      const steps = 20;
+      const stepTime = duration / steps;
+      const volStep = audio.volume / steps;
+      fadeTimer = setInterval(() => {
+        if (audio.volume - volStep > 0) {
+          audio.volume -= volStep;
+        } else {
+          audio.volume = 0;
+          audio.pause();
+          clearInterval(fadeTimer);
+          updateAudioUI(false);
+        }
+      }, stepTime);
+    }
+
+    function toggleAudio() {
+      if (!audio) return;
+      if (isPlaying) {
+        fadeOutAudio();
+      } else {
+        fadeInAudio(TARGET_VOLUME);
+      }
+    }
+
+    function triggerGesturePlay() {
+      if (gestureTriggered || isPlaying) return;
+      gestureTriggered = true;
+      fadeInAudio(TARGET_VOLUME);
+      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+        window.removeEventListener(ev, triggerGesturePlay);
+      });
+    }
+
+    function setupGestureAutoplay() {
+      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+        window.addEventListener(ev, triggerGesturePlay, { once: true, passive: true });
+      });
+    }
+
+    // ==================== LIVE COUNTDOWN TIMER ====================
+    const TARGET_DATE = new Date('2027-05-01T20:00:00+02:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = TARGET_DATE - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // ==================== CALENDAR INTEGRATION ====================
+    function addToGoogleCalendar() {
+      const title = encodeURIComponent("Boda Gerwin & Yeralding — Gran Celebración");
+      const details = encodeURIComponent("Celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.");
+      const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
+      const dates = "20270501T180000Z/20270502T010000Z";
+      window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
+    }
+
+    function downloadICS() {
+      const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gerwin & Yeralding Wedding 2027//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-gerwin-yeralding-2027@reehorst
+DTSTAMP:20270501T180000Z
+DTSTART:20270501T180000Z
+DTEND:20270502T010000Z
+SUMMARY:Boda Gerwin & Yeralding
+DESCRIPTION:Gran celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.
+LOCATION:Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'Boda_Gerwin_y_Yeralding_2027.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ==================== RSVP FORM HANDLER ====================
+    function handleRSVPSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('rsvpName').value.trim();
+      const email = document.getElementById('rsvpEmail').value.trim();
+      const phone = document.getElementById('rsvpPhone').value.trim();
+      const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
+      const diet = document.getElementById('rsvpDiet').value.trim();
+      const song = document.getElementById('rsvpSong').value.trim();
+
+      const isNL = currentLang === 'nl';
+      const isEN = currentLang === 'en';
+
+      const header = isNL ? '💍 *RSVP BEVESTIGING — BRUILOFT GERWIN & YERALDING*' : (isEN ? '💍 *RSVP CONFIRMATION — WEDDING GERWIN & YERALDING*' : '💍 *CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING*');
+      const guestLabel = isNL ? '👤 *Gast:*' : (isEN ? '👤 *Guest:*' : '👤 *Invitado:*');
+      const emailLabel = isNL ? '📧 *E-mail:*' : (isEN ? '📧 *Email:*' : '📧 *Correo:*');
+      const phoneLabel = isNL ? '📱 *Telefoon:*' : (isEN ? '📱 *Phone:*' : '📱 *Teléfono:*');
+      const attendLabel = isNL ? '✨ *Aanwezigheid:*' : (isEN ? '✨ *Attendance:*' : '✨ *Asistencia:*');
+      const yesText = isNL ? 'JA, IK BEN ERBIJ! 🎉' : (isEN ? 'YES, I WILL ATTEND! 🎉' : '¡SÍ, ASISTIRÉ! 🎉');
+      const noText = isNL ? 'Helaas kan ik niet ❤️' : (isEN ? 'Regretfully decline ❤️' : 'Lamentablemente no podré asistir ❤️');
+      const hotelNotice = isNL ? '🏨 *Viering in Hotel ReeHorst (01 Mei 2027)*' : (isEN ? '🏨 *Celebration at Hotel ReeHorst (May 1, 2027)*' : '🏨 *Celebración en Hotel ReeHorst (01 Mayo 2027)*');
+      const dietLabel = isNL ? '🥗 *Dieetwensen / Allergieën voor de chef:*' : (isEN ? '🥗 *Dietary / Allergies for the Chef:*' : '🥗 *Dieta / Alergias para el Chef:*');
+      const songLabel = isNL ? '🎵 *Verzoeknummer voor de DJ:*' : (isEN ? '🎵 *Song suggestion for the DJ:*' : '🎵 *Sugerencia de Canción para el DJ:*');
+      const noneDiet = isNL ? 'Geen' : (isEN ? 'None' : 'Ninguna');
+      const noneSong = isNL ? 'Geen voorkeur' : (isEN ? 'No preference' : 'Ninguna sugerida');
+      const footerMsg = isNL ? '_Bevestiging verzonden vóór 31/12/2026 via de officiële bruiloftswebsite._' : (isEN ? '_Confirmation sent before 31/12/2026 from official wedding website._' : '_Confirmación enviada antes del 31/12/2026 desde la web oficial de boda._');
+
+      let text = `${header}\n\n`;
+      text += `${guestLabel} ${name}\n`;
+      if (email) text += `${emailLabel} ${email}\n`;
+      if (phone) text += `${phoneLabel} ${phone}\n`;
+      text += `${attendLabel} ${attend === 'si' ? yesText : noText}\n`;
+      if (attend === 'si') {
+        text += `${hotelNotice}\n`;
+        text += `${dietLabel} ${diet || noneDiet}\n`;
+        text += `${songLabel} ${song || noneSong}\n`;
+      }
+      text += `\n${footerMsg}`;
+
+      const toast = document.getElementById('rsvpSuccess');
+      toast.classList.remove('hidden');
+
+      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 700);
+    }
+
+    // ==================== FAQ ACCORDION LOGIC ====================
+    function toggleFAQ(button) {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const wasActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+      });
+      
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // ==================== CHECKLIST LOGIC & PERSISTENCE ====================
+    function updateChecklist(checkbox, index) {
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      const state = [];
+      allChecks.forEach((c) => {
+        if (c.checked) checkedCount++;
+        state.push(c.checked);
+      });
+
+      localStorage.setItem('yg_wedding_checklist_state', JSON.stringify(state));
+
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    function loadChecklist() {
+      const saved = localStorage.getItem('yg_wedding_checklist_state');
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      if (saved && allChecks.length) {
+        try {
+          const state = JSON.parse(saved);
+          allChecks.forEach((c, i) => {
+            if (state[i]) {
+              c.checked = true;
+              checkedCount++;
+            }
+          });
+        } catch(e) {}
+      }
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    // ==================== DYNAMIC BLURRED PHOTO BACKGROUND ON SCROLL ====================
+    function handleBackgroundScroll() {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const bgImg = document.getElementById('globalBgImg');
+      const scrollVeil = document.getElementById('scrollBgVeil');
+      
+      if (!bgImg) return;
+      
+      const maxScroll = 500;
+      const progress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+      
+      const blurPx = progress * 14;
+      const scale = 1.05 + progress * 0.05;
+      bgImg.style.filter = `blur(${blurPx.toFixed(1)}px)`;
+      bgImg.style.transform = `scale(${scale.toFixed(3)})`;
+      
+      if (scrollVeil) {
+        scrollVeil.style.opacity = (progress * 0.85).toFixed(2);
+      }
+    }
+
+    window.addEventListener('scroll', handleBackgroundScroll, { passive: true });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      handleBackgroundScroll();
+      loadChecklist();
+      fadeInAudio(TARGET_VOLUME);
+      setupGestureAutoplay();
+    });
+
+    handleBackgroundScroll();
+    // Immediate pre-emptive play attempt
+    fadeInAudio(TARGET_VOLUME);
+    setupGestureAutoplay();
+  </script>
+</body>
+</html>
