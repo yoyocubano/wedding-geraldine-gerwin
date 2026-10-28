@@ -362,7 +362,7 @@
         Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados
       </p>
       <div class="mt-2">
-        <video src="/wedding-geraldine-gerwin/preview-916/timeline-916-jardin-blur-v3.webm?v=v3" autoplay loop muted playsinline controls style="width:min(720px,92vw);height:auto;display:block;margin:0 auto;border:1px solid #d8c9a8;background:#f6f0e4"></video>
+        <video id="programaVideo" src="/wedding-geraldine-gerwin/preview-916/timeline-916-jardin-blur-v4.webm?v=v4" autoplay muted playsinline controls style="width:min(720px,92vw);height:auto;display:block;margin:0 auto;border:1px solid #d8c9a8;background:#f6f0e4"></video>
       </div>
     </div>
   </section>
@@ -837,7 +837,7 @@
   </footer>
 
   <!-- Audio Element -->
-  <audio id="weddingMusic" loop preload="auto">
+  <audio id="weddingMusic" preload="auto">
     <source src="assets/wedding_music.mp3" type="audio/mp3" />
   </audio>
 
@@ -1542,5 +1542,41 @@ END:VCALENDAR`;
     window.addEventListener('load', updateTimelineGlass);
     updateTimelineGlass();
   </script>
+
+<script>
+  // Musica: intento automatico al abrir (el codigo existente ya lo intenta y, si el navegador
+  // bloquea el sonido sin interaccion, arranca al primer toque/clic/desplazamiento).
+  // Limite: 3 reproducciones en total, luego se detiene (sin loop infinito).
+  (function () {
+    var a = document.getElementById('weddingMusic');
+    if (a) {
+      a.loop = false;
+      var ended = 0;
+      a.addEventListener('ended', function () {
+        ended++;
+        if (ended < 3) { a.currentTime = 0; a.play().catch(function () {}); }
+      });
+    }
+    // Video Programa: se reproduce solo cuando se llega a esa parte, y se pausa al salir.
+    // Limite: 5 reproducciones en total, luego se detiene.
+    var v = document.getElementById('programaVideo');
+    if (v && 'IntersectionObserver' in window) {
+      v.loop = false;
+      var vEnded = 0, vInView = false;
+      v.addEventListener('ended', function () {
+        vEnded++;
+        if (vEnded < 5 && vInView) { v.play().catch(function () {}); }
+      });
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          vInView = e.isIntersecting;
+          if (e.isIntersecting) {
+            if (v.paused && vEnded < 5) { v.play().catch(function () {}); }
+          } else if (!v.paused) { v.pause(); }
+        });
+      }, { threshold: 0.4 }).observe(v);
+    }
+  })();
+</script>
 </body>
 </html>
