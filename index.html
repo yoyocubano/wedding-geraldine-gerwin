@@ -1580,16 +1580,31 @@ END:VCALENDAR`;
         <p class="mt-3">Bereid jullie mooiste looks alvast voor, want we hebben foto's in te halen en veel herinneringen te creëren! We wachten jullie op met een vol hart en open armen.</p>
         <p class="mt-4 font-script text-2xl text-espresso">Met veel liefde,<br/>Gerwin &amp; Yeralding</p>
       </div>
-         <p class="font-script text-3xl text-espresso mb-4">Dear family and friends!</p>
-        <p>There are moments in life that become even more special when we share them with the people we love. And what could be more beautiful than celebrating love surrounded by those who hold a special place in our hearts?</p>
-        <p class="mt-3">On April 21, 2027 we will say yes, and on May 1 we want to celebrate this happiness with all of you.</p>
-        <p class="mt-3">We are so excited to share this day, full of love, laughter, hugs and new memories. Although some years and many kilometres separate us, the affection remains intact. It means so much to us to have you here, and Gerwin is happy to finally meet those friends Yeralding talks about with so much affection.</p>
-        <p class="mt-3">Prepare your best looks, because we have photos to catch up on and many memories to create! We look forward to welcoming you with full hearts and open arms.</p>
-        <p class="mt-4 font-script text-2xl text-espresso">With much love,<br/>Gerwin &amp; Yeralding</p>
-      </div>
-      <button onclick="document.getElementById('confirmLetterModal').classList.add('hidden')" class="mt-6 w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold cursor-pointer">Cerrar</button>
+               <button onclick="document.getElementById('confirmLetterModal').classList.add('hidden')" class="mt-6 w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold cursor-pointer">Cerrar</button>
     </div>
   </div>
 
+<script>
+  // La invitación siempre empieza por el header, nunca por el footer:
+  // el navegador (sobre todo en móvil) restaura la posición anterior al reabrir el enlace.
+  (function () {
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    function goTop() {
+      if (window.location.hash) return;
+      var root = document.documentElement;
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      if (document.body) document.body.scrollTop = 0;
+      root.scrollTop = 0;
+      setTimeout(function () { root.style.scrollBehavior = prev; }, 100);
+    }
+    goTop();
+    window.addEventListener('DOMContentLoaded', goTop);
+    window.addEventListener('load', goTop);
+    window.addEventListener('pageshow', goTop);
+    setTimeout(goTop, 500);
+  })();
+</script>
 </body>
 </html>
