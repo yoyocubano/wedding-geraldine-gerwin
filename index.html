@@ -1019,6 +1019,8 @@
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise.then(() => {
+          gestureTriggered = false;
+          removeGestureListeners();
           updateAudioUI(true);
           const steps = 30;
           const stepTime = duration / steps;
@@ -1032,6 +1034,8 @@
             }
           }, stepTime);
         }).catch(err => {
+          // Falla sin gesto válido: dejar que el próximo gesto reintente.
+          gestureTriggered = false;
           updateAudioUI(false);
           setupGestureAutoplay();
         });
@@ -1066,18 +1070,22 @@
       }
     }
 
-    function triggerGesturePlay() {
-      if (gestureTriggered || isPlaying) return;
-      gestureTriggered = true;
-      fadeInAudio(TARGET_VOLUME);
-      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
+    function removeGestureListeners() {
+      ['click', 'touchstart', 'touchend', 'scroll', 'pointerdown', 'pointerup', 'keydown'].forEach(ev => {
         window.removeEventListener(ev, triggerGesturePlay);
       });
     }
 
+    function triggerGesturePlay() {
+      if (isPlaying) { removeGestureListeners(); return; }
+      // No marcar como hecho hasta que suene: si este gesto falla
+      // (p. ej. solo desplazar en Safari), el siguiente gesto reintenta.
+      fadeInAudio(TARGET_VOLUME);
+    }
+
     function setupGestureAutoplay() {
-      ['click', 'touchstart', 'scroll', 'pointerdown', 'keydown'].forEach(ev => {
-        window.addEventListener(ev, triggerGesturePlay, { once: true, passive: true });
+      ['click', 'touchstart', 'touchend', 'scroll', 'pointerdown', 'pointerup', 'keydown'].forEach(ev => {
+        window.addEventListener(ev, triggerGesturePlay, { passive: true });
       });
     }
 
