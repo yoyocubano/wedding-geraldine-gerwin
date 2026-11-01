@@ -202,7 +202,7 @@
           <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-800" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
         </button>
 
-        <!-- Trilingual Switcher (ES | NL | EN) -->
+        <!-- Language Switcher (ES | NL) -->
         <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-sm font-sans font-medium">
           <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
           <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
@@ -247,7 +247,7 @@
       </div>
 
       <p class="text-sm uppercase tracking-[0.25em] font-sans text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-1" data-i18n="hero.location">
-        Hotel ReeHorst • Bennekomseweg 24, 6717 LM Ede, Países Bajos • 19:30
+        Sábado • Hotel ReeHorst • Bennekomseweg 24, 6717 LM Ede, Países Bajos • Recepción: 19:30
       </p>
       <p class="text-sm uppercase tracking-[0.2em] font-sans text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-1" data-i18n="hero.venue_line">
         Celebración en el Salón New York
@@ -259,7 +259,7 @@
 
   <!-- ==================== AUDIO SECTION: ALEX WARREN - ORDINARY (PIANELLA PIANO) ==================== -->
   <section class="py-10 px-2 sm:px-4 bg-white/70 backdrop-blur-xl border-b border-champagne-500/20 relative overflow-hidden">
-    <p class="font-script text-4xl sm:text-5xl text-champagne-700 text-center mb-1" style="text-shadow:0 1px 0 rgba(255,255,255,0.6);">Our wedding song</p>
+    <p class="font-script text-4xl sm:text-5xl text-champagne-700 text-center mb-1" style="text-shadow:0 1px 0 rgba(255,255,255,0.6);" data-i18n="audio.wedding_song">Nuestra canción de boda</p>
     <div class="flex items-stretch justify-center gap-2 max-w-5xl mx-auto">
       <img src="assets/notas-musicales-1.png" alt="" class="notes-left hidden sm:block w-1/4 object-contain self-center" />
     <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
@@ -306,9 +306,9 @@
       <div class="flex justify-center my-8">
         <img src="assets/anillos-reales-sin-fondo.png" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 object-cover" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));" />
       </div>
-      <p class="font-script text-4xl sm:text-5xl text-black leading-tight">We can&rsquo;t</p>
-      <p class="font-script text-4xl sm:text-5xl text-black leading-tight">imagine this day</p>
-      <p class="font-script text-6xl sm:text-7xl text-black leading-tight mt-1">Without You</p>
+      <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script1">No podemos</p>
+      <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script2">imaginar este día</p>
+      <p class="font-script text-6xl sm:text-7xl text-black leading-tight mt-1" data-i18n="countdown.script3">sin ti</p>
       <div class="flex justify-center mt-6 mb-2">
         <img src="assets/corazon-dorado-sin-fondo.png" alt="Corazón dorado" class="hero-heart w-24 h-24 object-contain" />
       </div>
@@ -570,7 +570,7 @@
         Guía de viaje para nuestros invitados
       </h2>
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-4 mb-6 max-w-xl mx-auto" data-i18n="guia.text">
-        Si viajas desde el extranjero, aquí encontrarás próximamente la guía con todo lo necesario para llegar fácil, cómodo y económico.
+        Si viajas desde el extranjero, aquí tienes la guía con todo lo necesario para llegar fácil, cómodo y económico.
       </p>
       <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="es">
         <div>
@@ -669,6 +669,7 @@
         "hero.venue_line": "Celebración en el Salón New York",
         "hero.btn_start": "Comenzar",
         "audio.label": "Música de la Boda",
+        "audio.wedding_song": "Nuestra canción de boda",
         "audio.title": "Alex Warren — Ordinary",
         "audio.subtitle": "Piano Cover by Pianella Piano",
         "welcome.subtitle": "✦ Carta a Nuestros Invitados ✦",
@@ -677,6 +678,9 @@
         "welcome.text_p2": "El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para nosotros y nuestra familia, tenerlos ahí significa muchísimo. Gerwin está feliz porque tiene por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que tanto les hablo. Así que vayan preparando sus mejores looks porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos.",
         "countdown.until": "Until",
         "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.script1": "No podemos",
+        "countdown.script2": "imaginar este día",
+        "countdown.script3": "sin ti",
         "countdown.cant_imagine": "No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto",
         "countdown.days": "DÍAS",
         "countdown.hours": "HORAS",
@@ -728,7 +732,7 @@
         "rsvp.submit_btn": "Enviar confirmación",
         "rsvp.email_btn": "Enviar por email a Yeralding",
         "rsvp.whatsapp_btn": "Enviar también por WhatsApp (opcional)",
-        "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
+        "rsvp.success": "¡Muchas gracias! Tu confirmación ha sido enviada con éxito.",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
         "footer.uber_title": "✦ Uber en Países Bajos",
@@ -804,6 +808,7 @@
         "hero.venue_line": "Feest in Salon New York",
         "hero.btn_start": "Ontdekken",
         "audio.label": "Bruiloftsmuziek",
+        "audio.wedding_song": "Ons trouwlied",
         "audio.title": "Alex Warren — Ordinary",
         "audio.subtitle": "Piano Cover door Pianella Piano",
         "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
@@ -812,6 +817,9 @@
         "welcome.text_p2": "Op 21 april 2027 zullen Gerwin en ik het jawoord geven en op 1 mei vieren we dat met jullie. Voor ons en onze familie betekent het heel veel dat jullie erbij zijn. Gerwin is blij omdat hij eindelijk de kans krijgt jullie te ontmoeten en persoonlijk die vrienden te ontdekken over wie ik jullie zoveel vertel. Dus bereid jullie mooiste looks alvast voor, want we hebben jaren aan foto's die bijgewerkt moeten worden en veel nieuwe herinneringen te creëren. Heel erg bedankt dat jullie de moeite nemen om te komen en deel uit te maken van zo'n belangrijk moment voor ons. We kijken ernaar uit jullie met een vol hart en open armen te ontvangen.",
         "countdown.until": "Tot",
         "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.script1": "We kunnen ons",
+        "countdown.script2": "deze dag niet voorstellen",
+        "countdown.script3": "zonder jullie",
         "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
         "countdown.days": "DAGEN",
         "countdown.hours": "UREN",
@@ -863,7 +871,7 @@
         "rsvp.submit_btn": "Bevestiging verzenden",
         "rsvp.email_btn": "Verzenden per e-mail naar Yeralding",
         "rsvp.whatsapp_btn": "Ook verzenden via WhatsApp (optioneel)",
-        "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
+        "rsvp.success": "Hartelijk dank! Je bevestiging is succesvol verzonden.",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
         "footer.uber_title": "✦ Uber in Nederland",
@@ -935,6 +943,8 @@
       if (lang === 'en') lang = 'es';
       if (!i18n[lang]) return;
       currentLang = lang;
+      document.documentElement.lang = lang;
+      document.title = (lang === 'nl') ? 'Gerwin & Yeralding \u2014 Ons Huwelijk 2027' : 'Gerwin & Yeralding \u2014 Nuestra Boda 2027';
 
       ['es', 'nl'].forEach(l => {
         const btn = document.getElementById(`btn-lang-${l}`);
@@ -1528,6 +1538,7 @@ END:VCALENDAR`;
     }
     goTop();
     window.addEventListener('DOMContentLoaded', goTop);
+    window.addEventListener('DOMContentLoaded', function () { if (typeof setLanguage === 'function') setLanguage('es'); });
     window.addEventListener('load', goTop);
     window.addEventListener('pageshow', goTop);
     setTimeout(goTop, 500);
