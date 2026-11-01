@@ -435,9 +435,13 @@
       <button onclick="document.getElementById('giftBankPanel').classList.toggle('hidden')" class="px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.btn">
         Una nueva aventura comienza juntos
       </button>
-      <div id="giftBankPanel" class="hidden bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-6 max-w-md mx-auto">
-        <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-1" data-i18n="regalo.bank_title">Datos bancarios · Pendientes</p>
-        <p class="text-sm font-sans text-champagne-800" data-i18n="regalo.bank_note">En cuanto la pareja comparta sus datos, aparecerán aquí.</p>
+      <div id="giftBankPanel" class="hidden bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-6 max-w-md mx-auto text-left">
+        <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-3" data-i18n="regalo.bank_title">Datos para transferencia</p>
+        <p class="text-sm font-sans text-espresso mb-1"><span class="font-bold" data-i18n="regalo.beneficiary_label">Beneficiario:</span> Gerwin Onderstal</p>
+        <p class="text-sm font-sans text-espresso mb-1"><span class="font-bold">IBAN:</span> NL30 **** **** 5167</p>
+        <p class="text-sm font-sans text-espresso mb-4"><span class="font-bold">BIC:</span> <span data-i18n="regalo.bic_note">se copia con los datos</span></p>
+        <button onclick="copyGiftData()" class="w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.2em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.copy_btn">Copiar datos para transferencia</button>
+        <p id="giftCopied" class="hidden text-sm font-sans font-semibold text-emerald-800 mt-3 text-center" data-i18n="regalo.copied">¡Datos copiados! Pégalos en tu banco para hacer la transferencia.</p>
       </div>
     </div>
   </section>
@@ -1069,8 +1073,12 @@
         "regalo.title": "Un regalo para nuestra aventura",
         "regalo.text": "Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.",
         "regalo.btn": "Una nueva aventura comienza juntos",
-        "regalo.bank_title": "Datos bancarios · Pendientes",
-        "regalo.bank_note": "En cuanto la pareja comparta sus datos, aparecerán aquí.",
+        "regalo.bank_title": "Datos para transferencia",
+        "regalo.bank_note": "",
+        "regalo.beneficiary_label": "Beneficiario:",
+        "regalo.bic_note": "se copia con los datos",
+        "regalo.copy_btn": "Copiar datos para transferencia",
+        "regalo.copied": "¡Datos copiados! Pégalos en tu banco para hacer la transferencia.",
         "guia.subtitle": "✦ Guía de viaje ✦",
         "guia.title": "Guía de viaje para nuestros invitados",
         "guia.text": "Si viajas desde el extranjero, aquí tienes la guía con todo lo necesario para llegar fácil, cómodo y económico.",
@@ -1195,8 +1203,12 @@
         "regalo.title": "Een cadeau voor ons avontuur",
         "regalo.text": "We kijken er enorm naar uit om aan deze nieuwe fase te beginnen, nieuwe bestemmingen te ontdekken en onvergetelijke herinneringen te creëren. Als jullie ons een cadeau willen geven, kunnen jullie ons helpen onze droomhuwelijksreis waar te maken: elke bijdrage brengt ons dichter bij nieuwe ervaringen en avonturen samen.",
         "regalo.btn": "Een nieuw avontuur begint samen",
-        "regalo.bank_title": "Bankgegevens · In afwachting",
-        "regalo.bank_note": "Zodra het bruidspaar hun gegevens deelt, verschijnen deze hier.",
+        "regalo.bank_title": "Gegevens voor overboeking",
+        "regalo.bank_note": "",
+        "regalo.beneficiary_label": "Begunstigde:",
+        "regalo.bic_note": "wordt meegekopieerd",
+        "regalo.copy_btn": "Gegevens kopiëren voor overboeking",
+        "regalo.copied": "Gegevens gekopieerd! Plak ze in je bank om over te boeken.",
         "guia.subtitle": "✦ Reisgids ✦",
         "guia.title": "Reisgids voor onze gasten",
         "guia.text": "Reis je vanuit het buitenland? Hier vind je de gids met alles wat je nodig hebt om gemakkelijk, comfortabel en voordelig aan te komen.",
@@ -1321,8 +1333,12 @@
         "regalo.title": "A Gift for Our Adventure",
         "regalo.text": "We are so excited to begin this new chapter discovering new destinations and creating unforgettable memories. If you would like to give us a gift, you can help make our dream honeymoon come true: every contribution brings us closer to living new experiences and adventures together.",
         "regalo.btn": "A New Adventure Begins Together",
-        "regalo.bank_title": "Bank Details · Pending",
-        "regalo.bank_note": "As soon as the couple shares their details, they will appear here.",
+        "regalo.bank_title": "Bank transfer details",
+        "regalo.bank_note": "",
+        "regalo.beneficiary_label": "Beneficiary:",
+        "regalo.bic_note": "copied with the details",
+        "regalo.copy_btn": "Copy details for bank transfer",
+        "regalo.copied": "Details copied! Paste them into your bank to make the transfer.",
         "guia.subtitle": "✦ Travel Guide ✦",
         "guia.title": "Travel Guide for Our Guests",
         "guia.text": "Traveling from abroad? Here you will find the guide with everything you need to arrive easily, comfortably and affordably.",
@@ -1592,6 +1608,28 @@ END:VCALENDAR`;
       setTimeout(() => {
         window.open(waUrl, '_blank');
       }, 700);
+    }
+
+    // Regalo: copiar en un clic los datos de transferencia (beneficiario, IBAN y BIC).
+    // En pantalla solo se muestra el IBAN enmascarado; el BIC completo solo va al portapapeles.
+    function copyGiftData() {
+      var text = "Beneficiario: Gerwin Onderstal\nIBAN: NL30 REVO 6912 0351 67\nBIC: REVONL22\nConcepto: Regalo boda Gerwin & Yeralding";
+      function done() {
+        var el = document.getElementById('giftCopied');
+        if (el) el.classList.remove('hidden');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function() { fallbackCopy(text); done(); });
+      } else {
+        fallbackCopy(text); done();
+      }
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
     }
 
     // ==================== FAQ ACCORDION LOGIC ====================
