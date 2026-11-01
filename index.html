@@ -773,7 +773,7 @@
           type="submit" 
           class="w-full py-4 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-4"
         >
-          <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
+          <span data-i18n="rsvp.submit_btn">Enviar confirmación</span>
           <span></span>
         </button>
         <!-- Botón visible para enviar por email a Yeralding (también guarda en las listas) -->
@@ -783,6 +783,14 @@
           class="w-full py-4 rounded-full bg-white/70 border border-champagne-500/60 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-3"
         >
           <span data-i18n="rsvp.email_btn">Enviar por email a Yeralding</span>
+        </button>
+        <!-- WhatsApp opcional: la confirmación automática ya se guardó y se notificó por email -->
+        <button
+          type="button"
+          onclick="handleRSVPWhatsApp(event)"
+          class="w-full py-4 rounded-full bg-white/70 border border-champagne-500/60 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-3"
+        >
+          <span data-i18n="rsvp.whatsapp_btn">Enviar también por WhatsApp (opcional)</span>
         </button>
         <p id="rsvpStatus" class="hidden text-sm font-sans font-semibold text-champagne-800 mt-3 text-center"></p>
       </form>
@@ -1020,8 +1028,9 @@
         "rsvp.diet_placeholder": "Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher...",
         "rsvp.song_label": "Canción favorita de sugerencia para el DJ ",
         "rsvp.song_placeholder": "Título de la canción y artista",
-        "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.submit_btn": "Enviar confirmación",
         "rsvp.email_btn": "Enviar por email a Yeralding",
+        "rsvp.whatsapp_btn": "Enviar también por WhatsApp (opcional)",
         "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
@@ -1153,8 +1162,9 @@
         "rsvp.diet_placeholder": "Bijv.: Geen schaaldieren, glutenvrij (coeliakie), vegetarisch...",
         "rsvp.song_label": "Favoriet verzoeknummer voor de DJ ",
         "rsvp.song_placeholder": "Titel van het nummer en artiest",
-        "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.submit_btn": "Bevestiging verzenden",
         "rsvp.email_btn": "Verzenden per e-mail naar Yeralding",
+        "rsvp.whatsapp_btn": "Ook verzenden via WhatsApp (optioneel)",
         "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
@@ -1286,8 +1296,9 @@
         "rsvp.diet_placeholder": "e.g.: No shellfish, gluten-free, vegetarian, kosher...",
         "rsvp.song_label": "Favorite song suggestion for the DJ ",
         "rsvp.song_placeholder": "Song title and artist",
-        "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.submit_btn": "Send confirmation",
         "rsvp.email_btn": "Send by email to Yeralding",
+        "rsvp.whatsapp_btn": "Also send via WhatsApp (optional)",
         "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
         "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
         "footer.waiting": "We look forward to celebrating with you!",
@@ -1593,19 +1604,16 @@ END:VCALENDAR`;
       }
       text += `\n${footerMsg}`;
 
-      // WhatsApp INMEDIATO, en el mismo clic: el retardo de 700 ms hacía que el móvil lo bloqueara como ventana emergente.
-      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
-      window.open(waUrl, '_blank');
-
-      // Guardado en las listas + email automático a Yeralding (Apps Script), con estado visible.
+      // ENVÍO AUTOMÁTICO al momento: sheet actualizada + email a Yeralding, sin depender de WhatsApp.
       // text/plain evita el preflight de CORS; no-cors porque Apps Script redirige a googleusercontent.
       var statusEl = document.getElementById('rsvpStatus');
       function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
-      var sendingMsg = (currentLang === 'nl') ? 'Verzenden naar de lijsten…' : ((currentLang === 'en') ? 'Saving to the lists…' : 'Guardando en las listas…');
-      var savedMsg = (currentLang === 'nl') ? 'Opgeslagen in de lijsten en e-mail verzonden naar Yeralding.' : ((currentLang === 'en') ? 'Saved in the lists and email sent to Yeralding.' : 'Guardado en las listas y email enviado a Yeralding.');
+      var sendingMsg = (currentLang === 'nl') ? 'Automatisch verzenden naar de lijsten en per e-mail naar Yeralding…' : ((currentLang === 'en') ? 'Sending automatically to the lists and by email to Yeralding…' : 'Enviando automáticamente a las listas y por email a Yeralding…');
+      var savedMsg = (currentLang === 'nl') ? 'Bevestiging automatisch verzonden: opgeslagen in de lijsten en Yeralding per e-mail op de hoogte gebracht.' : ((currentLang === 'en') ? 'Confirmation sent automatically: saved in the lists and Yeralding notified by email.' : 'Confirmación enviada automáticamente: guardada en las listas y Yeralding notificada por email.');
       showStatus(sendingMsg);
       try {
-        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL) {
+        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+          window.rsvpAlreadyPosted = true;
           fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) })
             .then(function() { showStatus(savedMsg); })
@@ -1623,6 +1631,26 @@ END:VCALENDAR`;
       }
     }
 
+
+    // WhatsApp opcional: solo abre el mensaje, no es necesario para que la confirmación quede guardada.
+    function handleRSVPWhatsApp(e) {
+      if (e) e.preventDefault();
+      var name = document.getElementById('rsvpName').value.trim();
+      if (!name) { document.getElementById('rsvpName').focus(); return; }
+      var email = document.getElementById('rsvpEmail').value.trim();
+      var phone = document.getElementById('rsvpPhone').value.trim();
+      var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
+      var attend = attendEl ? attendEl.value : 'si';
+      var diet = document.getElementById('rsvpDiet').value.trim();
+      var song = document.getElementById('rsvpSong').value.trim();
+      if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+        window.rsvpAlreadyPosted = true;
+        fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) }).catch(function(){});
+      }
+      var text = 'CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING\n\nInvitado: ' + name + '\nCorreo: ' + email + '\nTeléfono: ' + phone + '\nAsistencia: ' + (attend === 'si' ? 'SÍ, ASISTIRÉ' : 'No podré asistir') + '\nDieta / Alergias: ' + (diet || 'Ninguna') + '\nCanción DJ: ' + (song || 'Ninguna sugerida');
+      window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(text), '_blank');
+    }
     // Botón de email: guarda en las listas (igual que el envío principal) y abre el email
     // de la invitada/o con el mensaje ya escrito para Yeralding, en el mismo clic.
     function handleRSVPEmail(e) {
@@ -1639,7 +1667,8 @@ END:VCALENDAR`;
       function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
       var savedMsg = (currentLang === 'nl') ? 'Opgeslagen in de lijsten. Je e-mail naar Yeralding staat klaar om te verzenden.' : ((currentLang === 'en') ? 'Saved in the lists. Your email to Yeralding is ready to send.' : 'Guardado en las listas. Tu email para Yeralding quedó listo para enviar.');
       try {
-        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL) {
+        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+          window.rsvpAlreadyPosted = true;
           fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) }).catch(function(){});
         }
