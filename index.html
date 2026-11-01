@@ -190,14 +190,14 @@
   </nav>
 
   <!-- ==================== HERO SECTION: FACES CLEAR, TEXT IN LOWER HALF ==================== -->
-  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-12 pt-32">
+  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-6 sm:pb-12 pt-32">
     
     <!-- Hero Content Placed in Lower Half so Faces are Completely Visible -->
     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
       
       <!-- PASO 1: estilo de la imagen de referencia, texto en la mitad inferior para no tapar caras -->
       <div class="hero-fade hero-fade-d1 text-center">
-        <div class="hero-we-say text-6xl sm:text-7xl lg:text-8xl select-none" aria-label="We Say Yes">
+        <div class="hero-we-say text-5xl sm:text-7xl lg:text-8xl select-none" aria-label="We Say Yes">
           <span>We</span>
           <svg class="hero-heart inline-block w-10 h-10 sm:w-12 sm:h-12 -mx-1 align-middle" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 C 6 16.5 3 13.2 3 9.6 C 3 7 5 5 7.5 5 C 9.3 5 11 6.1 12 7.6 C 13 6.1 14.7 5 16.5 5 C 19 5 21 7 21 9.6 C 21 13.2 18 16.5 12 20.5 Z"/></svg>
           <span>Say</span><br /><span>Yes</span>
@@ -206,8 +206,8 @@
       <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mt-4 mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
-      <h1 class="hero-fade hero-fade-d2 font-cinzel text-3xl sm:text-4xl lg:text-5xl text-gold-gradient leading-tight mt-8 mb-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
-        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient text-4xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
+      <h1 class="hero-fade hero-fade-d2 font-cinzel text-2xl sm:text-4xl lg:text-5xl text-gold-gradient leading-tight mt-4 sm:mt-8 mb-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
+        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient text-3xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
       </h1>
       <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra boda
@@ -229,11 +229,6 @@
         Celebración en el Salón New York
       </p>
 
-
-      <!-- Soft Scroll Down Arrow -->
-      <a href="#bienvenida" class="mt-4 text-white/80 hover:text-white transition-colors animate-bounce cursor-pointer" aria-label="Desplazar a Bienvenida">
-        <svg class="w-5 h-5 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-      </a>
 
     </div>
   </header>
@@ -1536,7 +1531,7 @@ END:VCALENDAR`;
     // ==================== RSVP FORM HANDLER ====================
     // URL del Apps Script del RSVP (pegar aquí la URL tras desplegar, ver rsvp-apps-script/README.md).
     // Vacía = solo WhatsApp. Con URL = lista Google + email a Yeralding en tiempo real.
-    const RSVP_SHEET_URL = '';
+    const RSVP_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzHE47vvgFgz1YkMInssEPpIIgoQ0jcf-iqavQEYYMVNpvR1RTomOXq5t1bD-3vMXPp/exec';
 
     function handleRSVPSubmit(e) {
       e.preventDefault();
