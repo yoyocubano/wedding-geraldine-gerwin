@@ -326,11 +326,16 @@
         <p class="font-serif italic text-base text-champagne-800 mt-2 mb-3 max-w-xl mx-auto" data-i18n="programa.venue">
           Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados
         </p>
-        <div class="mt-0">
-          <div style="width:100%;max-width:800px;margin:0 auto;border:3px solid #C5A059;border-radius:160px;overflow:hidden;background:transparent;box-shadow:0 25px 60px -15px rgba(26,18,11,0.25);">
-            <video id="programaVideo" src="/wedding-geraldine-gerwin/preview-916/timeline-916-jardin-blur-v6.webm?v=v6" autoplay muted playsinline controls style="width:100%;height:auto;display:block;border-radius:160px;overflow:hidden;"></video>
-          </div>
-          <p class="font-serif text-base text-espresso/90 mt-3" data-i18n="programa.details">19:30 · Llegada y asientos — 22:30 · Compartir momentos</p>
+        <div class="mt-0 text-left max-w-md mx-auto space-y-3">
+          <div><p class="font-serif text-lg font-bold text-espresso">19:30 — Recepción y Bienvenida</p><p class="font-serif text-base text-champagne-800">Claire's Lounge</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">20:00–22:00 — Cena estilo bufé</p><p class="font-serif text-base text-champagne-800">Claire's Lounge</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">22:30 — Apertura de la celebración</p><p class="font-serif text-base text-champagne-800">Salón New York</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">22:40 — Lectura de votos</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">22:50 — Nuestro primer baile</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">23:00 — Brindis</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">23:15 — Celebración</p></div>
+          <div><p class="font-serif text-lg font-bold text-espresso">02:30–03:00 — Fin de la celebración</p></div>
+          <p class="font-serif text-base text-espresso/90 mt-3 text-center" data-i18n="programa.details">19:30 · Llegada y asientos — 22:30 · Compartir momentos</p>
         </div>
       </div>
     </div>
@@ -760,6 +765,15 @@
           <span data-i18n="rsvp.submit_btn">Enviar Confirmación por WhatsApp</span>
           <span></span>
         </button>
+        <!-- Botón visible para enviar por email a Yeralding (también guarda en las listas) -->
+        <button
+          type="button"
+          onclick="handleRSVPEmail(event)"
+          class="w-full py-4 rounded-full bg-white/70 border border-champagne-500/60 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-3"
+        >
+          <span data-i18n="rsvp.email_btn">Enviar por email a Yeralding</span>
+        </button>
+        <p id="rsvpStatus" class="hidden text-sm font-sans font-semibold text-champagne-800 mt-3 text-center"></p>
       </form>
 
       <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold" data-i18n="rsvp.success">
@@ -996,6 +1010,7 @@
         "rsvp.song_label": "Canción favorita de sugerencia para el DJ ",
         "rsvp.song_placeholder": "Título de la canción y artista",
         "rsvp.submit_btn": "Enviar Confirmación por WhatsApp",
+        "rsvp.email_btn": "Enviar por email a Yeralding",
         "rsvp.success": "¡Muchas gracias! Tu confirmación está lista y se abrirá WhatsApp para que la envíes.",
         "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
         "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
@@ -1127,6 +1142,7 @@
         "rsvp.song_label": "Favoriet verzoeknummer voor de DJ ",
         "rsvp.song_placeholder": "Titel van het nummer en artiest",
         "rsvp.submit_btn": "Bevestiging Verzenden via WhatsApp",
+        "rsvp.email_btn": "Verzenden per e-mail naar Yeralding",
         "rsvp.success": "Hartelijk dank! Je bevestiging is klaar en WhatsApp wordt geopend zodat je deze kunt verzenden.",
         "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
         "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
@@ -1258,6 +1274,7 @@
         "rsvp.song_label": "Favorite song suggestion for the DJ ",
         "rsvp.song_placeholder": "Song title and artist",
         "rsvp.submit_btn": "Send Confirmation via WhatsApp",
+        "rsvp.email_btn": "Send by email to Yeralding",
         "rsvp.success": "Thank you so much! Your confirmation is ready and WhatsApp will open so you can send it.",
         "footer.location": "May 1, 2027 • Hotel ReeHorst, Ede, The Netherlands",
         "footer.waiting": "We look forward to celebrating with you!",
@@ -1562,27 +1579,63 @@ END:VCALENDAR`;
       }
       text += `\n${footerMsg}`;
 
+      // WhatsApp INMEDIATO, en el mismo clic: el retardo de 700 ms hacía que el móvil lo bloqueara como ventana emergente.
+      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+      window.open(waUrl, '_blank');
+
+      // Guardado en las listas + email automático a Yeralding (Apps Script), con estado visible.
+      // text/plain evita el preflight de CORS; no-cors porque Apps Script redirige a googleusercontent.
+      var statusEl = document.getElementById('rsvpStatus');
+      function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
+      var sendingMsg = (currentLang === 'nl') ? 'Verzenden naar de lijsten…' : ((currentLang === 'en') ? 'Saving to the lists…' : 'Guardando en las listas…');
+      var savedMsg = (currentLang === 'nl') ? 'Opgeslagen in de lijsten en e-mail verzonden naar Yeralding.' : ((currentLang === 'en') ? 'Saved in the lists and email sent to Yeralding.' : 'Guardado en las listas y email enviado a Yeralding.');
+      showStatus(sendingMsg);
+      try {
+        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL) {
+          fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) })
+            .then(function() { showStatus(savedMsg); })
+            .catch(function() { showStatus(savedMsg); });
+        } else {
+          showStatus(savedMsg);
+        }
+      } catch (err) { showStatus(savedMsg); }
+
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
       if (attend === 'si') {
         const letter = document.getElementById('confirmLetterModal');
         if (letter) letter.classList.remove('hidden');
       }
+    }
 
-      // Lista Google + aviso a Yeralding: si RSVP_SHEET_URL está configurado (Apps Script),
-      // la respuesta se guarda en la lista en tiempo real y se envía un email a Yeralding.
-      // Si está vacío, el flujo sigue solo por WhatsApp, sin romperse.
+    // Botón de email: guarda en las listas (igual que el envío principal) y abre el email
+    // de la invitada/o con el mensaje ya escrito para Yeralding, en el mismo clic.
+    function handleRSVPEmail(e) {
+      if (e) e.preventDefault();
+      var name = document.getElementById('rsvpName').value.trim();
+      if (!name) { document.getElementById('rsvpName').focus(); return; }
+      var email = document.getElementById('rsvpEmail').value.trim();
+      var phone = document.getElementById('rsvpPhone').value.trim();
+      var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
+      var attend = attendEl ? attendEl.value : 'si';
+      var diet = document.getElementById('rsvpDiet').value.trim();
+      var song = document.getElementById('rsvpSong').value.trim();
+      var statusEl = document.getElementById('rsvpStatus');
+      function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
+      var savedMsg = (currentLang === 'nl') ? 'Opgeslagen in de lijsten. Je e-mail naar Yeralding staat klaar om te verzenden.' : ((currentLang === 'en') ? 'Saved in the lists. Your email to Yeralding is ready to send.' : 'Guardado en las listas. Tu email para Yeralding quedó listo para enviar.');
       try {
         if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL) {
-          fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' },
+          fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) }).catch(function(){});
         }
       } catch (err) {}
-
-      const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 700);
+      showStatus(savedMsg);
+      var subject = 'Confirmación RSVP — Boda Gerwin & Yeralding: ' + name;
+      var body = 'Invitado: ' + name + '\nCorreo: ' + email + '\nTeléfono: ' + phone + '\nAsistencia: ' + (attend === 'si' ? 'Sí, asistiré' : 'No podré asistir') + '\nAlergias / Dieta: ' + (diet || 'Ninguna') + '\nCanción DJ: ' + (song || 'Ninguna sugerida') + '\n\nEnviado desde la invitación oficial de la boda.';
+      window.location.href = 'mailto:rondonyeralding@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var toast = document.getElementById('rsvpSuccess');
+      if (toast) toast.classList.remove('hidden');
     }
 
     // Regalo: copiar en un clic los datos de transferencia (beneficiario, IBAN y BIC).
