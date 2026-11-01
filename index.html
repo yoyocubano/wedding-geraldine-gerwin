@@ -1253,6 +1253,7 @@
       if (isPlaying) {
         fadeOutAudio();
       } else {
+        if (audio.ended) { audio.currentTime = 0; window.__musicPlays = 0; }
         fadeInAudio(TARGET_VOLUME);
       }
     }
@@ -1593,10 +1594,11 @@ END:VCALENDAR`;
     var a = document.getElementById('weddingMusic');
     if (a) {
       a.loop = false;
-      var ended = 0;
+      window.__musicPlays = 0;
       a.addEventListener('ended', function () {
-        ended++;
-        if (ended < 3) { a.currentTime = 0; a.play().catch(function () {}); }
+        window.__musicPlays++;
+        if (window.__musicPlays < 3) { a.currentTime = 0; a.play().catch(function () {}); }
+        else if (typeof updateAudioUI === 'function') { updateAudioUI(false); }
       });
     }
     // Video Programa: se reproduce solo cuando se llega a esa parte, y se pausa al salir.
