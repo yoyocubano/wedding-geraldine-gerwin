@@ -783,22 +783,7 @@
           <span data-i18n="rsvp.submit_btn">Enviar confirmación</span>
           <span></span>
         </button>
-        <!-- Botón visible para enviar por email a Yeralding (también guarda en las listas) -->
-        <button
-          type="button"
-          onclick="handleRSVPEmail(event)"
-          class="w-full py-4 rounded-full bg-white/70 border border-champagne-500/60 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-3"
-        >
-          <span data-i18n="rsvp.email_btn">Enviar por email a Yeralding</span>
-        </button>
-        <!-- WhatsApp opcional: la confirmación automática ya se guardó y se notificó por email -->
-        <button
-          type="button"
-          onclick="handleRSVPWhatsApp(event)"
-          class="w-full py-4 rounded-full bg-white/70 border border-champagne-500/60 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-3"
-        >
-          <span data-i18n="rsvp.whatsapp_btn">Enviar también por WhatsApp (opcional)</span>
-        </button>
+
         <p id="rsvpStatus" class="hidden text-sm font-sans font-semibold text-champagne-800 mt-3 text-center"></p>
       </form>
 
