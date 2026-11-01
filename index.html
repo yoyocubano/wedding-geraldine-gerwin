@@ -331,17 +331,16 @@
       <!-- Programa con la imagen COMPLETA (sin recorte) y el texto ajustado a la imagen:
            imagen entera arriba, y debajo el texto en la misma crema y el mismo dorado, con el mismo
            ancho y la misma tipografía, para que imagen y texto se lean como una sola tarjeta. -->
-      <div class="mt-0" style="width:100%;max-width:640px;margin:0 auto;border:3px solid #C5A059;border-radius:1.5rem;overflow:hidden;box-shadow:0 25px 60px -15px rgba(26,18,11,0.25);background:#FAF7F2;">
-        <div class="text-center mx-auto" style="max-width:32rem;padding:1.5rem 1rem 0.5rem;">
-          <h3 class="mb-2"><span class="font-script text-5xl sm:text-6xl programa-gold" data-i18n="programa.title_script">Programa</span> <span class="font-cinzel text-2xl sm:text-3xl font-bold tracking-[0.18em] programa-gold" data-i18n="programa.title_caps">DEL DÍA</span></h3>
-          <p class="font-serif italic text-sm sm:text-base text-champagne-800 mb-3" data-i18n="programa.venue">Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados</p>
-        </div>
-        <div style="position:relative;width:100%;">
-          <img src="assets/programa-chatgpt.jpg" alt="Fondo del programa de boda: arco dorado, anillos, rosas y vela" style="width:100%;height:auto;display:block;" />
+      <!-- Título y hotel FUERA del arco (como en el asset), y TODO el texto DENTRO de la imagen,
+           bien centrado, SIN cuadro blanco debajo: la imagen es el fondo y el texto va encima. -->
+      <div class="text-center mx-auto" style="max-width:32rem;padding:0 1rem 1rem;">
+        <h3 class="mb-2"><span class="font-script text-5xl sm:text-6xl programa-gold" data-i18n="programa.title_script">Programa</span> <span class="font-cinzel text-2xl sm:text-3xl font-bold tracking-[0.18em] programa-gold" data-i18n="programa.title_caps">DEL DÍA</span></h3>
+        <p class="font-serif italic text-sm sm:text-base text-champagne-800" data-i18n="programa.venue">Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados</p>
+      </div>
+      <div class="mt-0" style="width:100%;max-width:640px;margin:0 auto;border:3px solid #C5A059;border-radius:999px 999px 2.5rem 2.5rem;overflow:hidden;background-image:url('assets/programa-chatgpt.jpg');background-size:cover;background-position:center top;box-shadow:0 25px 60px -15px rgba(26,18,11,0.25);">
+        <div class="text-center mx-auto" style="max-width:22rem;background:radial-gradient(ellipse at center, rgba(250,247,242,0.60) 0%, rgba(250,247,242,0.25) 55%, rgba(250,247,242,0) 78%);padding:4.5rem 1rem 3rem;">
           <!-- Gerwin & Yeralding empieza justo DEBAJO DE LOS ANILLOS, dentro del arco -->
-          <p style="position:absolute;top:17%;left:50%;transform:translateX(-50%);width:78%;text-align:center;margin:0;" class="font-serif font-bold programa-gold programa-couple-overlay" data-i18n="programa.couple_date">GERWIN &amp; YERALDING · 01 DE MAYO DE 2027</p>
-        </div>
-        <div class="text-center mx-auto" style="max-width:22rem;padding:1.5rem 1rem 2rem;">
+          <p class="font-serif font-bold programa-gold programa-couple-overlay mb-5" data-i18n="programa.couple_date">GERWIN &amp; YERALDING · 01 DE MAYO DE 2027</p>
           <div class="space-y-4 text-center">
             <div><p class="font-serif text-lg font-bold programa-gold leading-tight">19:30</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-gold leading-tight" data-i18n="programa.e1">Recepción y bienvenida</p><p class="font-serif italic text-sm text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</p></div>
             <div><p class="font-serif text-lg font-bold programa-gold leading-tight">20:00–22:00</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-gold leading-tight" data-i18n="programa.e2">Cena estilo bufé</p><p class="font-serif italic text-sm text-champagne-800" data-i18n="programa.v_claires">Claire's Lounge</p></div>
