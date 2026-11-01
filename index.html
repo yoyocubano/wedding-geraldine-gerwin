@@ -2,6 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
+  <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerwin & Yeralding — Nuestra Boda 2027</title>
   
@@ -91,6 +92,7 @@
       font-family: 'EB Garamond', serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      overflow-anchor: none;
     }
 
     /* Metallic Gold Gradient Text - SOLO para títulos grandes.
@@ -196,11 +198,6 @@
 
       <!-- Right Controls: Audio & Language Switcher -->
       <div class="flex items-center gap-2">
-        <!-- Audio Player Toggle -->
-        <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-100/90 border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200 transition-colors shadow-xs cursor-pointer" title="Música romántica de boda">
-          <svg id="soundIconOn" class="w-4 h-4 text-champagne-800" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-800" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-        </button>
 
         <!-- Language Switcher (ES | NL) -->
         <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-sm font-sans font-medium">
@@ -264,9 +261,6 @@
       <img src="assets/notas-musicales-1.png" alt="" class="notes-left hidden sm:block w-1/4 object-contain self-center" />
     <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shadow-glow-gold cursor-pointer">
-          <svg id="songPlayIcon" class="w-5 h-5 ml-0.5 text-espresso" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </button>
         <div class="text-left">
           <span class="block text-sm uppercase font-sans tracking-widest text-champagne-800 font-bold" data-i18n="audio.label">Música de la Boda</span>
           <span class="font-serif text-sm font-bold text-espresso block" data-i18n="audio.title">Alex Warren — Ordinary</span>
@@ -991,8 +985,8 @@
     const songPlayIcon = document.getElementById('songPlayIcon');
     const musicBars = document.getElementById('musicBars');
 
-    // Soft ambient volume (22%) - gentle piano background that doesn't overpower
-    const TARGET_VOLUME = 0.22;
+    // Volumen agradable al oído (45%): se oye claro, sin ser fuerte
+    const TARGET_VOLUME = 0.45;
     let fadeTimer = null;
     let gestureTriggered = false;
 
@@ -1531,25 +1525,37 @@ END:VCALENDAR`;
 
 <script>
   // La invitación siempre empieza por el header, nunca por el footer:
-  // el navegador (sobre todo en móvil) restaura la posición anterior al reabrir el enlace.
+  // Safari (sobre todo en móvil) restaura la posición anterior AL REABRIR el enlace,
+  // y lo hace DESPUÉS de cargar, por eso un solo goTop al inicio no bastaba.
   (function () {
     try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    var userMoved = false;
+    function markUserMove() { userMoved = true; }
+    ['wheel', 'touchmove', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, markUserMove, { passive: true });
+    });
     function goTop() {
-      if (window.location.hash) return;
+      if (window.location.hash || userMoved) return;
       var root = document.documentElement;
       var prev = root.style.scrollBehavior;
       root.style.scrollBehavior = 'auto';
       window.scrollTo(0, 0);
       if (document.body) document.body.scrollTop = 0;
       root.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
       setTimeout(function () { root.style.scrollBehavior = prev; }, 100);
     }
+    function forceTopRepeatedly() {
+      [0, 250, 500, 1000, 1750, 2500].forEach(function (ms) {
+        setTimeout(goTop, ms);
+      });
+    }
     goTop();
-    window.addEventListener('DOMContentLoaded', goTop);
+    window.addEventListener('DOMContentLoaded', function () { goTop(); forceTopRepeatedly(); });
     window.addEventListener('DOMContentLoaded', function () { if (typeof setLanguage === 'function') setLanguage('es'); });
-    window.addEventListener('load', goTop);
-    window.addEventListener('pageshow', goTop);
-    setTimeout(goTop, 500);
+    window.addEventListener('load', forceTopRepeatedly);
+    window.addEventListener('pageshow', forceTopRepeatedly);
+    forceTopRepeatedly();
   })();
 </script>
 </body>
