@@ -191,7 +191,6 @@
         <a href="#vestimenta" class="hover:text-espresso transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
         <a href="#hospedaje" class="hover:text-espresso transition-colors" data-i18n="nav.lodging">Hospedaje</a>
         <a href="#regalo" class="hover:text-espresso transition-colors" data-i18n="nav.gift">Regalo</a>
-        <a href="#faq" class="hover:text-espresso transition-colors" data-i18n="nav.faq">Preguntas Frecuentes</a>
         <a href="#rsvp" class="hover:text-espresso transition-colors font-bold text-champagne-800" data-i18n="nav.rsvp">RSVP</a>
       </div>
 
@@ -395,9 +394,6 @@
   <!-- ==================== SECTION: HOSPEDAJE ==================== -->
   <section id="hospedaje" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="hospedaje.subtitle">
-        ✦ Hospedaje ✦
-      </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="hospedaje.title">
         Hospedaje
       </h2>
@@ -414,9 +410,6 @@
   <!-- ==================== SECTION: REGALO ==================== -->
   <section id="regalo" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="regalo.subtitle">
-        ✦ Un regalo para nuestra aventura ✦
-      </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="regalo.title">
         Un regalo para nuestra aventura
       </h2>
@@ -437,150 +430,6 @@
         <button onclick="copyGiftData()" class="w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.2em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.copy_btn">Copiar datos para transferencia</button>
         <p id="giftCopied" class="hidden text-sm font-sans font-semibold text-emerald-800 mt-3 text-center" data-i18n="regalo.copied">¡Datos copiados! Pégalos en tu banco para hacer la transferencia.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ==================== FAQ SECTION: PREGUNTAS FRECUENTES (DIRECTAS Y COMPLETAS) ==================== -->
-  <section id="faq" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
-    <div class="max-w-3xl mx-auto">
-      
-      <div class="text-center mb-10">
-        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="faq.title">
-          Preguntas Frecuentes
-        </h2>
-      </div>
-
-      <!-- FAQ Accordion List -->
-      <div class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-champagne-500/30 shadow-luxury">
-
-        <div class="space-y-3.5" id="faqAccordionList">
-          
-          <!-- Item 1: Vuelos Schiphol -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all active">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q1">1. ✦ Aeropuerto recomendado: Amsterdam Schiphol (AMS)</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a1">
-                Independientemente de dónde viajes, te recomendamos volar al aeropuerto de Ámsterdam-Schiphol (AMS). Es la opción más cómoda para llegar al hotel, ya que desde el aeropuerto puedes tomar un tren intercity directo hasta la estación de Ede-Wageningen. ¡Es muy sencillo! En cuanto aterrices en Ámsterdam-Schiphol, puedes tomar directamente en el aeropuerto el tren directo con destino a Ede-Wageningen. Puedes comprar los billetes en las máquinas de NS, situadas en Schiphol Plaza, antes de bajar a los andenes. El trayecto en tren dura aproximadamente 50 minutos y cuesta unos 18,80 € por trayecto. Al llegar a la estación de Ede-Wageningen, encontrarás el hotel justo enfrente de la estación. ¿Prefieres alquilar un coche? El Hotel ReeHorst dispone de aparcamiento gratuito para sus huéspedes.<br/><br/>Enlaces para chequear el tren: <a href="https://www.ns.nl" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">Consultar trenes y comprar billetes de NS: ns.nl</a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 2: Cómo llegar desde el aeropuerto al Hotel ReeHorst -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q2">2. ✦ ¿Cómo llegar desde el aeropuerto Schiphol hasta el Hotel ReeHorst?</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a2">
-                ¡Llegar es muy fácil!  Al aterrizar en Amsterdam Schiphol, puedes tomar el tren directamente desde el aeropuerto con destino a <strong>Ede-Wageningen</strong>. El billete se puede comprar en el propio aeropuerto, antes de bajar a la zona de trenes. El trayecto dura aproximadamente <strong>50 minutos</strong> y el billete cuesta alrededor de <strong>18,80 € por trayecto</strong>. Al llegar a la estación de Ede-Wageningen, el hotel se encuentra justo frente a la estación. <br/><br/>
-                Si prefieres alquilar un coche, el Hotel ReeHorst cuenta con <strong>parking gratuito</strong> para sus huéspedes. 
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 3: Alojamiento en Hotel ReeHorst -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q3">3. ✦ ¿Por qué recomendamos hospedarse en el Hotel ReeHorst?</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a3">
-                Puedes reservar tu habitación en el mismo hotel donde celebraremos la fiesta. Hay habitaciones individuales y familiares, además de opciones con desayuno incluido. <br/><br/>
-                Así podrás disfrutar de la celebración con tranquilidad y, al terminar, simplemente subir a descansar sin preocuparte por taxis, desplazamientos o conducir después de haber bebido. <br/><br/>
-                Una vez que confirmes tu asistencia a la boda, <strong>te enviaremos un código especial de reserva</strong> para que puedas reservar tu habitación directamente con el hotel.<br/><br/>
-                Puedes consultar todos los tipos de habitaciones disponibles y conocer más detalles en la página del Hotel ReeHorst:<br/>
-                <a href="https://www.hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">https://www.hotelreehorst.nl/hotelkamers/</a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 4: Barra Libre -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q4">4. ✦ Barra libre</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a4">
-                Cervezas, vinos y refrescos estarán incluidos durante toda la noche. <br/><br/>
-                Para quienes quieran disfrutar de algo diferente, también habrá cócteles especiales disponibles en la barra, por cuenta propia. ✦
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 5: Dress Code -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q5">5. ✦ Dress Code: Casual Chic / Traje Formal</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a5">
-                Viste con tus colores favoritos. El blanco queda reservado con cariño para la novia.
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 6: Clima y Temperatura en Mayo -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q6">6. ✦ ¿Qué tiempo hace en mayo y cómo es el salón?</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a6">
-                En mayo, el clima en Países Bajos suele ser fresco y agradable, con temperaturas que generalmente rondan los <strong>14 °C a 18 °C</strong>. ✦<br/><br/>
-                La celebración tendrá lugar en un <strong>salón cerrado y climatizado</strong> dentro del hotel, así que estaremos cómodos durante la fiesta independientemente del tiempo que haga fuera. <br/><br/>
-                Para los momentos fuera del hotel —como traslados, paseos o desplazamientos— te recomendamos tener en cuenta que puede refrescar, especialmente por la tarde o noche. Si eres de los que sienten frío fácilmente, una chaqueta ligera puede ser una buena idea. 
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 7: Puntualidad Neerlandesa -->
-          <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
-            <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
-              <span class="flex items-center gap-2.5">
-                <span class="text-champagne-800 text-sm">✦</span>
-                <span data-i18n="faq.q7">7. ✦ Puntualidad en Países Bajos</span>
-              </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
-            <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
-              <p data-i18n="faq.a7">
-                Aviso importante: aquí la hora significa la hora. <br/><br/>
-                En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. <br/><br/>
-                Así que, por una vez, ¡intentemos encontrarnos a mitad de camino!  Te recomendamos llegar unos minutos antes para no perderte nada de la celebración. 
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
   </section>
 
@@ -753,7 +602,11 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Número de emergencia</h3>
           <p>El número de emergencia en Países Bajos es el 112. Puedes llamar de forma gratuita si necesitas asistencia urgente de la policía, los bomberos o una ambulancia. Recuerda que todos hablan inglés aunque su lengua nativa sea neerlandés.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">El mejor viaje es el que nos lleva de vuelta a las personas que queremos!! Nos vemos en Mayo</p>
+                <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">9. Puntualidad en Países Bajos</h3>
+          <p>Aviso importante: aquí la hora significa la hora. En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. Así que, por una vez, ¡intentemos encontrarnos a mitad de camino! Te recomendamos llegar unos minutos antes para no perderte nada de la celebración.</p>
+        </div>
+        <p class="text-center font-cinzel font-bold text-espresso text-xl pt-2">El mejor viaje es el que nos lleva de vuelta a las personas que queremos!! Nos vemos en Mayo</p>
       </div>
       <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="nl" style="display:none">
         <div>
@@ -788,7 +641,11 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Noodnummer</h3>
           <p>Het noodnummer in Nederland is 112. Je kunt gratis bellen als je dringend hulp nodig hebt van politie, brandweer of ambulance. Iedereen spreekt Engels, ook al is Nederlands hun moedertaal.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">De mooiste reis is de reis die ons terugbrengt naar de mensen van wie we houden!! Tot in mei</p>
+                <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">9. Stiptheid in Nederland</h3>
+          <p>Belangrijk weetje: hier betekent de afgesproken tijd ook echt de afgesproken tijd! In Nederland is 10 minuten van tevoren aanwezig zijn de norm. Voor veel latino's valt 10 minuten te laat nog onder 'ik ben er bijna!'. Laten we elkaar deze keer tegemoetkomen! We raden aan om ruim op tijd te komen zodat je niets van het feest hoeft te missen.</p>
+        </div>
+        <p class="text-center font-cinzel font-bold text-espresso text-xl pt-2">De mooiste reis is de reis die ons terugbrengt naar de mensen van wie we houden!! Tot in mei</p>
       </div>
       <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="en" style="display:none">
         <div>
@@ -823,7 +680,11 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Emergency number</h3>
           <p>The emergency number in the Netherlands is 112. You can call free of charge if you urgently need police, fire brigade or ambulance assistance. Everyone speaks English, even though Dutch is their native language.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">The best journey is the one that brings us back to the people we love!! See you in May</p>
+                <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">9. Punctuality in The Netherlands</h3>
+          <p>Important note: time means time here! In the Netherlands, arriving 10 minutes early is on time. Please arrive a few minutes before so you don't miss anything.</p>
+        </div>
+        <p class="text-center font-cinzel font-bold text-espresso text-xl pt-2">The best journey is the one that brings us back to the people we love!! See you in May</p>
       </div>
     </div>
   </section>
