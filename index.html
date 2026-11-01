@@ -191,7 +191,6 @@
         <a href="#vestimenta" class="hover:text-espresso transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
         <a href="#hospedaje" class="hover:text-espresso transition-colors" data-i18n="nav.lodging">Hospedaje</a>
         <a href="#regalo" class="hover:text-espresso transition-colors" data-i18n="nav.gift">Regalo</a>
-        <a href="#checklist" class="hover:text-espresso transition-colors text-champagne-800 font-bold" data-i18n="nav.checklist">Checklist</a>
         <a href="#faq" class="hover:text-espresso transition-colors" data-i18n="nav.faq">Preguntas Frecuentes</a>
         <a href="#rsvp" class="hover:text-espresso transition-colors font-bold text-champagne-800" data-i18n="nav.rsvp">RSVP</a>
       </div>
@@ -379,17 +378,15 @@
       <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="vestimenta.intro">
         Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.
       </p>
-      <div class="grid sm:grid-cols-2 gap-4 text-left">
-        <div class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
-          <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-1" data-i18n="vestimenta.women_label">Mujeres</p>
-          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.women_text">Casual chic con un toque elegante</p>
-        </div>
-        <div class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury">
-          <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-1" data-i18n="vestimenta.men_label">Hombres</p>
-          <p class="font-serif text-lg font-bold text-espresso" data-i18n="vestimenta.men_text">Traje formal</p>
-        </div>
+      <div class="text-center">
+        <svg class="mx-auto" width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#B8903B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="34" cy="20" r="10"/><circle cx="45" cy="9" r="4"/><path d="M20 62c2-14 6-20 14-20s12 6 14 20"/><path d="M27 36c4 4 12 4 16 0"/></svg>
+        <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso mt-2" data-i18n="vestimenta.women_label">Mujeres</p>
+        <p class="font-serif text-xl sm:text-2xl text-espresso mt-1 mb-10" data-i18n="vestimenta.women_text">Casual chic con un toque elegante</p>
+        <svg class="mx-auto" width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#B8903B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="36" cy="17" r="9"/><path d="M20 62c1-13 6-19 16-19s15 6 16 19"/><path d="M28 44l8 4 8-4"/><path d="M30 42l6 3 6-3"/><path d="M36 48v8"/></svg>
+        <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso mt-2" data-i18n="vestimenta.men_label">Hombres</p>
+        <p class="font-serif text-xl sm:text-2xl text-espresso mt-1" data-i18n="vestimenta.men_text">Traje formal</p>
       </div>
-      <p class="font-cormorant italic text-2xl sm:text-3xl font-bold text-espresso mt-8 bg-white/85 border-2 border-champagne-500/60 rounded-2xl px-6 py-4 shadow-luxury leading-snug" data-i18n="vestimenta.note">
+      <p class="font-cormorant italic text-2xl sm:text-3xl text-espresso mt-12 leading-snug" data-i18n="vestimenta.note">
         Un detalle especial: el blanco está reservado exclusivamente para la novia.
       </p>
     </div>
@@ -440,91 +437,6 @@
         <button onclick="copyGiftData()" class="w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.2em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.copy_btn">Copiar datos para transferencia</button>
         <p id="giftCopied" class="hidden text-sm font-sans font-semibold text-emerald-800 mt-3 text-center" data-i18n="regalo.copied">¡Datos copiados! Pégalos en tu banco para hacer la transferencia.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ==================== SECTION: CHECKLIST DEL INVITADO (MINIMAL & CLEAR) ==================== -->
-  <section id="checklist" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
-    <div class="max-w-2xl mx-auto">
-      
-      <div class="text-center mb-10">
-        <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="checklist.title">
-          Tu viaje a Países Bajos
-        </h2>
-        <p class="font-serif italic text-base text-champagne-800 mt-2 max-w-xl mx-auto" data-i18n="checklist.intro">
-          Aquí tienes tu check list paso a paso para que organices el viaje sin estrés:
-        </p>
-      </div>
-
-      <!-- Checklist Container -->
-      <div class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-champagne-500/40 shadow-luxury">
-        
-        <!-- Progress Bar Header -->
-        <div class="mb-6 pb-4 border-b border-champagne-500/20 flex items-center justify-between gap-4">
-          <div class="flex items-center gap-2">
-            <span id="checklistScore" class="font-serif text-xl font-bold text-espresso">0 de 8</span>
-            <span id="checklistCompletedLabel" class="text-sm font-sans text-champagne-800" data-i18n="checklist.completed">completados</span>
-          </div>
-          <div class="w-36 sm:w-48 bg-champagne-100 rounded-full h-2.5 overflow-hidden border border-champagne-500/30">
-            <div id="checklistProgressBar" class="bg-gradient-to-r from-champagne-500 to-[#C5A059] h-full w-0 transition-all duration-300"></div>
-          </div>
-        </div>
-
-        <!-- The 8 Concise Checklist Items (Without paragraphs, clean checks) -->
-        <div class="space-y-2.5" id="guestChecklistItems">
-          
-          <!-- 1. Confirmar asistencia -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 0)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item1">1. Confirmar asistencia</span>
-          </label>
-
-          <!-- 2. Reservar vuelo -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 1)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item2">2. Reservar vuelo</span>
-          </label>
-
-          <!-- 3. Reservar el hospedaje -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 2)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item3">3. Reservar el hospedaje</span>
-          </label>
-
-          <!-- 4. Para la cena indicarnos alergias e intolerancias -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 3)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item4">4. Para la cena indicarnos alergias e intolerancias</span>
-          </label>
-
-          <!-- 5. Preparar el look -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 4)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item5">5. Preparar el look</span>
-          </label>
-
-          <!-- 6. Organizar el transporte en tren o alquiler de coche -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 5)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item6">6. Organizar el transporte en tren o alquiler de coche</span>
-          </label>
-
-          <!-- 7. Hacer maletas -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border border-champagne-500/25 bg-champagne-50/40 hover:bg-champagne-100/60 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 6)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item7">7. Hacer maletas</span>
-          </label>
-
-          <!-- 8. Venir a celebrar con nosotros -->
-          <label class="checklist-row flex items-center gap-3.5 p-3.5 rounded-xl border-2 border-champagne-500/60 bg-champagne-100/80 hover:bg-champagne-100 transition-all cursor-pointer">
-            <input type="checkbox" onchange="updateChecklist(this, 7)" class="checklist-check w-5 h-5 rounded-md text-espresso focus:ring-champagne-600 border-champagne-500/40 cursor-pointer" />
-            <span class="font-serif text-base sm:text-lg font-bold text-espresso" data-i18n="checklist.item8">8. Venir a celebrar con nosotros </span>
-          </label>
-
-        </div>
-
-      </div>
-
     </div>
   </section>
 
