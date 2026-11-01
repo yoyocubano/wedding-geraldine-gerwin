@@ -160,7 +160,7 @@
     .timeline-bubble { position: absolute; bottom: 8px; border-radius: 9999px; background: rgba(255,255,255,0.9); animation: bubbleRise 3.2s ease-in infinite; }
   </style>
 </head>
-<body class="selection:bg-champagne-300 selection:text-espresso relative">
+<body class="selection:bg-champagne-300 selection:text-espresso relative overflow-x-hidden">
 
   <!-- ==================== FIXED GLOBAL BACKGROUND (AUTHENTIC PHOTO + BLUR ON SCROLL) ==================== -->
   <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
@@ -216,6 +216,8 @@
 
   <!-- ==================== HERO SECTION: FACES CLEAR, TEXT IN LOWER HALF ==================== -->
   <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-10 sm:pb-12 pt-32">
+    <!-- Velo oscuro solo en la parte inferior: oscurece el ramo/vestido detrás de los nombres, sin tapar las caras -->
+    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/35 to-transparent pointer-events-none"></div>
     
     <!-- Hero Content Placed in Lower Half so Faces are Completely Visible -->
     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
@@ -228,13 +230,13 @@
           <span>Say</span><br /><span>Yes</span>
         </div>
       </div>
-      <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mt-2 mb-2" data-i18n="hero.together">
+      <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] mt-2 mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
-      <h1 class="hero-fade hero-fade-d2 font-cinzel text-lg sm:text-4xl lg:text-5xl text-gold-gradient hero-name-gold leading-tight mt-2 sm:mt-8 mb-1 tracking-[0.05em] whitespace-nowrap drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
-        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient hero-name-gold text-xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
+      <h1 class="hero-fade hero-fade-d2 font-cinzel text-base sm:text-4xl lg:text-5xl leading-tight mt-2 sm:mt-8 mb-1 tracking-[0.02em] sm:tracking-[0.05em] whitespace-nowrap select-none" style="color:#EAC97A;background:rgba(26,18,11,0.68);border:1px solid rgba(197,160,89,0.55);border-radius:9999px;padding:0.45rem 1rem;max-width:calc(100vw - 2rem);text-shadow:0 1px 3px rgba(0,0,0,0.9);backdrop-filter:blur(6px);">
+        GERWIN <span class="font-script normal-case tracking-normal text-lg sm:text-5xl lg:text-6xl" style="color:#EAC97A;">&amp;</span> YERALDING
       </h1>
-      <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
+      <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_12px_rgba(0,0,0,1)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra boda
       </p>
 
