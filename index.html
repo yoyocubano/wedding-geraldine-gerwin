@@ -101,6 +101,14 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    /* Nombres de portada en móvil: dorado FUERTE, sin centro casi blanco, para contraste con la foto */
+    @media (max-width: 639px) {
+      .hero-name-gold {
+        background: linear-gradient(135deg, #7A5A1F 0%, #D4AF37 38%, #B8903B 62%, #6B4E12 100%) !important;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
 
     /* Luxury Accordion */
     .faq-answer {
@@ -205,8 +213,8 @@
       <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.85)] mt-4 mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
-      <h1 class="hero-fade hero-fade-d2 font-cinzel text-2xl sm:text-4xl lg:text-5xl text-gold-gradient leading-tight mt-4 sm:mt-8 mb-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
-        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient text-3xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
+      <h1 class="hero-fade hero-fade-d2 font-cinzel text-2xl sm:text-4xl lg:text-5xl text-gold-gradient hero-name-gold leading-tight mt-4 sm:mt-8 mb-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
+        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient hero-name-gold text-3xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
       </h1>
       <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra boda
