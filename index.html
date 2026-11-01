@@ -93,8 +93,10 @@
       overflow-x: hidden;
     }
 
-    /* Metallic Gold Gradient Text */
-    .text-champagne-800 {
+    /* Metallic Gold Gradient Text - SOLO para títulos grandes.
+       Las letras pequeñas NO lo usan: el centro casi blanco (#FFF6D1) las borraba
+       sobre fondo claro. El resto usa text-champagne-800 sólido (#58351C). */
+    .text-gold-gradient {
       background: linear-gradient(135deg, #B8903B 0%, #E6C86E 35%, #FFF6D1 50%, #C5A059 70%, #99732B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -160,15 +162,15 @@
       </a>
 
       <!-- Quick Nav Links -->
-      <div class="hidden md:flex items-center gap-6 text-sm uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-semibold">
-        <a href="#bienvenida" class="hover:text-champagne-600 transition-colors" data-i18n="nav.welcome">Bienvenidos</a>
-        <a href="#programa" class="hover:text-champagne-600 transition-colors" data-i18n="nav.timeline">Programa</a>
-        <a href="#vestimenta" class="hover:text-champagne-600 transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
-        <a href="#hospedaje" class="hover:text-champagne-600 transition-colors" data-i18n="nav.lodging">Hospedaje</a>
-        <a href="#regalo" class="hover:text-champagne-600 transition-colors" data-i18n="nav.gift">Regalo</a>
-        <a href="#checklist" class="hover:text-champagne-600 transition-colors text-champagne-800 font-bold" data-i18n="nav.checklist">Checklist</a>
-        <a href="#faq" class="hover:text-champagne-600 transition-colors" data-i18n="nav.faq">Preguntas Frecuentes</a>
-        <a href="#rsvp" class="hover:text-champagne-600 transition-colors font-bold text-champagne-800" data-i18n="nav.rsvp">RSVP</a>
+      <div class="hidden md:flex items-center gap-6 text-sm uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-bold">
+        <a href="#bienvenida" class="hover:text-espresso transition-colors" data-i18n="nav.welcome">Bienvenidos</a>
+        <a href="#programa" class="hover:text-espresso transition-colors" data-i18n="nav.timeline">Programa</a>
+        <a href="#vestimenta" class="hover:text-espresso transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
+        <a href="#hospedaje" class="hover:text-espresso transition-colors" data-i18n="nav.lodging">Hospedaje</a>
+        <a href="#regalo" class="hover:text-espresso transition-colors" data-i18n="nav.gift">Regalo</a>
+        <a href="#checklist" class="hover:text-espresso transition-colors text-champagne-800 font-bold" data-i18n="nav.checklist">Checklist</a>
+        <a href="#faq" class="hover:text-espresso transition-colors" data-i18n="nav.faq">Preguntas Frecuentes</a>
+        <a href="#rsvp" class="hover:text-espresso transition-colors font-bold text-champagne-800" data-i18n="nav.rsvp">RSVP</a>
       </div>
 
       <!-- Right Controls: Audio & Language Switcher -->
@@ -176,7 +178,7 @@
         <!-- Audio Player Toggle -->
         <button id="soundToggle" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-champagne-100/90 border border-champagne-500/40 flex items-center justify-center text-champagne-800 hover:bg-champagne-200 transition-colors shadow-xs cursor-pointer" title="Música romántica de boda">
           <svg id="soundIconOn" class="w-4 h-4 text-champagne-800" fill="currentColor" viewBox="0 0 24 24"><path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2 0l-5 5H3v8h4l5 5V3.23zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-500" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          <svg id="soundIconOff" class="w-4 h-4 hidden text-champagne-800" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
         </button>
 
         <!-- Trilingual Switcher (ES | NL | EN) -->
@@ -207,7 +209,7 @@
         Junto a nuestra familia
       </p>
       <h1 class="hero-fade hero-fade-d2 font-cinzel text-3xl sm:text-4xl lg:text-5xl text-white leading-tight my-1 tracking-[0.12em] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] select-none">
-        GERWIN <span class="font-script normal-case tracking-normal text-champagne-800 text-4xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
+        GERWIN <span class="font-script normal-case tracking-normal text-champagne-800 text-gold-gradient text-4xl sm:text-5xl lg:text-6xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">&amp;</span> YERALDING
       </h1>
       <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] max-w-lg mx-auto mb-3" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra boda
@@ -219,7 +221,7 @@
         <span class="w-px h-8 bg-white/80"></span>
         <span class="font-cinzel text-4xl sm:text-5xl font-bold text-white tracking-widest">01</span>
         <span class="w-px h-8 bg-white/80"></span>
-        <span class="font-sans text-sm uppercase tracking-widest text-champagne-300 font-semibold">2027</span>
+        <span class="font-sans text-sm uppercase tracking-widest text-champagne-300 font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">2027</span>
       </div>
 
       <p class="text-sm uppercase tracking-[0.25em] font-sans text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-1" data-i18n="hero.location">
@@ -250,7 +252,7 @@
 
   <!-- ==================== AUDIO SECTION: ALEX WARREN - ORDINARY (PIANELLA PIANO) ==================== -->
   <section class="py-10 px-2 sm:px-4 bg-white/70 backdrop-blur-xl border-b border-champagne-500/20 relative overflow-hidden">
-    <p class="font-script text-3xl sm:text-4xl text-champagne-800 text-center mb-1">Our wedding song</p>
+    <p class="font-script text-3xl sm:text-4xl text-champagne-800 text-gold-gradient text-center mb-1">Our wedding song</p>
     <div class="flex items-stretch justify-center gap-2 max-w-5xl mx-auto">
       <div class="notes-left hidden sm:block w-1/4 opacity-90" aria-hidden="true"><svg viewBox="0 0 300 180" class="w-full h-full" aria-hidden="true"><g stroke="#111" stroke-width="1.2"><line x1="0" y1="30" x2="300" y2="20"/><line x1="0" y1="60" x2="300" y2="50"/><line x1="0" y1="90" x2="300" y2="80"/><line x1="0" y1="120" x2="300" y2="110"/><line x1="0" y1="150" x2="300" y2="140"/></g><g fill="#111"><ellipse cx="60" cy="52" rx="14" ry="10" transform="rotate(-20 60 52)"/><rect x="70" y="8" width="4" height="44"/><ellipse cx="140" cy="82" rx="14" ry="10" transform="rotate(-20 140 82)"/><rect x="150" y="38" width="4" height="44"/><ellipse cx="220" cy="112" rx="14" ry="10" transform="rotate(-20 220 112)"/><rect x="230" y="68" width="4" height="44"/><ellipse cx="270" cy="32" rx="12" ry="9" transform="rotate(-20 270 32)"/><rect x="279" y="-10" width="4" height="42"/></g></svg></div>
     <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
@@ -279,7 +281,7 @@
   <section id="bienvenida" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="welcome.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="welcome.subtitle">
         ✦ Carta a Nuestros Invitados ✦
       </span>
 
@@ -289,7 +291,7 @@
 
       <!-- Heartfelt Text with Wageningen and ReeHorst Celebration -->
       <div class="bg-white/70 backdrop-blur-xl border border-champagne-500/40 rounded-3xl p-6 sm:p-10 shadow-luxury text-left relative">
-        <span class="font-serif text-6xl text-champagne-400/40 absolute top-4 left-6 select-none">“</span>
+        <span class="font-serif text-6xl text-champagne-800/70 absolute top-4 left-6 select-none">“</span>
         
         <p class="font-cormorant text-xl sm:text-2xl text-espresso/90 leading-relaxed italic mb-4 pt-2 relative z-10" data-i18n="welcome.text_p1">
           Aunque hayan pasado los años y hoy nos separen tantos kilómetros, hay amistades que siguen sintiéndose cerquita, y ustedes son eso para mí. Los llevo en mi corazón y guardo con muchísimo cariño tantos recuerdos de nuestra historia juntos.
@@ -299,7 +301,7 @@
 
         <!-- Clean Solid Gold Signature Without Blur, Without Monogram Seal, Without Ede 2027 -->
         <div class="border-t border-champagne-500/20 pt-4 text-center sm:text-left">
-          <span class="font-script text-3xl sm:text-4xl text-champagne-800 font-normal block tracking-wide">
+          <span class="font-script text-3xl sm:text-4xl text-champagne-800 text-gold-gradient font-normal block tracking-wide">
             Gerwin & Yeralding
           </span>
         </div>
@@ -313,7 +315,7 @@
     <img src="assets/yeralding_gerwin_hero.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-top" style="filter: blur(6px) brightness(1.08);" />
     <div class="absolute inset-0 bg-white/65" aria-hidden="true"></div>
     <div class="max-w-2xl mx-auto relative z-10">
-      <h3 class="font-cinzel text-3xl sm:text-5xl text-champagne-800 font-semibold tracking-[0.18em] mb-6" data-i18n="countdown.we_say_ido">
+      <h3 class="font-cinzel text-3xl sm:text-5xl text-champagne-800 text-gold-gradient font-semibold tracking-[0.18em] mb-6" data-i18n="countdown.we_say_ido">
         WE SAY I DO
       </h3>
       <div class="flex items-start justify-center gap-1 sm:gap-3 my-6">
@@ -323,14 +325,14 @@
         <span class="font-sans text-5xl sm:text-6xl font-bold text-black leading-none">:</span>
         <div class="text-center"><span id="cd-mins" class="block font-sans text-5xl sm:text-6xl font-bold text-black leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.mins">MINUTOS</span></div>
         <span class="font-sans text-5xl sm:text-6xl font-bold text-black leading-none">:</span>
-        <div class="text-center"><span id="cd-secs" class="block font-sans text-5xl sm:text-6xl font-bold text-champagne-800 leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.secs">SEGUNDOS</span></div>
+        <div class="text-center"><span id="cd-secs" class="block font-sans text-5xl sm:text-6xl font-bold text-champagne-800 text-gold-gradient leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.secs">SEGUNDOS</span></div>
       </div>
       <div class="flex justify-center my-8">
         <img src="assets/anillos-reales-sin-fondo.png" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 object-cover" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));" />
       </div>
       <p class="font-script text-4xl sm:text-5xl text-black leading-tight">We can&rsquo;t</p>
       <p class="font-script text-4xl sm:text-5xl text-black leading-tight">imagine this day</p>
-      <p class="font-script text-6xl sm:text-7xl text-champagne-800 leading-tight mt-1">Without You</p>
+      <p class="font-script text-6xl sm:text-7xl text-champagne-800 text-gold-gradient leading-tight mt-1">Without You</p>
       <div class="flex justify-center mt-6 mb-2">
         <img src="assets/corazon-dorado-sin-fondo.png" alt="Corazón dorado" class="hero-heart w-24 h-24 object-contain" />
       </div>
@@ -354,7 +356,7 @@
   <!-- ==================== SECTION: PROGRAMA DEL DÍA (TIMELINE) ==================== -->
   <section id="programa" class="py-20 px-4 sm:px-6 relative border-t border-champagne-500/20" style="background:linear-gradient(rgba(246,240,228,0.70),rgba(246,240,228,0.70)),url('/wedding-geraldine-gerwin/preview-916/jardin-blur-crema.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;">
     <div class="max-w-3xl mx-auto text-center">
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="programa.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="programa.subtitle">
         ✦ El día de la celebración ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="programa.title">
@@ -379,7 +381,7 @@
   </section>
   <section id="vestimenta" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="vestimenta.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="vestimenta.subtitle">
         ✦ Código de vestimenta ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="vestimenta.title">
@@ -412,7 +414,7 @@
   <!-- ==================== SECTION: HOSPEDAJE ==================== -->
   <section id="hospedaje" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="hospedaje.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="hospedaje.subtitle">
         ✦ Hospedaje ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="hospedaje.title">
@@ -426,7 +428,7 @@
       </a>
       <div class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-8 max-w-md mx-auto">
         <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-1" data-i18n="hospedaje.code_label">Código especial de la pareja</p>
-        <p class="font-cinzel text-2xl font-bold text-champagne-800 tracking-widest" data-i18n="hospedaje.code_value">[Código XXX]</p>
+        <p class="font-cinzel text-2xl font-bold text-champagne-800 text-gold-gradient tracking-widest" data-i18n="hospedaje.code_value">[Código XXX]</p>
         <p class="text-sm font-sans text-champagne-800 mt-2" data-i18n="hospedaje.code_note">En cuanto la pareja comparta su código, aparecerá aquí.</p>
       </div>
     </div>
@@ -435,7 +437,7 @@
   <!-- ==================== SECTION: REGALO ==================== -->
   <section id="regalo" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="regalo.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="regalo.subtitle">
         ✦ Un regalo para nuestra aventura ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="regalo.title">
@@ -561,10 +563,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all active">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q1">1. ✦ Aeropuerto recomendado: Amsterdam Schiphol (AMS)</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a1">
@@ -577,10 +579,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q2">2. ✦ ¿Cómo llegar desde el aeropuerto Schiphol hasta el Hotel ReeHorst?</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a2">
@@ -594,10 +596,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q3">3. ✦ ¿Por qué recomendamos hospedarse en el Hotel ReeHorst?</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a3">
@@ -614,10 +616,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q4">4. ✦ Barra libre</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a4">
@@ -631,10 +633,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q5">5. ✦ Dress Code: Casual Chic / Traje Formal</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a5">
@@ -647,10 +649,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q6">6. ✦ ¿Qué tiempo hace en mayo y cómo es el salón?</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a6">
@@ -665,10 +667,10 @@
           <div class="faq-item bg-white/70 backdrop-blur-xl rounded-2xl border border-champagne-500/30 overflow-hidden shadow-xs transition-all">
             <button onclick="toggleFAQ(this)" class="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-serif text-base sm:text-lg font-bold text-espresso hover:text-champagne-800 transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5">
-                <span class="text-champagne-600 text-sm">✦</span>
+                <span class="text-champagne-800 text-sm">✦</span>
                 <span data-i18n="faq.q7">7. ✦ Puntualidad en Países Bajos</span>
               </span>
-              <svg class="faq-icon w-4 h-4 text-champagne-600 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg class="faq-icon w-4 h-4 text-champagne-800 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div class="faq-answer px-5 pb-5 text-sm sm:text-base font-sans text-champagne-900/85 leading-relaxed border-t border-champagne-100/80 pt-3">
               <p data-i18n="faq.a7">
@@ -690,7 +692,7 @@
   <section id="rsvp" class="py-20 px-4 sm:px-6 bg-transparent relative">
     <div class="max-w-2xl mx-auto text-center">
       
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="rsvp.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="rsvp.subtitle">
         ✦ Confirmación de Asistencia ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide">
@@ -811,7 +813,7 @@
   <!-- ==================== SECTION: GUÍA DE VIAJE ==================== -->
   <section id="guia" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-sm uppercase tracking-[0.3em] font-sans font-semibold text-champagne-800 block mb-2" data-i18n="guia.subtitle">
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="guia.subtitle">
         ✦ Guía de viaje ✦
       </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="guia.title">
@@ -853,7 +855,7 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Número de emergencia</h3>
           <p>El número de emergencia en Países Bajos es el 112. Puedes llamar de forma gratuita si necesitas asistencia urgente de la policía, los bomberos o una ambulancia. Recuerda que todos hablan inglés aunque su lengua nativa sea neerlandés.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">El mejor viaje es el que nos lleva de vuelta a las personas que queremos!! Nos vemos en Mayo</p>
+        <p class="text-center font-cinzel font-bold text-champagne-800 text-gold-gradient text-lg pt-2">El mejor viaje es el que nos lleva de vuelta a las personas que queremos!! Nos vemos en Mayo</p>
       </div>
       <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="nl" style="display:none">
         <div>
@@ -888,7 +890,7 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Noodnummer</h3>
           <p>Het noodnummer in Nederland is 112. Je kunt gratis bellen als je dringend hulp nodig hebt van politie, brandweer of ambulance. Iedereen spreekt Engels, ook al is Nederlands hun moedertaal.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">De mooiste reis is de reis die ons terugbrengt naar de mensen van wie we houden!! Tot in mei</p>
+        <p class="text-center font-cinzel font-bold text-champagne-800 text-gold-gradient text-lg pt-2">De mooiste reis is de reis die ons terugbrengt naar de mensen van wie we houden!! Tot in mei</p>
       </div>
       <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="en" style="display:none">
         <div>
@@ -923,7 +925,7 @@
           <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Emergency number</h3>
           <p>The emergency number in the Netherlands is 112. You can call free of charge if you urgently need police, fire brigade or ambulance assistance. Everyone speaks English, even though Dutch is their native language.</p>
         </div>
-        <p class="text-center font-cinzel font-bold text-champagne-800 text-lg pt-2">The best journey is the one that brings us back to the people we love!! See you in May</p>
+        <p class="text-center font-cinzel font-bold text-champagne-800 text-gold-gradient text-lg pt-2">The best journey is the one that brings us back to the people we love!! See you in May</p>
       </div>
     </div>
   </section>
@@ -937,7 +939,7 @@
       <p class="font-cinzel text-base tracking-widest text-white font-bold">
         GERWIN & YERALDING
       </p>
-      <p class="text-sm font-sans text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
+      <p class="text-sm font-sans font-semibold text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
         01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
       </p>
       <p class="font-script text-2xl text-champagne-300 mt-4" data-i18n="footer.waiting">
