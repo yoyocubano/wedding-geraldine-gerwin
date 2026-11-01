@@ -382,7 +382,7 @@
         </div>
       </div>
       <p class="font-cormorant italic text-2xl sm:text-3xl text-espresso mt-12 leading-snug" data-i18n="vestimenta.note">
-        Un detalle especial: el blanco está reservado exclusivamente para la novia.
+        Un detalle especial: El blanco está reservado exclusivamente para la novia.
       </p>
     </div>
   </section>
@@ -396,7 +396,6 @@
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 mt-2 mb-2 max-w-xl mx-auto" data-i18n="hospedaje.text">
         Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.
       </p>
-      <p class="font-serif text-base sm:text-lg text-espresso font-bold mt-4 mb-4 max-w-xl mx-auto" data-i18n="hospedaje.urgency">¡Haz ya tu reserva! Las habitaciones pueden estar ya reservadas si esperas más.</p>
       <a href="https://hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener" class="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="hospedaje.btn">
         Consultar tarifas y reservar habitación
       </a>
@@ -445,15 +444,23 @@
 
       <!-- Form Container -->
       <form onsubmit="handleRSVPSubmit(event)" class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
-        <!-- Asistencia (Sí / No) -->
+        <!-- Asistencia (cena / fiesta / ambos / no) -->
         <div>
           <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
             ¿Asistirás a la celebración? *
           </label>
-          <div class="grid grid-cols-2 gap-3 text-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
-              <input type="radio" name="rsvpAttend" value="si" checked class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
-              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.yes">¡Sí, asistiré! </span>
+              <input type="radio" name="rsvpAttend" value="cena" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.cena">Asistiré a la cena</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="fiesta" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.fiesta">Asistiré a la fiesta</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="ambos" checked class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.ambos">Asistiré a ambos</span>
             </label>
             <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
               <input type="radio" name="rsvpAttend" value="no" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
@@ -556,9 +563,6 @@
   <!-- ==================== SECTION: GUÍA DE VIAJE ==================== -->
   <section id="guia" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
     <div class="max-w-2xl mx-auto text-center">
-      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="guia.subtitle">
-        ✦ Guía de viaje ✦
-      </span>
       <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="guia.title">
         Guía de viaje para nuestros invitados
       </h2>
@@ -719,6 +723,9 @@
         "rsvp.phone_placeholder": "Tu teléfono",
         "rsvp.attendance_label": "¿Asistirás a la celebración? *",
         "rsvp.yes": "¡Sí, asistiré! ",
+        "rsvp.cena": "Asistiré a la cena",
+        "rsvp.fiesta": "Asistiré a la fiesta",
+        "rsvp.ambos": "Asistiré a ambos",
         "rsvp.no": "No podré asistir ",
         "rsvp.diet_label": "Alergias o Restricciones Alimentarias (Muy importante para el chef)",
         "rsvp.diet_placeholder": "Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher...",
@@ -764,7 +771,7 @@
         "vestimenta.men_label": "Hombres",
         "vestimenta.men_text": "Casual chic con un toque elegante",
         "vestimenta.photos_note": "Fotos de ejemplo",
-        "vestimenta.note": "Un detalle especial: el blanco está reservado exclusivamente para la novia.",
+        "vestimenta.note": "Un detalle especial: El blanco está reservado exclusivamente para la novia.",
         "hospedaje.subtitle": "✦ Hospedaje ✦",
         "hospedaje.title": "Hospedaje",
         "hospedaje.text": "Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.",
@@ -859,6 +866,9 @@
         "rsvp.phone_placeholder": "Je telefoonnummer",
         "rsvp.attendance_label": "Ben je aanwezig bij de viering? *",
         "rsvp.yes": "Ja, ik ben erbij! ",
+        "rsvp.cena": "Ik ben erbij bij het diner",
+        "rsvp.fiesta": "Ik ben erbij bij het feest",
+        "rsvp.ambos": "Ik ben erbij bij beide",
         "rsvp.no": "Helaas kan ik niet ",
         "rsvp.diet_label": "Dieetwensen of allergieën (zeer belangrijk voor de chef)",
         "rsvp.diet_placeholder": "Bijv.: Geen schaaldieren, glutenvrij (coeliakie), vegetarisch...",
@@ -1157,8 +1167,13 @@ END:VCALENDAR`;
       const emailLabel = isNL ? ' *E-mail:*' : (isEN ? ' *Email:*' : ' *Correo:*');
       const phoneLabel = isNL ? ' *Telefoon:*' : (isEN ? ' *Phone:*' : ' *Teléfono:*');
       const attendLabel = isNL ? ' *Aanwezigheid:*' : (isEN ? ' *Attendance:*' : ' *Asistencia:*');
-      const yesText = isNL ? 'JA, IK BEN ERBIJ! ' : (isEN ? 'YES, I WILL ATTEND! ' : '¡SÍ, ASISTIRÉ! ');
-      const noText = isNL ? 'Helaas kan ik niet ' : (isEN ? 'Regretfully decline ' : 'Lamentablemente no podré asistir ');
+      const attendTexts = {
+        cena: isNL ? 'Ik ben erbij bij het diner' : (isEN ? 'I will attend the dinner' : 'Asistiré a la cena'),
+        fiesta: isNL ? 'Ik ben erbij bij het feest' : (isEN ? 'I will attend the party' : 'Asistiré a la fiesta'),
+        ambos: isNL ? 'Ik ben erbij bij beide' : (isEN ? 'I will attend both' : 'Asistiré a ambos'),
+        no: isNL ? 'Helaas kan ik niet' : (isEN ? 'Regretfully decline' : 'No podré asistir')
+      };
+      const attendTextJs = attendTexts[attend] || attendTexts['ambos'];
       const hotelNotice = isNL ? ' *Viering in Hotel ReeHorst (01 Mei 2027)*' : (isEN ? ' *Celebration at Hotel ReeHorst (May 1, 2027)*' : ' *Celebración en Hotel ReeHorst (01 Mayo 2027)*');
       const dietLabel = isNL ? ' *Dieetwensen / Allergieën voor de chef:*' : (isEN ? ' *Dietary / Allergies for the Chef:*' : ' *Dieta / Alergias para el Chef:*');
       const songLabel = isNL ? ' *Verzoeknummer voor de DJ:*' : (isEN ? ' *Song suggestion for the DJ:*' : ' *Sugerencia de Canción para el DJ:*');
@@ -1170,8 +1185,8 @@ END:VCALENDAR`;
       text += `${guestLabel} ${name}\n`;
       if (email) text += `${emailLabel} ${email}\n`;
       if (phone) text += `${phoneLabel} ${phone}\n`;
-      text += `${attendLabel} ${attend === 'si' ? yesText : noText}\n`;
-      if (attend === 'si') {
+      text += `${attendLabel} ${attendTextJs}\n`;
+      if (attend !== 'no') {
         text += `${hotelNotice}\n`;
         text += `${dietLabel} ${diet || noneDiet}\n`;
         text += `${songLabel} ${song || noneSong}\n`;
@@ -1199,7 +1214,7 @@ END:VCALENDAR`;
 
       const toast = document.getElementById('rsvpSuccess');
       toast.classList.remove('hidden');
-      if (attend === 'si') {
+      if (attend !== 'no') {
         const letter = document.getElementById('confirmLetterModal');
         if (letter) letter.classList.remove('hidden');
       }
