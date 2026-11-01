@@ -670,6 +670,8 @@
         "hero.btn_start": "Comenzar",
         "audio.label": "Música de la Boda",
         "audio.wedding_song": "Nuestra canción de boda",
+        "modal.envelope_title": "✦ Un sobre para ti ✦",
+        "modal.close": "Cerrar",
         "audio.title": "Alex Warren — Ordinary",
         "audio.subtitle": "Piano Cover by Pianella Piano",
         "welcome.subtitle": "✦ Carta a Nuestros Invitados ✦",
@@ -809,6 +811,8 @@
         "hero.btn_start": "Ontdekken",
         "audio.label": "Bruiloftsmuziek",
         "audio.wedding_song": "Ons trouwlied",
+        "modal.envelope_title": "✦ Een envelop voor jou ✦",
+        "modal.close": "Sluiten",
         "audio.title": "Alex Warren — Ordinary",
         "audio.subtitle": "Piano Cover door Pianella Piano",
         "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
@@ -1500,7 +1504,7 @@ END:VCALENDAR`;
   <!-- Carta post-confirmación: sobre que se superpone hasta tocar -->
   <div id="confirmLetterModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xl" onclick="document.getElementById('confirmLetterModal').classList.add('hidden')">
     <div class="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury max-w-xl w-full max-h-[85vh] overflow-y-auto text-left" onclick="event.stopPropagation()">
-      <p class="font-cinzel tracking-widest text-champagne-800 font-bold text-center mb-4">✦ Un sobre para ti ✦</p>
+      <p class="font-cinzel tracking-widest text-champagne-800 font-bold text-center mb-4" data-i18n="modal.envelope_title">✦ Un sobre para ti ✦</p>
       <div class="lang-content font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="es">
         <p class="font-script text-3xl text-espresso mb-4">¡Querida familia y amigos!</p>
         <p>Hay momentos en la vida que se vuelven aún más especiales cuando los compartimos con las personas que queremos. ¿Y qué más bonito que celebrar el amor rodeados de quienes ocupan un lugar especial en nuestros corazones?</p>
@@ -1510,14 +1514,14 @@ END:VCALENDAR`;
         <p class="mt-4 font-script text-2xl text-espresso">Con mucho amor,<br/>Gerwin &amp; Yeralding</p>
       </div>
       <div class="lang-content font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="nl" style="display:none">
-        <p class="font-script text-3xl text-espresso mb-4">Lieve familie en vrienden!</p>
-        <p>Er zijn momenten in het leven die nog specialer worden als we ze delen met de mensen van wie we houden. En wat is er mooier dan de liefde vieren omringd door wie een speciale plaats in ons hart heeft?</p>
-        <p class="mt-3">Op 21 april 2027 geven we elkaar het jawoord, en op 1 mei willen we dit geluk met jullie allemaal vieren.</p>
-        <p class="mt-3">We kijken er enorm naar uit deze dag te delen, vol liefde, lachen, knuffels en nieuwe herinneringen. Ook al scheiden sommige jaren en vele kilometers ons, de genegenheid blijft intact. Het betekent heel veel voor ons dat jullie hier zijn, en Gerwin is blij eindelijk die vrienden te leren kennen over wie Yeralding met zoveel genegenheid vertelt.</p>
-        <p class="mt-3">Bereid jullie mooiste looks alvast voor, want we hebben foto's in te halen en veel herinneringen te creëren! We wachten jullie op met een vol hart en open armen.</p>
-        <p class="mt-4 font-script text-2xl text-espresso">Met veel liefde,<br/>Gerwin &amp; Yeralding</p>
+        <p class="font-script text-3xl text-espresso mb-4">Lieve vrienden! 🤍</p>
+        <p>Ook al zijn er jaren voorbijgegaan en wonen we tegenwoordig duizenden kilometers van elkaar vandaan, sommige vriendschappen blijven altijd dichtbij voelen. Zo voelt dat voor mij met jullie. Jullie hebben een speciaal plekje in mijn hart en ik koester alle mooie herinneringen die we samen hebben gemaakt.</p>
+        <p class="mt-3">Op 21 april 2027 geven Gerwin en ik elkaar het jawoord, en op 1 mei willen we dit graag samen met jullie vieren. Het zou ontzettend veel voor mij en onze familie betekenen om jullie erbij te hebben.</p>
+        <p class="mt-3">Gerwin kijkt er enorm naar uit om jullie eindelijk te ontmoeten en kennis te maken met de vrienden over wie ik hem zo vaak vertel. Dus haal jullie mooiste outfits maar alvast tevoorschijn, want we hebben heel wat oude foto’s in te halen en veel nieuwe herinneringen om samen te maken! 📸✨</p>
+        <p class="mt-3">Heel erg bedankt dat jullie de moeite nemen om naar ons toe te komen en deel uit te maken van zo’n bijzonder moment in ons leven. We kijken ernaar uit om jullie te verwelkomen, met een vol hart en open armen.</p>
+        <p class="mt-4 font-script text-2xl text-espresso">Liefs,<br/>Gerwin &amp; Yeralding</p>
       </div>
-               <button onclick="document.getElementById('confirmLetterModal').classList.add('hidden')" class="mt-6 w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold cursor-pointer">Cerrar</button>
+               <button onclick="document.getElementById('confirmLetterModal').classList.add('hidden')" class="mt-6 w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold cursor-pointer" data-i18n="modal.close">Cerrar</button>
     </div>
   </div>
 
