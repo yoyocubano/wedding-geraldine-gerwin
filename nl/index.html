@@ -106,7 +106,9 @@
     .text-gold-gradient {
       background: linear-gradient(135deg, #B8903B 0%, #E6C86E 35%, #FFF6D1 50%, #C5A059 70%, #99732B 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: transparent;
     }
     /* Nombre dentro de la imagen del programa: escala con el ancho, empieza debajo de los anillos */
     @media (max-width: 639px) {
@@ -124,7 +126,9 @@
     .programa-gold {
       background: linear-gradient(135deg, #7A5A1F 0%, #D4AF37 38%, #B8903B 62%, #6B4E12 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: transparent;
     }
     /* Nombres de portada en móvil: dorado FUERTE, sin centro casi blanco, para contraste con la foto */
     .hero-name-gold {
@@ -270,7 +274,7 @@
   <section class="py-10 px-2 sm:px-4 bg-white/70 backdrop-blur-xl border-b border-champagne-500/20 relative overflow-hidden">
     <p class="font-script text-4xl sm:text-5xl text-champagne-700 text-center mb-1" style="text-shadow:0 1px 0 rgba(255,255,255,0.6);" data-i18n="audio.wedding_song">Nuestra canción de boda</p>
     <div class="flex items-stretch justify-center gap-2 max-w-5xl mx-auto">
-      <img src="/assets/notas-musicales-1.png" alt="" class="notes-left hidden sm:block w-1/4 object-contain self-center" />
+      <img loading="lazy" decoding="async" src="/assets/notas-musicales-1.png" alt="" class="notes-left hidden sm:block w-1/4 object-contain self-center" />
     <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <div class="text-left">
@@ -286,7 +290,7 @@
         <span class="w-1 h-4 bg-champagne-500 rounded-full animate-pulse" style="animation-delay: 0.45s"></span>
       </div>
     </div>
-      <img src="/assets/notas-musicales-2.png" alt="" class="notes-right hidden sm:block w-1/4 object-contain self-center" />
+      <img loading="lazy" decoding="async" src="/assets/notas-musicales-2.png" alt="" class="notes-right hidden sm:block w-1/4 object-contain self-center" />
     </div>
   </section>
 
@@ -310,14 +314,14 @@
         <div class="text-center"><span id="cd-secs" class="block font-sans text-5xl sm:text-6xl font-bold text-champagne-800 text-gold-gradient leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.secs">SEGUNDOS</span></div>
       </div>
       <div class="flex justify-center my-8">
-        <img src="/assets/anillos-reales-sin-fondo.png" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 object-cover" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));" />
+        <img loading="lazy" decoding="async" src="/assets/anillos-reales-sin-fondo.png" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 object-cover" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));" />
       </div>
       <div class="sm:hidden h-6" aria-hidden="true"></div>
       <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script1">No podemos</p>
       <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script2">imaginar este día</p>
       <p class="font-script text-6xl sm:text-7xl text-black leading-tight mt-1" data-i18n="countdown.script3">Sin ti</p>
       <div class="flex justify-center mt-6 mb-2">
-        <img src="/assets/corazon-dorado-sin-fondo.png" alt="Corazón dorado" class="hero-heart w-24 h-24 object-contain" />
+        <img loading="lazy" decoding="async" src="/assets/corazon-dorado-sin-fondo.png" alt="Corazón dorado" class="hero-heart w-24 h-24 object-contain" />
       </div>
 
       <!-- Add to Calendar Buttons -->
@@ -371,7 +375,7 @@
   <!-- Manos de los novios, enseguida despues de Programa del dia -->
   <section id="manos" class="bg-transparent relative" style="padding:0;margin:0;">
     <div style="width:100%;margin:0;padding:0;">
-      <img src="/assets/manos-novios-color.jpg" alt="Manos de los novios con anillos" style="width:100vw;max-width:100%;height:auto;display:block;margin:0;border:none;" />
+      <img loading="lazy" decoding="async" src="/assets/manos-novios-color.jpg" alt="Manos de los novios con anillos" style="width:100%;max-width:100%;height:auto;display:block;margin:0;border:none;" />
     </div>
   </section>
   <section id="vestimenta" class="py-10 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
@@ -384,12 +388,12 @@
       </p>
       <div class="grid sm:grid-cols-2 gap-10 mt-2">
         <div class="text-center">
-          <img src="/assets/vestimenta-mujer.png" alt="" class="mx-auto w-48 sm:w-56" />
+          <img loading="lazy" decoding="async" src="/assets/vestimenta-mujer.png" alt="" class="mx-auto w-48 sm:w-56" />
           <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso uppercase mt-2" data-i18n="vestimenta.women_label">Mujeres</p>
           <p class="font-serif text-xl sm:text-2xl text-espresso mt-1 mx-auto max-w-[14rem] text-center" data-i18n="vestimenta.women_text">Semi formal con toque elegante</p>
         </div>
         <div class="text-center">
-          <img src="/assets/vestimenta-hombre.png" alt="" class="mx-auto w-48 sm:w-56" />
+          <img loading="lazy" decoding="async" src="/assets/vestimenta-hombre.png" alt="" class="mx-auto w-48 sm:w-56" />
           <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso uppercase mt-2" data-i18n="vestimenta.men_label">Hombres</p>
           <p class="font-serif text-xl sm:text-2xl text-espresso mt-1 mx-auto max-w-[14rem] text-center" data-i18n="vestimenta.men_text">Semi formal con toque elegante</p>
         </div>
@@ -422,7 +426,7 @@
         Un regalo para nuestra aventura
       </h2>
       <div class="rounded-3xl overflow-hidden border border-champagne-500/40 shadow-luxury mt-8">
-        <img src="/assets/gift_honeymoon.jpg" alt="Luna de miel" class="w-full h-64 sm:h-80 object-cover" />
+        <img loading="lazy" decoding="async" src="/assets/gift_honeymoon.jpg" alt="Luna de miel" class="w-full h-64 sm:h-80 object-cover" />
       </div>
       <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-6 mb-6 max-w-xl mx-auto" data-i18n="regalo.text">
         Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.
@@ -660,7 +664,7 @@
   </footer>
 
   <!-- Audio Element -->
-  <audio id="weddingMusic" preload="auto">
+  <audio id="weddingMusic" preload="metadata">
     <source src="/assets/wedding_music.mp3" type="audio/mp3" />
   </audio>
 
@@ -1512,7 +1516,7 @@ END:VCALENDAR`;
             + '<div style="font-size:11px;opacity:.8;text-align:right;">' + L.live + '<br/>' + updated + '</div></div>'
             + '<div style="text-align:center;margin:4px 0 2px;"><div style="font-size:64px;line-height:1;font-weight:300;">' + Math.round(c.temperature_2m) + '°</div>'
             + '<div style="font-size:15px;font-weight:600;">' + w + '</div>'
-            + '<div style="font-size:13px;opacity:.9;">L.max + ': ' + Math.round(day0[0]) + '° &nbsp; L.min + ': ' + Math.round(day0min[0]) + '°</div></div>'
+            + '<div style="font-size:13px;opacity:.9;">' + L.max + ': ' + Math.round(day0[0]) + '° &nbsp; ' + L.min + ': ' + Math.round(day0min[0]) + '°</div></div>'
             + '<div style="display:flex;gap:8px;margin:12px 0 4px;text-align:center;font-size:11px;">'
             + '<div style="flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 4px;"><div style="opacity:.8;">' + L.feels + '</div><div style="font-weight:700;font-size:13px;">' + Math.round(c.apparent_temperature) + '°</div></div>'
             + '<div style="flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 4px;"><div style="opacity:.8;">' + L.wind + '</div><div style="font-weight:700;font-size:13px;">' + Math.round(c.wind_speed_10m) + ' km/h</div></div>'
