@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1A120B" />
   <title>Gerwin & Yeralding — Ons Huwelijk 2027</title>
   
-  <meta name="description" content="Invitación de Boda oficial de Gerwin & Yeralding. 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
+  <meta name="description" content="Officiële huwelijksuitnodiging van Gerwin & Yeralding. 01 mei 2027, Hotel ReeHorst, Ede, Nederland." />
   <meta property="og:title" content="Gerwin & Yeralding — Huwelijk 2027" />
   <meta property="og:description" content="Vier onze liefde in Nederland. Gids voor gasten, vervoer, hotel en RSVP-bevestiging." />
   <meta property="og:type" content="website" />
@@ -29,9 +30,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+    if (window.tailwind) tailwind.config = {
       theme: {
         extend: {
           colors: {
@@ -90,6 +92,9 @@
     html {
       background-color: #FAF7F2;
       scroll-behavior: smooth;
+    }
+    @supports (padding: env(safe-area-inset-top)) {
+      nav.fixed { margin-top: env(safe-area-inset-top); }
     }
     body {
       background-color: transparent;
@@ -183,7 +188,7 @@
   <!-- ==================== FIXED GLOBAL BACKGROUND (AUTHENTIC PHOTO + BLUR ON SCROLL) ==================== -->
   <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
     <img 
-      id="globalBgImg"
+      id="globalBgImg" fetchpriority="high"
       src="/assets/yeralding_gerwin_hero.jpg" 
       alt="Gerwin & Yeralding Boda Real" 
       class="w-full h-full object-cover object-top will-change-transform scale-105"
@@ -494,7 +499,7 @@
           </label>
           <input 
             type="text" 
-            id="rsvpName" 
+            id="rsvpName" autocomplete="name" 
             required 
             placeholder="Tu nombre y apellido" 
             data-i18n-placeholder="rsvp.name_placeholder"
@@ -509,7 +514,7 @@
           </label>
           <input
             type="email"
-            id="rsvpEmail"
+            id="rsvpEmail" autocomplete="email"
             placeholder="Tu correo electrónico"
             data-i18n-placeholder="rsvp.email_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
@@ -523,7 +528,7 @@
           </label>
           <input
             type="tel"
-            id="rsvpPhone"
+            id="rsvpPhone" autocomplete="tel"
             placeholder="Tu teléfono"
             data-i18n-placeholder="rsvp.phone_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
