@@ -248,7 +248,7 @@
       <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] mt-2 mb-2" data-i18n="hero.together">
         Junto a nuestra familia
       </p>
-      <h1 id="heroNames" class="hero-fade hero-fade-d2 hero-we-say leading-tight mt-2 sm:mt-8 mb-1 whitespace-nowrap select-none" style="font-size:clamp(2rem,9vw,4.5rem);max-width:calc(100vw - 2rem);">Gerwin &amp; Yeralding</h1>
+      <h1 class="hero-fade hero-fade-d2 hero-we-say leading-tight mt-2 sm:mt-8 mb-1 whitespace-nowrap select-none" style="font-size:clamp(2rem,11vw,5rem);max-width:calc(100vw - 2rem);">Gerwin &amp; Yeralding</h1>
       <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_12px_rgba(0,0,0,1)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
         Tenemos el honor de invitarte a celebrar nuestra boda
       </p>
@@ -1600,34 +1600,6 @@ END:VCALENDAR`;
 </script>
 
 <script>
-  // Nombres de portada: siempre en UNA sola línea, en cualquier teléfono.
-  // Empieza grande (CSS) y, si el texto no cabe, lo encoge píxel a píxel hasta que quepa.
-  // Se re-mide al cargar, al cambiar de tamaño/orientación y cuando termina de cargar la letra cursiva,
-  // porque el ancho real cambia cuando Great Vibes sustituye a la letra de respaldo.
-  (function () {
-    function fitHeroNames() {
-      var h = document.getElementById('heroNames');
-      if (!h || !h.parentElement) return;
-      h.style.fontSize = '';
-      var size = parseFloat(window.getComputedStyle(h).fontSize) || 32;
-      var avail = h.parentElement.clientWidth - 16;
-      var guard = 0;
-      while (h.scrollWidth > avail && size > 14 && guard < 80) {
-        size -= 1;
-        h.style.fontSize = size + 'px';
-        guard++;
-      }
-    }
-    var t = null;
-    function fitSoon() { clearTimeout(t); t = setTimeout(fitHeroNames, 60); }
-    window.addEventListener('load', fitHeroNames);
-    window.addEventListener('resize', fitSoon);
-    window.addEventListener('orientationchange', fitSoon);
-    document.addEventListener('DOMContentLoaded', fitHeroNames);
-    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitHeroNames); }
-    setTimeout(fitHeroNames, 500);
-    setTimeout(fitHeroNames, 1500);
-  })();
-</script>
+
 </body>
 </html>
