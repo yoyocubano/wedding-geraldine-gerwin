@@ -152,13 +152,13 @@
     /* PASO 1 + MUSICA (preview only, checkpoint intacto) */
     @keyframes heroFadeIn { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1.05); } }
     @keyframes heroTextFadeIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes heartbeat { 0%,100% { transform: scale(1) rotate(-12deg); } 14% { transform: scale(1.22) rotate(-12deg); } 28% { transform: scale(1) rotate(-12deg); } 42% { transform: scale(1.18) rotate(-12deg); } 70% { transform: scale(1) rotate(-12deg); } }
+    @keyframes heartbeat { 0%,100% { transform: scale(1) rotate(-12deg); } 14% { transform: scale(1.30) rotate(-12deg); } 28% { transform: scale(1) rotate(-12deg); } 42% { transform: scale(1.24) rotate(-12deg); } 70% { transform: scale(1) rotate(-12deg); } }
     #globalPhotoBg img { animation: heroFadeIn 1.6s ease-out both; }
     .hero-fade { animation: heroTextFadeIn 1.2s ease-out both; }
     .hero-fade-d1 { animation-delay: .35s; } .hero-fade-d2 { animation-delay: .7s; } .hero-fade-d3 { animation-delay: 1s; }
     .hero-we-say { font-family: 'Great Vibes', 'Alex Brush', cursive; color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.95), 0 0 6px rgba(0,0,0,.85); line-height: .95; }
-    .hero-heart { animation: heartbeat 1.6s ease-in-out infinite; transform-origin: center; filter: drop-shadow(0 0 8px rgba(197,160,89,.9)); }
-    @media (prefers-reduced-motion: reduce) { #globalPhotoBg img, .hero-fade, .hero-heart { animation: none !important; } }
+    .hero-heart { -webkit-animation: heartbeat 1.6s ease-in-out infinite; animation: heartbeat 1.6s ease-in-out infinite; transform-origin: center; will-change: transform; filter: drop-shadow(0 0 8px rgba(197,160,89,.9)); }
+    @media (prefers-reduced-motion: reduce) { #globalPhotoBg img, .hero-fade { animation: none !important; } }
   
     .champagne-bowl { border: 3px solid #C5A059; border-top: none; border-radius: 0 0 140px 140px / 0 0 220px 220px; background: rgba(255,255,255,0.88); overflow: hidden; position: relative; }
     .champagne-rim { height: 14px; border: 3px solid #C5A059; border-radius: 50%; margin: 0 -6px -8px; background: transparent; }
@@ -1103,7 +1103,7 @@
     }
 
     // ==================== LIVE COUNTDOWN TIMER ====================
-    const TARGET_DATE = new Date('2027-05-01T20:00:00+02:00').getTime();
+    const TARGET_DATE = new Date('2027-05-01T19:30:00+02:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -1135,7 +1135,7 @@
       const title = encodeURIComponent("Boda Gerwin & Yeralding — Gran Celebración");
       const details = encodeURIComponent("Celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.");
       const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
-      const dates = "20270501T180000Z/20270502T010000Z";
+      const dates = "20270501T173000Z/20270502T010000Z";
       window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
     }
 
@@ -1148,7 +1148,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:wedding-gerwin-yeralding-2027@reehorst
 DTSTAMP:20270501T180000Z
-DTSTART:20270501T180000Z
+DTSTART:20270501T173000Z
 DTEND:20270502T010000Z
 SUMMARY:Boda Gerwin & Yeralding
 DESCRIPTION:Gran celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.
@@ -1176,7 +1176,7 @@ END:VCALENDAR`;
       const name = document.getElementById('rsvpName').value.trim();
       const email = document.getElementById('rsvpEmail').value.trim();
       const phone = document.getElementById('rsvpPhone').value.trim();
-      const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
+      const attendEl = document.querySelector('input[name="rsvpAttend"]:checked'); const attend = attendEl ? attendEl.value : 'ambos';
       const diet = document.getElementById('rsvpDiet').value.trim();
       const song = document.getElementById('rsvpSong').value.trim();
 
@@ -1469,7 +1469,7 @@ END:VCALENDAR`;
       nl: {0:'Helder',1:'Overwegend helder',2:'Gedeeltelijk bewolkt',3:'Bewolkt',45:'Mist',48:'IJzelmist',51:'Lichte motregen',53:'Motregen',55:'Sterke motregen',61:'Lichte regen',63:'Regen',65:'Sterke regen',71:'Lichte sneeuw',73:'Sneeuw',75:'Sterke sneeuw',80:'Lichte buien',81:'Buien',82:'Sterke buien',95:'Onweer',96:'Onweer met hagel',99:'Onweer met hagel'}
     };
     var wd = {es:['dom','lun','mar','mié','jue','vie','sáb'], nl:['zo','ma','di','wo','do','vr','za'], en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']};
-    var lab = {es:{feels:'Sensación',wind:'Viento',hum:'Humedad',live:'En vivo',nl:'Países Bajos'}, nl:{feels:'Gevoel',wind:'Wind',hum:'Vochtigheid',live:'Live',nl:'Nederland'}, en:{feels:'Feels like',wind:'Wind',hum:'Humidity',live:'Live',nl:'Netherlands'}};
+    var lab = {es:{feels:'Sensación',wind:'Viento',hum:'Humedad',live:'En vivo',nl:'Países Bajos',max:'Máx',min:'Mín'}, nl:{feels:'Gevoel',wind:'Wind',hum:'Vochtigheid',live:'Live',nl:'Nederland',max:'Max',min:'Min'}, en:{feels:'Feels like',wind:'Wind',hum:'Humidity',live:'Live',nl:'Netherlands',max:'Max',min:'Min'}};
     function icon(code, isDay, size) {
       var sz = size || 28;
       var s = '<svg width="' + sz + '" height="' + sz + '" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none">';
