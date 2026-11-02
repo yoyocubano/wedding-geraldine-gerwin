@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerwin & Yeralding — Ons Huwelijk 2027</title>
+  
+  <meta name="description" content="Invitación de Boda oficial de Gerwin & Yeralding. 01 de Mayo 2027, Hotel ReeHorst, Ede, Países Bajos." />
+  <meta property="og:title" content="Gerwin & Yeralding — Huwelijk 2027" />
+  <meta property="og:description" content="Vier onze liefde in Nederland. Gids voor gasten, vervoer, hotel en RSVP-bevestiging." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wedding-yeralding-gerwin.com/nl/" />
+  <meta property="og:image" content="https://wedding-yeralding-gerwin.com/assets/sobre-invitacion-boda-nl.jpg" />
+  <meta property="og:image:width" content="2112" />
+  <meta property="og:image:height" content="1104" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://wedding-yeralding-gerwin.com/assets/sobre-invitacion-boda-nl.jpg" />
+
+  <!-- Favicon: Minimización de foto de Gerwin & Yeralding -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/favicon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- Google Fonts: Luxury Editorial Serif, Romantic Calligraphy & Modern Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            champagne: {
+              50: '#FDFBF7',
+              100: '#FAF5EB',
+              200: '#F3E8D2',
+              300: '#DFBE7D',
+              400: '#D4AF37',
+              500: '#C5A059',
+              600: '#A98338',
+              700: '#8C6726',
+              800: '#58351C',
+              900: '#2A1B0E',
+            },
+            parchment: '#FBF9F4',
+            warmwhite: '#FAF7F2',
+            espresso: '#1A120B',
+            darknoir: '#0F0B08',
+            goldfoil: '#C5A059',
+          },
+          fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+            alex: ['"Alex Brush"', 'cursive'],
+            body: ['"EB Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          boxShadow: {
+            'luxury': '0 25px 60px -15px rgba(26, 18, 11, 0.12), 0 0 0 1px rgba(197, 160, 89, 0.25)',
+            'luxury-dark': '0 30px 70px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(212, 175, 55, 0.35)',
+            'glow-gold': '0 0 35px 5px rgba(197, 160, 89, 0.45)',
+          },
+          animation: {
+            'pulse-slow': 'pulseSlow 3s infinite ease-in-out',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            pulseSlow: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.03)', opacity: '0.9' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      background-color: #FAF7F2;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: transparent;
+      color: #1A120B;
+      font-family: 'EB Garamond', serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      overflow-anchor: none;
+    }
+
+    /* Metallic Gold Gradient Text - SOLO para títulos grandes.
+       Las letras pequeñas NO lo usan: el centro casi blanco (#FFF6D1) las borraba
+       sobre fondo claro. El resto usa text-champagne-800 sólido (#58351C). */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #B8903B 0%, #E6C86E 35%, #FFF6D1 50%, #C5A059 70%, #99732B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Nombre dentro de la imagen del programa: escala con el ancho, empieza debajo de los anillos */
+    @media (max-width: 639px) {
+      #programa .programa-couple-overlay { font-size: 3.4vw !important; letter-spacing: 0.08em; line-height: 1.3; }
+    }
+    @media (min-width: 640px) {
+      #programa .programa-couple-overlay { font-size: 17px !important; letter-spacing: 0.12em; line-height: 1.3; }
+    }
+    /* Texto del programa dentro de la imagen: dorado oscuro sólido + halo claro, para contraste */
+    .programa-text {
+      color: #6B4E12;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.9), 0 0 10px rgba(250,247,242,0.9);
+    }
+    /* Programa: mismo dorado fuerte de la invitación, sin centro blanco, legible sobre crema */
+    .programa-gold {
+      background: linear-gradient(135deg, #7A5A1F 0%, #D4AF37 38%, #B8903B 62%, #6B4E12 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Nombres de portada en móvil: dorado FUERTE, sin centro casi blanco, para contraste con la foto */
+    @media (max-width: 639px) {
+      .hero-name-gold {
+        background: linear-gradient(135deg, #7A5A1F 0%, #D4AF37 38%, #B8903B 62%, #6B4E12 100%) !important;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    /* Luxury Accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+    }
+    .faq-item.active .faq-answer {
+      max-height: 650px;
+      transition: max-height 0.55s ease-in-out;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  
+    /* PASO 1 + MUSICA (preview only, checkpoint intacto) */
+    @keyframes heroFadeIn { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: scale(1.05); } }
+    @keyframes heroTextFadeIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes heartbeat { 0%,100% { transform: scale(1) rotate(-12deg); } 14% { transform: scale(1.22) rotate(-12deg); } 28% { transform: scale(1) rotate(-12deg); } 42% { transform: scale(1.18) rotate(-12deg); } 70% { transform: scale(1) rotate(-12deg); } }
+    #globalPhotoBg img { animation: heroFadeIn 1.6s ease-out both; }
+    .hero-fade { animation: heroTextFadeIn 1.2s ease-out both; }
+    .hero-fade-d1 { animation-delay: .35s; } .hero-fade-d2 { animation-delay: .7s; } .hero-fade-d3 { animation-delay: 1s; }
+    .hero-we-say { font-family: 'Great Vibes', 'Alex Brush', cursive; color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.95), 0 0 6px rgba(0,0,0,.85); line-height: .95; }
+    .hero-heart { animation: heartbeat 1.6s ease-in-out infinite; transform-origin: center; filter: drop-shadow(0 0 8px rgba(197,160,89,.9)); }
+    @media (prefers-reduced-motion: reduce) { #globalPhotoBg img, .hero-fade, .hero-heart { animation: none !important; } }
+  
+    .champagne-bowl { border: 3px solid #C5A059; border-top: none; border-radius: 0 0 140px 140px / 0 0 220px 220px; background: rgba(255,255,255,0.88); overflow: hidden; position: relative; }
+    .champagne-rim { height: 14px; border: 3px solid #C5A059; border-radius: 50%; margin: 0 -6px -8px; background: transparent; }
+    #timelineLiquid { transition: height 0.15s linear; }
+    @keyframes bubbleRise { from { transform: translateY(0); opacity: .9; } to { transform: translateY(-120px); opacity: 0; } }
+    .timeline-bubble { position: absolute; bottom: 8px; border-radius: 9999px; background: rgba(255,255,255,0.9); animation: bubbleRise 3.2s ease-in infinite; }
+    @media (max-width: 639px) {
+    #countdown .countdown-bg { object-position: center 30%; filter: blur(10px) brightness(1.05); }
+    #countdown .countdown-veil { background: rgba(255, 255, 255, 0.82); }
+    #countdown [data-i18n="countdown.script1"],
+    #countdown [data-i18n="countdown.script2"] { line-height: 1.3; }
+    #countdown [data-i18n="countdown.script3"] { line-height: 1.3; margin-top: 1rem; }
+  }
+</style>
+</head>
+<body class="selection:bg-champagne-300 selection:text-espresso relative overflow-x-hidden">
+
+  <!-- ==================== FIXED GLOBAL BACKGROUND (AUTHENTIC PHOTO + BLUR ON SCROLL) ==================== -->
+  <div id="globalPhotoBg" class="fixed inset-0 -z-10 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+    <img 
+      id="globalBgImg"
+      src="/assets/yeralding_gerwin_hero.jpg" 
+      alt="Gerwin & Yeralding Boda Real" 
+      class="w-full h-full object-cover object-top will-change-transform scale-105"
+      style="filter: blur(0px) brightness(0.98) contrast(1.02); transition: filter 0.1s ease-out, transform 0.1s ease-out;"
+    />
+    <!-- Warm Luxury Frosted Parchment Veil -->
+    <div id="scrollBgVeil" class="absolute inset-0 bg-[#FAF7F2] transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+  </div>
+
+  <!-- ==================== FLOATING LUXURY NAVBAR ==================== -->
+  <nav class="fixed top-4 inset-x-3 z-50 max-w-5xl mx-auto">
+    <div class="backdrop-blur-xl bg-white/70 border border-champagne-500/30 rounded-full px-4 sm:px-6 py-2.5 shadow-luxury flex items-center justify-between transition-all duration-300">
+      
+      <!-- Couple Name & Photo Avatar -->
+      <a href="#hero" class="flex items-center gap-2.5 group cursor-pointer">
+        <img src="/assets/favicon-32.png" alt="Gerwin & Yeralding" class="w-8 h-8 rounded-full border border-champagne-500/60 shadow-xs group-hover:scale-105 transition-transform object-cover" />
+        <span class="font-cinzel text-sm tracking-widest text-espresso font-semibold hidden sm:inline">GERWIN & YERALDING</span>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-sm uppercase tracking-[0.2em] font-sans text-champagne-900/80 font-bold">
+        <a href="#programa" class="hover:text-espresso transition-colors" data-i18n="nav.timeline">Programa</a>
+        <a href="#vestimenta" class="hover:text-espresso transition-colors" data-i18n="nav.dresscode">Vestimenta</a>
+        <a href="#hospedaje" class="hover:text-espresso transition-colors" data-i18n="nav.lodging">Hospedaje</a>
+        <a href="#regalo" class="hover:text-espresso transition-colors" data-i18n="nav.gift">Regalo</a>
+        <a href="#rsvp" class="hover:text-espresso transition-colors font-bold text-champagne-800" data-i18n="nav.rsvp">RSVP</a>
+      </div>
+
+      <!-- Right Controls: Audio & Language Switcher -->
+      <div class="flex items-center gap-2">
+
+        <!-- Language Switcher (ES | NL) -->
+        <div class="flex items-center bg-champagne-200/50 border border-champagne-500/30 rounded-full p-0.5 text-sm font-sans font-medium">
+          <button onclick="setLanguage('es')" id="btn-lang-es" class="px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold">ES</button>
+          <button onclick="setLanguage('nl')" id="btn-lang-nl" class="px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso">NL</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION: FACES CLEAR, TEXT IN LOWER HALF ==================== -->
+  <header id="hero" class="relative min-h-screen flex items-end justify-center overflow-hidden bg-transparent pb-10 sm:pb-12 pt-32">
+    <!-- Velo oscuro solo en la parte inferior: oscurece el ramo/vestido detrás de los nombres, sin tapar las caras -->
+    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/35 to-transparent pointer-events-none"></div>
+    
+    <!-- Hero Content Placed in Lower Half so Faces are Completely Visible -->
+    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 text-center text-white flex flex-col items-center">
+      
+      <!-- PASO 1: estilo de la imagen de referencia, texto en la mitad inferior para no tapar caras -->
+      <div class="hero-fade hero-fade-d1 text-center">
+        <div class="hero-we-say text-4xl sm:text-7xl lg:text-8xl select-none" aria-label="We Say Yes">
+          <span>We</span>
+          <svg class="hero-heart inline-block w-10 h-10 sm:w-12 sm:h-12 -mx-1 align-middle" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5 C 6 16.5 3 13.2 3 9.6 C 3 7 5 5 7.5 5 C 9.3 5 11 6.1 12 7.6 C 13 6.1 14.7 5 16.5 5 C 19 5 21 7 21 9.6 C 21 13.2 18 16.5 12 20.5 Z"/></svg>
+          <span>Say</span><br /><span>Yes</span>
+        </div>
+      </div>
+      <p class="hero-fade hero-fade-d2 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,1)] mt-2 mb-2" data-i18n="hero.together">
+        Junto a nuestra familia
+      </p>
+      <h1 class="hero-fade hero-fade-d2 font-cinzel text-gold-gradient leading-tight mt-2 sm:mt-8 mb-1 tracking-[0.01em] whitespace-nowrap drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] select-none" style="font-size:clamp(1.25rem,5.6vw,4rem);max-width:calc(100vw - 2rem);">
+        GERWIN <span class="font-script normal-case tracking-normal text-gold-gradient drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]" style="font-size:1.25em;">&amp;</span> YERALDING
+      </h1>
+      <p class="hero-fade hero-fade-d3 font-sans text-sm sm:text-base uppercase tracking-[0.3em] text-white font-bold drop-shadow-[0_2px_12px_rgba(0,0,0,1)] max-w-lg mx-auto mb-1" data-i18n="hero.invite_sub">
+        Tenemos el honor de invitarte a celebrar nuestra boda
+      </p>
+
+      <!-- Date Banner: 01 Mayo 2027 -->
+      <div class="my-1 py-2 px-6 rounded-full bg-black/60 backdrop-blur-xl border border-champagne-400/50 inline-flex items-center gap-3 text-center shadow-luxury">
+        <span class="font-sans text-sm uppercase tracking-widest text-white font-semibold" data-i18n="hero.month">MAYO</span>
+        <span class="w-px h-8 bg-white/80"></span>
+        <span class="font-cinzel text-4xl sm:text-5xl font-bold text-white tracking-widest">01</span>
+        <span class="w-px h-8 bg-white/80"></span>
+        <span class="font-sans text-sm uppercase tracking-widest text-champagne-300 font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">2027</span>
+      </div>
+
+      <p class="text-sm uppercase tracking-[0.25em] font-sans text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-1" data-i18n="hero.location">
+        Sábado • Hotel ReeHorst • Bennekomseweg 24, 6717 LM Ede, Países Bajos • Recepción: 19:30
+      </p>
+      <p class="text-sm uppercase tracking-[0.2em] font-sans text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] mt-1" data-i18n="hero.venue_line">
+        Celebración en el Salón New York
+      </p>
+
+
+    </div>
+  </header>
+
+  <!-- ==================== AUDIO SECTION: ALEX WARREN - ORDINARY (PIANELLA PIANO) ==================== -->
+  <section class="py-10 px-2 sm:px-4 bg-white/70 backdrop-blur-xl border-b border-champagne-500/20 relative overflow-hidden">
+    <p class="font-script text-4xl sm:text-5xl text-champagne-700 text-center mb-1" style="text-shadow:0 1px 0 rgba(255,255,255,0.6);" data-i18n="audio.wedding_song">Nuestra canción de boda</p>
+    <div class="flex items-stretch justify-center gap-2 max-w-5xl mx-auto">
+      <img src="/assets/notas-musicales-1.png" alt="" class="notes-left hidden sm:block w-1/4 object-contain self-center" />
+    <div class="max-w-md mx-auto p-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-champagne-500/30 shadow-luxury flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="text-left">
+          <span class="block text-sm uppercase font-sans tracking-widest text-champagne-800 font-bold" data-i18n="audio.label">Música de la Boda</span>
+          <span class="font-serif text-sm font-bold text-espresso block" data-i18n="audio.title">Alex Warren — Ordinary</span>
+          <span class="text-sm font-sans text-champagne-800" data-i18n="audio.subtitle">Piano Cover by Pianella Piano</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 h-5 pr-2" id="musicBars">
+        <span class="w-1 h-3 bg-champagne-600 rounded-full animate-pulse"></span>
+        <span class="w-1 h-5 bg-champagne-400 rounded-full animate-pulse" style="animation-delay: 0.15s"></span>
+        <span class="w-1 h-2 bg-champagne-600 rounded-full animate-pulse" style="animation-delay: 0.3s"></span>
+        <span class="w-1 h-4 bg-champagne-500 rounded-full animate-pulse" style="animation-delay: 0.45s"></span>
+      </div>
+    </div>
+      <img src="/assets/notas-musicales-2.png" alt="" class="notes-right hidden sm:block w-1/4 object-contain self-center" />
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CARTA A NUESTROS INVITADOS ==================== -->
+
+  <!-- ==================== SECTION: COUNTDOWN ("UNTIL WE SAY I DO") ==================== -->
+  <section id="countdown" class="py-16 px-4 border-y border-champagne-500/20 text-center relative overflow-hidden">
+    <img src="/assets/yeralding_gerwin_hero.jpg" alt="" aria-hidden="true" class="countdown-bg absolute inset-0 w-full h-full object-cover object-top" style="filter: blur(6px) brightness(1.08);" />
+    <div class="countdown-veil absolute inset-0 bg-white/65" aria-hidden="true"></div>
+    <div class="max-w-2xl mx-auto relative z-10">
+      <h3 class="font-cinzel text-3xl sm:text-5xl text-champagne-800 font-semibold tracking-[0.18em] mb-6" data-i18n="countdown.we_say_ido">
+        WE SAY I DO
+      </h3>
+      <div class="flex items-start justify-center gap-1 sm:gap-3 my-6">
+        <div class="text-center"><span id="cd-days" class="block font-sans text-5xl sm:text-6xl font-bold text-black leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.days">DÍAS</span></div>
+        <span class="font-sans text-5xl sm:text-6xl font-bold text-black leading-none">:</span>
+        <div class="text-center"><span id="cd-hours" class="block font-sans text-5xl sm:text-6xl font-bold text-black leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.hours">HORAS</span></div>
+        <span class="font-sans text-5xl sm:text-6xl font-bold text-black leading-none">:</span>
+        <div class="text-center"><span id="cd-mins" class="block font-sans text-5xl sm:text-6xl font-bold text-black leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.mins">MINUTOS</span></div>
+        <span class="font-sans text-5xl sm:text-6xl font-bold text-black leading-none">:</span>
+        <div class="text-center"><span id="cd-secs" class="block font-sans text-5xl sm:text-6xl font-bold text-champagne-800 text-gold-gradient leading-none">--</span><span class="block text-sm sm:text-base font-sans uppercase tracking-wider text-black font-semibold mt-2" data-i18n="countdown.secs">SEGUNDOS</span></div>
+      </div>
+      <div class="flex justify-center my-8">
+        <img src="/assets/anillos-reales-sin-fondo.png" alt="Dos anillos de boda dorados" class="w-56 sm:w-64 object-cover" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));" />
+      </div>
+      <div class="sm:hidden h-6" aria-hidden="true"></div>
+      <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script1">No podemos</p>
+      <p class="font-script text-4xl sm:text-5xl text-black leading-tight" data-i18n="countdown.script2">imaginar este día</p>
+      <p class="font-script text-6xl sm:text-7xl text-black leading-tight mt-1" data-i18n="countdown.script3">Sin ti</p>
+      <div class="flex justify-center mt-6 mb-2">
+        <img src="/assets/corazon-dorado-sin-fondo.png" alt="Corazón dorado" class="hero-heart w-24 h-24 object-contain" />
+      </div>
+
+      <!-- Add to Calendar Buttons -->
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <button onclick="addToGoogleCalendar()" class="px-5 py-2 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-wider shadow-glow-gold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
+          <span></span>
+          <span data-i18n="countdown.google_cal">Google Calendar</span>
+        </button>
+        <button onclick="downloadICS()" class="px-5 py-2 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-wider shadow-glow-gold hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
+          <span></span>
+          <span data-i18n="countdown.apple_cal">Apple iCal (.ics)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== SECTION: PROGRAMA DEL DÍA (TIMELINE) ==================== -->
+  <section id="programa" class="py-20 px-2 sm:px-6 relative border-t border-champagne-500/20" style="background:linear-gradient(rgba(246,240,228,0.70),rgba(246,240,228,0.70)),url('/wedding-geraldine-gerwin/preview-916/jardin-blur-crema.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Programa con la imagen COMPLETA (sin recorte) y el texto ajustado a la imagen:
+           imagen entera arriba, y debajo el texto en la misma crema y el mismo dorado, con el mismo
+           ancho y la misma tipografía, para que imagen y texto se lean como una sola tarjeta. -->
+      <!-- Título y hotel FUERA del arco (como en el asset), y TODO el texto DENTRO de la imagen,
+           bien centrado, SIN cuadro blanco debajo: la imagen es el fondo y el texto va encima. -->
+      <div class="text-center mx-auto" style="max-width:32rem;padding:0 1rem 1rem;">
+        <h3 class="mb-2"><span class="font-cinzel text-3xl sm:text-4xl font-bold tracking-wide programa-gold" data-i18n="programa.title">Programa del día</span></h3>
+        <p class="font-serif italic text-sm sm:text-base text-champagne-800" data-i18n="programa.venue">Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados</p>
+      </div>
+      <div class="mt-0" style="width:100%;max-width:640px;margin:0 auto;border:3px solid #C5A059;border-radius:999px 999px 2.5rem 2.5rem;overflow:hidden;background-color:#FAF7F2;background-image:url('/assets/programa-chatgpt-crop.jpg');background-size:cover;background-position:center top;box-shadow:0 25px 60px -15px rgba(26,18,11,0.25);">
+        <div class="text-center mx-auto" style="max-width:22rem;background:radial-gradient(ellipse at center, rgba(250,247,242,0.88) 0%, rgba(250,247,242,0.60) 55%, rgba(250,247,242,0.15) 80%);padding:6.5rem 1rem 4rem;">
+          <!-- Gerwin & Yeralding empieza justo DEBAJO DE LOS ANILLOS, dentro del arco -->
+          <p class="font-serif font-bold programa-text programa-couple-overlay mb-5" data-i18n="programa.couple_date">GERWIN &amp; YERALDING · 01 DE MAYO DE 2027</p>
+          <div class="space-y-4 text-center">
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">19:30</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e1">Recepción y bienvenida</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">20:00–22:00</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e2">Cena estilo bufé</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">22:30</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e3">Apertura de la celebración</p><p class="font-serif italic text-sm text-champagne-800" data-i18n="programa.v_ny">Salón New York</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">22:40</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e4">Lectura de votos</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">22:50</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e5">Nuestro primer baile</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">23:00</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e6">Brindis</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">23:15</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e7">Celebración</p></div>
+            <div><p class="font-serif text-lg font-bold programa-text leading-tight">02:30–03:00</p><p class="font-serif text-sm sm:text-base font-bold uppercase tracking-wide programa-text leading-tight" data-i18n="programa.e8">Fin de la celebración</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: CÓDIGO DE VESTIMENTA ==================== -->
+  <!-- Manos de los novios, enseguida despues de Programa del dia -->
+  <section id="manos" class="bg-transparent relative" style="padding:0;margin:0;">
+    <div style="width:100%;margin:0;padding:0;">
+      <img src="/assets/manos-novios-color.jpg" alt="Manos de los novios con anillos" style="width:100vw;max-width:100%;height:auto;display:block;margin:0;border:none;" />
+    </div>
+  </section>
+  <section id="vestimenta" class="py-10 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="vestimenta.title">
+        Código de vestimenta
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-2 mb-8 max-w-xl mx-auto" data-i18n="vestimenta.intro">
+        Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-10 mt-2">
+        <div class="text-center">
+          <img src="/assets/vestimenta-mujer.png" alt="" class="mx-auto w-48 sm:w-56" />
+          <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso uppercase mt-2" data-i18n="vestimenta.women_label">Mujeres</p>
+          <p class="font-serif text-xl sm:text-2xl text-espresso mt-1 mx-auto max-w-[14rem] text-center" data-i18n="vestimenta.women_text">Semi formal con toque elegante</p>
+        </div>
+        <div class="text-center">
+          <img src="/assets/vestimenta-hombre.png" alt="" class="mx-auto w-48 sm:w-56" />
+          <p class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-espresso uppercase mt-2" data-i18n="vestimenta.men_label">Hombres</p>
+          <p class="font-serif text-xl sm:text-2xl text-espresso mt-1 mx-auto max-w-[14rem] text-center" data-i18n="vestimenta.men_text">Semi formal con toque elegante</p>
+        </div>
+      </div>
+      <p class="font-cormorant italic text-2xl sm:text-3xl text-espresso mt-12 leading-snug" data-i18n="vestimenta.note">
+        Un detalle especial: El blanco está reservado exclusivamente para la novia.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: HOSPEDAJE ==================== -->
+  <section id="hospedaje" class="py-10 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="hospedaje.title">
+        Hospedaje
+      </h2>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 mt-2 mb-2 max-w-xl mx-auto" data-i18n="hospedaje.text">
+        Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.
+      </p>
+      <a href="https://hotelreehorst.nl/hotelkamers/" target="_blank" rel="noopener" class="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="hospedaje.btn">
+        Consultar tarifas y reservar habitación
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: REGALO ==================== -->
+  <section id="regalo" class="py-10 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="regalo.title">
+        Un regalo para nuestra aventura
+      </h2>
+      <div class="rounded-3xl overflow-hidden border border-champagne-500/40 shadow-luxury mt-8">
+        <img src="/assets/gift_honeymoon.jpg" alt="Luna de miel" class="w-full h-64 sm:h-80 object-cover" />
+      </div>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-6 mb-6 max-w-xl mx-auto" data-i18n="regalo.text">
+        Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.
+      </p>
+      <button onclick="document.getElementById('giftBankPanel').classList.toggle('hidden')" class="px-8 py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.btn">
+        Una nueva aventura comienza juntos
+      </button>
+      <div id="giftBankPanel" class="hidden bg-white/70 backdrop-blur-xl rounded-3xl p-6 border border-champagne-500/40 shadow-luxury mt-6 max-w-md mx-auto text-left">
+        <p class="text-sm font-sans uppercase tracking-widest text-champagne-800 font-bold mb-3" data-i18n="regalo.bank_title">Datos para transferencia</p>
+        <p class="text-sm font-sans text-espresso mb-1"><span class="font-bold" data-i18n="regalo.beneficiary_label">Beneficiario:</span> Gerwin Onderstal</p>
+        <p class="text-sm font-sans text-espresso mb-1"><span class="font-bold">IBAN:</span> NL30 **** **** 5167</p>
+        <p class="text-sm font-sans text-espresso mb-4"><span class="font-bold">BIC:</span> <span data-i18n="regalo.bic_note">se copia con los datos</span></p>
+        <button onclick="copyGiftData()" class="w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.2em] shadow-glow-gold hover:scale-105 active:scale-95 transition-all cursor-pointer" data-i18n="regalo.copy_btn">Copiar datos para transferencia</button>
+        <p id="giftCopied" class="hidden text-sm font-sans font-semibold text-emerald-800 mt-3 text-center" data-i18n="regalo.copied">¡Datos copiados! Pégalos en tu banco para hacer la transferencia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RSVP FORM: CONFIRMACIÓN DE ASISTENCIA (DEADLINE 31/12/2026) ==================== -->
+  <section id="rsvp" class="py-10 px-4 sm:px-6 bg-transparent relative">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <span class="text-base uppercase tracking-[0.2em] font-sans font-bold text-champagne-800 block mb-2" data-i18n="rsvp.subtitle">
+        ✦ Confirmación de Asistencia ✦
+      </span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide">
+        R. S. V. P.
+      </h2>
+      <p class="font-serif italic text-base text-champagne-800 mt-1 mb-8" data-i18n="rsvp.deadline">
+        Por favor confirma tu asistencia antes del 31 de Diciembre de 2026
+      </p>
+
+      <!-- Form Container -->
+      <form onsubmit="handleRSVPSubmit(event)" class="bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury text-left space-y-4">
+        <!-- Asistencia (cena / fiesta / ambos / no) -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.attendance_label">
+            ¿Asistirás a la celebración? *
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="cena" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.cena">Asistiré a la cena</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="fiesta" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.fiesta">Asistiré a la fiesta</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="ambos" checked class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-semibold text-espresso" data-i18n="rsvp.ambos">Asistiré a ambos</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 rounded-xl border border-champagne-500/40 bg-champagne-50/70 cursor-pointer">
+              <input type="radio" name="rsvpAttend" value="no" class="text-champagne-800 focus:ring-champagne-700 cursor-pointer" />
+              <span class="font-sans font-medium text-espresso" data-i18n="rsvp.no">No podré asistir </span>
+            </label>
+          </div>
+        </div>
+
+        
+        <!-- Nombre Completo -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.name_label">
+            Nombre Completo *
+          </label>
+          <input 
+            type="text" 
+            id="rsvpName" 
+            required 
+            placeholder="Tu nombre y apellido" 
+            data-i18n-placeholder="rsvp.name_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Correo electrónico -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.email_label">
+            Correo electrónico
+          </label>
+          <input
+            type="email"
+            id="rsvpEmail"
+            placeholder="Tu correo electrónico"
+            data-i18n-placeholder="rsvp.email_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Teléfono -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.phone_label">
+            Teléfono
+          </label>
+          <input
+            type="tel"
+            id="rsvpPhone"
+            placeholder="Tu teléfono"
+            data-i18n-placeholder="rsvp.phone_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Alergias o Restricciones Alimentarias -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.diet_label">
+            Alergias o Restricciones Alimentarias (Muy importante para el chef)
+          </label>
+          <input 
+            type="text" 
+            id="rsvpDiet" 
+            placeholder="Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher..." 
+            data-i18n-placeholder="rsvp.diet_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Canción favorita de sugerencia para el DJ -->
+        <div>
+          <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.song_label">
+            Canción favorita de sugerencia para el DJ 
+          </label>
+          <input 
+            type="text" 
+            id="rsvpSong" 
+            placeholder="Título de la canción y artista" 
+            data-i18n-placeholder="rsvp.song_placeholder"
+            class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full py-4 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-4"
+        >
+          <span data-i18n="rsvp.submit_btn">Enviar confirmación</span>
+          <span></span>
+        </button>
+
+        <p id="rsvpStatus" class="hidden text-sm font-sans font-semibold text-champagne-800 mt-3 text-center"></p>
+      </form>
+
+      <div id="rsvpSuccess" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-500 text-emerald-900 rounded-2xl text-sm font-sans font-semibold" data-i18n="rsvp.success">
+        ¡Muchas gracias! Tu confirmación ha sido preparada y enviada con éxito.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION: GUÍA DE VIAJE ==================== -->
+  <section id="guia" class="py-20 px-4 sm:px-6 bg-transparent relative border-t border-champagne-500/20">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-cinzel text-3xl sm:text-4xl text-espresso font-bold tracking-wide" data-i18n="guia.title">
+        Guía de viaje para nuestros invitados
+      </h2>
+      <p class="font-serif text-base sm:text-lg text-champagne-900/90 leading-relaxed mt-4 mb-6 max-w-xl mx-auto" data-i18n="guia.text">
+        Si viajas desde el extranjero, aquí tienes la guía con todo lo necesario para llegar fácil, cómodo y económico.
+      </p>
+      <div class="lang-content text-left max-w-xl mx-auto space-y-5 font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="es">
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">1. Aeropuerto recomendado: Ámsterdam-Schiphol (AMS)</h3>
+          <p>Independientemente de dónde viajes, te recomendamos volar al aeropuerto de Ámsterdam-Schiphol (AMS). Es la opción más cómoda para llegar al hotel, ya que desde el aeropuerto puedes tomar un tren intercity directo hasta la estación de Ede-Wageningen. En cuanto aterrices en Ámsterdam-Schiphol, puedes tomar directamente en el aeropuerto el tren directo con destino a Ede-Wageningen. Puedes comprar los billetes en las máquinas de NS, situadas en Schiphol Plaza, antes de bajar a los andenes. El trayecto en tren dura aproximadamente 50 minutos y cuesta unos 18,80 € por trayecto. Al llegar a la estación de Ede-Wageningen, encontrarás el hotel justo enfrente de la estación. Si prefieres alquilar un coche, el Hotel ReeHorst dispone de aparcamiento gratuito para sus huéspedes.</p><p class="mt-2">Enlace: <a href="https://www.ns.nl" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">Consultar trenes y comprar billetes de NS: ns.nl</a></p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">2. Cómo desplazarse en Ede</h3>
+          <p><a href="https://www.9292.nl" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">Planificar tu viaje en transporte público: 9292.nl</a></p><p class="mt-1"><a href="https://m.uber.com/ul/?action=setPickup&amp;dropoff[latitude]=52.02435&amp;dropoff[longitude]=5.67142&amp;dropoff[nickname]=Hotel%20ReeHorst" target="_blank" rel="noopener noreferrer" class="text-champagne-800 font-bold underline hover:text-espresso transition-colors">Pedir un Uber aquí</a></p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">3. Dónde comer en Ede</h3>
+          <p><strong>ZUZU Restaurant-Bar</strong>, dentro del Hotel ReeHorst, ideal para comer sin desplazarse.</p><p><strong>Uber Eats</strong>, comida a domicilio de distintos restaurantes de la zona.</p><p><strong>Thuisbezorgd</strong>, otra opción para pedir comida a domicilio o para llevar.</p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">4. Antes de hacer la maleta</h3>
+          <p>En mayo, el clima en Países Bajos puede ser bastante cambiante: puede hacer sol, refrescar o llover en el mismo día. Te recomendamos llevar: una chaqueta abrigada y ropa por capas; zapatos cómodos para caminar; un impermeable o paraguas; gafas de sol; tu look más elegante para celebrar con nosotros, y no olvides zapatos cómodos para bailar.</p><p class="mt-2"><strong>Temperaturas habituales:</strong> entre 7 y 10 °C por la mañana y la noche, y entre 15 y 18 °C durante el día, aunque puede variar.</p><p class="mt-2">El tiempo en vivo en Ede está al pie de esta invitación: consúltalo antes de cerrar la maleta.</p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">5. Cargadores y adaptadores</h3>
+          <p>Si vienes desde América Latina o Estados Unidos, te recomendamos traer un adaptador de corriente para poder conectar tus cargadores en Europa, ya que los enchufes pueden ser diferentes a los de tu país.</p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">6. Conexión a internet en Europa</h3>
+          <p>Si viajas desde América Latina o Estados Unidos, puedes adquirir una SIM o eSIM para mantenerte conectado durante tu estancia. En el aeropuerto de Ámsterdam, encontrarás Airport Telecom en Schiphol Plaza, entre las salas de llegadas 1 y 2. Las eSIM tienen precios desde 14 € y las SIM físicas desde 44,99 €. Si vienes de otro país de Europa no olvides activar tu itinerancia de datos.</p>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">7. Diferencia horaria en mayo</h3>
+          <p>Durante el mes de mayo, Países Bajos se encuentra en horario de verano (CEST, UTC+2):</p><ul class="list-disc pl-6 mt-1 space-y-1"><li>Ecuador continental: Países Bajos está 7 horas por delante.</li><li>Houston, Texas: Países Bajos está 7 horas por delante.</li><li>Venezuela: Países Bajos está 6 horas por delante.</li><li>Irlanda: Países Bajos está 1 hora por delante.</li><li>España peninsular: tiene la misma hora que Países Bajos.</li></ul>
+        </div>
+        <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">8. Número de emergencia</h3>
+          <p>El número de emergencia en Países Bajos es el 112. Puedes llamar de forma gratuita si necesitas asistencia urgente de la policía, los bomberos o una ambulancia. Recuerda que todos hablan inglés aunque su lengua nativa sea neerlandés.</p>
+        </div>
+                <div>
+          <h3 class="font-cinzel font-bold text-espresso text-lg mb-1">9. Puntualidad en Países Bajos</h3>
+          <p>Aviso importante: aquí la hora significa la hora. En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. Así que, por una vez, ¡intentemos encontrarnos a mitad de camino! Te recomendamos llegar unos minutos antes para no perderte nada de la celebración.</p>
+        </div>
+        <p class="text-center font-cinzel font-bold text-espresso text-xl pt-2">El mejor viaje es el que nos lleva de vuelta a las personas que queremos!! Nos vemos en Mayo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 px-4 bg-espresso/95 backdrop-blur-xl text-center text-champagne-200 border-t border-champagne-500/30 relative z-10">
+    <div class="max-w-3xl mx-auto">
+      <div class="w-12 h-12 rounded-full border border-champagne-400/50 overflow-hidden mx-auto mb-3 shadow-luxury">
+        <img src="/assets/favicon-64.png" alt="Gerwin & Yeralding" class="w-full h-full object-cover" />
+      </div>
+      <p class="font-cinzel text-base tracking-widest text-white font-bold">
+        GERWIN & YERALDING
+      </p>
+      <p class="text-sm font-sans font-semibold text-champagne-400 tracking-wider mt-1" data-i18n="footer.location">
+        01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos
+      </p>
+      <p class="font-script text-2xl text-champagne-300 mt-4" data-i18n="footer.waiting">
+        ¡Os esperamos con todo nuestro cariño!
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto text-left">
+        <div class="rounded-2xl border border-champagne-400/40 bg-white/10 p-5 flex flex-col">
+          <p class="font-cinzel tracking-widest text-champagne-300 font-bold" data-i18n="footer.uber_title">✦ Uber en Países Bajos</p>
+          <div class="mt-3 overflow-hidden" style="border-radius:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+            <iframe title="Mapa Hotel ReeHorst, Ede" src="https://www.openstreetmap.org/export/embed.html?bbox=5.65142%2C52.01435%2C5.69142%2C52.03435&amp;layer=mapnik&amp;marker=52.02435%2C5.67142" style="width:100%;height:180px;border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="text-sm font-sans text-white/90 mt-3" data-i18n="footer.uber_text">Pide tu viaje directamente al Hotel ReeHorst, Bennekomseweg 24, Ede.</p>
+          <a href="https://m.uber.com/ul/?action=setPickup&amp;dropoff[latitude]=52.02435&amp;dropoff[longitude]=5.67142&amp;dropoff[nickname]=Hotel%20ReeHorst" target="_blank" rel="noopener" class="inline-flex mt-4 self-start px-5 py-2 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm shadow-glow-gold" data-i18n="footer.uber_btn">Abrir Uber</a>
+        </div>
+        <div class="rounded-2xl border border-champagne-400/40 bg-white/10 p-5">
+          <p class="font-cinzel tracking-widest text-champagne-300 font-bold" data-i18n="footer.weather_title">✦ El tiempo en Ede, en vivo</p>
+          <div id="weatherWidget" class="mt-3 font-sans text-white" style="border-radius:1.5rem;overflow:hidden;background:linear-gradient(180deg,#2A5A8A,#1B3A5F);padding:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+            <p class="text-sm text-white/80">Cargando el tiempo actual en Ede…</p>
+          </div>
+          <p class="text-sm font-sans text-white/80 mt-3" data-i18n="footer.weather_wedding">01/05/2027 · Clima habitual en mayo: 15-18 °C de día, 7-10 °C de noche. El pronóstico en vivo para ese día aparecerá aquí cuando falten 16 días.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Audio Element -->
+  <audio id="weddingMusic" preload="auto">
+    <source src="/assets/wedding_music.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- ==================== JAVASCRIPT LOGIC & TRILINGUAL DICTIONARY ==================== -->
+  <script>
+    const i18n = {
+      es: {
+        "nav.welcome": "Bienvenidos",
+        "nav.checklist": "Checklist",
+        "nav.faq": "Preguntas Frecuentes",
+        "nav.rsvp": "RSVP",
+        "hero.together": "Junto a nuestra familia",
+        "hero.invite_sub": "Tenemos el honor de invitarte a celebrar nuestra boda",
+        "hero.month": "MAYO",
+        "hero.location": "Sábado • Hotel ReeHorst • Bennekomseweg 24, 6717 LM Ede, Países Bajos • Recepción: 19:30",
+        "hero.venue_line": "Celebración en el Salón New York",
+        "hero.btn_start": "Comenzar",
+        "audio.label": "Música de la Boda",
+        "audio.wedding_song": "Nuestra canción de boda",
+        "modal.envelope_title": "✦ Un sobre para ti ✦",
+        "modal.close": "Cerrar",
+        "audio.title": "Alex Warren — Ordinary",
+        "audio.subtitle": "Piano Cover by Pianella Piano",
+        "welcome.subtitle": "✦ Carta a Nuestros Invitados ✦",
+        "welcome.title": "Queridos amigos!",
+        "welcome.text_p1": "Aunque hayan pasado los años y hoy nos separen tantos kilómetros, hay amistades que siguen sintiéndose cerquita y ustedes son eso para nosotros. Los llevamos en nuestro corazón y guardamos con muchísimo cariño tantos recuerdos de nuestra historia juntos.",
+        "welcome.text_p2": "El 21 de abril de 2027, Gerwin y yo daremos el sí y el 1 de mayo celebraremos con ustedes. Para nosotros y nuestra familia, tenerlos ahí significa muchísimo. Gerwin está feliz porque tiene por fin la oportunidad de conocerlos y descubrir en persona a esos amigos de los que tanto les hablo. Así que vayan preparando sus mejores looks porque tenemos años de fotos pendientes por actualizar y muchos nuevos recuerdos por crear. Muchísimas gracias por hacer el esfuerzo de venir y ser parte de un momento tan importante para nosotros. Los esperamos con el corazón lleno y los brazos abiertos.",
+        "countdown.until": "Until",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.script1": "No podemos",
+        "countdown.script2": "imaginar este día",
+        "countdown.script3": "Sin ti",
+        "countdown.cant_imagine": "No podemos imaginar este día sin ti y te invitamos a agregarlo a tu calendario para que no se te pase por alto",
+        "countdown.days": "DÍAS",
+        "countdown.hours": "HORAS",
+        "countdown.mins": "MINUTOS",
+        "countdown.secs": "SEGUNDOS",
+        "countdown.google_cal": "Google Calendar",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "checklist.title": "Tu viaje a Países Bajos",
+        "checklist.intro": "Aquí tienes tu check list paso a paso para que organices el viaje sin estrés:",
+        "checklist.completed": "completados",
+        "checklist.item1": "1. Confirmar asistencia",
+        "checklist.item2": "2. Reservar vuelo",
+        "checklist.item3": "3. Reservar el hospedaje",
+        "checklist.item4": "4. Para la cena indicarnos alergias e intolerancias",
+        "checklist.item5": "5. Preparar el look",
+        "checklist.item6": "6. Organizar el transporte en tren o alquiler de coche",
+        "checklist.item7": "7. Hacer maletas",
+        "checklist.item8": "8. Venir a celebrar con nosotros ",
+        "faq.title": "Preguntas Frecuentes",
+        "faq.q1": "1. ✦ Aeropuerto recomendado: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Independientemente de dónde viajes, te recomendamos volar al aeropuerto de Ámsterdam-Schiphol (AMS). Es la opción más cómoda para llegar al hotel, ya que desde el aeropuerto puedes tomar un tren intercity directo hasta la estación de Ede-Wageningen. ¡Es muy sencillo! En cuanto aterrices en Ámsterdam-Schiphol, puedes tomar directamente en el aeropuerto el tren directo con destino a Ede-Wageningen. Puedes comprar los billetes en las máquinas de NS, situadas en Schiphol Plaza, antes de bajar a los andenes. El trayecto en tren dura aproximadamente 50 minutos y cuesta unos 18,80 € por trayecto. Al llegar a la estación de Ede-Wageningen, encontrarás el hotel justo enfrente de la estación. ¿Prefieres alquilar un coche? El Hotel ReeHorst dispone de aparcamiento gratuito para sus huéspedes.<br/><br/>Enlaces para chequear el tren: <a href=\"https://www.ns.nl\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">Consultar trenes y comprar billetes de NS: ns.nl</a>",
+        "faq.q2": "2. ✦ ¿Cómo llegar desde el aeropuerto Schiphol hasta el Hotel ReeHorst?",
+        "faq.a2": "¡Llegar es muy fácil!  Al aterrizar en Amsterdam Schiphol, puedes tomar el tren directamente desde el aeropuerto con destino a <strong>Ede-Wageningen</strong>. El billete se puede comprar en el propio aeropuerto, antes de bajar a la zona de trenes. El trayecto dura aproximadamente <strong>50 minutos</strong> y el billete cuesta alrededor de <strong>18,80 € por trayecto</strong>. Al llegar a la estación de Ede-Wageningen, el hotel se encuentra justo frente a la estación. <br/><br/>Si prefieres alquilar un coche, el Hotel ReeHorst cuenta con <strong>parking gratuito</strong> para sus huéspedes. ",
+        "faq.q3": "3. ✦ ¿Por qué recomendamos hospedarse en el Hotel ReeHorst?",
+        "faq.a3": "Puedes reservar tu habitación en el mismo hotel donde celebraremos la fiesta. Hay habitaciones individuales y familiares, además de opciones con desayuno incluido. <br/><br/>Así podrás disfrutar de la celebración con tranquilidad y, al terminar, simplemente subir a descansar sin preocuparte por taxis, desplazamientos o conducir después de haber bebido. <br/><br/>Una vez que confirmes tu asistencia a la boda, <strong>te enviaremos un código especial de reserva</strong> para que puedas reservar tu habitación directamente con el hotel.<br/><br/>Puedes consultar todos los tipos de habitaciones disponibles y conocer más detalles en la página del Hotel ReeHorst:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. ✦ Barra libre",
+        "faq.a4": "Cervezas, vinos y refrescos estarán incluidos durante toda la noche. <br/><br/>Para quienes quieran disfrutar de algo diferente, también habrá cócteles especiales disponibles en la barra, por cuenta propia. ✦",
+        "faq.q5": "5. ✦ Dress Code: Casual Chic / Traje Formal",
+        "faq.a5": "Viste con tus colores favoritos. El blanco queda reservado con cariño para la novia.",
+        "faq.q6": "6. ✦ ¿Qué tiempo hace en mayo y cómo es el salón?",
+        "faq.a6": "En mayo, el clima en Países Bajos suele ser fresco y agradable, con temperaturas que generalmente rondan los <strong>14 °C a 18 °C</strong>. ✦<br/><br/>La celebración tendrá lugar en un <strong>salón cerrado y climatizado</strong> dentro del hotel, así que estaremos cómodos durante la fiesta independientemente del tiempo que haga fuera. <br/><br/>Para los momentos fuera del hotel —como traslados, paseos o desplazamientos— te recomendamos tener en cuenta que puede refrescar, especialmente por la tarde o noche. Si eres de los que sienten frío fácilmente, una chaqueta ligera puede ser una buena idea. ",
+        "faq.q7": "7. ✦ Puntualidad en Países Bajos",
+        "faq.a7": "Aviso importante: aquí la hora significa la hora. <br/><br/>En Países Bajos, llegar 10 minutos antes es ser puntual. Para muchos latinos, llegar 10 minutos tarde todavía entra en la categoría de “voy llegando”. <br/><br/>Así que, por una vez, ¡intentemos encontrarnos a mitad de camino!  Te recomendamos llegar unos minutos antes para no perderte nada de la celebración. ",
+        "rsvp.subtitle": "✦ Confirmación de Asistencia ✦",
+        "rsvp.deadline": "Por favor confirma tu asistencia antes del 31 de Diciembre de 2026",
+        "rsvp.name_label": "Nombre Completo *",
+        "rsvp.name_placeholder": "Tu nombre y apellido",
+        "rsvp.email_label": "Correo electrónico",
+        "rsvp.email_placeholder": "Tu correo electrónico",
+        "rsvp.phone_label": "Teléfono",
+        "rsvp.phone_placeholder": "Tu teléfono",
+        "rsvp.attendance_label": "¿Asistirás a la celebración? *",
+        "rsvp.yes": "¡Sí, asistiré! ",
+        "rsvp.cena": "Asistiré a la cena",
+        "rsvp.fiesta": "Asistiré a la fiesta",
+        "rsvp.ambos": "Asistiré a ambos",
+        "rsvp.no": "No podré asistir ",
+        "rsvp.diet_label": "Alergias o Restricciones Alimentarias (Muy importante para el chef)",
+        "rsvp.diet_placeholder": "Ej: Sin mariscos, celíaco (sin gluten), vegetariano, kosher...",
+        "rsvp.song_label": "Canción favorita de sugerencia para el DJ ",
+        "rsvp.song_placeholder": "Título de la canción y artista",
+        "rsvp.submit_btn": "Enviar confirmación",
+        "rsvp.email_btn": "Enviar por email a Yeralding",
+        "rsvp.whatsapp_btn": "Enviar también por WhatsApp (opcional)",
+        "rsvp.success": "¡Muchas gracias! Tu confirmación ha sido enviada con éxito.",
+        "footer.location": "01 Mayo 2027 • Hotel ReeHorst, Ede, Países Bajos",
+        "footer.waiting": "¡Os esperamos con todo nuestro cariño!",
+        "footer.uber_title": "✦ Uber en Países Bajos",
+        "footer.uber_text": "Pide tu viaje directamente al Hotel ReeHorst, Bennekomseweg 24, Ede.",
+        "footer.uber_btn": "Abrir Uber",
+        "footer.weather_title": "✦ El tiempo en Ede, en vivo",
+        "footer.weather_loading": "Cargando el tiempo actual en Ede…",
+        "footer.weather_wedding": "01/05/2027 · Clima habitual en mayo: 15-18 °C de día, 7-10 °C de noche. El pronóstico en vivo para ese día aparecerá aquí cuando falten 16 días.",
+                "nav.timeline": "Programa",
+        "nav.dresscode": "Vestimenta",
+        "nav.lodging": "Hospedaje",
+        "nav.gift": "Regalo",
+        "programa.subtitle": "✦ El día de la celebración ✦",
+        "programa.title": "Programa del día",
+        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Países Bajos · Estacionamiento gratuito para todos nuestros invitados",
+        "programa.couple_date": "GERWIN & YERALDING · 01 DE MAYO DE 2027",
+        "programa.title_script": "Programa",
+        "programa.title_caps": "DEL DÍA",
+                "programa.champagne_caption": "Brindis · Champán amarillo",
+        "programa.e1": "Recepción y bienvenida",
+        "programa.e2": "Cena estilo bufé",
+        "programa.e3": "Apertura de la celebración",
+        "programa.e4": "Lectura de votos",
+        "programa.e5": "Nuestro primer baile",
+        "programa.e6": "Brindis",
+        "programa.e7": "Celebración",
+        "programa.e8": "Fin de la celebración",
+        "programa.v_ny": "Salón New York",
+        "vestimenta.subtitle": "✦ Código de vestimenta ✦",
+        "vestimenta.title": "Código de vestimenta",
+        "vestimenta.intro": "Nos encantará compartir este día tan especial con ustedes y verles celebrar con nosotros. Queremos guardar en nuestros álbumes fotografías llenas de alegría, amor y momentos inolvidables.",
+        "vestimenta.women_label": "Mujeres",
+        "vestimenta.women_text": "Semi formal con toque elegante",
+        "vestimenta.men_label": "Hombres",
+        "vestimenta.men_text": "Semi formal con toque elegante",
+        "vestimenta.photos_note": "Fotos de ejemplo",
+        "vestimenta.note": "Un detalle especial: El blanco está reservado exclusivamente para la novia.",
+        "hospedaje.subtitle": "✦ Hospedaje ✦",
+        "hospedaje.title": "Hospedaje",
+        "hospedaje.text": "Para su comodidad, les recomendamos hospedarse en el hotel donde tendrá lugar nuestra celebración. A través del siguiente enlace podrán consultar las tarifas y reservar su habitación directamente.",
+        "hospedaje.rooms": "Habitaciones individuales y familiares con desayuno.",
+        "hospedaje.btn": "Consultar tarifas y reservar habitación",
+        "hospedaje.urgency": "¡Haz ya tu reserva! Las habitaciones pueden estar ya reservadas si esperas más.",
+        "hospedaje.code_label": "Código especial de la pareja",
+        "hospedaje.code_value": "[Código XXX]",
+        "hospedaje.code_note": "En cuanto la pareja comparta su código, aparecerá aquí.",
+        "regalo.subtitle": "✦ Un regalo para nuestra aventura ✦",
+        "regalo.title": "Un regalo para nuestra aventura",
+        "regalo.text": "Nos hace mucha ilusión comenzar esta nueva etapa descubriendo nuevos destinos y creando recuerdos inolvidables. Si desean hacernos un regalo, pueden ayudarnos a hacer realidad la luna de miel de nuestros sueños: cada aportación nos acerca a vivir nuevas experiencias y aventuras juntos.",
+        "regalo.btn": "Una nueva aventura comienza juntos",
+        "regalo.bank_title": "Datos para transferencia",
+        "regalo.bank_note": "",
+        "regalo.beneficiary_label": "Beneficiario:",
+        "regalo.bic_note": "se copia con los datos",
+        "regalo.copy_btn": "Copiar datos para transferencia",
+        "regalo.copied": "¡Datos copiados! Pégalos en tu banco para hacer la transferencia.",
+        "guia.subtitle": "✦ Guía de viaje ✦",
+        "guia.title": "Guía de viaje para nuestros invitados",
+        "guia.text": "Si viajas desde el extranjero, aquí tienes la guía con todo lo necesario para llegar fácil, cómodo y económico.",
+        "guia.btn": "Próximamente",
+        "guia.note": "La guía se abrirá aquí en cuanto se comparta su enlace. La invitación y la guía comparten la misma música de fondo."
+      },
+      nl: {
+        "nav.welcome": "Welkom",
+        "nav.checklist": "Checklist",
+        "nav.faq": "Veelgestelde Vragen",
+        "nav.rsvp": "RSVP",
+        "hero.together": "Samen met onze families",
+        "hero.invite_sub": "Wij hebben de eer jullie uit te nodigen voor onze bruiloft",
+        "hero.month": "MEI",
+        "hero.location": "Zaterdag • Hotel ReeHorst • Bennekomseweg 24, 6717 LM Ede, Nederland • Receptie: 19:30",
+        "hero.venue_line": "Feest in Salon New York",
+        "hero.btn_start": "Ontdekken",
+        "audio.label": "Bruiloftsmuziek",
+        "audio.wedding_song": "Ons trouwlied",
+        "modal.envelope_title": "✦ Een envelop voor jou ✦",
+        "modal.close": "Sluiten",
+        "audio.title": "Alex Warren — Ordinary",
+        "audio.subtitle": "Piano Cover door Pianella Piano",
+        "welcome.subtitle": "✦ Brief aan Onze Gasten ✦",
+        "welcome.title": "Lieve vrienden!",
+        "welcome.text_p1": "Ook al zijn er jaren voorbijgegaan en scheiden zoveel kilometers ons vandaag, er zijn vriendschappen die nog steeds dichtbij voelen, en dat zijn jullie voor ons. Wij dragen jullie in ons hart en bewaren met veel liefde zoveel herinneringen aan onze gezamenlijke geschiedenis.",
+        "welcome.text_p2": "Op 21 april 2027 zullen Gerwin en ik het jawoord geven en op 1 mei vieren we dat met jullie. Voor ons en onze familie betekent het heel veel dat jullie erbij zijn. Gerwin is blij omdat hij eindelijk de kans krijgt jullie te ontmoeten en persoonlijk die vrienden te ontdekken over wie ik jullie zoveel vertel. Dus bereid jullie mooiste looks alvast voor, want we hebben jaren aan foto's die bijgewerkt moeten worden en veel nieuwe herinneringen te creëren. Heel erg bedankt dat jullie de moeite nemen om te komen en deel uit te maken van zo'n belangrijk moment voor ons. We kijken ernaar uit jullie met een vol hart en open armen te ontvangen.",
+        "countdown.until": "Tot",
+        "countdown.we_say_ido": "WE SAY I DO",
+        "countdown.script1": "We kunnen ons",
+        "countdown.script2": "deze dag niet voorstellen",
+        "countdown.script3": "Zonder jullie",
+        "countdown.cant_imagine": "We kunnen ons deze dag niet voorstellen zonder jullie. Voeg deze datum toe aan je agenda zodat je het niet mist!",
+        "countdown.days": "DAGEN",
+        "countdown.hours": "UREN",
+        "countdown.mins": "MINUTEN",
+        "countdown.secs": "SECONDEN",
+        "countdown.google_cal": "Google Agenda",
+        "countdown.apple_cal": "Apple iCal (.ics)",
+        "checklist.title": "Jouw reis naar Nederland",
+        "checklist.intro": "Hier is je stapsgewijze checklist om je reis zonder stress te plannen:",
+        "checklist.completed": "voltooid",
+        "checklist.item1": "1. Aanwezigheid bevestigen (RSVP)",
+        "checklist.item2": "2. Vlucht boeken",
+        "checklist.item3": "3. Hotelkamer reserveren",
+        "checklist.item4": "4. Dieetwensen en allergieën doorgeven voor het diner",
+        "checklist.item5": "5. Feestelijke outfit kiezen",
+        "checklist.item6": "6. Treinreis of huurauto regelen",
+        "checklist.item7": "7. Koffers inpakken",
+        "checklist.item8": "8. Komen vieren met ons! ",
+        "faq.title": "Veelgestelde Vragen",
+        "faq.q1": "1. ✦ Aanbevolen luchthaven: Amsterdam Schiphol (AMS)",
+        "faq.a1": "Waar je ook vandaan reist, we raden aan om naar Amsterdam Schiphol (AMS) te vliegen. Dit is de makkelijkste optie om bij het hotel te komen, omdat je vanaf de luchthaven rechtstreeks de intercity naar station Ede-Wageningen kunt nemen. Heel eenvoudig! Zodra je landt op Amsterdam Schiphol, kun je direct op de luchthaven de rechtstreekse trein nemen richting Ede-Wageningen. Treinkaartjes koop je op Schiphol Plaza bij de NS-automaten vóórdat je naar de perrons afdaalt. De treinreis duurt circa 50 minuten en kost ongeveer 18,80 € per enkele reis. Bij aankomst op station Ede-Wageningen ligt het hotel direct tegenover het station. Kom je liever met een huurauto? Hotel ReeHorst beschikt over gratis parkeergelegenheid voor gasten.<br/><br/>Nuttige links: <a href=\"https://www.ns.nl\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">Treinen bekijken en NS-kaartjes kopen: ns.nl</a>",
+        "faq.q2": "2. ✦ Hoe reis je vanaf Schiphol naar Hotel ReeHorst?",
+        "faq.a2": "Heel eenvoudig!  Zodra je landt op Amsterdam Schiphol, kun je direct op de luchthaven de rechtstreekse trein nemen richting <strong>Ede-Wageningen</strong>. Treinkaartjes koop je op Schiphol Plaza bij de NS-automaten vóórdat je naar de perrons afdaalt. De treinreis duurt circa <strong>50 minuten</strong> en kost ongeveer <strong>€ 18,80 per enkele reis</strong>. Bij aankomst op station Ede-Wageningen ligt het hotel direct tegenover het station. <br/><br/>Kom je liever met een huurauto? Hotel ReeHorst beschikt over <strong>gratis parkeergelegenheid</strong> voor gasten. ",
+        "faq.q3": "3. ✦ Waarom raden we aan om in Hotel ReeHorst te overnachten?",
+        "faq.a3": "Je kunt een kamer boeken in hetzelfde hotel waar we het feest vieren. Er zijn zowel comfortabele eenpersoons- als familiekamers beschikbaar, inclusief heerlijk ontbijt. <br/><br/>Zo kun je volop van de avond genieten en na afloop gewoon naar boven lopen om te slapen, zonder je zorgen te maken over taxi's of rijden na een drankje. <br/><br/>Zodra je je aanwezigheid bevestigt, <strong>ontvang je van ons een speciale boekingscode</strong> waarmee je rechtstreeks bij het hotel kunt reserveren.<br/><br/>Bekijk alle beschikbare kamertypes op de officiële website van Hotel ReeHorst:<br/><a href=\"https://www.hotelreehorst.nl/hotelkamers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-champagne-800 font-bold underline hover:text-espresso transition-colors\">https://www.hotelreehorst.nl/hotelkamers/</a>",
+        "faq.q4": "4. ✦ Open bar",
+        "faq.a4": "Bier, wijn en frisdrank zijn de hele avond inbegrepen. <br/><br/>Voor wie graag een speciale cocktail wil, zijn deze verkrijgbaar aan de bar voor eigen rekening. ✦",
+        "faq.q5": "5. ✦ Dresscode: Casual Chic / Feestelijk Formeel",
+        "faq.a5": "Draag vooral je favoriete feestelijke kleuren. Wit houden we met liefde gereserveerd voor de bruid. ",
+        "faq.q6": "6. ✦ Wat voor weer is het in mei en hoe is de feestzaal?",
+        "faq.a6": "In mei is het weer in Nederland meestal fris en aangenaam, met temperaturen rond de <strong>14 °C tot 18 °C</strong>. ✦<br/><br/>De viering vindt plaats in een <strong>sfeervolle, overdekte en geklimatiseerde zaal</strong> in het hotel. We zitten dus heerlijk comfortabel, ongeacht het weer buiten. <br/><br/>Voor momenten buiten (vervoer, wandelen) kan het 's avonds afkoelen, dus een colbert of een lichte jas is aan te raden. ",
+        "faq.q7": "7. ✦ Stiptheid in Nederland",
+        "faq.a7": "Belangrijk weetje: hier betekent de afgesproken tijd ook echt de afgesproken tijd! <br/><br/>In Nederland is 10 minuten van tevoren aanwezig zijn de norm. Voor veel latino's valt 10 minuten te laat nog onder 'ik ben er bijna!'. <br/><br/>Laten we elkaar deze keer tegemoetkomen!  We raden aan om ruim op tijd te komen zodat je niets van het feest hoeft te missen. ",
+        "rsvp.subtitle": "✦ Aanwezigheid Bevestigen ✦",
+        "rsvp.deadline": "Gelieve je aanwezigheid te bevestigen vóór 31 december 2026",
+        "rsvp.name_label": "Volledige Naam *",
+        "rsvp.name_placeholder": "Je voor- en achternaam",
+        "rsvp.email_label": "E-mail",
+        "rsvp.email_placeholder": "Je e-mailadres",
+        "rsvp.phone_label": "Telefoon",
+        "rsvp.phone_placeholder": "Je telefoonnummer",
+        "rsvp.attendance_label": "Ben je aanwezig bij de viering? *",
+        "rsvp.yes": "Ja, ik ben erbij! ",
+        "rsvp.cena": "Ik ben erbij bij het diner",
+        "rsvp.fiesta": "Ik ben erbij bij het feest",
+        "rsvp.ambos": "Ik ben erbij bij beide",
+        "rsvp.no": "Helaas kan ik niet ",
+        "rsvp.diet_label": "Dieetwensen of allergieën (zeer belangrijk voor de chef)",
+        "rsvp.diet_placeholder": "Bijv.: Geen schaaldieren, glutenvrij (coeliakie), vegetarisch...",
+        "rsvp.song_label": "Favoriet verzoeknummer voor de DJ ",
+        "rsvp.song_placeholder": "Titel van het nummer en artiest",
+        "rsvp.submit_btn": "Bevestiging verzenden",
+        "rsvp.email_btn": "Verzenden per e-mail naar Yeralding",
+        "rsvp.whatsapp_btn": "Ook verzenden via WhatsApp (optioneel)",
+        "rsvp.success": "Hartelijk dank! Je bevestiging is succesvol verzonden.",
+        "footer.location": "01 Mei 2027 • Hotel ReeHorst, Ede, Nederland",
+        "footer.waiting": "We kijken er enorm naar uit om dit met jullie te vieren!",
+        "footer.uber_title": "✦ Uber in Nederland",
+        "footer.uber_text": "Vraag je rit rechtstreeks naar Hotel ReeHorst, Bennekomseweg 24, Ede.",
+        "footer.uber_btn": "Open Uber",
+        "footer.weather_title": "✦ Het weer in Ede, live",
+        "footer.weather_loading": "Het actuele weer in Ede laden…",
+        "footer.weather_wedding": "01/05/2027 · Gebruikelijk meiweer: 15-18 °C overdag, 7-10 °C 's nachts. De livevoorspelling voor die dag verschijnt hier als het nog 16 dagen is.",
+                "nav.timeline": "Programma",
+        "nav.dresscode": "Dresscode",
+        "nav.lodging": "Overnachten",
+        "nav.gift": "Cadeau",
+        "programa.subtitle": "✦ Het programma van de dag ✦",
+        "programa.title": "Programma van de dag",
+        "programa.venue": "Hotel ReeHorst · Bennekomseweg 24, 6717 LM Ede, Nederland · Gratis parkeergelegenheid voor al onze gasten",
+        "programa.couple_date": "GERWIN & YERALDING · 01 MEI 2027",
+        "programa.title_script": "Programma",
+        "programa.title_caps": "VAN DE DAG",
+                "programa.champagne_caption": "Proost · Gele champagne",
+        "programa.e1": "Ontvangst en welkom",
+        "programa.e2": "Diner in buffetvorm",
+        "programa.e3": "Opening van het feest",
+        "programa.e4": "Lezen van de geloften",
+        "programa.e5": "Onze eerste dans",
+        "programa.e6": "Toast",
+        "programa.e7": "Feest",
+        "programa.e8": "Einde van het feest",
+        "programa.v_ny": "Salon New York",
+        "vestimenta.subtitle": "✦ Dresscode ✦",
+        "vestimenta.title": "Dresscode",
+        "vestimenta.intro": "We kijken er enorm naar uit om deze bijzondere dag met jullie te delen en samen met ons te vieren. We willen in onze albums foto's bewaren vol vreugde, liefde en onvergetelijke momenten.",
+        "vestimenta.women_label": "Dames",
+        "vestimenta.women_text": "Semi-formeel met een elegante toets",
+        "vestimenta.men_label": "Heren",
+        "vestimenta.men_text": "Semi-formeel met een elegante toets",
+        "vestimenta.photos_note": "Voorbeeldfoto's",
+        "vestimenta.note": "Een bijzonder detail: wit is exclusief gereserveerd voor de bruid.",
+        "hospedaje.subtitle": "✦ Overnachten ✦",
+        "hospedaje.title": "Overnachten",
+        "hospedaje.text": "Voor uw comfort raden wij aan te verblijven in het hotel waar onze viering plaatsvindt. Via de onderstaande link kunt u de tarieven bekijken en uw kamer direct reserveren.",
+        "hospedaje.rooms": "Eenpersoons- en familiekamers met ontbijt.",
+        "hospedaje.btn": "Bekijk tarieven en reserveer je kamer",
+        "hospedaje.urgency": "Reserveer nu je kamer! De kamers kunnen al volgeboekt zijn als je langer wacht.",
+        "hospedaje.code_label": "Speciale code van het bruidspaar",
+        "hospedaje.code_value": "[Code XXX]",
+        "hospedaje.code_note": "Zodra het bruidspaar hun code deelt, verschijnt deze hier.",
+        "regalo.subtitle": "✦ Een cadeau voor ons avontuur ✦",
+        "regalo.title": "Een cadeau voor ons avontuur",
+        "regalo.text": "We kijken er enorm naar uit om aan deze nieuwe fase te beginnen, nieuwe bestemmingen te ontdekken en onvergetelijke herinneringen te creëren. Als jullie ons een cadeau willen geven, kunnen jullie ons helpen onze droomhuwelijksreis waar te maken: elke bijdrage brengt ons dichter bij nieuwe ervaringen en avonturen samen.",
+        "regalo.btn": "Een nieuw avontuur begint samen",
+        "regalo.bank_title": "Gegevens voor overboeking",
+        "regalo.bank_note": "",
+        "regalo.beneficiary_label": "Begunstigde:",
+        "regalo.bic_note": "wordt meegekopieerd",
+        "regalo.copy_btn": "Gegevens kopiëren voor overboeking",
+        "regalo.copied": "Gegevens gekopieerd! Plak ze in je bank om over te boeken.",
+        "guia.subtitle": "✦ Reisgids ✦",
+        "guia.title": "Reisgids voor onze gasten",
+        "guia.text": "Reis je vanuit het buitenland? Hier vind je de gids met alles wat je nodig hebt om gemakkelijk, comfortabel en voordelig aan te komen.",
+        "guia.btn": "Binnenkort beschikbaar",
+        "guia.note": "De gids opent hier zodra de link wordt gedeeld. De uitnodiging en de gids delen dezelfde achtergrondmuziek."
+      }
+    };
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      if (lang === 'en') lang = 'es';
+      if (!i18n[lang]) return;
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.title = (lang === 'nl') ? 'Gerwin & Yeralding \u2014 Ons Huwelijk 2027' : 'Gerwin & Yeralding \u2014 Nuestra Boda 2027';
+
+      ['es', 'nl'].forEach(l => {
+        const btn = document.getElementById(`btn-lang-${l}`);
+        if (btn) {
+          if (l === lang) {
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all bg-champagne-800 text-white font-semibold";
+          } else {
+            btn.className = "px-2.5 py-0.5 rounded-full transition-all text-champagne-800 hover:text-espresso";
+          }
+        }
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (i18n[lang][key]) {
+          el.setAttribute('placeholder', i18n[lang][key]);
+        }
+      });
+
+      loadChecklist();
+      document.querySelectorAll('.lang-content').forEach(function (el) {
+        el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+      });
+      var guiaSec = document.getElementById('guia');
+      if (guiaSec) guiaSec.style.display = (lang === 'nl') ? 'none' : '';
+    }
+
+    // ==================== AUDIO CONTROLLER (SOFT BACKGROUND AUTOPLAY) ====================
+    let isPlaying = false;
+    const audio = document.getElementById('weddingMusic');
+    const soundIconOn = document.getElementById('soundIconOn');
+    const soundIconOff = document.getElementById('soundIconOff');
+    const songPlayIcon = document.getElementById('songPlayIcon');
+    const musicBars = document.getElementById('musicBars');
+
+    // Volumen agradable al oído (45%): se oye claro, sin ser fuerte
+    const TARGET_VOLUME = 0.45;
+    let fadeTimer = null;
+    let gestureTriggered = false;
+
+    function updateAudioUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        if (soundIconOn) soundIconOn.classList.remove('hidden');
+        if (soundIconOff) soundIconOff.classList.add('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+        if (musicBars) musicBars.classList.remove('opacity-30');
+      } else {
+        if (soundIconOn) soundIconOn.classList.add('hidden');
+        if (soundIconOff) soundIconOff.classList.remove('hidden');
+        if (songPlayIcon) songPlayIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+        if (musicBars) musicBars.classList.add('opacity-30');
+      }
+    }
+
+    function fadeInAudio(target = TARGET_VOLUME, duration = 1800) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      audio.volume = 0;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          gestureTriggered = false;
+          removeGestureListeners();
+          updateAudioUI(true);
+          const steps = 30;
+          const stepTime = duration / steps;
+          const volStep = target / steps;
+          fadeTimer = setInterval(() => {
+            if (audio.volume + volStep < target) {
+              audio.volume += volStep;
+            } else {
+              audio.volume = target;
+              clearInterval(fadeTimer);
+            }
+          }, stepTime);
+        }).catch(err => {
+          // Falla sin gesto válido: dejar que el próximo gesto reintente.
+          gestureTriggered = false;
+          updateAudioUI(false);
+          setupGestureAutoplay();
+        });
+      }
+    }
+
+    function fadeOutAudio(duration = 600) {
+      if (!audio) return;
+      clearInterval(fadeTimer);
+      const steps = 20;
+      const stepTime = duration / steps;
+      const volStep = audio.volume / steps;
+      fadeTimer = setInterval(() => {
+        if (audio.volume - volStep > 0) {
+          audio.volume -= volStep;
+        } else {
+          audio.volume = 0;
+          audio.pause();
+          clearInterval(fadeTimer);
+          updateAudioUI(false);
+        }
+      }, stepTime);
+    }
+
+    function toggleAudio() {
+      if (!audio) return;
+      if (isPlaying) {
+        fadeOutAudio();
+      } else {
+        if (audio.ended) { audio.currentTime = 0; window.__musicPlays = 0; }
+        fadeInAudio(TARGET_VOLUME);
+      }
+    }
+
+    function removeGestureListeners() {
+      ['click', 'touchstart', 'touchend', 'scroll', 'pointerdown', 'pointerup', 'keydown'].forEach(ev => {
+        window.removeEventListener(ev, triggerGesturePlay);
+      });
+    }
+
+    function triggerGesturePlay() {
+      if (isPlaying) { removeGestureListeners(); return; }
+      // No marcar como hecho hasta que suene: si este gesto falla
+      // (p. ej. solo desplazar en Safari), el siguiente gesto reintenta.
+      fadeInAudio(TARGET_VOLUME);
+    }
+
+    function setupGestureAutoplay() {
+      ['click', 'touchstart', 'touchend', 'scroll', 'pointerdown', 'pointerup', 'keydown'].forEach(ev => {
+        window.addEventListener(ev, triggerGesturePlay, { passive: true });
+      });
+    }
+
+    // ==================== LIVE COUNTDOWN TIMER ====================
+    const TARGET_DATE = new Date('2027-05-01T20:00:00+02:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = TARGET_DATE - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // ==================== CALENDAR INTEGRATION ====================
+    function addToGoogleCalendar() {
+      const title = encodeURIComponent("Boda Gerwin & Yeralding — Gran Celebración");
+      const details = encodeURIComponent("Celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.");
+      const location = encodeURIComponent("Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Netherlands");
+      const dates = "20270501T180000Z/20270502T010000Z";
+      window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`, '_blank');
+    }
+
+    function downloadICS() {
+      const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gerwin & Yeralding Wedding 2027//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-gerwin-yeralding-2027@reehorst
+DTSTAMP:20270501T180000Z
+DTSTART:20270501T180000Z
+DTEND:20270502T010000Z
+SUMMARY:Boda Gerwin & Yeralding
+DESCRIPTION:Gran celebración de boda de Gerwin & Yeralding en Hotel ReeHorst, Ede, Países Bajos.
+LOCATION:Hotel & Congrescentrum ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'Boda_Gerwin_y_Yeralding_2027.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ==================== RSVP FORM HANDLER ====================
+    // URL del Apps Script del RSVP (pegar aquí la URL tras desplegar, ver rsvp-apps-script/README.md).
+    // Vacía = solo WhatsApp. Con URL = lista Google + email a Yeralding en tiempo real.
+    const RSVP_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzHE47vvgFgz1YkMInssEPpIIgoQ0jcf-iqavQEYYMVNpvR1RTomOXq5t1bD-3vMXPp/exec';
+
+    function handleRSVPSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('rsvpName').value.trim();
+      const email = document.getElementById('rsvpEmail').value.trim();
+      const phone = document.getElementById('rsvpPhone').value.trim();
+      const attend = document.querySelector('input[name="rsvpAttend"]:checked').value;
+      const diet = document.getElementById('rsvpDiet').value.trim();
+      const song = document.getElementById('rsvpSong').value.trim();
+
+      const isNL = currentLang === 'nl';
+      const isEN = currentLang === 'en';
+
+      const header = isNL ? ' *RSVP BEVESTIGING — BRUILOFT GERWIN & YERALDING*' : (isEN ? ' *RSVP CONFIRMATION — WEDDING GERWIN & YERALDING*' : ' *CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING*');
+      const guestLabel = isNL ? ' *Gast:*' : (isEN ? ' *Guest:*' : ' *Invitado:*');
+      const emailLabel = isNL ? ' *E-mail:*' : (isEN ? ' *Email:*' : ' *Correo:*');
+      const phoneLabel = isNL ? ' *Telefoon:*' : (isEN ? ' *Phone:*' : ' *Teléfono:*');
+      const attendLabel = isNL ? ' *Aanwezigheid:*' : (isEN ? ' *Attendance:*' : ' *Asistencia:*');
+      const attendTexts = {
+        cena: isNL ? 'Ik ben erbij bij het diner' : (isEN ? 'I will attend the dinner' : 'Asistiré a la cena'),
+        fiesta: isNL ? 'Ik ben erbij bij het feest' : (isEN ? 'I will attend the party' : 'Asistiré a la fiesta'),
+        ambos: isNL ? 'Ik ben erbij bij beide' : (isEN ? 'I will attend both' : 'Asistiré a ambos'),
+        no: isNL ? 'Helaas kan ik niet' : (isEN ? 'Regretfully decline' : 'No podré asistir')
+      };
+      const attendTextJs = attendTexts[attend] || attendTexts['ambos'];
+      const hotelNotice = isNL ? ' *Viering in Hotel ReeHorst (01 Mei 2027)*' : (isEN ? ' *Celebration at Hotel ReeHorst (May 1, 2027)*' : ' *Celebración en Hotel ReeHorst (01 Mayo 2027)*');
+      const dietLabel = isNL ? ' *Dieetwensen / Allergieën voor de chef:*' : (isEN ? ' *Dietary / Allergies for the Chef:*' : ' *Dieta / Alergias para el Chef:*');
+      const songLabel = isNL ? ' *Verzoeknummer voor de DJ:*' : (isEN ? ' *Song suggestion for the DJ:*' : ' *Sugerencia de Canción para el DJ:*');
+      const noneDiet = isNL ? 'Geen' : (isEN ? 'None' : 'Ninguna');
+      const noneSong = isNL ? 'Geen voorkeur' : (isEN ? 'No preference' : 'Ninguna sugerida');
+      const footerMsg = isNL ? '_Bevestiging verzonden vóór 31/12/2026 via de officiële bruiloftswebsite._' : (isEN ? '_Confirmation sent before 31/12/2026 from official wedding website._' : '_Confirmación enviada antes del 31/12/2026 desde la web oficial de boda._');
+
+      let text = `${header}\n\n`;
+      text += `${guestLabel} ${name}\n`;
+      if (email) text += `${emailLabel} ${email}\n`;
+      if (phone) text += `${phoneLabel} ${phone}\n`;
+      text += `${attendLabel} ${attendTextJs}\n`;
+      if (attend !== 'no') {
+        text += `${hotelNotice}\n`;
+        text += `${dietLabel} ${diet || noneDiet}\n`;
+        text += `${songLabel} ${song || noneSong}\n`;
+      }
+      text += `\n${footerMsg}`;
+
+      // ENVÍO AUTOMÁTICO al momento: sheet actualizada + email a Yeralding, sin depender de WhatsApp.
+      // text/plain evita el preflight de CORS; no-cors porque Apps Script redirige a googleusercontent.
+      var statusEl = document.getElementById('rsvpStatus');
+      function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
+      var sendingMsg = (currentLang === 'nl') ? 'Automatisch verzenden naar de lijsten en per e-mail naar Yeralding…' : ((currentLang === 'en') ? 'Sending automatically to the lists and by email to Yeralding…' : 'Enviando automáticamente a las listas y por email a Yeralding…');
+      var savedMsg = (currentLang === 'nl') ? 'Bevestiging automatisch verzonden: opgeslagen in de lijsten en Yeralding per e-mail op de hoogte gebracht.' : ((currentLang === 'en') ? 'Confirmation sent automatically: saved in the lists and Yeralding notified by email.' : 'Confirmación enviada automáticamente: guardada en las listas y Yeralding notificada por email.');
+      showStatus(sendingMsg);
+      try {
+        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+          window.rsvpAlreadyPosted = true;
+          fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) })
+            .then(function() { showStatus(savedMsg); })
+            .catch(function() { showStatus(savedMsg); });
+        } else {
+          showStatus(savedMsg);
+        }
+      } catch (err) { showStatus(savedMsg); }
+
+      const toast = document.getElementById('rsvpSuccess');
+      toast.classList.remove('hidden');
+      if (attend !== 'no') {
+        const letter = document.getElementById('confirmLetterModal');
+        if (letter) letter.classList.remove('hidden');
+      }
+    }
+
+
+    // WhatsApp opcional: solo abre el mensaje, no es necesario para que la confirmación quede guardada.
+    function handleRSVPWhatsApp(e) {
+      if (e) e.preventDefault();
+      var name = document.getElementById('rsvpName').value.trim();
+      if (!name) { document.getElementById('rsvpName').focus(); return; }
+      var email = document.getElementById('rsvpEmail').value.trim();
+      var phone = document.getElementById('rsvpPhone').value.trim();
+      var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
+      var attend = attendEl ? attendEl.value : 'si';
+      var diet = document.getElementById('rsvpDiet').value.trim();
+      var song = document.getElementById('rsvpSong').value.trim();
+      if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+        window.rsvpAlreadyPosted = true;
+        fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) }).catch(function(){});
+      }
+      var text = 'CONFIRMACIÓN RSVP — BODA GERWIN & YERALDING\n\nInvitado: ' + name + '\nCorreo: ' + email + '\nTeléfono: ' + phone + '\nAsistencia: ' + (attend === 'si' ? 'SÍ, ASISTIRÉ' : 'No podré asistir') + '\nDieta / Alergias: ' + (diet || 'Ninguna') + '\nCanción DJ: ' + (song || 'Ninguna sugerida');
+      window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(text), '_blank');
+    }
+    // Botón de email: guarda en las listas (igual que el envío principal) y abre el email
+    // de la invitada/o con el mensaje ya escrito para Yeralding, en el mismo clic.
+    function handleRSVPEmail(e) {
+      if (e) e.preventDefault();
+      var name = document.getElementById('rsvpName').value.trim();
+      if (!name) { document.getElementById('rsvpName').focus(); return; }
+      var email = document.getElementById('rsvpEmail').value.trim();
+      var phone = document.getElementById('rsvpPhone').value.trim();
+      var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
+      var attend = attendEl ? attendEl.value : 'si';
+      var diet = document.getElementById('rsvpDiet').value.trim();
+      var song = document.getElementById('rsvpSong').value.trim();
+      var statusEl = document.getElementById('rsvpStatus');
+      function showStatus(msg) { if (statusEl) { statusEl.textContent = msg; statusEl.classList.remove('hidden'); } }
+      var savedMsg = (currentLang === 'nl') ? 'Opgeslagen in de lijsten. Je e-mail naar Yeralding staat klaar om te verzenden.' : ((currentLang === 'en') ? 'Saved in the lists. Your email to Yeralding is ready to send.' : 'Guardado en las listas. Tu email para Yeralding quedó listo para enviar.');
+      try {
+        if (typeof RSVP_SHEET_URL !== 'undefined' && RSVP_SHEET_URL && !window.rsvpAlreadyPosted) {
+          window.rsvpAlreadyPosted = true;
+          fetch(RSVP_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ name: name, email: email, phone: phone, attend: attend, diet: diet, song: song, lang: currentLang, date: new Date().toISOString() }) }).catch(function(){});
+        }
+      } catch (err) {}
+      showStatus(savedMsg);
+      var subject = 'Confirmación RSVP — Boda Gerwin & Yeralding: ' + name;
+      var body = 'Invitado: ' + name + '\nCorreo: ' + email + '\nTeléfono: ' + phone + '\nAsistencia: ' + (attend === 'si' ? 'Sí, asistiré' : 'No podré asistir') + '\nAlergias / Dieta: ' + (diet || 'Ninguna') + '\nCanción DJ: ' + (song || 'Ninguna sugerida') + '\n\nEnviado desde la invitación oficial de la boda.';
+      window.location.href = 'mailto:rondonyeralding@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var toast = document.getElementById('rsvpSuccess');
+      if (toast) toast.classList.remove('hidden');
+    }
+
+    // Regalo: copiar en un clic los datos de transferencia (beneficiario, IBAN y BIC).
+    // En pantalla solo se muestra el IBAN enmascarado; el BIC completo solo va al portapapeles.
+    function copyGiftData() {
+      var text = "Beneficiario: Gerwin Onderstal\nIBAN: NL30 REVO 6912 0351 67\nBIC: REVONL22\nConcepto: Regalo boda Gerwin & Yeralding";
+      function done() {
+        var el = document.getElementById('giftCopied');
+        if (el) el.classList.remove('hidden');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function() { fallbackCopy(text); done(); });
+      } else {
+        fallbackCopy(text); done();
+      }
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    // ==================== FAQ ACCORDION LOGIC ====================
+    function toggleFAQ(button) {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const wasActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+      });
+      
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // ==================== CHECKLIST LOGIC & PERSISTENCE ====================
+    function updateChecklist(checkbox, index) {
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      const state = [];
+      allChecks.forEach((c) => {
+        if (c.checked) checkedCount++;
+        state.push(c.checked);
+      });
+
+      localStorage.setItem('yg_wedding_checklist_state', JSON.stringify(state));
+
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    function loadChecklist() {
+      const saved = localStorage.getItem('yg_wedding_checklist_state');
+      const allChecks = document.querySelectorAll('.checklist-check');
+      let checkedCount = 0;
+      if (saved && allChecks.length) {
+        try {
+          const state = JSON.parse(saved);
+          allChecks.forEach((c, i) => {
+            if (state[i]) {
+              c.checked = true;
+              checkedCount++;
+            }
+          });
+        } catch(e) {}
+      }
+      const ofWord = (currentLang === 'nl') ? 'van' : ((currentLang === 'en') ? 'of' : 'de');
+      const scoreEl = document.getElementById('checklistScore');
+      const barEl = document.getElementById('checklistProgressBar');
+      if (scoreEl) scoreEl.textContent = `${checkedCount} ${ofWord} ${allChecks.length}`;
+      if (barEl) barEl.style.width = `${(checkedCount / allChecks.length) * 100}%`;
+    }
+
+    // ==================== DYNAMIC BLURRED PHOTO BACKGROUND ON SCROLL ====================
+    function handleBackgroundScroll() {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const bgImg = document.getElementById('globalBgImg');
+      const scrollVeil = document.getElementById('scrollBgVeil');
+      
+      if (!bgImg) return;
+      
+      const maxScroll = 500;
+      const progress = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+      
+      const blurPx = progress * 14;
+      const scale = 1.05 + progress * 0.05;
+      bgImg.style.filter = `blur(${blurPx.toFixed(1)}px)`;
+      bgImg.style.transform = `scale(${scale.toFixed(3)})`;
+      
+      if (scrollVeil) {
+        scrollVeil.style.opacity = (progress * 0.85).toFixed(2);
+      }
+    }
+
+    window.addEventListener('scroll', handleBackgroundScroll, { passive: true });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      handleBackgroundScroll();
+      loadChecklist();
+      fadeInAudio(TARGET_VOLUME);
+      setupGestureAutoplay();
+    });
+
+    handleBackgroundScroll();
+    // Immediate pre-emptive play attempt
+    fadeInAudio(TARGET_VOLUME);
+    setupGestureAutoplay();
+  </script>
+<script>
+    function updateTimelineGlass() {
+      var liquid = document.getElementById('timelineLiquid');
+      var section = document.getElementById('programa');
+      if (!liquid || !section) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { liquid.style.height = '100%'; return; }
+      var rect = section.getBoundingClientRect();
+      var total = rect.height + window.innerHeight;
+      var progress = Math.min(Math.max((window.innerHeight - rect.top) / total, 0), 1);
+      liquid.style.height = (progress * 100).toFixed(1) + '%';
+    }
+    window.addEventListener('scroll', updateTimelineGlass, { passive: true });
+    window.addEventListener('load', updateTimelineGlass);
+    updateTimelineGlass();
+  </script>
+
+<script>
+  // Musica: intento automatico al abrir (el codigo existente ya lo intenta y, si el navegador
+  // bloquea el sonido sin interaccion, arranca al primer toque/clic/desplazamiento).
+  // Limite: 3 reproducciones en total, luego se detiene (sin loop infinito).
+  (function () {
+    var a = document.getElementById('weddingMusic');
+    if (a) {
+      a.loop = false;
+      window.__musicPlays = 0;
+      a.addEventListener('ended', function () {
+        window.__musicPlays++;
+        if (window.__musicPlays < 3) { a.currentTime = 0; a.play().catch(function () {}); }
+        else if (typeof updateAudioUI === 'function') { updateAudioUI(false); }
+      });
+    }
+    // Video Programa: se reproduce solo cuando se llega a esa parte, y se pausa al salir.
+    // Limite: 5 reproducciones en total, luego se detiene.
+    var v = document.getElementById('programaVideo');
+    if (v && 'IntersectionObserver' in window) {
+      v.loop = false;
+      var vEnded = 0, vInView = false;
+      v.addEventListener('ended', function () {
+        vEnded++;
+        if (vEnded < 5 && vInView) { v.play().catch(function () {}); }
+      });
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          vInView = e.isIntersecting;
+          if (e.isIntersecting) {
+            if (v.paused && vEnded < 5) { v.play().catch(function () {}); }
+          } else if (!v.paused) { v.pause(); }
+        });
+      }, { threshold: 0.4 }).observe(v);
+    }
+  })();
+</script>
+
+<script>
+  // Widget estilo iPhone del tiempo en vivo en Ede (Open-Meteo, sin clave): actual + por horas + 7 días, refresco cada 30 min.
+  // El 01/05/2027 no tiene pronóstico en vivo todavía: el servicio solo cubre 16 días,
+  // por eso la nota de la boda muestra el clima habitual de mayo hasta entonces.
+  (function () {
+    var el = document.getElementById('weatherWidget');
+    if (!el) return;
+    var desc = {
+      es: {0:'Despejado',1:'Mayormente despejado',2:'Parcialmente nublado',3:'Nublado',45:'Niebla',48:'Niebla helada',51:'Llovizna ligera',53:'Llovizna',55:'Llovizna intensa',61:'Lluvia ligera',63:'Lluvia',65:'Lluvia intensa',71:'Nieve ligera',73:'Nieve',75:'Nieve intensa',80:'Chubascos ligeros',81:'Chubascos',82:'Chubascos intensos',95:'Tormenta',96:'Tormenta con granizo',99:'Tormenta con granizo'},
+      nl: {0:'Helder',1:'Overwegend helder',2:'Gedeeltelijk bewolkt',3:'Bewolkt',45:'Mist',48:'IJzelmist',51:'Lichte motregen',53:'Motregen',55:'Sterke motregen',61:'Lichte regen',63:'Regen',65:'Sterke regen',71:'Lichte sneeuw',73:'Sneeuw',75:'Sterke sneeuw',80:'Lichte buien',81:'Buien',82:'Sterke buien',95:'Onweer',96:'Onweer met hagel',99:'Onweer met hagel'}
+    };
+    var wd = {es:['dom','lun','mar','mié','jue','vie','sáb'], nl:['zo','ma','di','wo','do','vr','za'], en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']};
+    var lab = {es:{feels:'Sensación',wind:'Viento',hum:'Humedad',live:'En vivo',nl:'Países Bajos'}, nl:{feels:'Gevoel',wind:'Wind',hum:'Vochtigheid',live:'Live',nl:'Nederland'}, en:{feels:'Feels like',wind:'Wind',hum:'Humidity',live:'Live',nl:'Netherlands'}};
+    function icon(code, isDay, size) {
+      var sz = size || 28;
+      var s = '<svg width="' + sz + '" height="' + sz + '" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none">';
+      if (code === 0) {
+        return isDay ? s + '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+                     : s + '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>';
+      }
+      if (code === 1 || code === 2) {
+        return isDay ? s + '<circle cx="9" cy="9" r="3.5"/><path d="M9 2v1.5M9 15.5V17M2.5 9H4M14 9h1.5M18 17a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 18 12a4 4 0 0 0-7.5-1A3 3 0 0 0 10 17H18Z"/></svg>'
+                     : s + '<path d="M19 13.5A2.5 2.5 0 0 0 19 8.5a4 4 0 0 0-7.5-1A3 3 0 0 0 11 13.5H19Z"/><path d="M20 3.5A7 7 0 1 1 10 13.5"/></svg>';
+      }
+      if (code === 45 || code === 48) return s + '<path d="M18 11a2.5 2.5 0 0 0 .5-4.9A4 4 0 0 0 11 5a3 3 0 0 0-.5 6H18Z"/><path d="M7 15h11M7 18h8M7 21h10"/></svg>';
+      if (code === 95 || code === 96 || code === 99) return s + '<path d="M18 11a2.5 2.5 0 0 0 .5-4.9A4 4 0 0 0 11 5a3 3 0 0 0-.5 6H18Z"/><path d="M13 14l-2.5 4H13l-2 4"/></svg>';
+      if (code === 71 || code === 73 || code === 75) return s + '<path d="M18 11a2.5 2.5 0 0 0 .5-4.9A4 4 0 0 0 11 5a3 3 0 0 0-.5 6H18Z"/><path d="M9 16l1 1M15 16l-1 1M12 17v2"/></svg>';
+      return s + '<path d="M18 11a2.5 2.5 0 0 0 .5-4.9A4 4 0 0 0 11 5a3 3 0 0 0-.5 6H18Z"/><path d="M9 15l-1 2M13 15l-1 2M17 15l-1 2"/></svg>';
+    }
+    function grad(code, isDay) {
+      if (!isDay) return 'linear-gradient(180deg,#0B1E3A,#1E3A5F)';
+      if (code === 0 || code === 1) return 'linear-gradient(180deg,#3A7BD5,#1E5AA8)';
+      if (code === 95 || code === 96 || code === 99) return 'linear-gradient(180deg,#3A3A4A,#1A1A2A)';
+      if (code >= 61 || (code >= 51 && code <= 55) || (code >= 80 && code <= 82)) return 'linear-gradient(180deg,#4A5A6A,#2A3A4A)';
+      return 'linear-gradient(180deg,#5A7A9A,#3A5A7A)';
+    }
+    function load() {
+      fetch('https://api.open-meteo.com/v1/forecast?latitude=52.02435&longitude=5.67142&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe%2FAmsterdam&forecast_days=7')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var c = d.current || {};
+          var lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'es';
+          var m = desc[lang] || desc.es;
+          var L = lab[lang] || lab.es;
+          var W = wd[lang] || wd.es;
+          var w = m[c.weather_code] || '';
+          var isDay = c.is_day === 1;
+          var day0 = (d.daily || {}).temperature_2m_max || [];
+          var day0min = (d.daily || {}).temperature_2m_min || [];
+          var updated = c.time ? String(c.time).replace('T', ' ') : '';
+          var html = '<div style="display:flex;justify-content:space-between;align-items:flex-start;">'
+            + '<div><div style="font-size:20px;font-weight:700;">Ede</div><div style="font-size:12px;opacity:.85;">' + L.nl + '</div></div>'
+            + '<div style="font-size:11px;opacity:.8;text-align:right;">' + L.live + '<br/>' + updated + '</div></div>'
+            + '<div style="text-align:center;margin:4px 0 2px;"><div style="font-size:64px;line-height:1;font-weight:300;">' + Math.round(c.temperature_2m) + '°</div>'
+            + '<div style="font-size:15px;font-weight:600;">' + w + '</div>'
+            + '<div style="font-size:13px;opacity:.9;">Máx: ' + Math.round(day0[0]) + '° &nbsp; Mín: ' + Math.round(day0min[0]) + '°</div></div>'
+            + '<div style="display:flex;gap:8px;margin:12px 0 4px;text-align:center;font-size:11px;">'
+            + '<div style="flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 4px;"><div style="opacity:.8;">' + L.feels + '</div><div style="font-weight:700;font-size:13px;">' + Math.round(c.apparent_temperature) + '°</div></div>'
+            + '<div style="flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 4px;"><div style="opacity:.8;">' + L.wind + '</div><div style="font-weight:700;font-size:13px;">' + Math.round(c.wind_speed_10m) + ' km/h</div></div>'
+            + '<div style="flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 4px;"><div style="opacity:.8;">' + L.hum + '</div><div style="font-weight:700;font-size:13px;">' + c.relative_humidity_2m + '%</div></div></div>';
+          html += '<div style="margin-top:12px;text-align:center;"><a href="https://www.google.com/search?q=weather+Ede+Netherlands" target="_blank" rel="noopener" style="display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:9999px;padding:8px 16px;font-size:13px;font-weight:700;color:white;text-decoration:none;">Ver pronóstico completo en Google Weather</a></div>';
+          el.innerHTML = html;
+          el.style.background = grad(c.weather_code, isDay);
+        })
+        .catch(function () { el.innerHTML = '<p class="text-sm text-white/90">No se pudo cargar el tiempo en vivo ahora mismo.</p>'; });
+    }
+    load();
+    setInterval(load, 30 * 60 * 1000);
+  })();
+</script>
+
+  <!-- Carta post-confirmación: sobre que se superpone hasta tocar -->
+  <div id="confirmLetterModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xl" onclick="document.getElementById('confirmLetterModal').classList.add('hidden')">
+    <div class="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-champagne-500/40 shadow-luxury max-w-xl w-full max-h-[85vh] overflow-y-auto text-left" onclick="event.stopPropagation()">
+      <p class="font-cinzel tracking-widest text-champagne-800 font-bold text-center mb-4" data-i18n="modal.envelope_title">✦ Un sobre para ti ✦</p>
+      <div class="lang-content font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="es">
+        <p class="font-script text-3xl text-espresso mb-4">¡Querida familia y amigos!</p>
+        <p>Hay momentos en la vida que se vuelven aún más especiales cuando los compartimos con las personas que queremos. ¿Y qué más bonito que celebrar el amor rodeados de quienes ocupan un lugar especial en nuestros corazones?</p>
+        <p class="mt-3">El 21 de abril de 2027 nos daremos el sí, y el 1 de mayo queremos celebrar esta felicidad con todos ustedes.</p>
+        <p class="mt-3">Nos hace mucha ilusión compartir este día, lleno de amor, risas, abrazos y nuevos recuerdos. Aunque algunos años y muchos kilómetros nos separen, el cariño permanece intacto. Para nosotros significa muchísimo tenerlos aquí, y Gerwin está feliz de conocer por fin a esos amigos de los que Yeralding habla con tanto cariño.</p>
+        <p class="mt-3">¡Preparen sus mejores looks, que tenemos fotos pendientes y muchos recuerdos por crear! Los esperamos con el corazón lleno y los brazos abiertos.</p>
+        <p class="mt-4 font-script text-2xl text-espresso">Con mucho amor,<br/>Gerwin &amp; Yeralding</p>
+      </div>
+      <div class="lang-content font-body text-base sm:text-lg text-champagne-900/90 leading-relaxed" data-lang="nl" style="display:none">
+        <p class="font-script text-3xl text-espresso mb-4">Lieve familie en vrienden! 🤍</p>
+        <p>Sommige momenten in het leven zijn extra bijzonder omdat je ze mag delen met de mensen die je liefhebt. En wat is er mooier dan de liefde vieren, omringd door familie en vrienden die een speciaal plekje in ons hart hebben.</p>
+        <p class="mt-3">Op 21 april 2027 geven wij elkaar het jawoord! Een bijzondere dag waarop wij officieel samen aan een nieuw hoofdstuk in ons leven beginnen. En op 1 mei 2027 willen we deze liefde en dit geluk graag met jullie vieren. ❤️</p>
+        <p class="mt-3">Jullie maken allemaal op jullie eigen manier deel uit van ons leven, en daarom zouden we het ontzettend mooi vinden om deze bijzondere gelegenheid samen met jullie te beleven.</p>
+        <p class="mt-3">Een bruiloft is voor ons meer dan alleen een feest. Het is een moment om stil te staan bij de liefde, bij alles wat ons heeft gebracht waar we nu zijn en bij alle mooie dingen die nog voor ons liggen. En wat zou het mooi zijn om dat te mogen delen met de mensen die dichtbij ons staan.</p>
+        <p class="mt-3">We willen er een dag van maken vol liefde, gezelligheid, mooie momenten, veel gelach en herinneringen waar we nog jarenlang met een glimlach op terugkijken.</p>
+        <p class="mt-3">Dus haal jullie mooiste outfits maar alvast tevoorschijn, maak je klaar voor een feestelijke dag en bereid je voor op heel veel gezelligheid, foto’s, knuffels en natuurlijk een heleboel liefde! 🥂📸✨</p>
+        <p class="mt-3">We kijken er enorm naar uit om deze mijlpaal samen met jullie te vieren. Want uiteindelijk zijn het niet alleen de bijzondere momenten die het leven mooi maken, maar vooral de mensen met wie je ze deelt.</p>
+        <p class="mt-3">We hopen jullie op 1 mei 2027 te mogen verwelkomen, met een vol hart, open armen en heel veel liefde. 🤍</p>
+        <p class="mt-4 font-script text-2xl text-espresso">Veel liefs,<br/>Gerwin &amp; Yeralding 💍</p>
+      </div>
+               <button onclick="document.getElementById('confirmLetterModal').classList.add('hidden')" class="mt-6 w-full py-3 rounded-full bg-gradient-to-r from-champagne-600 via-champagne-400 to-champagne-600 text-espresso font-sans font-bold text-sm uppercase tracking-[0.25em] shadow-glow-gold cursor-pointer" data-i18n="modal.close">Cerrar</button>
+    </div>
+  </div>
+
+<script>
+  // La invitación siempre empieza por el header, nunca por el footer:
+  // Safari (sobre todo en móvil) restaura la posición anterior AL REABRIR el enlace,
+  // y lo hace DESPUÉS de cargar, por eso un solo goTop al inicio no bastaba.
+  (function () {
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+    var userMoved = false;
+    function markUserMove() { userMoved = true; }
+    ['wheel', 'touchmove', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, markUserMove, { passive: true });
+    });
+    function goTop() {
+      if (window.location.hash || userMoved) return;
+      var root = document.documentElement;
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      if (document.body) document.body.scrollTop = 0;
+      root.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
+      setTimeout(function () { root.style.scrollBehavior = prev; }, 100);
+    }
+    function forceTopRepeatedly() {
+      [0, 250, 500, 1000, 1750, 2500].forEach(function (ms) {
+        setTimeout(goTop, ms);
+      });
+    }
+    goTop();
+    window.addEventListener('DOMContentLoaded', function () { goTop(); forceTopRepeatedly(); });
+    window.addEventListener('DOMContentLoaded', function () { if (typeof setLanguage === 'function') setLanguage('nl'); });
+    window.addEventListener('load', forceTopRepeatedly);
+    window.addEventListener('pageshow', forceTopRepeatedly);
+    forceTopRepeatedly();
+  })();
+</script>
+</body>
+</html>
