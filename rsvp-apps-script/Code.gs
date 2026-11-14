@@ -1,7 +1,11 @@
-// RSVP — Boda Gerwin & Yeralding — BACKEND COMPLETO (v3, con registro de errores + teléfono como texto)
+// RSVP — Boda Gerwin & Yeralding — BACKEND COMPLETO (v4, correo al invitado en su idioma)
 // Abrir: Hoja "RSVP — Boda Gerwin & Yeralding — Lista de confirmaciones" > Extensiones > Apps Script
 // Pegar este archivo completo, Guardar, y desplegar una NUEVA VERSIÓN de la implementación web existente:
 // Desplegar > Administrar implementaciones > Editar la implementación > Versión nueva > Implementar
+// Cambios v4 (14/11/2026):
+//  - El correo de confirmación al invitado sale en EL IDIOMA EN QUE CONFIRMÓ (d.lang): si confirma
+//    en holandés, asunto y cuerpo en holandés; si confirma en español, en español. El aviso a
+//    Yeralding sigue en español.
 // Cambios v3 (14/11/2026):
 //  - Logger.log en cada paso (recepción, filas, envío a Yeralding, envío al invitado, errores): si algo
 //    falla, el texto del error queda en Registros de Apps Script (Ejecuciones > Registros).
@@ -95,17 +99,30 @@ function doPost(e) {
       Logger.log('RSVP ERROR enviando correo a Yeralding: name=%s error=%s', d.name || '', emailError);
     }
     // Confirmación personalizada al propio invitado, si dejó su correo.
+    // Va en EL IDIOMA EN QUE CONFIRMÓ: holandés si lang es 'nl', español en el resto.
     if (d.email) {
-      var guestSubject = 'Tu confirmación — Boda Gerwin & Yeralding, 01 de mayo de 2027';
-      var guestBody = 'Hola ' + (d.name || '') + ',\n\nGracias por confirmar. Así quedó registrada tu confirmación:\n\n'
-        + 'Asistencia: ' + attendText + '\n'
-        + 'Alergias / Dieta: ' + (d.diet || 'Ninguna') + '\n'
-        + 'Canción DJ: ' + (d.song || 'Ninguna sugerida') + '\n\n'
-        + 'Celebración: sábado 01 de mayo de 2027, 19:30, Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos.\n'
-        + '¡Nos vemos en mayo! Gerwin & Yeralding';
+      var isNL = (d.lang === 'nl');
+      var attendNL = { 'cena': 'Ja, ik ben erbij bij het diner', 'fiesta': 'Ja, ik ben erbij bij het feest', 'ambos': 'Ja, ik ben erbij bij beide (diner en feest)', 'si': 'Ja, ik ben erbij', 'no': 'Nee, ik kan helaas niet komen' };
+      var attendGuest = isNL ? (attendNL[d.attend] || attendNL['ambos']) : attendText;
+      var guestSubject = isNL
+        ? 'Je bevestiging — Bruiloft Gerwin & Yeralding, 01 mei 2027'
+        : 'Tu confirmación — Boda Gerwin & Yeralding, 01 de mayo de 2027';
+      var guestBody = isNL
+        ? 'Hallo ' + (d.name || '') + ',\n\nBedankt voor je bevestiging. Zo is je bevestiging geregistreerd:\n\n'
+          + 'Aanwezigheid: ' + attendGuest + '\n'
+          + 'Allergieën / Dieet: ' + (d.diet || 'Geen') + '\n'
+          + 'DJ-nummer: ' + (d.song || 'Geen nummer voorgesteld') + '\n\n'
+          + 'Viering: zaterdag 01 mei 2027, 19:30, Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Nederland.\n'
+          + 'Tot in mei! Gerwin & Yeralding'
+        : 'Hola ' + (d.name || '') + ',\n\nGracias por confirmar. Así quedó registrada tu confirmación:\n\n'
+          + 'Asistencia: ' + attendText + '\n'
+          + 'Alergias / Dieta: ' + (d.diet || 'Ninguna') + '\n'
+          + 'Canción DJ: ' + (d.song || 'Ninguna sugerida') + '\n\n'
+          + 'Celebración: sábado 01 de mayo de 2027, 19:30, Hotel ReeHorst, Bennekomseweg 24, 6717 LM Ede, Países Bajos.\n'
+          + '¡Nos vemos en mayo! Gerwin & Yeralding';
       try {
         MailApp.sendEmail(d.email, guestSubject, guestBody);
-        Logger.log('RSVP correo al invitado enviado: %s', d.email);
+        Logger.log('RSVP correo al invitado enviado: %s lang=%s', d.email, d.lang || 'es');
       } catch (ge) {
         Logger.log('RSVP ERROR enviando correo al invitado %s: %s', d.email, String(ge && ge.stack ? ge.stack : ge));
       }
