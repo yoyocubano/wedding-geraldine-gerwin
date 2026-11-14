@@ -519,11 +519,12 @@
         <!-- Correo electrónico -->
         <div>
           <label class="block text-sm font-sans uppercase tracking-wider text-champagne-800 font-bold mb-1" data-i18n="rsvp.email_label">
-            Correo electrónico
+            Correo electrónico *
           </label>
           <input
             type="email"
             id="rsvpEmail" autocomplete="email"
+            required
             placeholder="Tu correo electrónico"
             data-i18n-placeholder="rsvp.email_placeholder"
             class="w-full px-4 py-3 text-sm rounded-xl bg-champagne-50/70 border border-champagne-500/40 text-espresso focus:outline-none focus:ring-2 focus:ring-champagne-600"
@@ -748,7 +749,7 @@
         "rsvp.deadline": "Por favor confirma tu asistencia antes del 31 de Diciembre de 2026",
         "rsvp.name_label": "Nombre Completo *",
         "rsvp.name_placeholder": "Tu nombre y apellido",
-        "rsvp.email_label": "Correo electrónico",
+        "rsvp.email_label": "Correo electrónico *",
         "rsvp.email_placeholder": "Tu correo electrónico",
         "rsvp.phone_label": "Teléfono",
         "rsvp.phone_placeholder": "Tu teléfono",
@@ -891,7 +892,7 @@
         "rsvp.deadline": "Gelieve je aanwezigheid te bevestigen vóór 31 december 2026",
         "rsvp.name_label": "Volledige Naam *",
         "rsvp.name_placeholder": "Je voor- en achternaam",
-        "rsvp.email_label": "E-mail",
+        "rsvp.email_label": "E-mail *",
         "rsvp.email_placeholder": "Je e-mailadres",
         "rsvp.phone_label": "Telefoon",
         "rsvp.phone_placeholder": "Je telefoonnummer",
@@ -1266,6 +1267,7 @@ END:VCALENDAR`;
       var name = document.getElementById('rsvpName').value.trim();
       if (!name) { document.getElementById('rsvpName').focus(); return; }
       var email = document.getElementById('rsvpEmail').value.trim();
+      if (!email) { document.getElementById('rsvpEmail').focus(); return; }
       var phone = document.getElementById('rsvpPhone').value.trim();
       var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
       var attend = attendEl ? attendEl.value : 'si';
@@ -1286,6 +1288,7 @@ END:VCALENDAR`;
       var name = document.getElementById('rsvpName').value.trim();
       if (!name) { document.getElementById('rsvpName').focus(); return; }
       var email = document.getElementById('rsvpEmail').value.trim();
+      if (!email) { document.getElementById('rsvpEmail').focus(); return; }
       var phone = document.getElementById('rsvpPhone').value.trim();
       var attendEl = document.querySelector('input[name="rsvpAttend"]:checked');
       var attend = attendEl ? attendEl.value : 'si';
